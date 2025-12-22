@@ -9,3 +9,6 @@ always
 always_comb
 always_latch
 always_ff
+
+===== Backlinks =====
+[[always construct]]

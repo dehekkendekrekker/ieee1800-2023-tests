@@ -5,3 +5,7 @@ Creation-Date: 2025-12-16T22:54:31+00:00
 ====== checker delaration ======
 Created Tuesday 16 December 2025
 
+[[checker or generate item]]
+
+===== Backlinks =====
+[[checker or generate item]]

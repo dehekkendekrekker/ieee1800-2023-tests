@@ -7,3 +7,6 @@ Created Tuesday 16 December 2025
 
 **assert** #0 ( expression ) [[6.3 Parallel and sequential blocks:action block|action block]]
 **assert final** ( expression ) [[6.3 Parallel and sequential blocks:action block|action block]]
+
+===== Backlinks =====
+[[deferred immediate assertion statement]]

@@ -12,9 +12,12 @@ program_instantiation
 bind_directive
 continuous_assign
 net_alias
-initial_construct
-final_construct
-always_construct
+[[initial construct]]
+[[final construct]]
+[[always construct]]
 loop_generate_construct
 conditional_generate_construct
 elaboration_severity_system_task
+
+===== Backlinks =====
+[[assertion item]]

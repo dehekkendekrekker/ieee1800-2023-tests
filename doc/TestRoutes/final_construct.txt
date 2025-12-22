@@ -5,4 +5,9 @@ Creation-Date: 2025-12-16T21:34:52+00:00
 ====== final construct ======
 Created Tuesday 16 December 2025
 
-final function_statemen
+final function_statement
+
+===== Backlinks =====
+[[checker or generate item]]
+[[module common item]]
+[[non port program item]]

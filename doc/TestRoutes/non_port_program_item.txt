@@ -8,7 +8,10 @@ Created Tuesday 16 December 2025
 continuous_assign
 module_or_generate_item_declaration
 [[initial construct]]
-final_construct
+[[final construct]]
 [[2.10 Assertion declarations:concurrent assertion item]]
-timeunits_declaration 3
+timeunits_declaration
 program_generate_item
+
+===== Backlinks =====
+[[program item]]
