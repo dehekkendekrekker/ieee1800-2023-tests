@@ -22,4 +22,4 @@ covergroup_declaration
 ;
 
 ===== Backlinks =====
-[[1.11 Package items:package item|package item]]
+[[package item]]

@@ -26,5 +26,5 @@ assertion_item_declaration ::=
 ===== Backlinks =====
 [[1.8 Checker items:checker or generate item declaration|checker or generate item declaration]]
 [[6.11 Clocking block:clocking item|clocking item]]
-[[1.11 Package items:package item:package or generate item declaration|package or generate item declaration]]
+[[1.11 Package items:package or generate item declaration|package or generate item declaration]]
 

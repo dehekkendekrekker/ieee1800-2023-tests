@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-22T00:00:00+00:00
+
+====== constant expression ======
+Created Sunday 22 December 2025
+
+[[constant primary]] [ { [[binary operator]] [[constant primary]] } ]
+| [[unary operator]] [[constant primary]] [ { [[binary operator]] [[constant primary]] } ]
+| [[constant primary]] ? { [[constant expression]] } : [[constant expression]]
+
+===== Backlinks =====
+[[2.2 Declaration data types:constant range|constant range]]
+[[2.2 Declaration data types:unpacked dimension|unpacked dimension]]
+

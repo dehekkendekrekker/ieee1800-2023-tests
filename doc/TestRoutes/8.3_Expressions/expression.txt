@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-22T00:00:00+00:00
+
+====== expression ======
+Created Sunday 22 December 2025
+
+[[primary]] [ { [[binary operator]] [[primary]] } ]
+| [[unary operator]] [[primary]] [ { [[binary operator]] [[primary]] } ]
+| [[inc dec expression]]
+| ( [[operator assignment]] )
+| [[primary]] ? { [[expression]] } : [[expression]]
+| [[inside expression]]
+| [[tagged union expression]]
+
+===== Backlinks =====
+[[2.2 Declaration data types:type reference|type reference]]
+
