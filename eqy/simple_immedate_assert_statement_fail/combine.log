@@ -1,0 +1,53 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite -- YosysHQ Edition [202512030840]     |
+ |  Copyright (C) 2012 - 2025 YosysHQ GmbH                                    |
+ |  For support, please contact support@yosyshq.com                           |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60 (git sha1 5bafeb77d, clang++ 18.1.8 -fPIC -O3)
+
+-- Executing script file `simple_immedate_assert_statement_fail/combine.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: simple_immedate_assert_statement_fail/gold.il
+
+2. Executing UNIQUIFY pass (creating unique copies of modules).
+Created 0 unique modules.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `simple_immediate_assert_statement'. Setting top module to simple_immediate_assert_statement.
+
+3.1. Analyzing design hierarchy..
+Top module:  \simple_immediate_assert_statement
+
+3.2. Analyzing design hierarchy..
+Top module:  \simple_immediate_assert_statement
+Removed 0 unused modules.
+Module simple_immediate_assert_statement directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing RTLIL frontend.
+Input filename: simple_immedate_assert_statement_fail/gate_recoded.il
+
+5. Executing UNIQUIFY pass (creating unique copies of modules).
+Created 0 unique modules.
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `simple_immediate_assert_statement'. Setting top module to simple_immediate_assert_statement.
+
+6.1. Analyzing design hierarchy..
+Top module:  \simple_immediate_assert_statement
+
+6.2. Analyzing design hierarchy..
+Top module:  \simple_immediate_assert_statement
+Removed 0 unused modules.
+Module simple_immediate_assert_statement directly or indirectly contains formal properties -> setting "keep" attribute.
+
+7. Executing MITER pass (creating miter circuit).
+Creating miter cell "miter" with gold cell "gold.simple_immediate_assert_statement" and gate cell "gate.simple_immediate_assert_statement".
+
+8. Executing RTLIL backend.
+Output filename: simple_immedate_assert_statement_fail/combined.il
+
+End of script. Logfile hash: a87106c260, CPU: user 0.02s system 0.01s, MEM: 27.55 MB peak
+Yosys 0.60 (git sha1 5bafeb77d, clang++ 18.1.8 -fPIC -O3)
+Time spent: 30% 1x plugin (0 sec), 22% 4x read_rtlil (0 sec), ...

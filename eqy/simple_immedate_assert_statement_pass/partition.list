@@ -1,0 +1,1 @@
+simple_immediate_assert_statement simple_immediate_assert_statement.a : a[0]

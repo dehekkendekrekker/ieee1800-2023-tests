@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-17T01:18:58+00:00
+
+====== action block ======
+Created Wednesday 17 December 2025
+
+[[statement or null]]
+[ [[statement]] ] else [[statement or null]]
+
+===== Backlinks =====
+[[deferred immediate assert statement]]
+[[deferred immediate assume statement]]
+[[simple immediate assert statement]]
+[[simple immediate assume statement]]
+[[2.10 Assertion declarations:assert property statement|assert property statement]]
+[[2.10 Assertion declarations:assume property statement|assume property statement]]

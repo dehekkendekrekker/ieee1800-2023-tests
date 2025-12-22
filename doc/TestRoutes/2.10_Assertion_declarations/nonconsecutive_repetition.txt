@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-17T00:42:42+00:00
+
+====== nonconsecutive repetition ======
+Created Wednesday 17 December 2025
+
+IEEE 1800-2023 Section A.2.10, 16.7.6
+
+nonconsecutive_repetition ::=
+	**[=** [[const or range expression]] **]**
+
+===== Permutations =====
+
+==== [=n] (exact count) ====
+Exactly n occurrences, not necessarily consecutive.
+	ack[=3]     - ack true exactly 3 times (can have gaps)
+
+==== [=m:n] (range count) ====
+Between m and n occurrences, not necessarily consecutive.
+	ack[=2:5]   - ack true 2-5 times (can have gaps)
+
+===== Notes =====
+Unlike consecutive repetition, the boolean may be false between matches.
+The sequence ends after the last required occurrence.
+
+===== Backlinks =====
+[[boolean abbrev]]
+

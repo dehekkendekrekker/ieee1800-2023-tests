@@ -1,0 +1,35 @@
+{
+  "partition": {
+    "index": 0,
+    "name": "simple_immediate_assert_statement",
+    "inbits": {
+      "clk": [
+        0
+      ]
+    },
+    "outbits": {},
+    "crossbits": {}
+  },
+  "gold_module": {
+    "name": "gold.simple_immediate_assert_statement",
+    "internal": {},
+    "unused": {
+      "clk": [
+        0
+      ]
+    },
+    "cellcount": 0,
+    "bitcount": 1
+  },
+  "gate_module": {
+    "name": "gold.simple_immediate_assert_statement",
+    "internal": {},
+    "unused": {
+      "clk": [
+        0
+      ]
+    },
+    "cellcount": 0,
+    "bitcount": 1
+  }
+}

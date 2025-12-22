@@ -1,0 +1,56 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:46:42+00:00
+
+====== property declaration ======
+Created Tuesday 16 December 2025
+
+IEEE 1800-2023 Section A.2.10, 16.11
+
+property_declaration ::=
+	**property** property_identifier [ ( [ [[property port list]] ] ) ] ;
+	{ [[assertion variable declaration]] }
+	[[property spec]] [ ; ]
+	**endproperty** [ : property_identifier ]
+
+===== Permutations =====
+
+==== Permutation 1: Basic property without arguments ====
+property p;
+	property_spec;
+endproperty
+
+==== Permutation 2: Property with port list ====
+property p(a, b);
+	a |-> b;
+endproperty
+
+==== Permutation 3: Property with typed arguments ====
+property p(logic a, logic b);
+	a |-> b;
+endproperty
+
+==== Permutation 4: Property with local variables ====
+property p;
+	int count;
+	(a, count = 0) |-> ##[1:5] (count < 10);
+endproperty
+
+==== Permutation 5: Property with default arguments ====
+property p(a, b = 1'b1);
+	a |-> b;
+endproperty
+
+==== Permutation 6: Property with named end label ====
+property p;
+	a |-> b;
+endproperty : p
+
+===== SVA-relevant paths =====
+[[property port list]]
+[[assertion variable declaration]]
+[[property spec]]
+
+===== Backlinks =====
+[[assertion item declaration]]
+

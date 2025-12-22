@@ -1,0 +1,86 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite -- YosysHQ Edition [202512030840]     |
+ |  Copyright (C) 2012 - 2025 YosysHQ GmbH                                    |
+ |  For support, please contact support@yosyshq.com                           |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60 (git sha1 5bafeb77d, clang++ 18.1.8 -fPIC -O3)
+
+-- Executing script file `partition.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: combined.il
+
+2. Executing INSBUF pass (insert buffer cells for connected wires).
+Add gate.simple_immediate_assert_statement/$auto$insbuf.cc:97:execute$14: 1'x -> $1
+Add gate.simple_immediate_assert_statement/$auto$insbuf.cc:97:execute$15: 1'x -> $3
+Add gate.simple_immediate_assert_statement/$auto$insbuf.cc:97:execute$16: 1'x -> \a
+Add gold.simple_immediate_assert_statement/$auto$insbuf.cc:97:execute$17: 1'1 -> \a
+
+3. Executing EQY PARTITION task.
+
+3.1. Processing module pair gold.simple_immediate_assert_statement / gate.simple_immediate_assert_statement.
+
+3.1.1. Processing matched IDs for module simple_immediate_assert_statement.
+
+3.1.2. Create fragment partitions for module simple_immediate_assert_statement.
+Adding output bit \a to partition 0.
+
+Final list of fragment partitions:
+  0 \a <=
+
+3.1.3. Execute partitioning commands for module simple_immediate_assert_statement.
+
+Amending partitions:
+Execute queued amend rules.
+Find automatic amend rules.
+  Checking partition 0:
+    Found 0 po matches and 0 auto/pi matches.
+
+Assigning partition names:
+Automatically naming partition 0 'a' using a PO name: a
+
+Partition Summary:
+  Fragments:
+       0: \a
+  Partitions:
+       0: a
+  Fragment-Partition-Matrix:
+           0          
+           0
+       0   #  a
+  Legend for Fragment-Partition-Matrix:
+      #  .... partition is this single fragment
+      *  .... fragments merged into single partition
+      +  .... fragments amended to the partition
+      =  .... fragment is driving a partition input
+      -  .... fragment is driving an amended fragment
+      .  .... no relationship between fragment and partition
+      ,  .... unused fragment index (as result of grouping)
+
+3.1.4. Write partitions for module simple_immediate_assert_statement.
+Adding non-output bit \dummy to partition 1.
+Adding non-output bit \a to partition 1.
+Writing partition 0 as simple_immediate_assert_statement.a.
+  partition po bit 0: \a <-> \a
+
+3.1.5. Executing RTLIL backend.
+Output filename: partitions/simple_immediate_assert_statement.a.il
+<suppressed ~31 debug messages>
+
+3.1.6. Executing CHECK pass (checking for obvious problems).
+Checking module gate.simple_immediate_assert_statement.a...
+Checking module gold.simple_immediate_assert_statement.a...
+Found and reported 0 problems.
+
+Writing partition 1 as simple_immediate_assert_statement.
+  partition pi bit 0: \dummy <-> \dummy
+  partition mp bit 0: \a <-> \a
+
+3.1.7. Executing RTLIL backend.
+Output filename: modules/simple_immediate_assert_statement.il
+<suppressed ~14 debug messages>
+
+End of script. Logfile hash: 7d0fbf64c2, CPU: user 0.02s system 0.01s, MEM: 30.11 MB peak
+Yosys 0.60 (git sha1 5bafeb77d, clang++ 18.1.8 -fPIC -O3)
+Time spent: 63% 1x eqy_partition (0 sec), 13% 1x plugin (0 sec), ...

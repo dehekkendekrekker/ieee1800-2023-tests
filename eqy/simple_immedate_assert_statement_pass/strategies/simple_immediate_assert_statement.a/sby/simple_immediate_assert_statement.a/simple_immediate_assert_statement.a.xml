@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2025-12-21T19:34:35" hostname="arch" package="simple_immediate_assert_statement.a" id="0" name="default" tests="1" errors="0" failures="1" time="0" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS, FAIL, UNKNOWN, TIMEOUT"/>
+<property name="status" value="FAIL"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property ASSERT in miter at ../../../../../partitions/simple_immediate_assert_statement.a.sv:54.37-54.49" time="0" type="ASSERT" location="../../../../../partitions/simple_immediate_assert_statement.a.sv:54.37-54.49" id="_witness_.assert_flatten___po_a__assert__assert________________partitions_simple_immediate_assert_statement_a_sv_54_24" tracefile="engine_0/trace.vcd">
+<failure type="ASSERT" message="Property ASSERT in miter at ../../../../../partitions/simple_immediate_assert_statement.a.sv:54.37-54.49 failed. Trace file: engine_0/trace.vcd" />
+</testcase>
+<system-out>SBY 19:34:35 [simple_immediate_assert_statement.a] Removing directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/simple_immedate_assert_statement_pass/strategies/simple_immediate_assert_statement.a/sby/simple_immediate_assert_statement.a'.
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0: smtbmc bitwuzla
+SBY 19:34:35 [simple_immediate_assert_statement.a] base: starting process &quot;cd simple_immediate_assert_statement.a/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 19:34:35 [simple_immediate_assert_statement.a] base: Warning: Unhandled cell __po_a__assert ($scopeinfo) during maybe-x marking
+SBY 19:34:35 [simple_immediate_assert_statement.a] base: Warning: Unhandled cell gate ($scopeinfo) during maybe-x marking
+SBY 19:34:35 [simple_immediate_assert_statement.a] base: Warning: Unhandled cell gold ($scopeinfo) during maybe-x marking
+SBY 19:34:35 [simple_immediate_assert_statement.a] base: finished (returncode=0)
+SBY 19:34:35 [simple_immediate_assert_statement.a] prep: starting process &quot;cd simple_immediate_assert_statement.a/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 19:34:35 [simple_immediate_assert_statement.a] prep: finished (returncode=0)
+SBY 19:34:35 [simple_immediate_assert_statement.a] smt2: starting process &quot;cd simple_immediate_assert_statement.a/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 19:34:35 [simple_immediate_assert_statement.a] smt2: finished (returncode=0)
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: starting process &quot;cd simple_immediate_assert_statement.a; yosys-smtbmc -s bitwuzla --presat --unroll --noprogress -t 2  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: starting process &quot;cd simple_immediate_assert_statement.a; yosys-smtbmc -s bitwuzla --presat --unroll -i --noprogress -t 2  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: ##   0:00:00  Solver: bitwuzla
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Solver: bitwuzla
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Trying induction in step 2..
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Trying induction in step 1..
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: ##   0:00:00  BMC failed!
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: ##   0:00:00  Assert failed in miter: ../../../../../partitions/simple_immediate_assert_statement.a.sv:54.37-54.49 (_witness_.assert_flatten___po_a__assert__assert________________partitions_simple_immediate_assert_statement_a_sv_54_24)
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Trying induction in step 0..
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Temporal induction failed!
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Assert failed in miter: ../../../../../partitions/simple_immediate_assert_statement.a.sv:54.37-54.49 (_witness_.assert_flatten___po_a__assert__assert________________partitions_simple_immediate_assert_statement_a_sv_54_24)
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Writing trace to VCD file: engine_0/trace_induct.vcd
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: ##   0:00:00  Status: failed
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_induct_tb.v
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Writing trace to constraints file: engine_0/trace_induct.smtc
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace_induct.yw
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: ##   0:00:00  Status: failed
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: finished (returncode=1)
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.basecase: Status returned by engine for basecase: FAIL
+SBY 19:34:35 [simple_immediate_assert_statement.a] engine_0.induction: terminating process
+SBY 19:34:35 [simple_immediate_assert_statement.a] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:34:35 [simple_immediate_assert_statement.a] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:34:35 [simple_immediate_assert_statement.a] summary: engine_0 (smtbmc bitwuzla) returned FAIL for basecase
+SBY 19:34:35 [simple_immediate_assert_statement.a] summary: counterexample trace [basecase]: simple_immediate_assert_statement.a/engine_0/trace.vcd
+SBY 19:34:35 [simple_immediate_assert_statement.a] summary:   failed assertion miter._witness_.assert_flatten___po_a__assert__assert________________partitions_simple_immediate_assert_statement_a_sv_54_24 at ../../../../../partitions/simple_immediate_assert_statement.a.sv:54.37-54.49
+SBY 19:34:35 [simple_immediate_assert_statement.a] summary: counterexample trace [induction]: simple_immediate_assert_statement.a/engine_0/trace_induct.vcd
+SBY 19:34:35 [simple_immediate_assert_statement.a] summary:   failed assertion miter._witness_.assert_flatten___po_a__assert__assert________________partitions_simple_immediate_assert_statement_a_sv_54_24 at ../../../../../partitions/simple_immediate_assert_statement.a.sv:54.37-54.49
+SBY 19:34:35 [simple_immediate_assert_statement.a] DONE (FAIL, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

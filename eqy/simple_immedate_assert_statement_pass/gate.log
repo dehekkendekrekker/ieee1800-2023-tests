@@ -1,0 +1,76 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite -- YosysHQ Edition [202512030840]     |
+ |  Copyright (C) 2012 - 2025 YosysHQ GmbH                                    |
+ |  For support, please contact support@yosyshq.com                           |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60 (git sha1 5bafeb77d, clang++ 18.1.8 -fPIC -O3)
+
+-- Executing script file `simple_immedate_assert_statement_pass/gate.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: ../rtlil/slang/simple_immediate_assert_statement_pass.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `simple_immediate_assert_statement'. Setting top module to simple_immediate_assert_statement.
+
+2.1. Analyzing design hierarchy..
+Top module:  \simple_immediate_assert_statement
+
+2.2. Analyzing design hierarchy..
+Top module:  \simple_immediate_assert_statement
+Removed 0 unused modules.
+Module simple_immediate_assert_statement directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module simple_immediate_assert_statement.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \simple_immediate_assert_statement..
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module simple_immediate_assert_statement...
+Warning: Wire simple_immediate_assert_statement.$3 is used but has no driver.
+Warning: Wire simple_immediate_assert_statement.$1 is used but has no driver.
+Warning: Wire simple_immediate_assert_statement.\a has 'init' attribute and is not driven by an FF cell.
+Found and reported 3 problems.
+
+6. Executing SETUNDEF pass (replace undef values with defined constants).
+
+7. Executing RTLIL backend.
+Output filename: simple_immedate_assert_statement_pass/gate.il
+
+Warnings: 3 unique messages, 3 total
+End of script. Logfile hash: 0228703fd3, CPU: user 0.02s system 0.01s, MEM: 26.88 MB peak
+Yosys 0.60 (git sha1 5bafeb77d, clang++ 18.1.8 -fPIC -O3)
+Time spent: 26% 1x opt_clean (0 sec), 26% 1x opt_expr (0 sec), ...

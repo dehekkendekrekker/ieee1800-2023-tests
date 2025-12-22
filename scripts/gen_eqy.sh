@@ -11,6 +11,7 @@ proc
 [gate]
 read_rtlil ../rtlil/slang/${BASENAME}.il
 hierarchy -auto-top
+proc
 
 [strategy sby]
 use sby

@@ -1,0 +1,11 @@
+{
+  "format": "Yosys Witness Trace",
+  "generator": "smtbmc",
+  "clocks": [],
+  "signals": [
+    {"path": ["\\__po_a__assert", "\\in_gate"], "width": 1, "offset": 0, "init_only": false}
+  ],
+  "steps": [
+    {"bits": "0"}
+  ]
+}

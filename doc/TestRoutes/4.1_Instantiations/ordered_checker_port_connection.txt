@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T23:41:21+00:00
+
+====== ordered checker port connection ======
+Created Tuesday 16 December 2025
+
+ { attribute_instance } [ [[2.10 Assertion declarations:property actual arg|property actual arg]] ]
+
+===== Backlinks =====
+[[list of checker port connections]]

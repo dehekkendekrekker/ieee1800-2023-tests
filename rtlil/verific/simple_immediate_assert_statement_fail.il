@@ -3,6 +3,8 @@ autoidx 5
 attribute \src "../tests/simple_immediate_assert_statement_fail.sv:4.1-8.10"
 attribute \cells_not_processed 1
 module \simple_immediate_assert_statement
+  attribute \src "../tests/simple_immediate_assert_statement_fail.sv:4.48-4.53"
+  wire input 1 \dummy
   wire $auto$rtlil.cc:3341:ReduceBool$4
   attribute \src "../tests/simple_immediate_assert_statement_fail.sv:6.9-6.18"
   wire $assert$../tests/simple_immediate_assert_statement_fail.sv:6$2_EN

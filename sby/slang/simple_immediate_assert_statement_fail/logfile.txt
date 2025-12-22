@@ -1,0 +1,39 @@
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] Removing directory '/home/dhk/projects/verilog-1800-2003-tests/sby/slang/simple_immediate_assert_statement_fail'.
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] Copy '/home/dhk/projects/verilog-1800-2003-tests/sby/slang/../../tests/simple_immediate_assert_statement_fail.sv' to '/home/dhk/projects/verilog-1800-2003-tests/sby/slang/simple_immediate_assert_statement_fail/src/simple_immediate_assert_statement_fail.sv'.
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0: smtbmc
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] base: starting process "cd ./simple_immediate_assert_statement_fail/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] base: note: use option '--ignore-initial' to ignore initial procedures
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] base: Top level design units:
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] base: simple_immediate_assert_statement
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] base: Build succeeded: 0 errors, 0 warnings
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] base: finished (returncode=0)
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] prep: starting process "cd ./simple_immediate_assert_statement_fail/model; yosys -ql design_prep.log design_prep.ys"
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] prep: Warning: Wire simple_immediate_assert_statement.$1 is used but has no driver.
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] prep: finished (returncode=0)
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] smt2: starting process "cd ./simple_immediate_assert_statement_fail/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] smt2: finished (returncode=0)
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: starting process "cd ./simple_immediate_assert_statement_fail; yosys-smtbmc --presat --unroll --noprogress -t 5  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.induction: starting process "cd ./simple_immediate_assert_statement_fail; yosys-smtbmc --presat --unroll -i --noprogress -t 5  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: ##   0:00:00  BMC failed!
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: ##   0:00:00  Assert failed in simple_immediate_assert_statement: simple_immediate_assert_statement_fail.sv:6.9-6.19 (_witness_.check_0)
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: ##   0:00:00  Status: failed
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.induction: ##   0:00:00  Solver: yices
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.induction: ##   0:00:00  Trying induction in step 5..
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.induction: ##   0:00:00  Status: passed
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: finished (returncode=1)
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.basecase: Status returned by engine for basecase: FAIL
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] engine_0.induction: terminating process
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] summary: engine_0 (smtbmc) returned FAIL for basecase
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] summary: counterexample trace [basecase]: simple_immediate_assert_statement_fail/engine_0/trace.vcd
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] summary:   failed assertion simple_immediate_assert_statement._witness_.check_0 at simple_immediate_assert_statement_fail.sv:6.9-6.19
+SBY 19:40:34 [./simple_immediate_assert_statement_fail] DONE (FAIL, rc=2)

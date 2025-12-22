@@ -1,0 +1,2 @@
+simple_immediate_assert_statement . A:src="../tests/always_assert.sv:4.1-13.10" A:top=1 A:keep=1
+simple_immediate_assert_statement clk w=0:0 A:src="../tests/always_assert.sv:5.13-5.16" P=I

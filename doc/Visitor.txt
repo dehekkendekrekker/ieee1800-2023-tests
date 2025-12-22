@@ -1,0 +1,106 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-10T19:03:17+00:00
+
+====== Visitor ======
+Created Wednesday 10 December 2025
+
+class SVAVisitor {
+  public:
+	  // Use AssertionExpr::visit() to dispatch
+	  void visit(const AssertionExpr& expr) {
+		  expr.visit(*this);
+	  }
+
+	  // Handler for each type
+	  void visit(const SimpleAssertionExpr& e) {
+		  std::cout << "Simple expr\n";
+		  // e.expr is the boolean signal
+	  }
+
+	  void visit(const SequenceConcatExpr& e) {
+		  std::cout << "Concat with " << e.elements.size() << " elements\n";
+		  for (auto& elem : e.elements) {
+			  std::cout << "  delay: " << elem.delay.min;
+			  if (elem.delay.max) std::cout << ":" << *elem.delay.max;
+			  std::cout << "\n";
+			  elem.sequence->visit(*this);  // recurse
+		  }
+	  }
+
+	  void visit(const BinaryAssertionExpr& e) {
+		  std::cout << "Binary op: " << toString(e.op) << "\n";
+		  e.left.visit(*this);
+		  e.right.visit(*this);
+	  }
+
+	  void visit(const UnaryAssertionExpr& e) {
+		  std::cout << "Unary op: " << toString(e.op) << "\n";
+		  e.expr.visit(*this);
+	  }
+
+	  void visit(const ClockingAssertionExpr& e) {
+		  std::cout << "Clocked assertion\n";
+		  // Extract clock from e.clocking
+		  if (auto* sig = e.clocking.as_if<SignalEventControl>()) {
+			  std::cout << "  clock edge: " << toString(sig->edge) << "\n";
+		  }
+		  e.expr.visit(*this);
+	  }
+
+	  void visit(const DisableIffAssertionExpr& e) {
+		  std::cout << "Disable iff\n";
+		  e.expr.visit(*this);
+	  }
+
+	  void visit(const AbortAssertionExpr& e) {
+		  std::cout << (e.action == AbortAssertionExpr::Accept ? "accept_on" : "reject_on") << "\n";
+		  e.expr.visit(*this);
+	  }
+
+	  void visit(const ConditionalAssertionExpr& e) {
+		  std::cout << "if-else property\n";
+		  e.ifExpr.visit(*this);
+		  if (e.elseExpr) e.elseExpr->visit(*this);
+	  }
+
+	  void visit(const FirstMatchAssertionExpr& e) {
+		  std::cout << "first_match\n";
+		  e.seq.visit(*this);
+	  }
+
+	  void visit(const StrongWeakAssertionExpr& e) {
+		  std::cout << (e.strength == StrongWeakAssertionExpr::Strong ? "strong" : "weak") << "\n";
+		  e.expr.visit(*this);
+	  }
+
+	  void visit(const SequenceWithMatchExpr& e) {
+		  std::cout << "Sequence with match\n";
+		  e.expr.visit(*this);
+	  }
+
+	  void visit(const CaseAssertionExpr& e) {
+		  std::cout << "case property\n";
+		  for (auto& item : e.items) {
+			  item.body->visit(*this);
+		  }
+		  if (e.defaultCase) e.defaultCase->visit(*this);
+	  }
+
+	  void visit(const InvalidAssertionExpr&) {
+		  std::cout << "Invalid\n";
+	  }
+  };
+
+  // Usage:
+  void handle_sva(const PropertySymbol& sym) {
+	  auto* syntax = sym.getSyntax();
+	  if (!syntax) return;
+
+	  auto& pds = syntax->as<syntax::PropertyDeclarationSyntax>();
+	  ASTContext context(sym, LookupLocation::max);
+	  const AssertionExpr& root = AssertionExpr::bind(*pds.propertySpec, context);
+
+	  SVAVisitor visitor;
+	  visitor.visit(root);  // This recurses the whole tree
+  }

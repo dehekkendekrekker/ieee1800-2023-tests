@@ -1,0 +1,19 @@
+EQY 19:16:15 [always_assert] read_gold: starting process "yosys -ql always_assert/gold.log always_assert/gold.ys"
+EQY 19:16:15 [always_assert] read_gold: finished (returncode=0)
+EQY 19:16:15 [always_assert] read_gate: starting process "yosys -ql always_assert/gate.log always_assert/gate.ys"
+EQY 19:16:15 [always_assert] read_gate: finished (returncode=0)
+EQY 19:16:15 [always_assert] combine: starting process "yosys -ql always_assert/combine.log always_assert/combine.ys"
+EQY 19:16:15 [always_assert] combine: finished (returncode=0)
+EQY 19:16:15 [always_assert] partition: starting process "cd always_assert; yosys -ql partition.log partition.ys"
+EQY 19:16:15 [always_assert] partition: finished (returncode=0)
+EQY 19:16:15 [always_assert] run: starting process "make -C always_assert -f strategies.mk"
+EQY 19:16:15 [always_assert] run: make: Entering directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/always_assert'
+EQY 19:16:15 [always_assert] run: make -f strategies.mk summary
+EQY 19:16:15 [always_assert] run: make[1]: Entering directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/always_assert'
+EQY 19:16:15 [always_assert] run: make[1]: Leaving directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/always_assert'
+EQY 19:16:15 [always_assert] run: make: Leaving directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/always_assert'
+EQY 19:16:15 [always_assert] run: finished (returncode=0)
+EQY 19:16:15 [always_assert] Successfully proved designs equivalent
+EQY 19:16:15 [always_assert] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+EQY 19:16:15 [always_assert] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+EQY 19:16:15 [always_assert] DONE (PASS, rc=0)

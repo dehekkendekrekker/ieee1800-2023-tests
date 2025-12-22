@@ -1,0 +1,9 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc bitwuzla) returned FAIL for basecase
+counterexample trace [basecase]: engine_0/trace.vcd
+counterexample trace [basecase]: engine_0/trace.yw
+  failed assertion miter._witness_.assert_flatten___po_a__assert__assert________________partitions_simple_immediate_assert_statement_a_sv_54_24 at ../../../../../partitions/simple_immediate_assert_statement.a.sv:54.37-54.49
+counterexample trace [induction]: engine_0/trace_induct.vcd
+counterexample trace [induction]: engine_0/trace_induct.yw
+  failed assertion miter._witness_.assert_flatten___po_a__assert__assert________________partitions_simple_immediate_assert_statement_a_sv_54_24 at ../../../../../partitions/simple_immediate_assert_statement.a.sv:54.37-54.49

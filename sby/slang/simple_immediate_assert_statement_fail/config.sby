@@ -1,0 +1,16 @@
+[options]
+mode prove
+depth 5
+
+[engines]
+smtbmc
+
+[script]
+plugin -i slang
+read_slang simple_immediate_assert_statement_fail.sv
+hierarchy -auto-top
+dump
+
+[files]
+../../tests/simple_immediate_assert_statement_fail.sv
+

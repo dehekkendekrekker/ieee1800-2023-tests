@@ -1,0 +1,66 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:47:09+00:00
+
+====== sequence declaration ======
+Created Tuesday 16 December 2025
+
+IEEE 1800-2023 Section A.2.10, 16.8
+
+sequence_declaration ::=
+	**sequence** sequence_identifier [ ( [ [[sequence port list]] ] ) ] ;
+	{ [[assertion variable declaration]] }
+	[[sequence expr]] [ ; ]
+	**endsequence** [ : sequence_identifier ]
+
+===== Permutations =====
+
+==== Permutation 1: Basic sequence without arguments ====
+sequence s;
+	a ##1 b;
+endsequence
+
+==== Permutation 2: Sequence with port list ====
+sequence s(a, b);
+	a ##1 b;
+endsequence
+
+==== Permutation 3: Sequence with typed arguments ====
+sequence s(logic a, logic b, int delay);
+	a ##delay b;
+endsequence
+
+==== Permutation 4: Sequence with local variables ====
+sequence s;
+	logic [7:0] captured;
+	(a, captured = data) ##[1:5] (data == captured);
+endsequence
+
+==== Permutation 5: Sequence with default arguments ====
+sequence s(a, b = 1'b1);
+	a ##1 b;
+endsequence
+
+==== Permutation 6: Sequence with named end label ====
+sequence s;
+	a ##1 b;
+endsequence : s
+
+==== Permutation 7: Sequence with formal type 'sequence' ====
+sequence s(sequence sub_seq);
+	a ##1 sub_seq;
+endsequence
+
+==== Permutation 8: Sequence with formal type 'untyped' ====
+sequence s(untyped expr);
+	expr ##1 b;
+endsequence
+
+===== SVA-relevant paths =====
+[[sequence port list]]
+[[assertion variable declaration]]
+[[sequence expr]]
+
+===== Backlinks =====
+[[assertion item declaration]]
+

@@ -1,0 +1,25 @@
+EQY 19:34:34 [simple_immedate_assert_statement_pass] read_gold: starting process "yosys -ql simple_immedate_assert_statement_pass/gold.log simple_immedate_assert_statement_pass/gold.ys"
+EQY 19:34:34 [simple_immedate_assert_statement_pass] read_gold: finished (returncode=0)
+EQY 19:34:34 [simple_immedate_assert_statement_pass] read_gate: starting process "yosys -ql simple_immedate_assert_statement_pass/gate.log simple_immedate_assert_statement_pass/gate.ys"
+EQY 19:34:34 [simple_immedate_assert_statement_pass] read_gate: Warning: Wire simple_immediate_assert_statement.$3 is used but has no driver.
+EQY 19:34:34 [simple_immedate_assert_statement_pass] read_gate: Warning: Wire simple_immediate_assert_statement.$1 is used but has no driver.
+EQY 19:34:34 [simple_immedate_assert_statement_pass] read_gate: Warning: Wire simple_immediate_assert_statement.\a has 'init' attribute and is not driven by an FF cell.
+EQY 19:34:34 [simple_immedate_assert_statement_pass] read_gate: finished (returncode=0)
+EQY 19:34:34 [simple_immedate_assert_statement_pass] combine: starting process "yosys -ql simple_immedate_assert_statement_pass/combine.log simple_immedate_assert_statement_pass/combine.ys"
+EQY 19:34:34 [simple_immedate_assert_statement_pass] combine: finished (returncode=0)
+EQY 19:34:34 [simple_immedate_assert_statement_pass] partition: starting process "cd simple_immedate_assert_statement_pass; yosys -ql partition.log partition.ys"
+EQY 19:34:34 [simple_immedate_assert_statement_pass] partition: finished (returncode=0)
+EQY 19:34:34 [simple_immedate_assert_statement_pass] run: starting process "make -C simple_immedate_assert_statement_pass -f strategies.mk"
+EQY 19:34:34 [simple_immedate_assert_statement_pass] run: make: Entering directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/simple_immedate_assert_statement_pass'
+EQY 19:34:34 [simple_immedate_assert_statement_pass] run: Running strategy 'sby' on 'simple_immediate_assert_statement.a'..
+EQY 19:34:35 [simple_immedate_assert_statement_pass] run: Could not prove equivalence of partition 'simple_immediate_assert_statement.a' using strategy 'sby': partitions not equivalent
+EQY 19:34:35 [simple_immedate_assert_statement_pass] run: make -f strategies.mk summary
+EQY 19:34:35 [simple_immedate_assert_statement_pass] run: make[1]: Entering directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/simple_immedate_assert_statement_pass'
+EQY 19:34:35 [simple_immedate_assert_statement_pass] run: make[1]: Leaving directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/simple_immedate_assert_statement_pass'
+EQY 19:34:35 [simple_immedate_assert_statement_pass] run: make: Leaving directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/simple_immedate_assert_statement_pass'
+EQY 19:34:35 [simple_immedate_assert_statement_pass] run: finished (returncode=0)
+EQY 19:34:35 [simple_immedate_assert_statement_pass] Warning: Failed to prove equivalence for 1/1 partitions:
+EQY 19:34:35 [simple_immedate_assert_statement_pass] Failed to prove equivalence of partition simple_immediate_assert_statement.a
+EQY 19:34:35 [simple_immedate_assert_statement_pass] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+EQY 19:34:35 [simple_immedate_assert_statement_pass] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+EQY 19:34:35 [simple_immedate_assert_statement_pass] DONE (FAIL, rc=2)

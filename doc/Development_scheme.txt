@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T13:53:26+00:00
+
+====== Development scheme ======
+Created Tuesday 16 December 2025
+
+| Language Feature            | 1800-2023 standard Chapter | Example   | Write test | Test Slang support | Test Verific support | Generate Verific RTLIL | Implement AST 2 RTLIL | Generate yosys-slang RTLIL | Compare output (EQY) | Fix issues | Iterate until working | Integrate into PR |
+|:----------------------------|:---------------------------|:----------|:-----------|:-------------------|:---------------------|:-----------------------|:----------------------|:---------------------------|:---------------------|:-----------|:----------------------|:------------------|
+| Simple Immediate assertions | 16.3                       | assert(1) | X          | X                  | X                    | X                      | -                     | -                          | X                    | -          | -                     | -                 |
+|                             |                            |           |            |                    |                      |                        |                       |                            |                      |            |                       |                   |
+|                             |                            |           |            |                    |                      |                        |                       |                            |                      |            |                       |                   |
+
+===== Simple Immediate Assertions =====
+
+assert(1)
+assume(1)
+cover(1)

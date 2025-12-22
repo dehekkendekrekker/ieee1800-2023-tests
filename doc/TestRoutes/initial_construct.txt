@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:33:26+00:00
+
+====== initial construct ======
+Created Tuesday 16 December 2025
+
+initial [[statement or null]]

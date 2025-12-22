@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T23:31:48+00:00
+
+====== property actual arg ======
+Created Tuesday 16 December 2025
+
+[[property expr]]
+[[sequence actual arg]]
+
+===== Backlinks =====
+[[property list of arguments]]
+[[1.8 Checker items:checker port item|checker port item]]

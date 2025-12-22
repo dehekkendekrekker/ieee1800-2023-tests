@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T23:32:21+00:00
+
+====== sequence actual arg ======
+Created Tuesday 16 December 2025
+
+event_expression
+[[sequence expr]]
+**$**
+
+
+===== Backlinks =====
+[[sequence port item]]
+[[sequence expr]]
+[[sequence list of arguments]]

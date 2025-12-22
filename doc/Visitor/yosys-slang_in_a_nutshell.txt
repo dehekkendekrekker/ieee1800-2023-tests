@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-10T21:28:46+00:00
+
+====== yosys-slang in a nutshell ======
+Created Wednesday 10 December 2025
+
+ Based on my exploration, here's how the handle() calls work in yosys-slang:
+
+  Architecture Overview
+
+  The codebase uses a compile-time visitor pattern based on slang's ASTVisitor framework.
+
+  How handle() Methods Work
+
+  1. Definition: handle() methods are overloaded handlers in visitor classes that process specific AST node types
+  2. Dispatch mechanism: Uses C++ concepts/SFINAE at compile-time (no virtual dispatch overhead)
+
+  // From slang's ASTVisitor - simplified
+  template<typename T>
+  void visit(const T& t) {
+	  if constexpr (requires { (DERIVED).handle(t); })
+		  (DERIVED).handle(t);    // Call if handle() exists
+	  else
+		  visitDefault(t);        // Otherwise visit children
+  }
+
+  Entry Point
+
+  The handle() calls are triggered from slang_frontend.cc:3029:
+
+  PopulateNetlist populate(hqueue, netlist);
+  netlist.realm.visit(populate);  // <-- THIS triggers all handle() calls
+
+  Where realm is an InstanceBodySymbol (the module body).
+
+  Key Visitors and Their handle() Methods
+
+  | Class                      	| File                   		| Handles                                                                                                   							      |
+  |-------------------------------------|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | PopulateNetlist        	| slang_frontend.cc:1288 	| ProceduralBlockSymbol, InstanceSymbol, PortSymbol, NetSymbol, ContinuousAssignSymbol, GenerateBlockSymbol |
+  | StatementExecutor      	| statements.h           	| ConditionalStatement, CaseStatement, ForLoopStatement, BlockStatement, etc.                               				|
+  | InferredMemoryDetector | memory.h               	| ElementSelectExpression, RangeSelectExpression                                                            					|
+
+  Call Chain Example
+
+  SlangFrontend::execute()
+	└─ netlist.realm.visit(populate)           // Entry point
+		 └─ PopulateNetlist::handle(InstanceBodySymbol)
+			  ├─ detect_memories(body)
+			  ├─ add_internal_wires(body)
+			  └─ visitDefault(body)            // Visits members
+				   ├─ handle(ProceduralBlockSymbol) → interpret() → handle_ff_process()
+				   ├─ handle(InstanceSymbol)   → creates RTLIL::Cell
+				   ├─ handle(ContinuousAssignSymbol) → wire connections
+				   └─ handle(PortSymbol)       → marks port direction
+
+  Why You Don't See Explicit Calls
+
+  The handle() methods are never called directly in your code. Instead:
+  1. You call .visit(visitor) on an AST node
+  2. The templated ASTVisitor::visit<T>() checks at compile-time if handle(T) exists
+  3. If it exists, it's called automatically via template dispatch
+
+  This is why searching for handle( calls won't find invocations—they're resolved at template instantiation time, not as regular function calls.

@@ -1,0 +1,98 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-10T20:31:06+00:00
+
+====== Symbols not handled ======
+Created Wednesday 10 December 2025
+
+===== Symbols from your list that ARE handled (36 total): =====
+
+  1. ProceduralBlockSymbol
+  2. NetSymbol
+  3. PortSymbol
+  4. MultiPortSymbol
+  5. InstanceSymbol
+  6. ContinuousAssignSymbol
+  7. GenerateBlockSymbol
+  8. GenerateBlockArraySymbol
+  9. InstanceBodySymbol
+  10. UninstantiatedDefSymbol
+  11. ClockingBlockSymbol
+  12. Type (not a Symbol, but handled)
+  13. NetType (not a Symbol, but handled)
+  14. ForwardingTypedefSymbol
+  15. TransparentMemberSymbol
+  16. SubroutineSymbol
+  17. ParameterSymbol
+  18. TypeParameterSymbol
+  19. WildcardImportSymbol
+  20. ExplicitImportSymbol
+  21. GenvarSymbol
+  22. VariableSymbol
+  23. EmptyMemberSymbol
+  24. ModportSymbol
+  25. InterfacePortSymbol
+  26. GenericClassDefSymbol
+  27. LetDeclSymbol
+  28. SpecparamSymbol
+  29. DefParamSymbol
+  30. SpecifyBlockSymbol
+  31. StatementBlockSymbol
+  32. InstanceArraySymbol
+  33. PrimitiveInstanceSymbol
+  34. PropertySymbol
+  35. Symbol (catch-all handler)
+
+===== Symbols NOT handled (32 total): =====
+
+  | Symbol Type               | Header File              |
+  |---------------------------|--------------------------|
+  | Checker Symbols           |                          |
+  | CheckerSymbol             | CheckerSymbols.h         |
+  | CheckerInstanceSymbol     | CheckerSymbols.h         |
+  | CheckerInstanceBodySymbol | CheckerSymbols.h         |
+  | Class Symbols             |                          |
+  | ClassPropertySymbol       | ClassSymbols.h           |
+  | ConstraintBlockSymbol     | ClassSymbols.h           |
+  | Compilation Unit Symbols  |                          |
+  | CompilationUnitSymbol     | CompilationUnitSymbols.h |
+  | PackageSymbol             | CompilationUnitSymbols.h |
+  | RootSymbol                | CompilationUnitSymbols.h |
+  | DefinitionSymbol          | CompilationUnitSymbols.h |
+  | ConfigBlockSymbol         | CompilationUnitSymbols.h |
+  | Cover Symbols             |                          |
+  | CovergroupBodySymbol      | CoverSymbols.h           |
+  | CoverageBinSymbol         | CoverSymbols.h           |
+  | CoverpointSymbol          | CoverSymbols.h           |
+  | CoverCrossBodySymbol      | CoverSymbols.h           |
+  | CoverCrossSymbol          | CoverSymbols.h           |
+  | Member Symbols            |                          |
+  | ModportPortSymbol         | MemberSymbols.h          |
+  | ModportClockingSymbol     | MemberSymbols.h          |
+  | ElabSystemTaskSymbol      | MemberSymbols.h          |
+  | PrimitivePortSymbol       | MemberSymbols.h          |
+  | PrimitiveSymbol           | MemberSymbols.h          |
+  | AssertionPortSymbol       | MemberSymbols.h          |
+  | SequenceSymbol            | MemberSymbols.h          |
+  | RandSeqProductionSymbol   | MemberSymbols.h          |
+  | AnonymousProgramSymbol    | MemberSymbols.h          |
+  | NetAliasSymbol            | MemberSymbols.h          |
+  | Subroutine Symbols        |                          |
+  | MethodPrototypeSymbol     | SubroutineSymbols.h      |
+  | Variable Symbols          |                          |
+  | FormalArgumentSymbol      | VariableSymbols.h        |
+  | FieldSymbol               | VariableSymbols.h        |
+  | IteratorSymbol            | VariableSymbols.h        |
+  | PatternVarSymbol          | VariableSymbols.h        |
+  | ClockVarSymbol            | VariableSymbols.h        |
+  | LocalAssertionVarSymbol   | VariableSymbols.h        |
+  | Specify Symbols           |                          |
+  | TimingPathSymbol          | SpecifySymbols.h         |
+  | PulseStyleSymbol          | SpecifySymbols.h         |
+  | SystemTimingCheckSymbol   | SpecifySymbols.h         |
+  | Type Symbols              |                          |
+  | EnumValueSymbol           | AllTypes.h               |
+  | AttributeSymbol           | AttributeSymbol.h        |
+
+
+

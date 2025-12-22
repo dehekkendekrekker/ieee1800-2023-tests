@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:19:43+00:00
+
+====== concurrent assertion statement ======
+Created Tuesday 16 December 2025
+
+IEEE 1800-2023 Section A.2.10
+
+concurrent_assertion_statement ::=
+	[[assert property statement]]
+	| [[assume property statement]]
+	| [[cover property statement]]
+	| [[cover sequence statement]]
+	| [[restrict property statement]]
+
+===== SVA-relevant paths =====
+
+==== assert_property_statement ====
+[[assert property statement]]
+
+==== assume_property_statement ====
+[[assume property statement]]
+
+==== cover_property_statement ====
+[[cover property statement]]
+
+==== cover_sequence_statement ====
+[[cover sequence statement]]
+
+==== restrict_property_statement ====
+[[restrict property statement]]
+
+===== Backlinks =====
+[[concurrent assertion item]]
+[[procedural assertion statement]]
+

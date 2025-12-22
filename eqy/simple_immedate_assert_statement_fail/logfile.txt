@@ -1,0 +1,20 @@
+EQY 19:46:05 [simple_immedate_assert_statement_fail] read_gold: starting process "yosys -ql simple_immedate_assert_statement_fail/gold.log simple_immedate_assert_statement_fail/gold.ys"
+EQY 19:46:05 [simple_immedate_assert_statement_fail] read_gold: finished (returncode=0)
+EQY 19:46:05 [simple_immedate_assert_statement_fail] read_gate: starting process "yosys -ql simple_immedate_assert_statement_fail/gate.log simple_immedate_assert_statement_fail/gate.ys"
+EQY 19:46:05 [simple_immedate_assert_statement_fail] read_gate: Warning: Wire simple_immediate_assert_statement.$1 is used but has no driver.
+EQY 19:46:05 [simple_immedate_assert_statement_fail] read_gate: finished (returncode=0)
+EQY 19:46:05 [simple_immedate_assert_statement_fail] combine: starting process "yosys -ql simple_immedate_assert_statement_fail/combine.log simple_immedate_assert_statement_fail/combine.ys"
+EQY 19:46:05 [simple_immedate_assert_statement_fail] combine: finished (returncode=0)
+EQY 19:46:05 [simple_immedate_assert_statement_fail] partition: starting process "cd simple_immedate_assert_statement_fail; yosys -ql partition.log partition.ys"
+EQY 19:46:05 [simple_immedate_assert_statement_fail] partition: finished (returncode=0)
+EQY 19:46:05 [simple_immedate_assert_statement_fail] run: starting process "make -C simple_immedate_assert_statement_fail -f strategies.mk"
+EQY 19:46:05 [simple_immedate_assert_statement_fail] run: make: Entering directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/simple_immedate_assert_statement_fail'
+EQY 19:46:05 [simple_immedate_assert_statement_fail] run: make -f strategies.mk summary
+EQY 19:46:05 [simple_immedate_assert_statement_fail] run: make[1]: Entering directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/simple_immedate_assert_statement_fail'
+EQY 19:46:05 [simple_immedate_assert_statement_fail] run: make[1]: Leaving directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/simple_immedate_assert_statement_fail'
+EQY 19:46:05 [simple_immedate_assert_statement_fail] run: make: Leaving directory '/home/dhk/projects/verilog-1800-2003-tests/eqy/simple_immedate_assert_statement_fail'
+EQY 19:46:05 [simple_immedate_assert_statement_fail] run: finished (returncode=0)
+EQY 19:46:05 [simple_immedate_assert_statement_fail] Successfully proved designs equivalent
+EQY 19:46:05 [simple_immedate_assert_statement_fail] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+EQY 19:46:05 [simple_immedate_assert_statement_fail] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+EQY 19:46:05 [simple_immedate_assert_statement_fail] DONE (PASS, rc=0)

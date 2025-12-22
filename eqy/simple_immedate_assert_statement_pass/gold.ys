@@ -1,0 +1,7 @@
+read_rtlil ../rtlil/verific/simple_immediate_assert_statement_pass.il
+hierarchy -auto-top
+proc
+opt_clean
+check -initdrv
+setundef -undriven -undef
+write_rtlil simple_immedate_assert_statement_pass/gold.il

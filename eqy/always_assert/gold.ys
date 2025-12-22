@@ -1,0 +1,7 @@
+read_rtlil ../rtlil/verific/always_assert.il
+hierarchy -auto-top
+proc
+opt_clean
+check -initdrv
+setundef -undriven -undef
+write_rtlil always_assert/gold.il

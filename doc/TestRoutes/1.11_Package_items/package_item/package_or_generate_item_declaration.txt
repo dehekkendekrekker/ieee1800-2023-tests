@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T22:52:39+00:00
+
+====== package or generate item declaration ======
+Created Tuesday 16 December 2025
+
+net_declaration
+data_declaration
+task_declaration
+function_declaration
+checker_declaration
+dpi_import_export
+extern_constraint_declaration
+class_declaration
+interface_class_declaration
+class_constructor_declaration
+local_parameter_declaration ;
+parameter_declaration ;
+covergroup_declaration
+[[2.10 Assertion declarations:assertion item declaration]]
+;

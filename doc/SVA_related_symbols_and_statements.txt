@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-10T20:49:31+00:00
+
+====== SVA related symbols and statements ======
+Created Wednesday 10 December 2025
+
+  SVA-Related Symbols (from your earlier list)
+
+  | Symbol                  | SVA Relationship                                   |
+  |-------------------------|----------------------------------------------------|
+  | PropertySymbol          | Core SVA - Named property declarations             |
+  | SequenceSymbol          | Core SVA - Named sequence declarations             |
+  | AssertionPortSymbol     | Core SVA - Ports for sequences/properties          |
+  | LocalAssertionVarSymbol | Core SVA - Local variables in sequences/properties |
+  | ClockingBlockSymbol     | SVA-related - Clocking blocks often used with SVA  |
+  | ClockVarSymbol          | SVA-related - Clocking variables                   |
+
+  Current Handling in Your Code
+
+  In StatementExecutor:
+
+  void handle(const ast::ConcurrentAssertionStatement &stmt)
+  {
+	  if (!netlist.settings.ignore_assertions.value_or(false)) {
+		  if (stmt.assertionKind == ast::AssertionKind::Expect) {
+			  netlist.add_diag(diag::ExpectStatementUnsupported, stmt.sourceRange);
+		  } else {
+			  netlist.add_diag(diag::SVAUnsupported, stmt.sourceRange);
+		  }
+	  }
+  }
+
+  This correctly identifies concurrent assertions as unsupported SVA.
+
+  For immediate assertions, your code does support the synthesizable subset:
+  void handle(const ast::ImmediateAssertionStatement &stmt)
+  {
+	  // Supports Assert, Assume, CoverProperty
+	  // Maps to $check cells
+  }
+
+  Summary
+
+  Pure SVA (temporal/concurrent):
+  - ConcurrentAssertionStatement
+  - PropertySymbol
+  - SequenceSymbol
+  - AssertionPortSymbol
+  - LocalAssertionVarSymbol
+
+  SVA-adjacent (synthesizable):
+  - ImmediateAssertionStatement - Already handled in your code
+
+  SVA-related infrastructure:
+  - ClockingBlockSymbol
+  - ClockVarSymbol

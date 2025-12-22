@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:41:09+00:00
+
+====== checker or generate item ======
+Created Tuesday 16 December 2025
+
+[[checker or item declaration]]
+[[initial construct]]
+[[always construct]]
+[[final construct]]
+[[assertion item]]
+continuous_assign
+checker_generate_item

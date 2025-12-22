@@ -1,0 +1,99 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60+8 (git sha1 0e31e389f, clang++ 21.1.6 -fPIC -O3)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing SLANG frontend.
+
+1.1. Executing UNDRIVEN pass. (resolve undriven signals)
+<suppressed ~1 debug messages>
+
+1.2. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+1.3. Executing TRIBUF pass.
+
+1.4. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+1.5. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+1.6. Executing PROC_INIT pass (extract init attributes).
+
+1.7. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+1.8. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+1.9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+1.10. Executing OPT_EXPR pass (perform const folding).
+Optimizing module simple_immediate_assert_statement.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `simple_immediate_assert_statement'. Setting top module to simple_immediate_assert_statement.
+
+2.1. Analyzing design hierarchy..
+Top module:  \simple_immediate_assert_statement
+
+2.2. Analyzing design hierarchy..
+Top module:  \simple_immediate_assert_statement
+Removed 0 unused modules.
+Module simple_immediate_assert_statement directly or indirectly contains formal properties -> setting "keep" attribute.
+
+autoidx 1
+
+attribute \src "simple_immediate_assert_statement_pass.sv:4.8"
+attribute \top 1
+attribute \keep 1
+module \simple_immediate_assert_statement
+
+  attribute \hdlname "dummy"
+  attribute \src "simple_immediate_assert_statement_pass.sv:4.48"
+  wire input 1 \dummy
+
+  wire $1
+
+  attribute \src "simple_immediate_assert_statement_pass.sv:6.9-6.19"
+  cell $check $0
+    parameter \TRG_ENABLE 1
+    parameter \TRG_WIDTH 0
+    parameter \TRG_POLARITY 0'x
+    parameter \FLAVOR "assert"
+    parameter \FORMAT ""
+    parameter \ARGS_WIDTH 0
+    parameter \PRIORITY 32'11111111111111111111111111111111
+    connect \EN $1
+    connect \TRG { }
+    connect \ARGS { }
+    connect \A 1'1
+  end
+end
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `simple_immediate_assert_statement'. Setting top module to simple_immediate_assert_statement.
+
+3.1. Analyzing design hierarchy..
+Top module:  \simple_immediate_assert_statement
+
+3.2. Analyzing design hierarchy..
+Top module:  \simple_immediate_assert_statement
+Removed 0 unused modules.
+Module simple_immediate_assert_statement directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: b1875daa66, CPU: user 0.01s system 0.01s, MEM: 29.88 MB peak
+Yosys 0.60+8 (git sha1 0e31e389f, clang++ 21.1.6 -fPIC -O3)
+Time spent: 46% 2x read_slang (0 sec), 42% 1x plugin (0 sec), ...

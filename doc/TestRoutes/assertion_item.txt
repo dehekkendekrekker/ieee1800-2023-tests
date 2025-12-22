@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:24:35+00:00
+
+====== assertion item ======
+Created Tuesday 16 December 2025
+
+[[2.10 Assertion declarations:concurrent assertion item]]
+[[deferred immediate assertion item]]
+
+
+====== Backlnks ======
+[[module common item]]
+[[checker or generate item]]

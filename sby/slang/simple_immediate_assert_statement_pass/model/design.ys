@@ -1,0 +1,10 @@
+# running in ./simple_immediate_assert_statement_pass/src/
+plugin -i slang
+read_slang simple_immediate_assert_statement_pass.sv
+hierarchy -auto-top
+dump
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

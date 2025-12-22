@@ -6,6 +6,7 @@ proc
 [gate]
 read_rtlil ../rtlil/slang/simple_immediate_assert_statement_fail.il
 hierarchy -auto-top
+proc
 
 [strategy sby]
 use sby

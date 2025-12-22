@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:36:43+00:00
+
+====== module common item ======
+Created Tuesday 16 December 2025
+
+module_or_generate_item_declaration
+interface_instantiation
+program_instantiation
+[[assertion item]]
+bind_directive
+continuous_assign
+net_alias
+initial_construct
+final_construct
+always_construct
+loop_generate_construct
+conditional_generate_construct
+elaboration_severity_system_task

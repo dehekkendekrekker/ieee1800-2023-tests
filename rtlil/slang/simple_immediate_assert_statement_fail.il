@@ -3,4 +3,22 @@ autoidx 1
 attribute \src "../tests/simple_immediate_assert_statement_fail.sv:4.8"
 attribute \top 1
 module \simple_immediate_assert_statement
+  attribute \hdlname "dummy"
+  attribute \src "../tests/simple_immediate_assert_statement_fail.sv:4.48"
+  wire input 1 \dummy
+  wire $1
+  attribute \src "../tests/simple_immediate_assert_statement_fail.sv:6.9-6.19"
+  cell $check $0
+    parameter \TRG_ENABLE 1
+    parameter \TRG_WIDTH 0
+    parameter \TRG_POLARITY 0'x
+    parameter \FLAVOR "assert"
+    parameter \FORMAT ""
+    parameter \ARGS_WIDTH 0
+    parameter \PRIORITY 32'11111111111111111111111111111111
+    connect \EN $1
+    connect \TRG { }
+    connect \ARGS { }
+    connect \A 1'0
+  end
 end

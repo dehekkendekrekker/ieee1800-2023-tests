@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:27:16+00:00
+
+====== statement item ======
+Created Tuesday 16 December 2025
+
+blocking_assignment ;
+nonblocking_assignment ;
+procedural_continuous_assignment ;
+case_statement
+conditional_statement
+subroutine_call_statement
+disable_statement
+event_trigger
+loop_statement
+jump_statement
+par_block
+procedural_timing_control_statement
+seq_block
+wait_statement
+[[procedural assertion statement]]
+clocking_drive ;
+randsequence_statement
+randcase_statement
+expect_property_statement
+
+===== Backlinks =====
+[[statement]]

@@ -1,0 +1,364 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-10T18:39:28+00:00
+
+====== Home ======
+Created Wednesday 10 December 2025
+
+
+===== Overview =====
+
+  Slang is a complete SystemVerilog frontend that fully parses and elaborates SVA (SystemVerilog
+  Assertions). To implement SVA export for Yosys, you need to traverse the AST and convert Slang's assertion
+   representations to Yosys's internal format.
+
+===== Key Entry Points =====
+
+==== 1. Getting Assertions from the Compilation ====
+
+  #include "slang/ast/Compilation.h"
+  #include "slang/ast/ASTVisitor.h"
+
+  // After parsing:
+  Compilation compilation;
+  compilation.addSyntaxTree(tree);
+
+  // Get the root and traverse
+  const RootSymbol& root = compilation.getRoot();
+
+==== 2. Finding Assertions in the Design ====
+
+=== Assertions appear in two forms: ===
+
+  A. Concurrent Assertion Statements (ConcurrentAssertionStatement)
+  - Located in procedural blocks (always, initial, etc.)
+  - File: include/slang/ast/statements/MiscStatements.h:179-222
+
+  class ConcurrentAssertionStatement final : public Statement {
+	  const AssertionExpr& propertySpec;  // The actual SVA property
+	  const Statement* ifTrue;             // Action on pass
+	  const Statement* ifFalse;            // Action on fail  
+	  AssertionKind assertionKind;         // assert/assume/cover
+  };
+
+  B. Assertion Instance Expressions (AssertionInstanceExpression)
+  - Property/sequence instantiations
+  - File: include/slang/ast/expressions/MiscExpressions.h:224-277
+
+  class AssertionInstanceExpression final : public Expression {
+	  const Symbol& symbol;           // The sequence/property being instantiated
+	  const AssertionExpr& body;      // Expanded body
+	  std::span<...> arguments;       // Formal-actual port bindings
+	  std::span<const LocalAssertionVarSymbol* const> localVars;
+	  bool isRecursiveProperty;
+  };
+
+===== Core SVA Data Structures =====
+
+  AssertionExpr Hierarchy (include/slang/ast/expressions/AssertionExpr.h)
+
+  This is the core class hierarchy for all SVA constructs:
+
+  enum class AssertionExprKind {
+	  Invalid,
+	  Simple,           // Boolean expression (base case)
+	  SequenceConcat,   // s1 ##1 s2 ##[2:5] s3
+	  SequenceWithMatch,// (seq, match_items) repetition
+	  Unary,            // not, always, eventually, nexttime, s_*
+	  Binary,           // and, or, implies, |=>, |->  etc.
+	  FirstMatch,       // first_match(seq)
+	  Clocking,         // @(posedge clk) property
+	  StrongWeak,       // strong(seq), weak(seq)
+	  Abort,            // accept_on, reject_on, sync_*
+	  Conditional,      // if-else in property
+	  Case,             // case property
+	  DisableIff        // disable iff (cond)
+  };
+
+==== Key Concrete Classes ====
+
+  1. SimpleAssertionExpr - Base Boolean Expressions
+
+  class SimpleAssertionExpr final : public AssertionExpr {
+	  const Expression& expr;                          // The actual boolean expression
+	  std::optional<SequenceRepetition> repetition;    // Optional [*n], [->n], [=n]
+	  bool isNullExpr;                                 // Known false constant
+  };
+
+  Yosys mapping: This becomes a combinational signal check.
+
+  2. SequenceConcatExpr - Delay Concatenation (##)
+
+  class SequenceConcatExpr final : public AssertionExpr {
+	  struct Element {
+		  SequenceRange delay;           // ##1, ##[2:5], ##[*]
+		  SourceRange delayRange;
+		  not_null<const AssertionExpr*> sequence;
+	  };
+	  std::span<const Element> elements;
+  };
+
+  Yosys mapping: This creates a chain of delay elements (shift registers or counters).
+
+  3. BinaryAssertionExpr - Binary Operators
+
+  enum class BinaryAssertionOperator {
+	  And, Or, Intersect, Throughout, Within,    // Sequence operators
+	  Iff, Until, SUntil, UntilWith, SUntilWith, // Property operators
+	  Implies,                                    // property -> property
+	  OverlappedImplication,                     // |->
+	  NonOverlappedImplication,                  // |=>
+	  OverlappedFollowedBy,                      // #-#
+	  NonOverlappedFollowedBy                    // #=#
+  };
+
+  class BinaryAssertionExpr final : public AssertionExpr {
+	  BinaryAssertionOperator op;
+	  const AssertionExpr& left;
+	  const AssertionExpr& right;
+  };
+
+  Yosys mapping:
+  - |-> (overlapped): antecedent match triggers consequent check same cycle
+  - |=> (non-overlapped): antecedent match triggers consequent check next cycle
+  - and/or: parallel assertion engines
+
+  4. UnaryAssertionExpr - Temporal Operators
+
+  enum class UnaryAssertionOperator {
+	  Not,                    // Negation
+	  NextTime, SNextTime,    // nexttime, s_nexttime
+	  Always, SAlways,        // always, s_always  
+	  Eventually, SEventually // eventually, s_eventually
+  };
+
+  class UnaryAssertionExpr final : public AssertionExpr {
+	  UnaryAssertionOperator op;
+	  const AssertionExpr& expr;
+	  std::optional<SequenceRange> range;  // For bounded operators
+  };
+
+  Yosys mapping:
+  - always → invariant check every cycle
+  - eventually → liveness check (needs bounded model checking or k-induction)
+  - nexttime → single cycle delay
+
+  5. ClockingAssertionExpr - Clock Domain
+
+  class ClockingAssertionExpr final : public AssertionExpr {
+	  const TimingControl& clocking;   // @(posedge clk), @(event_expr)
+	  const AssertionExpr& expr;
+  };
+
+  Critical for Yosys: Extract the clock signal for synchronous assertion checking.
+
+  6. DisableIffAssertionExpr - Reset/Disable Condition
+
+  class DisableIffAssertionExpr final : public AssertionExpr {
+	  const Expression& condition;    // The disable condition (often reset)
+	  const AssertionExpr& expr;
+  };
+
+  Yosys mapping: When condition is true, assertion is disabled (no pass/fail).
+
+  7. AbortAssertionExpr - Accept/Reject Conditions
+
+  class AbortAssertionExpr final : public AssertionExpr {
+	  const Expression& condition;
+	  const AssertionExpr& expr;
+	  enum Action { Accept, Reject } action;
+	  bool isSync;
+  };
+
+  Timing and Delay Structures
+
+  SequenceRange
+
+  struct SequenceRange {
+	  uint32_t min = 1;
+	  std::optional<uint32_t> max;  // Empty = unbounded ($)
+
+	  bool canIntersect(const SequenceRange& other) const;
+	  bool canBeWithin(const SequenceRange& other) const;
+  };
+
+  SequenceRepetition
+
+  struct SequenceRepetition {
+	  enum Kind {
+		  Consecutive,     // [*n] - every cycle
+		  Nonconsecutive,  // [=n] - may have gaps
+		  GoTo             // [->n] - goto repetition
+	  } kind;
+	  SequenceRange range;
+
+	  SequenceRange applyTo(SequenceRange other) const;
+  };
+
+  Timing Controls (include/slang/ast/TimingControl.h)
+
+  enum class TimingControlKind {
+	  Invalid, Delay, SignalEvent, EventList,
+	  ImplicitEvent, RepeatedEvent, Delay3,
+	  OneStepDelay, CycleDelay, BlockEventList
+  };
+
+  // Key class for clock extraction:
+  class SignalEventControl final : public TimingControl {
+	  const Expression& expr;          // The signal
+	  const Expression* iffCondition;  // Optional gating
+	  EdgeKind edge;                   // posedge/negedge/edge
+  };
+
+  Traversal Pattern for Yosys Export
+
+  Using the Visitor Pattern
+
+  #include "slang/ast/ASTVisitor.h"
+
+  class SVAToYosysVisitor : public ASTVisitor<SVAToYosysVisitor, true, true> {
+  public:
+	  // Handle concurrent assertions
+	  void handle(const ConcurrentAssertionStatement& stmt) {
+		  // Get assertion kind (assert/assume/cover)
+		  AssertionKind kind = stmt.assertionKind;
+
+		  // Get the property specification
+		  const AssertionExpr& prop = stmt.propertySpec;
+
+		  // Process the property tree
+		  processAssertionExpr(prop);
+	  }
+
+	  // Handle assertion expressions recursively
+	  void processAssertionExpr(const AssertionExpr& expr) {
+		  expr.visit(*this);  // Dispatch to correct handler
+	  }
+
+	  void handle(const SimpleAssertionExpr& expr) {
+		  // Convert expr.expr to Yosys signal
+		  // Handle expr.repetition if present
+	  }
+
+	  void handle(const BinaryAssertionExpr& expr) {
+		  switch (expr.op) {
+			  case BinaryAssertionOperator::OverlappedImplication:
+				  // Build antecedent -> consequent (same cycle)
+				  break;
+			  case BinaryAssertionOperator::NonOverlappedImplication:
+				  // Build antecedent -> consequent (next cycle)
+				  break;
+			  // ... other cases
+		  }
+		  processAssertionExpr(expr.left);
+		  processAssertionExpr(expr.right);
+	  }
+
+	  void handle(const SequenceConcatExpr& expr) {
+		  for (auto& elem : expr.elements) {
+			  // elem.delay gives you ##n or ##[m:n]
+			  // elem.sequence gives you the sub-expression
+		  }
+	  }
+
+	  void handle(const ClockingAssertionExpr& expr) {
+		  // Extract clock from expr.clocking
+		  if (auto* sigEvent = expr.clocking.as_if<SignalEventControl>()) {
+			  // sigEvent->expr is the clock signal
+			  // sigEvent->edge is posedge/negedge
+		  }
+		  processAssertionExpr(expr.expr);
+	  }
+
+	  void handle(const DisableIffAssertionExpr& expr) {
+		  // expr.condition is the reset/disable signal
+		  processAssertionExpr(expr.expr);
+	  }
+  };
+
+  Using makeVisitor for Quick Traversal
+
+  auto visitor = makeVisitor(
+	  [&](auto& self, const ConcurrentAssertionStatement& stmt) {
+		  // Process assertion
+		  stmt.propertySpec.visit(self);
+	  },
+	  [&](auto& self, const SimpleAssertionExpr& expr) {
+		  // Convert to Yosys cell
+	  },
+	  [&](auto& self, const BinaryAssertionExpr& expr) {
+		  // Handle binary operators
+		  expr.left.visit(self);
+		  expr.right.visit(self);
+	  }
+	  // ... more handlers
+  );
+
+  compilation.getRoot().visit(visitor);
+
+  Using AnalyzedAssertion for Clock Information
+
+  For multi-clocked assertions, use the analysis infrastructure:
+
+  #include "slang/analysis/AnalyzedAssertion.h"
+  #include "slang/analysis/AnalysisManager.h"
+
+  // Get clock for any sub-expression
+  AnalyzedAssertion analyzed(...);
+  const TimingControl* clock = analyzed.getClock(someSubExpr);
+  // Returns nullptr if multi-clocked (examine children)
+
+  Symbol Types for Named Sequences/Properties
+
+  // include/slang/ast/symbols/MemberSymbols.h
+
+  class SequenceSymbol final : public Symbol, public Scope {
+	  std::span<const AssertionPortSymbol* const> ports;
+  };
+
+  class PropertySymbol final : public Symbol, public Scope {
+	  std::span<const AssertionPortSymbol* const> ports;
+  };
+
+  class AssertionPortSymbol final : public ValueSymbol {
+	  std::optional<ArgumentDirection> direction;  // For local vars
+  };
+
+  Expression Evaluation
+
+  For constant delay values:
+
+  const Expression& delayExpr = ...;
+  ASTContext ctx(...);
+  ConstantValue cv = ctx.tryEval(delayExpr);
+  if (cv) {
+	  // cv.integer() gives you the constant value
+  }
+
+  Practical Implementation Steps
+
+  1. Collect all assertions: Walk the design with ASTVisitor, collecting ConcurrentAssertionStatement nodes
+  2. Extract clocks: For each assertion, find the ClockingAssertionExpr or use
+  AnalyzedAssertion::getSemanticLeadingClock()
+  3. Extract reset/disable: Look for DisableIffAssertionExpr nodes
+  4. Convert property tree: Recursively convert AssertionExpr nodes to Yosys cells:
+	- SimpleAssertionExpr → combinational check
+	- SequenceConcatExpr → delay chain (FFs)
+	- BinaryAssertionExpr with |-> → implication checker
+	- Repetition → counters or unrolled logic
+  5. Handle assertion types:
+	- AssertionKind::Assert → safety property (must hold)
+	- AssertionKind::Assume → environment constraint
+	- AssertionKind::Cover → reachability target
+
+  Key Files Reference
+
+  | File                                            | Purpose                     |
+  |-------------------------------------------------|-----------------------------|
+  | include/slang/ast/expressions/AssertionExpr.h   | All SVA expression types    |
+  | include/slang/ast/statements/MiscStatements.h   | Assertion statements        |
+  | include/slang/ast/TimingControl.h               | Clock/timing controls       |
+  | include/slang/ast/ASTVisitor.h                  | Traversal infrastructure    |
+  | include/slang/analysis/AnalyzedAssertion.h      | Clock analysis              |
+  | include/slang/ast/symbols/MemberSymbols.h       | Sequence/Property symbols   |
+  | include/slang/ast/expressions/MiscExpressions.h | AssertionInstanceExpression |

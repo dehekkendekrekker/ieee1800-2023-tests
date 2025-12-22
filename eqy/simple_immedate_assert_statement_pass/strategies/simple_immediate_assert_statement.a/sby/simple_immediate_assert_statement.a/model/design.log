@@ -1,0 +1,154 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite -- YosysHQ Edition [202512030840]     |
+ |  Copyright (C) 2012 - 2025 YosysHQ GmbH                                    |
+ |  For support, please contact support@yosyshq.com                           |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60 (git sha1 5bafeb77d, clang++ 18.1.8 -fPIC -O3)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: ../../../../../partitions/simple_immediate_assert_statement.a.sv
+Parsing SystemVerilog input from `../../../../../partitions/simple_immediate_assert_statement.a.sv' to AST representation.
+verilog frontend filename ../../../../../partitions/simple_immediate_assert_statement.a.sv
+Generating RTLIL representation for module `\miter'.
+Generating RTLIL representation for module `\miter_cmp_prop'.
+Generating RTLIL representation for module `\miter_def_prop'.
+Generating RTLIL representation for module `\gold.simple_immediate_assert_statement.a'.
+Generating RTLIL representation for module `\gate.simple_immediate_assert_statement.a'.
+Successfully finished Verilog frontend.
+
+2. Executing RTLIL frontend.
+Input filename: ../../../../../partitions/simple_immediate_assert_statement.a.il
+Replacing existing blackbox module \gold.simple_immediate_assert_statement.a.
+Replacing existing blackbox module \gate.simple_immediate_assert_statement.a.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     \miter_cmp_prop
+Used module:     \gate.simple_immediate_assert_statement.a
+Used module:     \gold.simple_immediate_assert_statement.a
+Parameter 1 (\WIDTH) = 1
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\miter_cmp_prop'.
+Parameter 1 (\WIDTH) = 1
+Parameter 2 (\TYPE) = 48'011000010111001101110011011001010111001001110100
+Generating RTLIL representation for module `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop'.
+
+3.3. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop
+Used module:     \gate.simple_immediate_assert_statement.a
+Used module:     \gold.simple_immediate_assert_statement.a
+
+3.4. Analyzing design hierarchy..
+Top module:  \miter
+Used module:     $paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop
+Used module:     \gate.simple_immediate_assert_statement.a
+Used module:     \gold.simple_immediate_assert_statement.a
+Removing unused module `\miter_def_prop'.
+Removing unused module `\miter_cmp_prop'.
+Removed 2 unused modules.
+Module $paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop directly or indirectly contains formal properties -> setting "keep" attribute.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+Mapping positional arguments of cell miter.__po_a__assert ($paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop).
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 3 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../../../partitions/simple_immediate_assert_statement.a.sv:54$23'.
+Creating decoders for process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../../../partitions/simple_immediate_assert_statement.a.sv:48$18'.
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.\i' from process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../../../partitions/simple_immediate_assert_statement.a.sv:48$18'.
+No latch inferred for signal `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.\okay' from process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../../../partitions/simple_immediate_assert_statement.a.sv:48$18'.
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../../../partitions/simple_immediate_assert_statement.a.sv:54$23'.
+Removing empty process `$paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.$proc$../../../../../partitions/simple_immediate_assert_statement.a.sv:48$18'.
+Cleaned up 0 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gold.simple_immediate_assert_statement.a.
+Optimizing module $paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.
+<suppressed ~1 debug messages>
+Optimizing module gate.simple_immediate_assert_statement.a.
+Optimizing module miter.
+
+5. Executing ASYNC2SYNC pass.
+
+6. Executing FORMALFF pass.
+
+7. Executing SETUNDEF pass (replace undef values with defined constants).
+
+8. Executing FLATTEN pass (flatten design).
+Deleting now unused module gold.simple_immediate_assert_statement.a.
+Deleting now unused module $paramod$7c68cd0f50b67350b96c971f2e7bf39c83376225\miter_cmp_prop.
+Deleting now unused module gate.simple_immediate_assert_statement.a.
+<suppressed ~3 debug messages>
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+<suppressed ~1 debug messages>
+
+11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 1 unused cells and 8 unused wires.
+<suppressed ~4 debug messages>
+
+12. Executing XPROP pass.
+
+12.1. Executing BMUXMAP pass.
+
+12.2. Executing DEMUXMAP pass.
+Warning: Unhandled cell __po_a__assert ($scopeinfo) during maybe-x marking
+Warning: Unhandled cell gate ($scopeinfo) during maybe-x marking
+Warning: Unhandled cell gold ($scopeinfo) during maybe-x marking
+<suppressed ~5 debug messages>
+
+13. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `miter'. Setting top module to miter.
+
+13.1. Analyzing design hierarchy..
+Top module:  \miter
+
+13.2. Analyzing design hierarchy..
+Top module:  \miter
+Removed 0 unused modules.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+
+14. Executing jny backend.
+
+15. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+Warnings: 3 unique messages, 3 total
+End of script. Logfile hash: d1b1d6cea1, CPU: user 0.02s system 0.01s, MEM: 29.40 MB peak
+Yosys 0.60 (git sha1 5bafeb77d, clang++ 18.1.8 -fPIC -O3)
+Time spent: 30% 2x opt_expr (0 sec), 20% 2x read_verilog (0 sec), ...

@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:18:06+00:00
+
+====== cover sequence statement ======
+Created Tuesday 16 December 2025
+
+IEEE 1800-2023 Section A.2.10, 16.14
+
+cover_sequence_statement ::=
+	**cover sequence** ( [ clocking_event ] [ disable iff ( expression_or_dist ) ] [[sequence expr]] ) statement_or_null
+
+===== Permutations =====
+
+==== Permutation 1: sequence_expr only ====
+cover sequence ( sequence_expr ) statement_or_null
+
+==== Permutation 2: With clocking_event ====
+cover sequence ( @(posedge clk) sequence_expr ) statement_or_null
+
+==== Permutation 3: With disable iff ====
+cover sequence ( disable iff (reset) sequence_expr ) statement_or_null
+
+==== Permutation 4: With clocking_event and disable iff ====
+cover sequence ( @(posedge clk) disable iff (reset) sequence_expr ) statement_or_null
+
+===== statement_or_null permutations =====
+* With pass statement
+* Empty (null statement)
+
+===== Backlinks =====
+[[concurrent assertion statement]]
+

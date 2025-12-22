@@ -1,0 +1,11 @@
+plugin -i /home/dhk/tools/tabby/libexec/../share/yosys/plugins/eqy_combine.so
+read_rtlil always_assert/gold.il
+uniquify
+hierarchy
+design -stash gold
+read_rtlil always_assert/gate_recoded.il
+uniquify
+hierarchy
+design -stash gate
+eqy_combine -gold_ids always_assert/gold.ids -gate_ids always_assert/gate_recoded.ids
+write_rtlil always_assert/combined.il

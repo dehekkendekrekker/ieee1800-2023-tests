@@ -1,0 +1,65 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-10T20:39:15+00:00
+
+====== Statements not handled ======
+Created Wednesday 10 December 2025
+
+===== Statements HANDLED (16 total) =====
+
+  | Statement Class              | Handler                                    |
+  |------------------------------|--------------------------------------------|
+  | ImmediateAssertionStatement  | Full implementation                        |
+  | ConcurrentAssertionStatement | Warns unsupported (SVA)                    |
+  | ExpressionStatement          | eval(stmt.expr)                            |
+  | BlockStatement               | Visits body                                |
+  | StatementList                | Iterates and visits                        |
+  | ConditionalStatement         | Full implementation with SwitchHelper      |
+  | CaseStatement                | Full implementation with wildcards, inside |
+  | WhileLoopStatement           | Full unrolling implementation              |
+  | ForLoopStatement             | Full unrolling implementation              |
+  | EmptyStatement               | No-op (correct)                            |
+  | VariableSymbol               | Init non-static variables                  |
+  | VariableDeclStatement        | Visits symbol                              |
+  | BreakStatement               | Signals escape                             |
+  | ContinueStatement            | Signals escape                             |
+  | ReturnStatement              | Full implementation                        |
+  | TimedStatement               | Warns and visits stmt                      |
+  | WaitStatement                | Warns unsupported                          |
+  | Statement (catch-all)        | Warns unsupported                          |
+
+===== Statements MISSING (14 total) =====
+
+  | Statement Kind     | Class Name                  | Description                      |
+  |--------------------|-----------------------------|----------------------------------|
+  | Invalid            | InvalidStatement            | Error placeholder                |
+  | PatternCase        | PatternCaseStatement        | Pattern matching case            |
+  | RepeatLoop         | RepeatLoopStatement         | repeat(n) loop                   |
+  | ForeachLoop        | ForeachLoopStatement        | foreach loop                     |
+  | DoWhileLoop        | DoWhileLoopStatement        | do...while loop                  |
+  | ForeverLoop        | ForeverLoopStatement        | forever loop                     |
+  | Disable            | DisableStatement            | disable statement                |
+  | DisableFork        | DisableForkStatement        | disable fork                     |
+  | WaitFork           | WaitForkStatement           | wait fork                        |
+  | WaitOrder          | WaitOrderStatement          | wait_order                       |
+  | EventTrigger       | EventTriggerStatement       | -> / ->> event trigger           |
+  | ProceduralAssign   | ProceduralAssignStatement   | assign / force                   |
+  | ProceduralDeassign | ProceduralDeassignStatement | deassign / release               |
+  | RandCase           | RandCaseStatement           | randcase                         |
+  | RandSequence       | RandSequenceStatement       | randsequence                     |
+  | ProceduralChecker  | ProceduralCheckerStatement  | Procedural checker instantiation |
+
+  Summary
+
+  - Handled: 16 statement types (including catch-all)
+  - Missing: 16 statement types
+
+  The missing statements fall into several categories:
+  1. Loop variants: RepeatLoop, ForeachLoop, DoWhileLoop, ForeverLoop
+  2. Fork/process control: DisableFork, WaitFork, Disable
+  3. Event-related: EventTrigger, WaitOrder
+  4. Procedural assigns: ProceduralAssign, ProceduralDeassign
+  5. Randomization: RandCase, RandSequence
+  6. Pattern matching: PatternCase
+  7. Checker: ProceduralChecker
+  8. Error: Invalid

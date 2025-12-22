@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:38:52+00:00
+
+====== non port program item ======
+Created Tuesday 16 December 2025
+
+continuous_assign
+module_or_generate_item_declaration
+[[initial construct]]
+final_construct
+[[2.10 Assertion declarations:concurrent assertion item]]
+timeunits_declaration 3
+program_generate_item
