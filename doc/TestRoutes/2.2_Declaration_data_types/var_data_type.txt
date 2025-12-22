@@ -8,4 +8,5 @@ Created Wednesday 17 December 2025
 data_type
 var data_type_or_implicit
 
-
+===== Backlinks =====
+[[2.10 Assertion declarations:assertion variable declaration|assertion variable declaration]]

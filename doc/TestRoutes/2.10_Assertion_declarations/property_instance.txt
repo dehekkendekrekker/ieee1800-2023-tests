@@ -7,3 +7,5 @@ Created Tuesday 16 December 2025
 
  [[9.3 Identifiers:ps or hierarchical property identifier|ps or hierarchical property identifier]] [ ( [ [[property list of arguments]] ] ) ]
 
+===== Backlinks =====
+[[property expr]]

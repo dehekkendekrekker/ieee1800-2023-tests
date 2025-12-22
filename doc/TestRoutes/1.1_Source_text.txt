@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-22T00:00:00+00:00
+
+====== 1.1 Source text ======
+Created Sunday 22 December 2025
+
+IEEE 1800-2023 Section A.1.1 - A.1.8
+
+Source text grammar rules defining module, program, interface, and checker declarations.
+

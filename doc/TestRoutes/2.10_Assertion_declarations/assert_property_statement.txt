@@ -8,7 +8,7 @@ Created Sunday 22 December 2025
 IEEE 1800-2023 Section A.2.10, 16.14
 
 assert_property_statement ::=
-	**assert property** ( [[property spec]] ) [[action block]]
+	**assert property** ( [[property spec]] ) [[6.3 Parallel and sequential blocks:action block|action block]]
 
 ===== property_spec permutations =====
 [[property spec]] ::=
@@ -27,7 +27,7 @@ assert property ( disable iff (reset) property_expr ) action_block
 assert property ( @(posedge clk) disable iff (reset) property_expr ) action_block
 
 ===== action_block permutations =====
-Same as [[simple immediate assert statement]]:
+Same as [[6.10 Assertion statements:simple immediate assert statement|simple immediate assert statement]]:
 * Pass statement only
 * Else statement only
 * Both pass and else

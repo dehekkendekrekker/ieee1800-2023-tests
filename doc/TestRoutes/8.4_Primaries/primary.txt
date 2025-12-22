@@ -20,3 +20,6 @@ streaming_concatenation
 this
 $
 null
+
+===== Backlinks =====
+(referenced by expression rules - see IEEE 1800-2023 A.8.4)

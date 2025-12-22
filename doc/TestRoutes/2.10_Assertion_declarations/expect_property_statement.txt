@@ -33,5 +33,5 @@ expect ( @(posedge clk) disable iff (reset) property_expr ) action_block
 * Empty action
 
 ===== Backlinks =====
-[[statement item]]
+[[6.4 Statements:statement item|statement item]]
 

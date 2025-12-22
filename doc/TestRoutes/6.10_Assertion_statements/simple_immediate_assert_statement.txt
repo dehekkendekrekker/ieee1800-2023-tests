@@ -5,8 +5,9 @@ Creation-Date: 2025-12-16T21:07:25+00:00
 ====== simple immediate assert statement ======
 Created Tuesday 16 December 2025
 
-assert ( expression ) [[6.3 Parallel and sequential blocks:action block|action block]]
+**assert** ( expression ) [[6.3 Parallel and sequential blocks:action block|action block]]
 
 
 ===== Backlinks =====
 [[simple immediate assertion statement]]
+[[2.10 Assertion declarations:assert property statement|assert property statement]]

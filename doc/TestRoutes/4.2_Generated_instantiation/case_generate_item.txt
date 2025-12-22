@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-22T00:00:00+00:00
+
+====== case generate item ======
+Created Sunday 22 December 2025
+
+constant_expression { , constant_expression } : [[generate block]]
+| **default** [ : ] [[generate block]]
+
+===== Backlinks =====
+[[case generate construct]]

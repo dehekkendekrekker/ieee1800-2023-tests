@@ -8,6 +8,6 @@ Created Tuesday 16 December 2025
 final function_statement
 
 ===== Backlinks =====
-[[checker or generate item]]
-[[module common item]]
-[[non port program item]]
+[[1.1 Source text:checker or generate item|checker or generate item]]
+[[1.1 Source text:module common item|module common item]]
+[[1.1 Source text:non port program item|non port program item]]

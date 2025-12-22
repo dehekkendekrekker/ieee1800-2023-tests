@@ -5,10 +5,10 @@ Creation-Date: 2025-12-16T21:24:35+00:00
 ====== assertion item ======
 Created Tuesday 16 December 2025
 
-[[2.10 Assertion declarations:concurrent assertion item]]
+[[2.10 Assertion declarations:concurrent assertion item|concurrent assertion item]]
 [[deferred immediate assertion item]]
 
 
 ===== Backlinks =====
-[[module common item]]
-[[checker or generate item]]
+[[1.1 Source text:module common item|module common item]]
+[[1.1 Source text:checker or generate item|checker or generate item]]

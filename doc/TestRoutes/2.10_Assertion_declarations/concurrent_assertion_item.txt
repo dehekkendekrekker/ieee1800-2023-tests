@@ -9,7 +9,7 @@ IEEE 1800-2023 Section A.2.10
 
 concurrent_assertion_item ::=
 	[ block_identifier : ] [[concurrent assertion statement]]
-	| checker_instantiation
+	| [[4.1 Instantiations:checker instantiations|checker instantiation]]
 
 ===== Syntax permutations =====
 
@@ -20,13 +20,13 @@ label : concurrent_assertion_statement
 concurrent_assertion_statement
 
 ==== Permutation 3: Checker instantiation ====
-checker_instantiation
+[[4.1 Instantiations:checker instantiations|checker instantiation]]
 
 ===== SVA-relevant paths =====
 [[concurrent assertion statement]]
-checker_instantiation (outside SVA scope)
+[[4.1 Instantiations:checker instantiations|checker instantiation]]
 
 ===== Backlinks =====
-[[assertion item]]
-[[non port program item]]
+[[6.10 Assertion statements:assertion item|assertion item]]
+[[1.1 Source text:non port program item|non port program item]]
 

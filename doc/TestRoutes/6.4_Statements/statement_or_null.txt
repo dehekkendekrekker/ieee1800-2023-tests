@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T21:26:52+00:00
+
+====== statement or null ======
+Created Tuesday 16 December 2025
+
+[[statement]]
+{attribute_instance}
+
+
+===== Backlinks =====
+[[6.7 Procedural blocks and assignments:initial construct|initial construct]]
+[[6.3 Parallel and sequential blocks:action block|action block]]
+[[2.10 Assertion declarations:cover property statement|cover property statement]]

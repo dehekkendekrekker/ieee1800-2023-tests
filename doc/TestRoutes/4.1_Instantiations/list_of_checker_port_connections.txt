@@ -8,5 +8,5 @@ Created Tuesday 16 December 2025
 [[ordered checker port connection]] { , [[ordered checker port connection]] }
 [[named checker port connection]] { , [[named checker port connection]] }
 
-===== backlinks =====
+===== Backlinks =====
 [[checker instantiations]]

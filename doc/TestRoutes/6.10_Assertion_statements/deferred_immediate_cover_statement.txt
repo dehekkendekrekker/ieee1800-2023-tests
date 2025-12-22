@@ -5,8 +5,8 @@ Creation-Date: 2025-12-16T21:14:12+00:00
 ====== deferred immediate cover statement ======
 Created Tuesday 16 December 2025
 
-cover #0 ( expression ) [[statement or null]]
-| cover final ( expression ) [[statement or null]]
+cover #0 ( expression ) [[6.4 Statements:statement or null|statement or null]]
+| cover final ( expression ) [[6.4 Statements:statement or null|statement or null]]
 
 ===== Backlinks =====
 [[deferred immediate assertion statement]]

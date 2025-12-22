@@ -8,3 +8,5 @@ Created Tuesday 16 December 2025
 { attribute_instance } [ checker_port_direction ] [[2.10 Assertion declarations:property formal type|property formal type]] formal_port_identifier
 { variable_dimension } [ = [[2.10 Assertion declarations:property actual arg|property actual arg]] ]
 
+===== Backlinks =====
+[[1.1 Source text:checker delaration|checker declaration]]

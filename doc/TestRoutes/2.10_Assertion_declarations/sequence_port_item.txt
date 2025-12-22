@@ -8,5 +8,5 @@ Created Wednesday 17 December 2025
 { attribute_instance } [ **local** [ [[sequence lvar port direction]] ] ] [[sequence formal type]]
 formal_port_identifier { variable_dimension } [ **=** [[sequence actual arg]] ]
 
-===== Backlnks =====
+===== Backlinks =====
 [[sequence port list]]

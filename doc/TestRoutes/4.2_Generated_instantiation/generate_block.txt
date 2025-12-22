@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-22T00:00:00+00:00
+
+====== generate block ======
+Created Sunday 22 December 2025
+
+[[1.1 Source text:checker or generate item|checker or generate item]]
+| [ generate_block_identifier : ] **begin** [ : generate_block_identifier ]
+	{ [[1.1 Source text:checker or generate item|checker or generate item]] }
+  **end** [ : generate_block_identifier ]
+
+===== Backlinks =====
+[[loop generate construct]]
+[[generate block or null]]
+[[case generate item]]

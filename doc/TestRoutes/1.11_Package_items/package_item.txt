@@ -8,4 +8,7 @@ Created Tuesday 16 December 2025
 [[package or generate item declaration]]
 anonymous_program
 package_export_declaration
-timeunits_declaration 
+timeunits_declaration
+
+===== Backlinks =====
+(root node in package context - linked from package_declaration)

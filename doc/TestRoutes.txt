@@ -18,7 +18,7 @@ All SVA paths originate from source_text > description which leads to:
 * program_declaration
 * package_declaration
 
-These reach assertions via [[+module common item|module common item]].
+These reach assertions via [[+1.1 Source text:module common item|module common item]].
 
 
 ======================================================================
@@ -27,16 +27,16 @@ These reach assertions via [[+module common item|module common item]].
 
 ==== 1.1 Simple Immediate Assertions in initial block ====
 
-[[+initial construct|initial construct]] > [[+statement or null|statement or null]] > [[+statement|statement]] > [[+statement item|statement item]] > [[+procedural assertion statement|procedural assertion statement]] > [[+immediate assertion statement|immediate assertion statement]] > [[+simple immediate assertion statement|simple immediate assertion statement]] > [[+simple immediate assert statement|simple immediate assert statement]]
+[[+6.7 Procedural blocks and assignments:initial construct|initial construct]] > [[+6.4 Statements:statement or null|statement or null]] > [[+6.4 Statements:statement|statement]] > [[+6.4 Statements:statement item|statement item]] > [[+6.10 Assertion statements:procedural assertion statement|procedural assertion statement]] > [[+6.10 Assertion statements:immediate assertion statement|immediate assertion statement]] > [[+6.10 Assertion statements:simple immediate assertion statement|simple immediate assertion statement]] > [[+6.10 Assertion statements:simple immediate assert statement|simple immediate assert statement]]
 
-[[+initial construct|initial construct]] > ... > [[+simple immediate assume statement|simple immediate assume statement]]
+[[+6.7 Procedural blocks and assignments:initial construct|initial construct]] > ... > [[+6.10 Assertion statements:simple immediate assume statement|simple immediate assume statement]]
 
-[[+initial construct|initial construct]] > ... > [[+simple immediate cover statement|simple immediate cover statement]]
+[[+6.7 Procedural blocks and assignments:initial construct|initial construct]] > ... > [[+6.10 Assertion statements:simple immediate cover statement|simple immediate cover statement]]
 
 
 ==== 1.2 Simple Immediate Assertions in always block ====
 
-[[+always construct|always construct]] > [[+statement|statement]] > [[+statement item|statement item]] > [[+procedural assertion statement|procedural assertion statement]] > [[+immediate assertion statement|immediate assertion statement]] > [[+simple immediate assertion statement|simple immediate assertion statement]] > [[+simple immediate assert statement|simple immediate assert statement]]
+[[+6.7 Procedural blocks and assignments:always construct|always construct]] > [[+6.4 Statements:statement|statement]] > [[+6.4 Statements:statement item|statement item]] > [[+6.10 Assertion statements:procedural assertion statement|procedural assertion statement]] > [[+6.10 Assertion statements:immediate assertion statement|immediate assertion statement]] > [[+6.10 Assertion statements:simple immediate assertion statement|simple immediate assertion statement]] > [[+6.10 Assertion statements:simple immediate assert statement|simple immediate assert statement]]
 
 always_keyword permutations:
 * **always** @(event) statement
@@ -47,7 +47,7 @@ always_keyword permutations:
 
 ==== 1.3 Deferred Immediate Assertions ====
 
-[[+initial construct|initial construct]] > ... > [[+deferred immediate assertion statement|deferred immediate assertion statement]] > [[+deferred immediate assert statement|deferred immediate assert statement]]
+[[+6.7 Procedural blocks and assignments:initial construct|initial construct]] > ... > [[+6.10 Assertion statements:deferred immediate assertion statement|deferred immediate assertion statement]] > [[+6.10 Assertion statements:deferred immediate assert statement|deferred immediate assert statement]]
 
 Deferral type permutations:
 * **assert #0** ( expression ) action_block
@@ -56,7 +56,7 @@ Deferral type permutations:
 
 ==== 1.4 Module-level Deferred Immediate Assertions ====
 
-[[+module common item|module common item]] > [[+assertion item|assertion item]] > [[+deferred immediate assertion item|deferred immediate assertion item]] > [[+deferred immediate assertion statement|deferred immediate assertion statement]]
+[[+1.1 Source text:module common item|module common item]] > [[+6.10 Assertion statements:assertion item|assertion item]] > [[+6.10 Assertion statements:deferred immediate assertion item|deferred immediate assertion item]] > [[+6.10 Assertion statements:deferred immediate assertion statement|deferred immediate assertion statement]]
 
 
 ======================================================================
@@ -65,25 +65,25 @@ Deferral type permutations:
 
 ==== 2.1 Concurrent Assertions in initial block ====
 
-[[+initial construct|initial construct]] > [[+statement or null|statement or null]] > [[+statement|statement]] > [[+statement item|statement item]] > [[+procedural assertion statement|procedural assertion statement]] > [[+2.10 Assertion declarations:concurrent assertion statement|concurrent assertion statement]] > [[+2.10 Assertion declarations:assert property statement|assert property statement]]
+[[+6.7 Procedural blocks and assignments:initial construct|initial construct]] > [[+6.4 Statements:statement or null|statement or null]] > [[+6.4 Statements:statement|statement]] > [[+6.4 Statements:statement item|statement item]] > [[+6.10 Assertion statements:procedural assertion statement|procedural assertion statement]] > [[+2.10 Assertion declarations:concurrent assertion statement|concurrent assertion statement]] > [[+2.10 Assertion declarations:assert property statement|assert property statement]]
 
-[[+initial construct|initial construct]] > ... > [[+2.10 Assertion declarations:assume property statement|assume property statement]]
+[[+6.7 Procedural blocks and assignments:initial construct|initial construct]] > ... > [[+2.10 Assertion declarations:assume property statement|assume property statement]]
 
-[[+initial construct|initial construct]] > ... > [[+2.10 Assertion declarations:cover property statement|cover property statement]]
+[[+6.7 Procedural blocks and assignments:initial construct|initial construct]] > ... > [[+2.10 Assertion declarations:cover property statement|cover property statement]]
 
-[[+initial construct|initial construct]] > ... > [[+2.10 Assertion declarations:cover sequence statement|cover sequence statement]]
+[[+6.7 Procedural blocks and assignments:initial construct|initial construct]] > ... > [[+2.10 Assertion declarations:cover sequence statement|cover sequence statement]]
 
-[[+initial construct|initial construct]] > ... > [[+2.10 Assertion declarations:restrict property statement|restrict property statement]]
+[[+6.7 Procedural blocks and assignments:initial construct|initial construct]] > ... > [[+2.10 Assertion declarations:restrict property statement|restrict property statement]]
 
 
 ==== 2.2 Concurrent Assertions as module items ====
 
-[[+module common item|module common item]] > [[+assertion item|assertion item]] > [[+2.10 Assertion declarations:concurrent assertion item|concurrent assertion item]] > [[+2.10 Assertion declarations:concurrent assertion statement|concurrent assertion statement]]
+[[+1.1 Source text:module common item|module common item]] > [[+6.10 Assertion statements:assertion item|assertion item]] > [[+2.10 Assertion declarations:concurrent assertion item|concurrent assertion item]] > [[+2.10 Assertion declarations:concurrent assertion statement|concurrent assertion statement]]
 
 
 ==== 2.3 Expect statement ====
 
-[[+initial construct|initial construct]] > ... > [[+statement item|statement item]] > [[+2.10 Assertion declarations:expect property statement|expect property statement]]
+[[+6.7 Procedural blocks and assignments:initial construct|initial construct]] > ... > [[+6.4 Statements:statement item|statement item]] > [[+2.10 Assertion declarations:expect property statement|expect property statement]]
 
 
 ======================================================================

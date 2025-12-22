@@ -5,9 +5,9 @@ Creation-Date: 2025-12-16T21:19:07+00:00
 ====== procedural assertion statement ======
 Created Tuesday 16 December 2025
 
-[[2.10 Assertion declarations:concurrent assertion statement]]
+[[2.10 Assertion declarations:concurrent assertion statement|concurrent assertion statement]]
 [[immediate assertion statement]]
-checker_instantiation
+[[4.1 Instantiations:checker instantiations|checker instantiation]]
 
 ===== Backlinks =====
-[[statement item]]
+[[6.4 Statements:statement item|statement item]]

@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-16T22:54:31+00:00
+
+====== checker delaration ======
+Created Tuesday 16 December 2025
+
+**checker** checker_identifier [ ( [ [[1.8 Checker items:checker port item|checker port list]] ] ) ] ;
+{ { attribute_instance } [[checker or generate item]] }
+**endchecker** [ : checker_identifier ]
+
+===== Backlinks =====
+[[1.8 Checker items:checker or generate item declaration|checker or generate item declaration]]
+[[checker or item declaration]]
+[[1.11 Package items:package item:package or generate item declaration|package or generate item declaration]]
