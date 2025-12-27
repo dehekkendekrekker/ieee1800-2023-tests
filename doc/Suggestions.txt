@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-26T18:54:15+00:00
+
+====== Suggestions ======
+Created Friday 26 December 2025
+
+Get rid of this:
+======================================================================
+===== ROOT SOURCE NODES =====
+======================================================================
+
+
+Solve dead links in 2.10
+
+Solve dead links in 8.3
