@@ -8,9 +8,9 @@ Created Tuesday 16 December 2025
 IEEE 1800-2023 Section A.2.10, 16.11
 
 property_declaration ::=
-	**property** property_identifier [ ( [ [[property port list]] ] ) ] ;
-	{ [[assertion variable declaration]] }
-	[[property spec]] [ ; ]
+	**property** property_identifier [ ( [ [[property_port_list]] ] ) ] ;
+	{ [[assertion_variable_declaration]] }
+	[[property_spec]] [ ; ]
 	**endproperty** [ : property_identifier ]
 
 ===== Permutations =====
@@ -47,10 +47,10 @@ property p;
 endproperty : p
 
 ===== SVA-relevant paths =====
-[[property port list]]
-[[assertion variable declaration]]
-[[property spec]]
+[[property_port_list]]
+[[assertion_variable_declaration]]
+[[property_spec]]
 
 ===== Backlinks =====
-[[assertion item declaration]]
+[[assertion_item_declaration]]
 

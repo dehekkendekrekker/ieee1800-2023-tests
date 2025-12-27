@@ -10,6 +10,6 @@ constant_expression : $
 
 
 ===== Backlinks =====
-[[property expr]]
-[[cycle delay range]]
-[[const or range expression]]
+[[property_expr]]
+[[cycle_delay_range]]
+[[const_or_range_expression]]

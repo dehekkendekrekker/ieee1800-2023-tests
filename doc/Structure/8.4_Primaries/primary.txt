@@ -16,7 +16,7 @@ let_expression
 cast
 assignment_pattern_expression
 streaming_concatenation
-[[2.10 Assertion declarations:sequence method call|sequence method call]]
+[[2.10_Assertion_declarations:sequence_method_call|sequence_method_call]]
 this
 $
 null

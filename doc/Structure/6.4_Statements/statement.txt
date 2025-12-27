@@ -5,9 +5,9 @@ Creation-Date: 2025-12-16T21:27:04+00:00
 ====== statement ======
 Created Tuesday 16 December 2025
 
- block_identifier : ] { attribute_instance } [[statement item]]
+ block_identifier : ] { attribute_instance } [[statement_item]]
 
 
 ===== Backlinks =====
-[[statement or null]]
-[[6.3 Parallel and sequential blocks:action block|action block]]
+[[statement_or_null]]
+[[6.3_Parallel_and_sequential_blocks:action_block|action_block]]

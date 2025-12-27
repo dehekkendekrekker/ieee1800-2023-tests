@@ -5,7 +5,7 @@ Creation-Date: 2025-12-16T23:27:39+00:00
 ====== property instance ======
 Created Tuesday 16 December 2025
 
- [[9.3 Identifiers:ps or hierarchical property identifier|ps or hierarchical property identifier]] [ ( [ [[property list of arguments]] ] ) ]
+ [[9.3_Identifiers:ps_or_hierarchical_property_identifier|ps_or_hierarchical_property_identifier]] [ ( [ [[property_list_of_arguments]] ] ) ]
 
 ===== Backlinks =====
-[[property expr]]
+[[property_expr]]

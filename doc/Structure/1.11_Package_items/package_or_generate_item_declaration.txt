@@ -9,7 +9,7 @@ net_declaration
 data_declaration
 task_declaration
 function_declaration
-[[1.1 Source text:checker declaration|checker declaration]]
+[[1.1_Source_text:checker_declaration|checker_declaration]]
 dpi_import_export
 extern_constraint_declaration
 class_declaration
@@ -18,8 +18,8 @@ class_constructor_declaration
 local_parameter_declaration ;
 parameter_declaration ;
 covergroup_declaration
-[[2.10 Assertion declarations:assertion item declaration|assertion item declaration]]
+[[2.10_Assertion_declarations:assertion_item_declaration|assertion_item_declaration]]
 ;
 
 ===== Backlinks =====
-[[package item]]
+[[package_item]]

@@ -10,12 +10,12 @@ IEEE 1800-2023 Section A.4.2
 Generated instantiation grammar rules.
 
 ===== Generate Constructs =====
-* [[+generate region]]
-* [[+generate block]]
-* [[+generate block or null]]
-* [[+conditional generate construct]]
-* [[+if generate construct]]
-* [[+case generate construct]]
-* [[+case generate item]]
-* [[+loop generate construct]]
+* [[+generate_region]]
+* [[+generate_block]]
+* [[+generate_block_or_null]]
+* [[+conditional_generate_construct]]
+* [[+if_generate_construct]]
+* [[+case_generate_construct]]
+* [[+case_generate_item]]
+* [[+loop_generate_construct]]
 

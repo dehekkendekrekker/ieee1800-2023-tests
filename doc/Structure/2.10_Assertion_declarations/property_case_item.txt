@@ -5,8 +5,8 @@ Creation-Date: 2025-12-16T22:00:31+00:00
 ====== property case item ======
 Created Tuesday 16 December 2025
 
-expression_or_dist { , expression_or_dist } : [[property expr]] ;
-| default [ : ] [[property expr]] ;
+expression_or_dist { , expression_or_dist } : [[property_expr]] ;
+| default [ : ] [[property_expr]] ;
 
 ===== Backlinks =====
-[[property expr]]
+[[property_expr]]

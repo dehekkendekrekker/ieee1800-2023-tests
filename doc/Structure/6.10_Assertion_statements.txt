@@ -10,20 +10,20 @@ IEEE 1800-2023 Section A.6.10
 Assertion statement grammar rules (immediate and deferred assertions).
 
 ===== Assertion Items =====
-* [[+assertion item]]
-* [[+procedural assertion statement]]
+* [[+assertion_item]]
+* [[+procedural_assertion_statement]]
 
 ===== Immediate Assertions =====
-* [[+immediate assertion statement]]
-* [[+simple immediate assertion statement]]
-* [[+simple immediate assert statement]]
-* [[+simple immediate assume statement]]
-* [[+simple immediate cover statement]]
+* [[+immediate_assertion_statement]]
+* [[+simple_immediate_assertion_statement]]
+* [[+simple_immediate_assert_statement]]
+* [[+simple_immediate_assume_statement]]
+* [[+simple_immediate_cover_statement]]
 
 ===== Deferred Assertions =====
-* [[+deferred immediate assertion item]]
-* [[+deferred immediate assertion statement]]
-* [[+deferred immediate assert statement]]
-* [[+deferred immediate assume statement]]
-* [[+deferred immediate cover statement]]
+* [[+deferred_immediate_assertion_item]]
+* [[+deferred_immediate_assertion_statement]]
+* [[+deferred_immediate_assert_statement]]
+* [[+deferred_immediate_assume_statement]]
+* [[+deferred_immediate_cover_statement]]
 

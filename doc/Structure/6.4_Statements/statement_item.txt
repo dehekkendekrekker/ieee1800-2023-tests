@@ -19,11 +19,11 @@ par_block
 procedural_timing_control_statement
 seq_block
 wait_statement
-[[6.10 Assertion statements:procedural assertion statement|procedural assertion statement]]
+[[6.10_Assertion_statements:procedural_assertion_statement|procedural_assertion_statement]]
 clocking_drive ;
 randsequence_statement
 randcase_statement
-[[2.10 Assertion declarations:expect property statement|expect property statement]]
+[[2.10_Assertion_declarations:expect_property_statement|expect_property_statement]]
 
 ===== Backlinks =====
 [[statement]]

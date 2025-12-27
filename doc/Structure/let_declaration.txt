@@ -8,4 +8,4 @@ Created Tuesday 16 December 2025
 let_declaration ::= let let_identifier [ ( [ let_port_list ] ) ] = expression ;
 
 ===== Backlinks =====
-[[2.10 Assertion declarations:assertion item declaration|assertion item declaration]]
+[[2.10_Assertion_declarations:assertion_item_declaration|assertion_item_declaration]]

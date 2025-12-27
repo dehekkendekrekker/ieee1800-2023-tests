@@ -9,5 +9,5 @@ Created Sunday 22 December 2025
 | **unsigned**
 
 ===== Backlinks =====
-[[implicit data type]]
-[[data type]]
+[[implicit_data_type]]
+[[data_type]]

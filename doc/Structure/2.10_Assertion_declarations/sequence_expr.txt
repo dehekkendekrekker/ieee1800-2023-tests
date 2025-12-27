@@ -8,18 +8,18 @@ Created Tuesday 16 December 2025
 IEEE 1800-2023 Section A.2.10, 16.7
 
 sequence_expr ::=
-	[[cycle delay range]] [[sequence expr]] { [[cycle delay range]] [[sequence expr]] }
-	| [[sequence expr]] [[cycle delay range]] [[sequence expr]] { [[cycle delay range]] [[sequence expr]] }
-	| expression_or_dist [ [[boolean abbrev]] ]
-	| [[sequence instance]] [ [[sequence abbrev]] ]
-	| ( [[sequence expr]] { , [[sequence match item]] } ) [ [[sequence abbrev]] ]
-	| [[sequence expr]] **and** [[sequence expr]]
-	| [[sequence expr]] **intersect** [[sequence expr]]
-	| [[sequence expr]] **or** [[sequence expr]]
-	| **first_match** ( [[sequence expr]] { , [[sequence match item]] } )
-	| expression_or_dist **throughout** [[sequence expr]]
-	| [[sequence expr]] **within** [[sequence expr]]
-	| clocking_event [[sequence expr]]
+	[[cycle_delay_range]] [[sequence_expr]] { [[cycle_delay_range]] [[sequence_expr]] }
+	| [[sequence_expr]] [[cycle_delay_range]] [[sequence_expr]] { [[cycle_delay_range]] [[sequence_expr]] }
+	| expression_or_dist [ [[boolean_abbrev]] ]
+	| [[sequence_instance]] [ [[sequence_abbrev]] ]
+	| ( [[sequence_expr]] { , [[sequence_match_item]] } ) [ [[sequence_abbrev]] ]
+	| [[sequence_expr]] **and** [[sequence_expr]]
+	| [[sequence_expr]] **intersect** [[sequence_expr]]
+	| [[sequence_expr]] **or** [[sequence_expr]]
+	| **first_match** ( [[sequence_expr]] { , [[sequence_match_item]] } )
+	| expression_or_dist **throughout** [[sequence_expr]]
+	| [[sequence_expr]] **within** [[sequence_expr]]
+	| clocking_event [[sequence_expr]]
 
 
 ===== Category 1: Basic expressions =====
@@ -165,18 +165,18 @@ Different clocks in sequence.
 
 
 ===== SVA-relevant paths =====
-[[cycle delay range]]
-[[boolean abbrev]]
-[[sequence abbrev]]
-[[consecutive repetition]]
-[[nonconsecutive repetition]]
-[[goto repetition]]
-[[sequence instance]]
-[[sequence match item]]
+[[cycle_delay_range]]
+[[boolean_abbrev]]
+[[sequence_abbrev]]
+[[consecutive_repetition]]
+[[nonconsecutive_repetition]]
+[[goto_repetition]]
+[[sequence_instance]]
+[[sequence_match_item]]
 
 ===== Backlinks =====
-[[property expr]]
-[[cover sequence statement]]
-[[sequence declaration]]
-[[sequence actual arg]]
+[[property_expr]]
+[[cover_sequence_statement]]
+[[sequence_declaration]]
+[[sequence_actual_arg]]
 

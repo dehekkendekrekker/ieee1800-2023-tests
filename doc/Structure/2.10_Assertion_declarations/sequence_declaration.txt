@@ -8,9 +8,9 @@ Created Tuesday 16 December 2025
 IEEE 1800-2023 Section A.2.10, 16.8
 
 sequence_declaration ::=
-	**sequence** sequence_identifier [ ( [ [[sequence port list]] ] ) ] ;
-	{ [[assertion variable declaration]] }
-	[[sequence expr]] [ ; ]
+	**sequence** sequence_identifier [ ( [ [[sequence_port_list]] ] ) ] ;
+	{ [[assertion_variable_declaration]] }
+	[[sequence_expr]] [ ; ]
 	**endsequence** [ : sequence_identifier ]
 
 ===== Permutations =====
@@ -57,10 +57,10 @@ sequence s(untyped expr);
 endsequence
 
 ===== SVA-relevant paths =====
-[[sequence port list]]
-[[assertion variable declaration]]
-[[sequence expr]]
+[[sequence_port_list]]
+[[assertion_variable_declaration]]
+[[sequence_expr]]
 
 ===== Backlinks =====
-[[assertion item declaration]]
+[[assertion_item_declaration]]
 

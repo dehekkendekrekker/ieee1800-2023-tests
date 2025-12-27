@@ -7,14 +7,14 @@ Created Tuesday 16 December 2025
 
 [ rand ] data_declaration
 function_declaration
-[[checker declaration]]
-[[2.10 Assertion declarations:assertion item declaration|assertion item declaration]]
+[[checker_declaration]]
+[[2.10_Assertion_declarations:assertion_item_declaration|assertion_item_declaration]]
 covergroup_declaration
 genvar_declaration
-[[6.11 Clocking block:clocking declaration|clocking declaration]]
+[[6.11_Clocking_block:clocking_declaration|clocking_declaration]]
 default clocking clocking_identifier ;
 default disable iff expression_or_dist ;
 ;
 
 ===== Backlinks =====
-[[checker or generate item]]
+[[checker_or_generate_item]]

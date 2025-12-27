@@ -8,7 +8,7 @@ Created Sunday 22 December 2025
 IEEE 1800-2023 Section A.2.10
 
 property_spec ::=
-	[ [[clocking event]] ] [ **disable iff** ( expression_or_dist ) ] [[property expr]]
+	[ [[clocking_event]] ] [ **disable iff** ( expression_or_dist ) ] [[property_expr]]
 
 ===== Permutations =====
 
@@ -37,14 +37,14 @@ clocking_event disable iff ( expression_or_dist ) property_expr
 Example: @(posedge clk) disable iff (reset) req |-> gnt
 
 ===== SVA-relevant paths =====
-[[property expr]]
-[[clocking event]]
+[[property_expr]]
+[[clocking_event]]
 
 ===== Backlinks =====
-[[assert property statement]]
-[[assume property statement]]
-[[cover property statement]]
-[[restrict property statement]]
-[[expect property statement]]
-[[property declaration]]
+[[assert_property_statement]]
+[[assume_property_statement]]
+[[cover_property_statement]]
+[[restrict_property_statement]]
+[[expect_property_statement]]
+[[property_declaration]]
 

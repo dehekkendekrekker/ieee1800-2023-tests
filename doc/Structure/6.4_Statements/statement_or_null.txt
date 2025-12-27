@@ -10,6 +10,6 @@ Created Tuesday 16 December 2025
 
 
 ===== Backlinks =====
-[[6.7 Procedural blocks and assignments:initial construct|initial construct]]
-[[6.3 Parallel and sequential blocks:action block|action block]]
-[[2.10 Assertion declarations:cover property statement|cover property statement]]
+[[6.7_Procedural_blocks_and_assignments:initial_construct|initial_construct]]
+[[6.3_Parallel_and_sequential_blocks:action_block|action_block]]
+[[2.10_Assertion_declarations:cover_property_statement|cover_property_statement]]

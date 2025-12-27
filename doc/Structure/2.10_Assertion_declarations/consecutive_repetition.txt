@@ -8,7 +8,7 @@ Created Wednesday 17 December 2025
 IEEE 1800-2023 Section A.2.10, 16.7.4
 
 consecutive_repetition ::=
-	**[*** [[const or range expression]] **]**
+	**[*** [[const_or_range_expression]] **]**
 	| **[*]**
 	| **[+]**
 
@@ -33,6 +33,6 @@ One or more consecutive occurrences.
 	a[+]        - a true for at least one cycle
 
 ===== Backlinks =====
-[[boolean abbrev]]
-[[sequence abbrev]]
+[[boolean_abbrev]]
+[[sequence_abbrev]]
 

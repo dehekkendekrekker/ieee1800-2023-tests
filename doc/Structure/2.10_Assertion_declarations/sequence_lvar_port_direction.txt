@@ -8,4 +8,4 @@ Created Wednesday 17 December 2025
 **input | inout | output**
 
 ===== Backlinks =====
-[[sequence port item]]
+[[sequence_port_item]]

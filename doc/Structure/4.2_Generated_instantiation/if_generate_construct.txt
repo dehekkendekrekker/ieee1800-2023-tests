@@ -5,9 +5,9 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== if generate construct ======
 Created Sunday 22 December 2025
 
-**if** ( constant_expression ) [[generate block or null]]
-{ **else if** ( constant_expression ) [[generate block or null]] }
-[ **else** [[generate block or null]] ]
+**if** ( constant_expression ) [[generate_block_or_null]]
+{ **else if** ( constant_expression ) [[generate_block_or_null]] }
+[ **else** [[generate_block_or_null]] ]
 
 ===== Backlinks =====
-[[conditional generate construct]]
+[[conditional_generate_construct]]

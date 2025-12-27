@@ -11,6 +11,6 @@ Statement grammar rules.
 
 ===== Statement Rules =====
 * [[+statement]]
-* [[+statement or null]]
-* [[+statement item]]
+* [[+statement_or_null]]
+* [[+statement_item]]
 

@@ -12,6 +12,9 @@ Created Wednesday 10 December 2025
 * [[Development scheme]] - Development tracking and progress
 * [[Resources]] - External references and standards
 
+==== Reference ====
+* {{./1800-2023_extracted.txt|IEEE 1800-2023 extracted text}} - Full text extraction from the standard PDF
+
 ==== Analysis ====
 * [[Problems]] - Known issues and comparisons (yosys-slang vs verific)
 * [[Statements not handled]] - Statement handling coverage

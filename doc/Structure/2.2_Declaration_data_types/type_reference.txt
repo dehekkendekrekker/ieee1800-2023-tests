@@ -5,9 +5,9 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== type reference ======
 Created Sunday 22 December 2025
 
-**type** ( [[8.3 Expressions:expression|expression]] )
-| **type** ( [[data type]] )
+**type** ( [[8.3_Expressions:expression|expression]] )
+| **type** ( [[data_type]] )
 
 ===== Backlinks =====
-[[data type]]
+[[data_type]]
 

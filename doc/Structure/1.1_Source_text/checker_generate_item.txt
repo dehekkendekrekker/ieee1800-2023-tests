@@ -5,10 +5,10 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== checker generate item ======
 Created Sunday 22 December 2025
 
-[[4.2 Generated instantiation:loop generate construct|loop generate construct]]
-[[4.2 Generated instantiation:conditional generate construct|conditional generate construct]]
-[[4.2 Generated instantiation:generate region|generate region]]
-[[2.11 Elaboration system tasks:elaboration system task|elaboration system task]]
+[[4.2_Generated_instantiation:loop_generate_construct|loop_generate_construct]]
+[[4.2_Generated_instantiation:conditional_generate_construct|conditional_generate_construct]]
+[[4.2_Generated_instantiation:generate_region|generate_region]]
+[[2.11_Elaboration_system_tasks:elaboration_system_task|elaboration_system_task]]
 
 ===== Backlinks =====
-[[checker or generate item]]
+[[checker_or_generate_item]]

@@ -13,5 +13,5 @@ Created Sunday 22 December 2025
 | **time**
 
 ===== Backlinks =====
-[[data type]]
+[[data_type]]
 

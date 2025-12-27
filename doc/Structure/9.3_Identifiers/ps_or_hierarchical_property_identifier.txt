@@ -9,4 +9,4 @@ Created Tuesday 16 December 2025
 hierarchical_property_identifier
 
 ===== Backlinks =====
-[[2.10 Assertion declarations:property instance|property instance]]
+[[2.10_Assertion_declarations:property_instance|property_instance]]

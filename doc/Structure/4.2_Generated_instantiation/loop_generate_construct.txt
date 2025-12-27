@@ -6,7 +6,7 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 Created Sunday 22 December 2025
 
 **for** ( genvar_initialization ; genvar_expression ; genvar_iteration )
-	[[generate block]]
+	[[generate_block]]
 
 ===== Backlinks =====
-[[1.1 Source text:checker generate item|checker generate item]]
+[[1.1_Source_text:checker_generate_item|checker_generate_item]]

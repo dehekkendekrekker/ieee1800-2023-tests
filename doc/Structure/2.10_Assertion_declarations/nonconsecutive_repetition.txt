@@ -8,7 +8,7 @@ Created Wednesday 17 December 2025
 IEEE 1800-2023 Section A.2.10, 16.7.6
 
 nonconsecutive_repetition ::=
-	**[=** [[const or range expression]] **]**
+	**[=** [[const_or_range_expression]] **]**
 
 ===== Permutations =====
 
@@ -25,5 +25,5 @@ Unlike consecutive repetition, the boolean may be false between matches.
 The sequence ends after the last required occurrence.
 
 ===== Backlinks =====
-[[boolean abbrev]]
+[[boolean_abbrev]]
 

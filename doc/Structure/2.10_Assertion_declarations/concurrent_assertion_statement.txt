@@ -8,30 +8,30 @@ Created Tuesday 16 December 2025
 IEEE 1800-2023 Section A.2.10
 
 concurrent_assertion_statement ::=
-	[[assert property statement]]
-	| [[assume property statement]]
-	| [[cover property statement]]
-	| [[cover sequence statement]]
-	| [[restrict property statement]]
+	[[assert_property_statement]]
+	| [[assume_property_statement]]
+	| [[cover_property_statement]]
+	| [[cover_sequence_statement]]
+	| [[restrict_property_statement]]
 
 ===== SVA-relevant paths =====
 
 ==== assert_property_statement ====
-[[assert property statement]]
+[[assert_property_statement]]
 
 ==== assume_property_statement ====
-[[assume property statement]]
+[[assume_property_statement]]
 
 ==== cover_property_statement ====
-[[cover property statement]]
+[[cover_property_statement]]
 
 ==== cover_sequence_statement ====
-[[cover sequence statement]]
+[[cover_sequence_statement]]
 
 ==== restrict_property_statement ====
-[[restrict property statement]]
+[[restrict_property_statement]]
 
 ===== Backlinks =====
-[[concurrent assertion item]]
-[[procedural assertion statement]]
+[[concurrent_assertion_item]]
+[[procedural_assertion_statement]]
 

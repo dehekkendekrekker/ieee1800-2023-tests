@@ -10,15 +10,15 @@ IEEE 1800-2023 Section A.1.1 - A.1.8
 Source text grammar rules defining module, program, interface, and checker declarations.
 
 ===== Module Items =====
-* [[+module common item]]
+* [[+module_common_item]]
 
 ===== Program Items =====
-* [[+program item]]
-* [[+non port program item]]
+* [[+program_item]]
+* [[+non_port_program_item]]
 
 ===== Checker Items =====
-* [[+checker declaration]]
-* [[+checker or generate item]]
-* [[+checker or item declaration]]
-* [[+checker generate item]]
+* [[+checker_declaration]]
+* [[+checker_or_generate_item]]
+* [[+checker_or_item_declaration]]
+* [[+checker_generate_item]]
 

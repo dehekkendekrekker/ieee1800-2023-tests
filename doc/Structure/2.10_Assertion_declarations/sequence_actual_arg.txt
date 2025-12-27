@@ -6,11 +6,11 @@ Creation-Date: 2025-12-16T23:32:21+00:00
 Created Tuesday 16 December 2025
 
 event_expression
-[[sequence expr]]
+[[sequence_expr]]
 **$**
 
 
 ===== Backlinks =====
-[[sequence port item]]
-[[sequence expr]]
-[[sequence list of arguments]]
+[[sequence_port_item]]
+[[sequence_expr]]
+[[sequence_list_of_arguments]]

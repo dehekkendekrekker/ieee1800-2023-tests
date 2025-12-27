@@ -8,15 +8,15 @@ Created Wednesday 17 December 2025
 IEEE 1800-2023 Section A.2.10, 16.7
 
 boolean_abbrev ::=
-	[[consecutive repetition]]
-	| [[nonconsecutive repetition]]
-	| [[goto repetition]]
+	[[consecutive_repetition]]
+	| [[nonconsecutive_repetition]]
+	| [[goto_repetition]]
 
 ===== SVA-relevant paths =====
-[[consecutive repetition]] - [*n], [*m:n], [*], [+]
-[[nonconsecutive repetition]] - [=n], [=m:n]
-[[goto repetition]] - [->n], [->m:n]
+[[consecutive_repetition]] - [*n], [*m:n], [*], [+]
+[[nonconsecutive_repetition]] - [=n], [=m:n]
+[[goto_repetition]] - [->n], [->m:n]
 
 ===== Backlinks =====
-[[sequence expr]]
+[[sequence_expr]]
 

@@ -7,11 +7,11 @@ Created Tuesday 16 December 2025
 
 continuous_assign
 module_or_generate_item_declaration
-[[6.7 Procedural blocks and assignments:initial construct|initial construct]]
-[[6.7 Procedural blocks and assignments:final construct|final construct]]
-[[2.10 Assertion declarations:concurrent assertion item|concurrent assertion item]]
+[[6.7_Procedural_blocks_and_assignments:initial_construct|initial_construct]]
+[[6.7_Procedural_blocks_and_assignments:final_construct|final_construct]]
+[[2.10_Assertion_declarations:concurrent_assertion_item|concurrent_assertion_item]]
 timeunits_declaration
 program_generate_item
 
 ===== Backlinks =====
-[[program item]]
+[[program_item]]

@@ -8,23 +8,23 @@ Created Tuesday 16 December 2025
 IEEE 1800-2023 Section A.2.10
 
 assertion_item_declaration ::=
-	[[property declaration]]
-	| [[sequence declaration]]
-	| [[let declaration]]
+	[[property_declaration]]
+	| [[sequence_declaration]]
+	| [[let_declaration]]
 
 ===== SVA-relevant paths =====
 
 ==== Property declaration ====
-[[property declaration]]
+[[property_declaration]]
 
 ==== Sequence declaration ====
-[[sequence declaration]]
+[[sequence_declaration]]
 
 ==== Let declaration ====
-[[let declaration]] (for reusable expressions)
+[[let_declaration]] (for reusable expressions)
 
 ===== Backlinks =====
-[[1.8 Checker items:checker or generate item declaration|checker or generate item declaration]]
-[[6.11 Clocking block:clocking item|clocking item]]
-[[1.11 Package items:package or generate item declaration|package or generate item declaration]]
+[[1.8_Checker_items:checker_or_generate_item_declaration|checker_or_generate_item_declaration]]
+[[6.11_Clocking_block:clocking_item|clocking_item]]
+[[1.11_Package_items:package_or_generate_item_declaration|package_or_generate_item_declaration]]
 

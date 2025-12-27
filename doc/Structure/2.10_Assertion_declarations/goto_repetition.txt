@@ -8,7 +8,7 @@ Created Wednesday 17 December 2025
 IEEE 1800-2023 Section A.2.10, 16.7.5
 
 goto_repetition ::=
-	**[->** [[const or range expression]] **]**
+	**[->** [[const_or_range_expression]] **]**
 
 ===== Permutations =====
 
@@ -30,5 +30,5 @@ Difference from [=]:
 - ack[->3] ##1 done : sequence ends at 3rd ack, then done is true next cycle
 
 ===== Backlinks =====
-[[boolean abbrev]]
+[[boolean_abbrev]]
 

@@ -11,4 +11,4 @@ always_latch
 always_ff
 
 ===== Backlinks =====
-[[always construct]]
+[[always_construct]]
