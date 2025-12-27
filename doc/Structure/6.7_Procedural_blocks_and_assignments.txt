@@ -5,13 +5,21 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== 6.7 Procedural blocks and assignments ======
 Created Sunday 22 December 2025
 
-IEEE 1800-2023 Section A.6.7
+IEEE 1800-2023 Section A.6.2
 
-Procedural block grammar rules (initial, always, final constructs).
+Procedural block and assignment grammar rules.
 
 ===== Procedural Blocks =====
 * [[+initial_construct]]
 * [[+always_construct]]
 * [[+always_keyword]]
 * [[+final_construct]]
+
+===== Assignments =====
+* [[+blocking_assignment]]
+* [[+operator_assignment]]
+* [[+assignment_operator]]
+* [[+nonblocking_assignment]]
+* [[+procedural_continuous_assignment]]
+* [[+variable_assignment]]
 

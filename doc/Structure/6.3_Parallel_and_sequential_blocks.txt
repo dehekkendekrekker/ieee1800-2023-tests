@@ -5,3 +5,13 @@ Creation-Date: 2025-12-17T01:18:46+00:00
 ====== 6.3 Parallel and sequential blocks ======
 Created Wednesday 17 December 2025
 
+IEEE 1800-2023 Section A.6.3
+
+Parallel and sequential block grammar rules.
+
+===== Blocks =====
+* [[+action_block]]
+* [[+seq_block]]
+* [[+par_block]]
+* [[+join_keyword]]
+

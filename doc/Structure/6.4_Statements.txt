@@ -10,7 +10,9 @@ IEEE 1800-2023 Section A.6.4
 Statement grammar rules.
 
 ===== Statement Rules =====
-* [[+statement]]
 * [[+statement_or_null]]
+* [[+statement]]
 * [[+statement_item]]
+* [[+function_statement]]
+* [[+function_statement_or_null]]
 
