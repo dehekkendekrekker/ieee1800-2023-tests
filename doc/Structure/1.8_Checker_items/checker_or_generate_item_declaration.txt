@@ -7,7 +7,7 @@ Created Tuesday 16 December 2025
 
 [ rand ] data_declaration
 function_declaration
-[[1.1 Source text:checker delaration|checker declaration]]
+[[1.1 Source text:checker declaration|checker declaration]]
 [[2.10 Assertion declarations:assertion item declaration|assertion item declaration]]
 covergroup_declaration
 genvar_declaration

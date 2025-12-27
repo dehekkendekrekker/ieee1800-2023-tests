@@ -9,3 +9,9 @@ IEEE 1800-2023 Section A.6.7
 
 Procedural block grammar rules (initial, always, final constructs).
 
+===== Procedural Blocks =====
+* [[+initial construct]]
+* [[+always construct]]
+* [[+always keyword]]
+* [[+final construct]]
+

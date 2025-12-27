@@ -5,6 +5,17 @@ Creation-Date: 2025-12-10T18:39:28+00:00
 ====== Home ======
 Created Wednesday 10 December 2025
 
+===== Navigation =====
+
+==== Documentation ====
+* [[Structure]] - SVA grammar test routes and structure
+* [[Development scheme]] - Development tracking and progress
+* [[Resources]] - External references and standards
+
+==== Analysis ====
+* [[Problems]] - Known issues and comparisons (yosys-slang vs verific)
+* [[Statements not handled]] - Statement handling coverage
+* [[SVA related symbols and statements]] - SVA symbol reference
 
 ===== Overview =====
 

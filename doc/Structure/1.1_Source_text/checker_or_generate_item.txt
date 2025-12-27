@@ -15,6 +15,6 @@ continuous_assign
 [[checker generate item]]
 
 ===== Backlinks =====
-[[checker delaration]]
+[[checker declaration]]
 [[4.2 Generated instantiation:generate region|generate region]]
 [[4.2 Generated instantiation:generate block|generate block]]

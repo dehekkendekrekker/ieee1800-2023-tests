@@ -9,7 +9,7 @@ net_declaration
 data_declaration
 task_declaration
 function_declaration
-[[1.1 Source text:checker delaration|checker declaration]]
+[[1.1 Source text:checker declaration|checker declaration]]
 dpi_import_export
 extern_constraint_declaration
 class_declaration

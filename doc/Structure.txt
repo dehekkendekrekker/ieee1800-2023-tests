@@ -8,6 +8,37 @@ Created Tuesday 16 December 2025
 This document defines all test routes (paths through the grammar) for SVA testing.
 Each route represents a unique path from a root source node through SVA-related constructs.
 
+===== Grammar Sections =====
+
+==== Source Text (A.1) ====
+* [[+1.1 Source text]] - Module, program, interface, checker declarations
+* [[+1.8 Checker items]] - Checker item rules
+* [[+1.11 Package items]] - Package item rules
+
+==== Declarations (A.2) ====
+* [[+2.2 Declaration data types]] - Data type declarations
+* [[+2.3 Declaration lists]] - Declaration list rules
+* [[+2.10 Assertion declarations]] - Property and sequence declarations
+* [[+2.11 Elaboration system tasks]] - Elaboration tasks
+
+==== Instantiations (A.4) ====
+* [[+4.1 Instantiations]] - Checker instantiations
+* [[+4.2 Generated instantiation]] - Generate constructs
+
+==== Behavioral Statements (A.6) ====
+* [[+6.3 Parallel and sequential blocks]] - Blocks and action blocks
+* [[+6.4 Statements]] - Statement rules
+* [[+6.7 Procedural blocks and assignments]] - Initial, always, final
+* [[+6.10 Assertion statements]] - Immediate and deferred assertions
+* [[+6.11 Clocking block]] - Clocking declarations
+
+==== Expressions (A.8) ====
+* [[+8.3 Expressions]] - Expression rules
+* [[+8.4 Primaries]] - Primary expressions
+
+==== Identifiers (A.9) ====
+* [[+9.3 Identifiers]] - Identifier rules
+
 ======================================================================
 ===== ROOT SOURCE NODES =====
 ======================================================================

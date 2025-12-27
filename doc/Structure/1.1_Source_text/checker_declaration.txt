@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2025-12-16T22:54:31+00:00
 
-====== checker delaration ======
+====== checker declaration ======
 Created Tuesday 16 December 2025
 
 **checker** checker_identifier [ ( [ [[1.8 Checker items:checker port item|checker port list]] ] ) ] ;

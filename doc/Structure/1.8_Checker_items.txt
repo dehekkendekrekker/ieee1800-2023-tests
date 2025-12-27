@@ -5,3 +5,11 @@ Creation-Date: 2025-12-16T23:35:41+00:00
 ====== 1.8 Checker items ======
 Created Tuesday 16 December 2025
 
+IEEE 1800-2023 Section A.1.8
+
+Checker item grammar rules.
+
+===== Checker Items =====
+* [[+checker or generate item declaration]]
+* [[+checker port item]]
+

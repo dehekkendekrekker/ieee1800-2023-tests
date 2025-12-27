@@ -8,3 +8,14 @@ Created Sunday 22 December 2025
 IEEE 1800-2023 Section A.4.2
 
 Generated instantiation grammar rules.
+
+===== Generate Constructs =====
+* [[+generate region]]
+* [[+generate block]]
+* [[+generate block or null]]
+* [[+conditional generate construct]]
+* [[+if generate construct]]
+* [[+case generate construct]]
+* [[+case generate item]]
+* [[+loop generate construct]]
+

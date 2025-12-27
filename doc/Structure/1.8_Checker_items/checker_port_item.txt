@@ -9,4 +9,4 @@ Created Tuesday 16 December 2025
 { variable_dimension } [ = [[2.10 Assertion declarations:property actual arg|property actual arg]] ]
 
 ===== Backlinks =====
-[[1.1 Source text:checker delaration|checker declaration]]
+[[1.1 Source text:checker declaration|checker declaration]]

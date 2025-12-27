@@ -5,3 +5,55 @@ Creation-Date: 2025-12-16T23:13:59+00:00
 ====== 2.10 Assertion declarations ======
 Created Tuesday 16 December 2025
 
+IEEE 1800-2023 Section A.2.10
+
+===== Concurrent Assertion Statements =====
+* [[+concurrent assertion item]]
+* [[+concurrent assertion statement]]
+* [[+assert property statement]]
+* [[+assume property statement]]
+* [[+cover property statement]]
+* [[+cover sequence statement]]
+* [[+expect property statement]]
+* [[+restrict property statement]]
+
+===== Property Declarations =====
+* [[+property declaration]]
+* [[+property port list]]
+* [[+property port item]]
+* [[+property lvar port direction]]
+* [[+property formal type]]
+* [[+property spec]]
+* [[+property expr]]
+* [[+property case item]]
+* [[+property instance]]
+* [[+property list of arguments]]
+* [[+property actual arg]]
+
+===== Sequence Declarations =====
+* [[+sequence declaration]]
+* [[+sequence port list]]
+* [[+sequence port item]]
+* [[+sequence lvar port direction]]
+* [[+sequence formal type]]
+* [[+sequence expr]]
+* [[+sequence instance]]
+* [[+sequence list of arguments]]
+* [[+sequence actual arg]]
+* [[+sequence match item]]
+* [[+sequence method call]]
+
+===== Repetition and Delays =====
+* [[+boolean abbrev]]
+* [[+sequence abbrev]]
+* [[+consecutive repetition]]
+* [[+nonconsecutive repetition]]
+* [[+goto repetition]]
+* [[+cycle delay range]]
+* [[+cycle delay const range expression]]
+* [[+const or range expression]]
+
+===== Variables =====
+* [[+assertion item declaration]]
+* [[+assertion variable declaration]]
+
