@@ -22,4 +22,4 @@ Created Sunday 22 December 2025
 ===== Backlinks =====
 [[var_data_type]]
 [[data_type_or_implicit]]
-[[6_Behavioral_statements/6.8_Looping_statements:for_variable_declaration|for_variable_declaration]]
+[[6_Behavioral_statements:6.8_Looping_statements:for_variable_declaration|for_variable_declaration]]

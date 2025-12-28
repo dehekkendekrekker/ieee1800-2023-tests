@@ -8,4 +8,4 @@ Created Friday 27 December 2025
 [ **static** ] **constraint** [ dynamic_override_specifiers ] constraint_identifier [[constraint_block]]
 
 ===== Backlinks =====
-[[1_Source_text/1.9_Class_items:class_constraint|class_constraint]]
+[[1_Source_text:1.9_Class_items:class_constraint|class_constraint]]

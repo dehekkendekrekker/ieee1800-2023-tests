@@ -9,6 +9,6 @@ Created Friday 27 December 2025
 
 ===== Backlinks =====
 [[task_body_declaration]]
-[[2_Declarations/2.6_Function_declarations:function_body_declaration|function_body_declaration]]
+[[2_Declarations:2.6_Function_declarations:function_body_declaration|function_body_declaration]]
 [[task_prototype]]
-[[2_Declarations/2.6_Function_declarations:function_prototype|function_prototype]]
+[[2_Declarations:2.6_Function_declarations:function_prototype|function_prototype]]

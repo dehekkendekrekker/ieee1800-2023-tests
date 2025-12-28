@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== mos switch instance ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.3.1
+
+[ [[4_Instantiations:4.1_Instantiations:name_of_instance|name_of_instance]] ] ( [[3_Primitive_instances:3.3_Primitive_terminals:output_terminal|output_terminal]] , [[3_Primitive_instances:3.3_Primitive_terminals:input_terminal|input_terminal]] , [[3_Primitive_instances:3.3_Primitive_terminals:enable_terminal|enable_terminal]] )
+
+===== Backlinks =====
+[[gate_instantiation]]
+

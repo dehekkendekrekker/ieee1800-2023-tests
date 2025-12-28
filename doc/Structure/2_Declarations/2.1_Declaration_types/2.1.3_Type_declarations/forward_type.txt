@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-27T00:00:00+00:00
+
+====== forward type ======
+Created Friday 27 December 2025
+
+IEEE 1800-2023 Section A.2.1.3
+
+**enum** | **struct** | **union** | **class** | **interface** **class**
+
+===== Backlinks =====
+[[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:type_parameter_declaration|type_parameter_declaration]]
+[[type_declaration]]

@@ -19,4 +19,5 @@ IEEE 1800-2023 Section A.6
 [[+6.9_Subroutine_call_statements]]
 [[+6.10_Assertion_statements]]
 [[+6.11_Clocking_block]]
+[[+6.12_Randsequence]]
 

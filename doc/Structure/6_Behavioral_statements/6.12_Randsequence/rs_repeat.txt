@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== rs repeat ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.6.12
+
+**repeat** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) [[rs_production_item]]
+
+===== Backlinks =====
+[[rs_prod]]
+

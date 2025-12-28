@@ -8,5 +8,5 @@ Created Friday 27 December 2025
 { [[stream_operator]] [ slice_size ] [[stream_concatenation]] }
 
 ===== Backlinks =====
-[[8_Expressions/8.4_Primaries:primary|primary]]
-[[8_Expressions/8.5_Expression_left_side_values:variable_lvalue|variable_lvalue]]
+[[8_Expressions:8.4_Primaries:primary|primary]]
+[[8_Expressions:8.5_Expression_left_side_values:variable_lvalue|variable_lvalue]]

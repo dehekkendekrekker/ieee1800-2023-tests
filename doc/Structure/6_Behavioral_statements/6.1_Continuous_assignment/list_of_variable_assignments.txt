@@ -7,7 +7,7 @@ Created Friday 27 December 2025
 
 IEEE 1800-2023 Section A.6.1
 
-[[6_Behavioral_statements/6.2_Procedural_blocks_and_assignments:variable_assignment|variable_assignment]] { **,** [[6_Behavioral_statements/6.2_Procedural_blocks_and_assignments:variable_assignment|variable_assignment]] }
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:variable_assignment|variable_assignment]] { **,** [[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:variable_assignment|variable_assignment]] }
 
 ===== Backlinks =====
 [[continuous_assign]]

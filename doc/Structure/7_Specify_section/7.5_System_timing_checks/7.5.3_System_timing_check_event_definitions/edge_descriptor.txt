@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== edge descriptor ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.7.5.3
+
+01 | 10 | [[z_or_x]] [[zero_or_one]] | [[zero_or_one]] [[z_or_x]]
+
+===== Backlinks =====
+[[edge_control_specifier]]
+

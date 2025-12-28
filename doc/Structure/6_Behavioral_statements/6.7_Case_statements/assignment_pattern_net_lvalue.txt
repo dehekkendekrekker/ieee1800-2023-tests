@@ -8,5 +8,5 @@ Created Friday 27 December 2025
 ' { net_lvalue { , net_lvalue } }
 
 ===== Backlinks =====
-[[8_Expressions/8.5_Expression_left_side_values:net_lvalue|net_lvalue]]
+[[8_Expressions:8.5_Expression_left_side_values:net_lvalue|net_lvalue]]
 

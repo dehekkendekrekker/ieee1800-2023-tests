@@ -11,5 +11,5 @@ Created Friday 27 December 2025
 
 ===== Backlinks =====
 [[event_control]]
-[[6_Behavioral_statements/6.11_Clocking_block:clocking_declaration|clocking_declaration]]
-[[2_Declarations/2.10_Assertion_declarations:property_spec|property_spec]]
+[[6_Behavioral_statements:6.11_Clocking_block:clocking_declaration|clocking_declaration]]
+[[2_Declarations:2.10_Assertion_declarations:property_spec|property_spec]]

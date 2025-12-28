@@ -10,7 +10,7 @@ Created Friday 27 December 2025
 | **interconnect** [[implicit_data_type]]
 
 ===== Backlinks =====
-[[1_Source_text/1.3_Module_parameters_and_ports:net_port_header|net_port_header]]
-[[2_Declarations/2.1_Declaration_types:inout_declaration|inout_declaration]]
-[[2_Declarations/2.1_Declaration_types:input_declaration|input_declaration]]
-[[2_Declarations/2.1_Declaration_types:output_declaration|output_declaration]]
+[[1_Source_text:1.3_Module_parameters_and_ports:net_port_header|net_port_header]]
+[[2_Declarations:2.1_Declaration_types:2.1.2_Port_declarations:inout_declaration|inout_declaration]]
+[[2_Declarations:2.1_Declaration_types:2.1.2_Port_declarations:input_declaration|input_declaration]]
+[[2_Declarations:2.1_Declaration_types:2.1.2_Port_declarations:output_declaration|output_declaration]]

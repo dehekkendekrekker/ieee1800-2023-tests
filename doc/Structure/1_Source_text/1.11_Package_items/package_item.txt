@@ -8,7 +8,7 @@ Created Tuesday 16 December 2025
 [[package_or_generate_item_declaration]]
 | [[anonymous_program]]
 | [[package_export_declaration]]
-| timeunits_declaration
+| [[1_Source_text:1.2_SystemVerilog_source_text:timeunits_declaration|timeunits_declaration]]
 
 ===== Backlinks =====
-[[1_Source_text/1.1_Source_text:package_declaration|package_declaration]]
+[[1_Source_text:1.2_SystemVerilog_source_text:package_declaration|package_declaration]]

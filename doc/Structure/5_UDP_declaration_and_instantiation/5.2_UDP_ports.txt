@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== 5.2 UDP ports ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.5.2
+
+===== Child pages =====
+[[+udp_port_list]]
+[[+udp_declaration_port_list]]
+[[+udp_port_declaration]]
+[[+udp_output_declaration]]
+[[+udp_input_declaration]]
+[[+udp_reg_declaration]]
+

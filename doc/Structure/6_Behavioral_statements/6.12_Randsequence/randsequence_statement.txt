@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== randsequence statement ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.6.12
+
+**randsequence** ( [ [[9_General:9.3_Identifiers:rs_production_identifier|rs_production_identifier]] ] )
+[[rs_production]] { [[rs_production]] }
+**endsequence**
+
+===== Backlinks =====
+[[6_Behavioral_statements:6.4_Statements:statement_item|statement_item]]
+

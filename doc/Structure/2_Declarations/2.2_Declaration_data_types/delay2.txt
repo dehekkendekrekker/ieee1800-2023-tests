@@ -8,7 +8,7 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.2.2.3
 
 **#** [[delay_value]]
-| **#** **(** [[8_Expressions/8.3_Expressions:mintypmax_expression|mintypmax_expression]] [ **,** [[8_Expressions/8.3_Expressions:mintypmax_expression|mintypmax_expression]] ] **)**
+| **#** **(** [[8_Expressions:8.3_Expressions:mintypmax_expression|mintypmax_expression]] [ **,** [[8_Expressions:8.3_Expressions:mintypmax_expression|mintypmax_expression]] ] **)**
 
 ===== Backlinks =====
-[[3.1_Primitive_instantiation:gate_instantiation|gate_instantiation]]
+[[4_Instantiations:4.1_Instantiations:gate_instantiation|gate_instantiation]]

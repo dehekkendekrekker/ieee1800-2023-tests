@@ -8,5 +8,5 @@ Created Friday 27 December 2025
 ' { variable_lvalue { , variable_lvalue } }
 
 ===== Backlinks =====
-[[8_Expressions/8.5_Expression_left_side_values:variable_lvalue|variable_lvalue]]
+[[8_Expressions:8.5_Expression_left_side_values:variable_lvalue|variable_lvalue]]
 

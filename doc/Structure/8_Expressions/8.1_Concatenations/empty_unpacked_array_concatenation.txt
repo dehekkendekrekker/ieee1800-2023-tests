@@ -8,5 +8,5 @@ Created Friday 27 December 2025
 { }
 
 ===== Backlinks =====
-[[8_Expressions/8.4_Primaries:primary|primary]]
-[[8_Expressions/8.4_Primaries:constant_primary|constant_primary]]
+[[8_Expressions:8.4_Primaries:primary|primary]]
+[[8_Expressions:8.4_Primaries:constant_primary|constant_primary]]

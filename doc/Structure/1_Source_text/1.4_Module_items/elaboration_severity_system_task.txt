@@ -11,4 +11,4 @@ IEEE 1800-2023 Section A.1.4
 
 ===== Backlinks =====
 [[module_common_item]]
-[[1_Source_text/1.8_Checker_items:checker_generate_item|checker_generate_item]]
+[[1_Source_text:1.8_Checker_items:checker_generate_item|checker_generate_item]]

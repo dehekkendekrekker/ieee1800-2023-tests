@@ -7,7 +7,7 @@ Created Tuesday 16 December 2025
 
 **default** default_skew ;
 | clocking_direction list_of_clocking_decl_assign ;
-| { attribute_instance } [[2_Declarations/2.10_Assertion_declarations:assertion_item_declaration|assertion_item_declaration]]
+| { attribute_instance } [[2_Declarations:2.10_Assertion_declarations:assertion_item_declaration|assertion_item_declaration]]
 
 
 ===== Backlinks =====

@@ -10,4 +10,4 @@ Created Sunday 22 December 2025
 
 ===== Backlinks =====
 [[var_data_type]]
-[[2_Declarations/2.10_Assertion_declarations:sequence_formal_type|sequence_formal_type]]
+[[2_Declarations:2.10_Assertion_declarations:sequence_formal_type|sequence_formal_type]]

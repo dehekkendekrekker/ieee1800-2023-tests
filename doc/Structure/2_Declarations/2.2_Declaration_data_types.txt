@@ -7,4 +7,32 @@ Created Wednesday 17 December 2025
 
 IEEE 1800-2023 Section A.2.2
 
-Declaration data types grammar rules.
+===== Child pages =====
+[[+casting_type]]
+[[+charge_strength]]
+[[+constant_range]]
+[[+data_type]]
+[[+data_type_or_implicit]]
+[[+data_type_or_incomplete_class_scoped_type]]
+[[+data_type_or_void]]
+[[+delay2]]
+[[+delay3]]
+[[+delay_value]]
+[[+drive_strength]]
+[[+implicit_data_type]]
+[[+incomplete_class_scoped_type]]
+[[+integer_atom_type]]
+[[+integer_vector_type]]
+[[+net_port_type]]
+[[+net_type]]
+[[+non_integer_type]]
+[[+packed_dimension]]
+[[+signing]]
+[[+strength0]]
+[[+strength1]]
+[[+type_reference]]
+[[+unpacked_dimension]]
+[[+unsized_dimension]]
+[[+var_data_type]]
+[[+variable_dimension]]
+[[+variable_port_type]]

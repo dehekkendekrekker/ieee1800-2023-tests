@@ -15,4 +15,5 @@ IEEE 1800-2023 Section A.8
 [[+8.5_Expression_left_side_values]]
 [[+8.6_Operators]]
 [[+8.7_Numbers]]
+[[+8.8_Strings]]
 

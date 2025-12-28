@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== sequential entry ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.5.3
+
+[[seq_input_list]] : [[current_state]] : [[next_state]] ;
+
+===== Backlinks =====
+[[sequential_body]]
+

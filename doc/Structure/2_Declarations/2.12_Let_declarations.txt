@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== 2.12 Let declarations ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.2.12
+
+===== Child pages =====
+[[+let_declaration]]
+[[+let_identifier]]
+[[+let_port_list]]
+[[+let_port_item]]
+[[+let_formal_type]]
+[[+let_expression]]
+[[+let_list_of_arguments]]
+[[+let_actual_arg]]
+

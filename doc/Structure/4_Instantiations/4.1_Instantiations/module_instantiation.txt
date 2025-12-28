@@ -8,5 +8,5 @@ Created Friday 27 December 2025
 module_identifier [ parameter_value_assignment ] hierarchical_instance { , hierarchical_instance } ;
 
 ===== Backlinks =====
-[[module_or_generate_item]]
-[[bind_instantiation]]
+[[1_Source_text:1.4_Module_items:module_or_generate_item|module_or_generate_item]]
+[[1_Source_text:1.4_Module_items:bind_instantiation|bind_instantiation]]

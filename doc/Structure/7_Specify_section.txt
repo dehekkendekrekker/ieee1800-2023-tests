@@ -8,4 +8,9 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.7
 
 ===== Child pages =====
+[[+7.1_Specify_block_declaration]]
+[[+7.2_Specify_path_declarations]]
+[[+7.3_Specify_block_terminals]]
+[[+7.4_Specify_path_delays]]
+[[+7.5_System_timing_checks]]
 

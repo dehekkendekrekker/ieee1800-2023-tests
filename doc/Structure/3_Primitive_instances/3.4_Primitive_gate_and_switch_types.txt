@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== 3.4 Primitive gate and switch types ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.3.4
+
+===== Child pages =====
+[[+cmos_switchtype]]
+[[+enable_gatetype]]
+[[+mos_switchtype]]
+[[+n_input_gatetype]]
+[[+n_output_gatetype]]
+[[+pass_en_switchtype]]
+[[+pass_switchtype]]
+

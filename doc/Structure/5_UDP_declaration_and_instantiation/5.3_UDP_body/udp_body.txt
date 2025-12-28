@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== udp body ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.5.3
+
+[[combinational_body]]
+| [[sequential_body]]
+
+===== Backlinks =====
+[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_declaration]]
+

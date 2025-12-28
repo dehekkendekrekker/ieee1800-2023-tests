@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== 8.8 Strings ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.8.8
+
+===== Child pages =====
+[[+string_literal]]
+[[+quoted_string]]
+[[+triple_quoted_string]]
+[[+quoted_string_item]]
+[[+triple_quoted_string_item]]
+[[+string_escape_seq]]
+

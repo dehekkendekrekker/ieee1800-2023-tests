@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== path delay expression ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.7.4
+
+[[8_Expressions:8.3_Expressions:constant_mintypmax_expression|constant_mintypmax_expression]]
+
+===== Backlinks =====
+[[t_path_delay_expression]]
+[[trise_path_delay_expression]]
+[[tfall_path_delay_expression]]
+[[tz_path_delay_expression]]
+[[t01_path_delay_expression]]
+[[t10_path_delay_expression]]
+[[t0z_path_delay_expression]]
+[[tz1_path_delay_expression]]
+[[t1z_path_delay_expression]]
+[[tz0_path_delay_expression]]
+[[t0x_path_delay_expression]]
+[[tx1_path_delay_expression]]
+[[t1x_path_delay_expression]]
+[[tx0_path_delay_expression]]
+[[txz_path_delay_expression]]
+[[tzx_path_delay_expression]]
+

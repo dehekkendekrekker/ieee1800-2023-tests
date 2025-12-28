@@ -9,5 +9,5 @@ Created Friday 27 December 2025
 | < | <= | > | >= | & | | | ^ | ^~ | ~^ | >> | << | >>> | <<< | -> | <->
 
 ===== Backlinks =====
-[[8_Expressions/8.3_Expressions:expression|expression]]
-[[8_Expressions/8.3_Expressions:constant_expression|constant_expression]]
+[[8_Expressions:8.3_Expressions:expression|expression]]
+[[8_Expressions:8.3_Expressions:constant_expression|constant_expression]]

@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== init val ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.5.3
+
+1'b0 | 1'b1 | 1'bx | 1'bX | 1'B0 | 1'B1 | 1'Bx | 1'BX | 1 | 0
+
+===== Backlinks =====
+[[udp_initial_statement]]
+

@@ -7,14 +7,16 @@ Created Sunday 22 December 2025
 
 IEEE 1800-2023 Section A.4.2
 
-Generated instantiation grammar rules.
-
-===== Generate Constructs =====
-* [[+generate_region]]
-* [[+generate_block]]
-* [[+conditional_generate_construct]]
-* [[+if_generate_construct]]
-* [[+case_generate_construct]]
-* [[+case_generate_item]]
-* [[+loop_generate_construct]]
+===== Child pages =====
+[[+generate_region]]
+[[+generate_item]]
+[[+generate_block]]
+[[+conditional_generate_construct]]
+[[+if_generate_construct]]
+[[+case_generate_construct]]
+[[+case_generate_item]]
+[[+loop_generate_construct]]
+[[+genvar_initialization]]
+[[+genvar_iteration]]
+[[+genvar_expression]]
 

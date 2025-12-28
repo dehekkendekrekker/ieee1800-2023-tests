@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== udp input declaration ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.5.2
+
+{ [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } **input** [[2_Declarations:2.3_Declaration_lists:list_of_udp_port_identifiers|list_of_udp_port_identifiers]]
+
+===== Backlinks =====
+[[udp_port_declaration]]
+[[udp_declaration_port_list]]
+

@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-22T00:00:00+00:00
+
+====== 1.2 SystemVerilog source text ======
+Created Sunday 22 December 2025
+
+IEEE 1800-2023 Section A.1.2
+
+===== Child pages =====
+[[+source_text]]
+[[+description]]
+[[+module_nonansi_header]]
+[[+module_ansi_header]]
+[[+module_declaration]]
+[[+module_keyword]]
+[[+interface_nonansi_header]]
+[[+interface_ansi_header]]
+[[+interface_declaration]]
+[[+program_nonansi_header]]
+[[+program_ansi_header]]
+[[+program_declaration]]
+[[+checker_declaration]]
+[[+class_declaration]]
+[[+interface_class_declaration]]
+[[+package_declaration]]
+[[+timeunits_declaration]]

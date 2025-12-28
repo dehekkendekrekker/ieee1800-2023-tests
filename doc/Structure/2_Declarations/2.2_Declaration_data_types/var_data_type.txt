@@ -9,4 +9,4 @@ Created Wednesday 17 December 2025
 | **var** [[data_type_or_implicit]]
 
 ===== Backlinks =====
-[[2_Declarations/2.10_Assertion_declarations:assertion_variable_declaration|assertion_variable_declaration]]
+[[2_Declarations:2.10_Assertion_declarations:assertion_variable_declaration|assertion_variable_declaration]]

@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== path delay value ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.7.4
+
+[[list_of_path_delay_expressions]]
+| ( [[list_of_path_delay_expressions]] )
+
+===== Backlinks =====
+[[7_Specify_section:7.2_Specify_path_declarations:simple_path_declaration]]
+[[7_Specify_section:7.2_Specify_path_declarations:edge_sensitive_path_declaration]]
+

@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== 7.3 Specify block terminals ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.7.3
+
+===== Child pages =====
+[[+list_of_path_inputs]]
+[[+list_of_path_outputs]]
+[[+specify_input_terminal_descriptor]]
+[[+specify_output_terminal_descriptor]]
+[[+input_identifier]]
+[[+output_identifier]]
+

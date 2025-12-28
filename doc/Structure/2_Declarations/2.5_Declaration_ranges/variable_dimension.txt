@@ -11,5 +11,5 @@ Created Friday 27 December 2025
 | [[queue_dimension]]
 
 ===== Backlinks =====
-[[1_Source_text/1.8_Checker_items:checker_port_item|checker_port_item]]
-[[2_Declarations/2.4_Declaration_assignments:variable_decl_assignment|variable_decl_assignment]]
+[[1_Source_text:1.8_Checker_items:checker_port_item|checker_port_item]]
+[[2_Declarations:2.4_Declaration_assignments:variable_decl_assignment|variable_decl_assignment]]

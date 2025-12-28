@@ -9,5 +9,5 @@ Created Friday 27 December 2025
 | **void**
 
 ===== Backlinks =====
-[[2_Declarations/2.6_Function_declarations:function_data_type_or_implicit|function_data_type_or_implicit]]
-[[2_Declarations/2.6_Function_declarations:function_prototype|function_prototype]]
+[[2_Declarations:2.6_Function_declarations:function_data_type_or_implicit|function_data_type_or_implicit]]
+[[2_Declarations:2.6_Function_declarations:function_prototype|function_prototype]]

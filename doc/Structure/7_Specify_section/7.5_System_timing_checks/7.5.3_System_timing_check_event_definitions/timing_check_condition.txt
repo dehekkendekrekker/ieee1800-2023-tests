@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== timing check condition ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.7.5.3
+
+[[scalar_timing_check_condition]]
+| ( [[scalar_timing_check_condition]] )
+
+===== Backlinks =====
+[[timing_check_event]]
+[[controlled_timing_check_event]]
+

@@ -7,8 +7,8 @@ Created Friday 27 December 2025
 
 ps_type_identifier
 | ps_parameter_identifier
-| [[2_Declarations/2.2_Declaration_data_types:integer_atom_type|integer_atom_type]]
-| [[2_Declarations/2.2_Declaration_data_types:type_reference|type_reference]]
+| [[2_Declarations:2.2_Declaration_data_types:integer_atom_type|integer_atom_type]]
+| [[2_Declarations:2.2_Declaration_data_types:type_reference|type_reference]]
 
 ===== Backlinks =====
 [[assignment_pattern_expression]]

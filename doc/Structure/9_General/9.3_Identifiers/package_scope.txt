@@ -9,9 +9,9 @@ package_identifier ::
 | **$unit** ::
 
 ===== Backlinks =====
-[[8_Expressions/8.4_Primaries:primary|primary]]
-[[8_Expressions/8.4_Primaries:constant_primary|constant_primary]]
-[[8_Expressions/8.4_Primaries:class_qualifier|class_qualifier]]
+[[8_Expressions:8.4_Primaries:primary|primary]]
+[[8_Expressions:8.4_Primaries:constant_primary|constant_primary]]
+[[8_Expressions:8.4_Primaries:class_qualifier|class_qualifier]]
 [[ps_identifier]]
 [[ps_parameter_identifier]]
 [[ps_type_identifier]]

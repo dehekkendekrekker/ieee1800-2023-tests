@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== 5.3 UDP body ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.5.3
+
+===== Child pages =====
+[[+udp_body]]
+[[+combinational_body]]
+[[+combinational_entry]]
+[[+sequential_body]]
+[[+udp_initial_statement]]
+[[+init_val]]
+[[+sequential_entry]]
+[[+seq_input_list]]
+[[+level_input_list]]
+[[+edge_input_list]]
+[[+edge_indicator]]
+[[+current_state]]
+[[+next_state]]
+[[+output_symbol]]
+[[+level_symbol]]
+[[+edge_symbol]]
+

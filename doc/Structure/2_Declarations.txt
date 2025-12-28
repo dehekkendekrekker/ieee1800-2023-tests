@@ -19,4 +19,5 @@ IEEE 1800-2023 Section A.2
 [[+2.9_Interface_declarations]]
 [[+2.10_Assertion_declarations]]
 [[+2.11_Covergroup_declarations]]
+[[+2.12_Let_declarations]]
 

@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-12-28T00:00:00+00:00
+
+====== 3.1 Primitive instantiation and instances ======
+Created Saturday 28 December 2025
+
+IEEE 1800-2023 Section A.3.1
+
+===== Child pages =====
+[[+gate_instantiation]]
+[[+cmos_switch_instance]]
+[[+enable_gate_instance]]
+[[+mos_switch_instance]]
+[[+n_input_gate_instance]]
+[[+n_output_gate_instance]]
+[[+pass_switch_instance]]
+[[+pass_enable_switch_instance]]
+[[+pull_gate_instance]]
+
