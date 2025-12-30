@@ -11,17 +11,17 @@ IEEE 1800-2023 Section A.6.5
 	Timing control statement grammar rules.
 
 ===== Timing Control =====
-* [[+procedural_timing_control_statement]]
-* [[+procedural_timing_control]]
-* [[+delay_or_event_control]]
-* [[+delay_control]]
-* [[+event_control]]
-* [[+clocking_event]]
-* [[+event_expression]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:procedural_timing_control_statement|procedural timing control statement]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:procedural_timing_control|procedural timing control]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:delay_or_event_control|delay or event control]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:delay_control|delay control]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:event_control|event control]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:clocking_event|clocking event]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:event_expression|event expression]]
 
 ===== Other Statements =====
-* [[+wait_statement]]
-* [[+event_trigger]]
-* [[+jump_statement]]
-* [[+disable_statement]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:wait_statement|wait statement]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:event_trigger|event trigger]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:jump_statement|jump statement]]
+* [[6_Behavioral_statements:6.5_Timing_control_statements:disable_statement|disable statement]]
 

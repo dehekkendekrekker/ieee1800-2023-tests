@@ -11,4 +11,4 @@ built_in_method_call ::=
 	[[array_manipulation_call]] | [[randomize_call]]
 
 ===== Backlinks =====
-(no backlinks)
+[[method_call_body]]

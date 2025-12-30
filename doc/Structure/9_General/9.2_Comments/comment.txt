@@ -12,5 +12,3 @@ comment ::=
 | [[block_comment]]
 
 ===== Backlinks =====
-(lexical element - handled by scanner)
-

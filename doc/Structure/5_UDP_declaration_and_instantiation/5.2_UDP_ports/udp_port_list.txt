@@ -11,5 +11,4 @@ udp_port_list ::=
 	[[9_General:9.3_Identifiers:output_port_identifier|output_port_identifier]] , [[9_General:9.3_Identifiers:input_port_identifier|input_port_identifier]] { , [[9_General:9.3_Identifiers:input_port_identifier|input_port_identifier]] }
 
 ===== Backlinks =====
-[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_nonansi_declaration]]
-
+[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_nonansi_declaration|udp_nonansi_declaration]]

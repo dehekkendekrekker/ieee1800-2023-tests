@@ -11,4 +11,4 @@ list_of_cross_items ::=
 	[[cross_item]] , [[cross_item]] { , [[cross_item]] }
 
 ===== Backlinks =====
-(no backlinks)
+[[cover_cross]]

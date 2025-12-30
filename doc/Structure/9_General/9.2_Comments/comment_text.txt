@@ -11,6 +11,5 @@ comment_text ::=
 	{ Any_ASCII_character }
 
 ===== Backlinks =====
-[[one_line_comment]]
 [[block_comment]]
-
+[[one_line_comment]]

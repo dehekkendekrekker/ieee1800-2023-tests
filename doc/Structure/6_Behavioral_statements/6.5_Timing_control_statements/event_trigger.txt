@@ -6,8 +6,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 event_trigger ::=
-	-> hierarchical_event_identifier nonrange_select ;
-| ->> [ [[delay_or_event_control]] ] hierarchical_event_identifier nonrange_select ;
+	-> [[9_General:9.3_Identifiers:hierarchical_event_identifier|hierarchical_event_identifier]] [[8_Expressions:8.4_Primaries:nonrange_select|nonrange_select]] ;
+| ->> [ [[delay_or_event_control]] ] [[9_General:9.3_Identifiers:hierarchical_event_identifier|hierarchical_event_identifier]] [[8_Expressions:8.4_Primaries:nonrange_select|nonrange_select]] ;
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.4_Statements:statement_item|statement_item]]

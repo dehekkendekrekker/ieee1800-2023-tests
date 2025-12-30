@@ -8,16 +8,16 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.2
 
 ===== Child pages =====
-[[+2.1_Declaration_types]]
-[[+2.2_Declaration_data_types]]
-[[+2.3_Declaration_lists]]
-[[+2.4_Declaration_assignments]]
-[[+2.5_Declaration_ranges]]
-[[+2.6_Function_declarations]]
-[[+2.7_Task_declarations]]
-[[+2.8_Block_item_declarations]]
-[[+2.9_Interface_declarations]]
-[[+2.10_Assertion_declarations]]
-[[+2.11_Covergroup_declarations]]
-[[+2.12_Let_declarations]]
+[[2_Declarations:2.1_Declaration_types|2.1 Declaration types]]
+[[2_Declarations:2.2_Declaration_data_types|2.2 Declaration data types]]
+[[2_Declarations:2.3_Declaration_lists|2.3 Declaration lists]]
+[[2_Declarations:2.4_Declaration_assignments|2.4 Declaration assignments]]
+[[2_Declarations:2.5_Declaration_ranges|2.5 Declaration ranges]]
+[[2_Declarations:2.6_Function_declarations|2.6 Function declarations]]
+[[2_Declarations:2.7_Task_declarations|2.7 Task declarations]]
+[[2_Declarations:2.8_Block_item_declarations|2.8 Block item declarations]]
+[[2_Declarations:2.9_Interface_declarations|2.9 Interface declarations]]
+[[2_Declarations:2.10_Assertion_declarations|2.10 Assertion declarations]]
+[[2_Declarations:2.11_Covergroup_declarations|2.11 Covergroup declarations]]
+[[2_Declarations:2.12_Let_declarations|2.12 Let declarations]]
 

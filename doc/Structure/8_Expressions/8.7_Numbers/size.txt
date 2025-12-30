@@ -11,8 +11,7 @@ size ::=
 	[[unsigned_number]]
 
 ===== Backlinks =====
-[[decimal_number]]
 [[binary_number]]
-[[octal_number]]
+[[decimal_number]]
 [[hex_number]]
-
+[[octal_number]]

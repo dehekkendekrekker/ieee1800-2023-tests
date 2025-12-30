@@ -13,4 +13,3 @@ string_literal ::=
 
 ===== Backlinks =====
 [[8_Expressions:8.4_Primaries:primary_literal|primary_literal]]
-

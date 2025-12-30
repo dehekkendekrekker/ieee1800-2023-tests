@@ -11,4 +11,4 @@ index_variable_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-
+[[6_Behavioral_statements:6.8_Looping_statements:loop_variables|loop_variables]]

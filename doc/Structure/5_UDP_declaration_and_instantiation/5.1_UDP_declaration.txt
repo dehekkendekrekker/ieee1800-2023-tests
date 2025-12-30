@@ -8,7 +8,7 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.5.1
 
 ===== Child pages =====
-[[+udp_nonansi_declaration]]
-[[+udp_ansi_declaration]]
-[[+udp_declaration]]
+[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_nonansi_declaration|udp nonansi declaration]]
+[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_ansi_declaration|udp ansi declaration]]
+[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_declaration|udp declaration]]
 

@@ -7,8 +7,8 @@ Created Tuesday 16 December 2025
 
 module_common_item ::=
 	[[module_or_generate_item_declaration]]
-| [[4_Instantiations:4.1_Instantiations:interface_instantiation|interface_instantiation]]
-| [[4_Instantiations:4.1_Instantiations:program_instantiation|program_instantiation]]
+| [[4_Instantiations:4.1_Instantiations:4.1.2_Interface_instantiation:interface_instantiation|interface_instantiation]]
+| [[4_Instantiations:4.1_Instantiations:4.1.3_Program_instantiation:program_instantiation|program_instantiation]]
 | [[6_Behavioral_statements:6.10_Assertion_statements:assertion_item|assertion_item]]
 | [[bind_directive]]
 | [[6_Behavioral_statements:6.1_Continuous_assignment:continuous_assign|continuous_assign]]
@@ -21,5 +21,5 @@ module_common_item ::=
 | [[elaboration_severity_system_task]]
 
 ===== Backlinks =====
-[[module_or_generate_item]]
 [[1_Source_text:1.6_Interface_items:interface_or_generate_item|interface_or_generate_item]]
+[[module_or_generate_item]]

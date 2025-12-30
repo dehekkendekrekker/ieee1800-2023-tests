@@ -10,4 +10,3 @@ array_pattern_key ::=
 
 ===== Backlinks =====
 [[assignment_pattern]]
-

@@ -13,4 +13,4 @@ pulse_control_specparam ::=
   = ( [[reject_limit_value]] [ , [[error_limit_value]] ] )
 
 ===== Backlinks =====
-(no backlinks)
+[[specparam_assignment]]

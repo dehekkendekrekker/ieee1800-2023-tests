@@ -12,4 +12,3 @@ hex_value ::=
 
 ===== Backlinks =====
 [[hex_number]]
-

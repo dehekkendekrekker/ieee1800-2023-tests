@@ -21,4 +21,3 @@ udp_declaration ::=
 
 ===== Backlinks =====
 [[1_Source_text:1.2_SystemVerilog_source_text:description|description]]
-

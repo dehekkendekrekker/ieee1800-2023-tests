@@ -6,18 +6,21 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 class_scope ::=
-	class_type ::
+	[[class_type]] ::
 
 ===== Backlinks =====
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:blocking_assignment|blocking_assignment]]
 [[1_Source_text:1.9_Class_items:class_constructor_declaration|class_constructor_declaration]]
 [[2_Declarations:2.4_Declaration_assignments:class_new|class_new]]
 [[8_Expressions:8.4_Primaries:class_qualifier|class_qualifier]]
 [[8_Expressions:8.4_Primaries:constant_primary|constant_primary]]
 [[1_Source_text:1.10_Constraints:constraint_primary|constraint_primary]]
-[[2_Declarations:2.2_Declaration_data_types:data_type|data_type]]
+[[data_type]]
 [[1_Source_text:1.10_Constraints:extern_constraint_declaration|extern_constraint_declaration]]
-[[hierarchical_btf_identifier]]
+[[2_Declarations:2.6_Function_declarations:function_body_declaration|function_body_declaration]]
+[[2_Declarations:2.11_Covergroup_declarations:hierarchical_btf_identifier|hierarchical_btf_identifier]]
 [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:nettype_declaration|nettype_declaration]]
-[[ps_or_hierarchical_array_identifier]]
-[[ps_parameter_identifier]]
-[[ps_type_identifier]]
+[[9_General:9.3_Identifiers:ps_or_hierarchical_array_identifier|ps_or_hierarchical_array_identifier]]
+[[9_General:9.3_Identifiers:ps_parameter_identifier|ps_parameter_identifier]]
+[[9_General:9.3_Identifiers:ps_type_identifier|ps_type_identifier]]
+[[2_Declarations:2.7_Task_declarations:task_body_declaration|task_body_declaration]]

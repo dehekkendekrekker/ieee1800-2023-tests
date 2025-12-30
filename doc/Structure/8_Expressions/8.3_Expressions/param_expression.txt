@@ -7,9 +7,9 @@ Created Friday 27 December 2025
 
 param_expression ::=
 	[[mintypmax_expression]]
-| [[2_Declarations:2.2_Declaration_data_types:data_type|data_type]]
+| [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:data_type|data_type]]
 | $
 
 ===== Backlinks =====
-[[4_Instantiations:4.1_Instantiations:named_parameter_assignment|named_parameter_assignment]]
-[[4_Instantiations:4.1_Instantiations:ordered_parameter_assignment|ordered_parameter_assignment]]
+[[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:named_parameter_assignment|named_parameter_assignment]]
+[[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:ordered_parameter_assignment|ordered_parameter_assignment]]

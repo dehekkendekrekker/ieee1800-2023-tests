@@ -13,4 +13,3 @@ let_list_of_arguments ::=
 
 ===== Backlinks =====
 [[let_expression]]
-

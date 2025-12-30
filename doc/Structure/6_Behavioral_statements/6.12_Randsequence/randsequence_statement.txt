@@ -13,4 +13,4 @@ randsequence_statement ::=
 **endsequence**
 
 ===== Backlinks =====
-(no backlinks)
+[[6_Behavioral_statements:6.4_Statements:statement_item|statement_item]]

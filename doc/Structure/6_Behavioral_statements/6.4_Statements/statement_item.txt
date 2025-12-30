@@ -21,8 +21,8 @@ statement_item ::=
 | [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:seq_block|seq_block]]
 | [[6_Behavioral_statements:6.5_Timing_control_statements:wait_statement|wait_statement]]
 | [[6_Behavioral_statements:6.10_Assertion_statements:procedural_assertion_statement|procedural_assertion_statement]]
-| clocking_drive ;
-| randsequence_statement
+| [[6_Behavioral_statements:6.11_Clocking_block:clocking_drive|clocking_drive]] ;
+| [[6_Behavioral_statements:6.12_Randsequence:randsequence_statement|randsequence_statement]]
 | [[6_Behavioral_statements:6.7_Case_statements:randcase_statement|randcase_statement]]
 | [[2_Declarations:2.10_Assertion_declarations:expect_property_statement|expect_property_statement]]
 

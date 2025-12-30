@@ -14,4 +14,3 @@ output_identifier ::=
 
 ===== Backlinks =====
 [[specify_output_terminal_descriptor]]
-

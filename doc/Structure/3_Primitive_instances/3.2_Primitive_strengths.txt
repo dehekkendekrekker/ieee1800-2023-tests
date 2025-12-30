@@ -8,6 +8,6 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.3.2
 
 ===== Child pages =====
-[[+pulldown_strength]]
-[[+pullup_strength]]
+[[3_Primitive_instances:3.2_Primitive_strengths:pulldown_strength|pulldown strength]]
+[[3_Primitive_instances:3.2_Primitive_strengths:pullup_strength|pullup strength]]
 

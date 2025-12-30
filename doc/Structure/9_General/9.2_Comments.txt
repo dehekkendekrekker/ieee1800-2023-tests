@@ -8,7 +8,7 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.9.2
 
 ===== Child pages =====
-[[+comment]]
-[[+one_line_comment]]
-[[+block_comment]]
-[[+comment_text]]
+[[9_General:9.2_Comments:comment|comment]]
+[[9_General:9.2_Comments:one_line_comment|one line comment]]
+[[9_General:9.2_Comments:block_comment|block comment]]
+[[9_General:9.2_Comments:comment_text|comment text]]

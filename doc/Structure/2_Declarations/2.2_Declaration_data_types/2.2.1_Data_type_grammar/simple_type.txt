@@ -14,4 +14,6 @@ simple_type ::=
 | [[9_General:9.3_Identifiers:ps_parameter_identifier|ps_parameter_identifier]]
 
 ===== Backlinks =====
+[[6_Behavioral_statements:6.7_Case_statements:6.7.1_Patterns:assignment_pattern_key|assignment_pattern_key]]
+[[casting_type]]
 [[8_Expressions:8.1_Concatenations:slice_size|slice_size]]

@@ -11,7 +11,6 @@ enable_terminal ::=
 	[[8_Expressions:8.3_Expressions:expression|expression]]
 
 ===== Backlinks =====
-[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:enable_gate_instance]]
-[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:mos_switch_instance]]
-[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:pass_enable_switch_instance]]
-
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:enable_gate_instance|enable_gate_instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:mos_switch_instance|mos_switch_instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:pass_enable_switch_instance|pass_enable_switch_instance]]

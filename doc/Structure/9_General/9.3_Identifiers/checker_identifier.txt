@@ -11,4 +11,5 @@ checker_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
+[[1_Source_text:1.2_SystemVerilog_source_text:checker_declaration|checker_declaration]]
 [[ps_checker_identifier]]

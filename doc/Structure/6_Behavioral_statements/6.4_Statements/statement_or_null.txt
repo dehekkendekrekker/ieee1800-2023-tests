@@ -7,7 +7,7 @@ Created Tuesday 16 December 2025
 
 statement_or_null ::=
 	[[statement]]
-| { attribute_instance } ;
+| { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } ;
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]
@@ -16,6 +16,7 @@ statement_or_null ::=
 [[6_Behavioral_statements:6.7_Case_statements:case_pattern_item|case_pattern_item]]
 [[6_Behavioral_statements:6.6_Conditional_statements:conditional_statement|conditional_statement]]
 [[2_Declarations:2.10_Assertion_declarations:cover_property_statement|cover_property_statement]]
+[[2_Declarations:2.10_Assertion_declarations:cover_sequence_statement|cover_sequence_statement]]
 [[6_Behavioral_statements:6.10_Assertion_statements:deferred_immediate_cover_statement|deferred_immediate_cover_statement]]
 [[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:initial_construct|initial_construct]]
 [[6_Behavioral_statements:6.8_Looping_statements:loop_statement|loop_statement]]

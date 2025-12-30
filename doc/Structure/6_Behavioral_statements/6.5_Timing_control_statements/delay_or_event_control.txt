@@ -11,6 +11,6 @@ delay_or_event_control ::=
 | **repeat** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) [[event_control]]
 
 ===== Backlinks =====
-[[event_trigger]]
 [[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:blocking_assignment|blocking_assignment]]
+[[event_trigger]]
 [[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:nonblocking_assignment|nonblocking_assignment]]

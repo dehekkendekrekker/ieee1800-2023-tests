@@ -12,4 +12,3 @@ decimal_base ::=
 
 ===== Backlinks =====
 [[decimal_number]]
-

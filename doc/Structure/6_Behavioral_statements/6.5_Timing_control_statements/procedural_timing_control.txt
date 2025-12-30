@@ -8,7 +8,7 @@ Created Friday 27 December 2025
 procedural_timing_control ::=
 	[[delay_control]]
 | [[event_control]]
-| cycle_delay
+| [[6_Behavioral_statements:6.11_Clocking_block:cycle_delay|cycle_delay]]
 
 ===== Backlinks =====
 [[procedural_timing_control_statement]]

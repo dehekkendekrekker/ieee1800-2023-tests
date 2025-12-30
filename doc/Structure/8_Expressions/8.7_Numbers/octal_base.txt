@@ -12,4 +12,3 @@ octal_base ::=
 
 ===== Backlinks =====
 [[octal_number]]
-

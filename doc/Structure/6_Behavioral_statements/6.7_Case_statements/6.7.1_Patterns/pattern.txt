@@ -7,14 +7,13 @@ Created Friday 27 December 2025
 
 pattern ::=
 	( [[pattern]] )
-| . variable_identifier
+| . [[9_General:9.3_Identifiers:variable_identifier|variable_identifier]]
 | .*
 | [[8_Expressions:8.3_Expressions:constant_expression|constant_expression]]
-| **tagged** member_identifier [ [[pattern]] ]
+| **tagged** [[9_General:9.3_Identifiers:member_identifier|member_identifier]] [ [[pattern]] ]
 | ' { [[pattern]] { , [[pattern]] } }
-| ' { member_identifier : [[pattern]] { , member_identifier : [[pattern]] } }
+| ' { [[9_General:9.3_Identifiers:member_identifier|member_identifier]] : [[pattern]] { , [[9_General:9.3_Identifiers:member_identifier|member_identifier]] : [[pattern]] } }
 
 ===== Backlinks =====
-[[case_pattern_item]]
+[[6_Behavioral_statements:6.7_Case_statements:case_pattern_item|case_pattern_item]]
 [[6_Behavioral_statements:6.6_Conditional_statements:cond_pattern|cond_pattern]]
-[[pattern]]

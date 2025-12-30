@@ -12,3 +12,4 @@ list_of_variable_assignments ::=
 
 ===== Backlinks =====
 [[continuous_assign]]
+[[6_Behavioral_statements:6.8_Looping_statements:for_initialization|for_initialization]]

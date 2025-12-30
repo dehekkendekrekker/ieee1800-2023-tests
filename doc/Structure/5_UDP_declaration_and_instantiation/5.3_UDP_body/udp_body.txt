@@ -12,5 +12,4 @@ udp_body ::=
 | [[sequential_body]]
 
 ===== Backlinks =====
-[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_declaration]]
-
+[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_declaration|udp_declaration]]

@@ -10,4 +10,3 @@ function_statement ::=
 
 ===== Backlinks =====
 [[function_statement_or_null]]
-[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:final_construct|final_construct]]

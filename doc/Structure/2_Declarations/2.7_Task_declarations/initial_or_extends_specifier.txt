@@ -13,4 +13,3 @@ initial_or_extends_specifier ::=
 
 ===== Backlinks =====
 [[dynamic_override_specifiers]]
-

@@ -11,4 +11,6 @@ hierarchical_variable_identifier ::=
 	[[hierarchical_identifier]]
 
 ===== Backlinks =====
-
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:blocking_assignment|blocking_assignment]]
+[[8_Expressions:8.5_Expression_left_side_values:nonrange_variable_lvalue|nonrange_variable_lvalue]]
+[[8_Expressions:8.5_Expression_left_side_values:variable_lvalue|variable_lvalue]]

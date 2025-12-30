@@ -10,5 +10,5 @@ value_range ::=
 | [ [[8_Expressions:8.3_Expressions:expression|expression]] : [[8_Expressions:8.3_Expressions:expression|expression]] ]
 
 ===== Backlinks =====
-[[range_list]]
 [[1_Source_text:1.10_Constraints:dist_item|dist_item]]
+[[range_list]]

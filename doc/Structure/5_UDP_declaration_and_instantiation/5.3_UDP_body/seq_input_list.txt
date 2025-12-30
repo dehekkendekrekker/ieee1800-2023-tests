@@ -13,4 +13,3 @@ seq_input_list ::=
 
 ===== Backlinks =====
 [[sequential_entry]]
-

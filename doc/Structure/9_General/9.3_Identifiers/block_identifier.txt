@@ -11,4 +11,8 @@ block_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-
+[[2_Declarations:2.10_Assertion_declarations:concurrent_assertion_item|concurrent_assertion_item]]
+[[6_Behavioral_statements:6.10_Assertion_statements:deferred_immediate_assertion_item|deferred_immediate_assertion_item]]
+[[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:par_block|par_block]]
+[[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:seq_block|seq_block]]
+[[6_Behavioral_statements:6.4_Statements:statement|statement]]

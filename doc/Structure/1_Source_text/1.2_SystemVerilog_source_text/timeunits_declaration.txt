@@ -8,10 +8,10 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.1.2
 
 timeunits_declaration ::=
-	**timeunit** [[8_Expressions:8.7_Numbers:time_literal|time_literal]] [ **/** [[8_Expressions:8.7_Numbers:time_literal|time_literal]] ] **;**
-| **timeprecision** [[8_Expressions:8.7_Numbers:time_literal|time_literal]] **;**
-| **timeunit** [[8_Expressions:8.7_Numbers:time_literal|time_literal]] **;** **timeprecision** [[8_Expressions:8.7_Numbers:time_literal|time_literal]] **;**
-| **timeprecision** [[8_Expressions:8.7_Numbers:time_literal|time_literal]] **;** **timeunit** [[8_Expressions:8.7_Numbers:time_literal|time_literal]] **;**
+	**timeunit** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] [ **/** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] ] **;**
+| **timeprecision** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] **;**
+| **timeunit** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] **;** **timeprecision** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] **;**
+| **timeprecision** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] **;** **timeunit** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] **;**
 
 ===== Backlinks =====
 [[interface_declaration]]

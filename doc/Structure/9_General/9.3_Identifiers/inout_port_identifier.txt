@@ -11,6 +11,5 @@ inout_port_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-[[7_Specify_section:7.3_Specify_block_terminals:input_identifier]]
-[[7_Specify_section:7.3_Specify_block_terminals:output_identifier]]
-
+[[7_Specify_section:7.3_Specify_block_terminals:input_identifier|input_identifier]]
+[[7_Specify_section:7.3_Specify_block_terminals:output_identifier|output_identifier]]

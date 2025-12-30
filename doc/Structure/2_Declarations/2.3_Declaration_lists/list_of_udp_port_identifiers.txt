@@ -12,4 +12,3 @@ list_of_udp_port_identifiers ::=
 
 ===== Backlinks =====
 [[5_UDP_declaration_and_instantiation:5.2_UDP_ports:udp_input_declaration|udp_input_declaration]]
-

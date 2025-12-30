@@ -8,10 +8,10 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.7.3
 
 ===== Child pages =====
-[[+list_of_path_inputs]]
-[[+list_of_path_outputs]]
-[[+specify_input_terminal_descriptor]]
-[[+specify_output_terminal_descriptor]]
-[[+input_identifier]]
-[[+output_identifier]]
+[[7_Specify_section:7.3_Specify_block_terminals:list_of_path_inputs|list of path inputs]]
+[[7_Specify_section:7.3_Specify_block_terminals:list_of_path_outputs|list of path outputs]]
+[[7_Specify_section:7.3_Specify_block_terminals:specify_input_terminal_descriptor|specify input terminal descriptor]]
+[[7_Specify_section:7.3_Specify_block_terminals:specify_output_terminal_descriptor|specify output terminal descriptor]]
+[[7_Specify_section:7.3_Specify_block_terminals:input_identifier|input identifier]]
+[[7_Specify_section:7.3_Specify_block_terminals:output_identifier|output identifier]]
 

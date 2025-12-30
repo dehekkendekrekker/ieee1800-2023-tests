@@ -8,7 +8,7 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.8.1
 
 slice_size ::=
-	[[2_Declarations:2.2_Declaration_data_types:simple_type|simple_type]] | [[8_Expressions:8.3_Expressions:constant_expression|constant_expression]]
+	[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:simple_type|simple_type]] | [[8_Expressions:8.3_Expressions:constant_expression|constant_expression]]
 
 ===== Backlinks =====
-(no backlinks)
+[[streaming_concatenation]]

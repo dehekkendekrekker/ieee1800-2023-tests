@@ -6,7 +6,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 nonrange_variable_lvalue ::=
-	[ [[8_Expressions:8.4_Primaries:implicit_class_handle|implicit_class_handle]] . | [[9_General:9.3_Identifiers:package_scope|package_scope]] ] hierarchical_variable_identifier nonrange_select
+	[ [[8_Expressions:8.4_Primaries:implicit_class_handle|implicit_class_handle]] . | [[9_General:9.3_Identifiers:package_scope|package_scope]] ] [[9_General:9.3_Identifiers:hierarchical_variable_identifier|hierarchical_variable_identifier]] [[8_Expressions:8.4_Primaries:nonrange_select|nonrange_select]]
 
 ===== Backlinks =====
-(Used in for loop variable assignments)
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:blocking_assignment|blocking_assignment]]

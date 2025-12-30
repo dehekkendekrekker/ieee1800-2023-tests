@@ -11,10 +11,10 @@ IEEE 1800-2023 Section A.8.2
 	Subroutine call grammar rules.
 
 ===== Subroutine Call Rules =====
-* [[+subroutine_call]]
-* [[+function_subroutine_call]]
-* [[+constant_function_call]]
-* [[+tf_call]]
-* [[+system_tf_call]]
-* [[+method_call]]
-* [[+list_of_arguments]]
+* [[8_Expressions:8.2_Subroutine_calls:subroutine_call|subroutine call]]
+* [[8_Expressions:8.2_Subroutine_calls:function_subroutine_call|function subroutine call]]
+* [[8_Expressions:8.2_Subroutine_calls:constant_function_call|constant function call]]
+* [[8_Expressions:8.2_Subroutine_calls:tf_call|tf call]]
+* [[8_Expressions:8.2_Subroutine_calls:system_tf_call|system tf call]]
+* [[8_Expressions:8.2_Subroutine_calls:method_call|method call]]
+* [[8_Expressions:8.2_Subroutine_calls:list_of_arguments|list of arguments]]

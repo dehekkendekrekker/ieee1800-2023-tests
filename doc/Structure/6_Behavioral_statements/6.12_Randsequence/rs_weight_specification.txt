@@ -14,4 +14,3 @@ rs_weight_specification ::=
 
 ===== Backlinks =====
 [[rs_rule]]
-

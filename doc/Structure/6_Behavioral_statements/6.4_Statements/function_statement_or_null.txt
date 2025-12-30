@@ -7,8 +7,8 @@ Created Friday 27 December 2025
 
 function_statement_or_null ::=
 	[[function_statement]]
-| { attribute_instance } ;
+| { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } ;
 
 ===== Backlinks =====
-[[2_Declarations:2.6_Function_declarations:function_body_declaration|function_body_declaration]]
 [[1_Source_text:1.9_Class_items:class_constructor_declaration|class_constructor_declaration]]
+[[2_Declarations:2.6_Function_declarations:function_body_declaration|function_body_declaration]]

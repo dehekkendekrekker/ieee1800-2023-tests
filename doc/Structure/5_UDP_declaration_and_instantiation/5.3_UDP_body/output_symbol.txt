@@ -13,4 +13,3 @@ output_symbol ::=
 ===== Backlinks =====
 [[combinational_entry]]
 [[next_state]]
-

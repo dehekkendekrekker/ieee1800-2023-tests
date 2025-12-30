@@ -8,13 +8,13 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.6.2
 
 ===== Child pages =====
-[[+initial_construct]]
-[[+always_construct]]
-[[+always_keyword]]
-[[+final_construct]]
-[[+blocking_assignment]]
-[[+operator_assignment]]
-[[+assignment_operator]]
-[[+nonblocking_assignment]]
-[[+procedural_continuous_assignment]]
-[[+variable_assignment]]
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:initial_construct|initial construct]]
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:always_construct|always construct]]
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:always_keyword|always keyword]]
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:final_construct|final construct]]
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:blocking_assignment|blocking assignment]]
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:operator_assignment|operator assignment]]
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:assignment_operator|assignment operator]]
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:nonblocking_assignment|nonblocking assignment]]
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:procedural_continuous_assignment|procedural continuous assignment]]
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:variable_assignment|variable assignment]]

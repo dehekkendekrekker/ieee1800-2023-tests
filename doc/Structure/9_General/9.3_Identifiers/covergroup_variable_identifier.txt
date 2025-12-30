@@ -11,4 +11,3 @@ covergroup_variable_identifier ::=
 	[[variable_identifier]]
 
 ===== Backlinks =====
-

@@ -8,8 +8,8 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.7.1
 
 ===== Child pages =====
-[[+specify_block]]
-[[+specify_item]]
-[[+pulsestyle_declaration]]
-[[+showcancelled_declaration]]
+[[7_Specify_section:7.1_Specify_block_declaration:specify_block|specify block]]
+[[7_Specify_section:7.1_Specify_block_declaration:specify_item|specify item]]
+[[7_Specify_section:7.1_Specify_block_declaration:pulsestyle_declaration|pulsestyle declaration]]
+[[7_Specify_section:7.1_Specify_block_declaration:showcancelled_declaration|showcancelled declaration]]
 

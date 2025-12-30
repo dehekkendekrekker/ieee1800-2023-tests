@@ -13,4 +13,3 @@ class_constructor_arg_list ::=
 ===== Backlinks =====
 [[class_constructor_declaration]]
 [[class_constructor_prototype]]
-

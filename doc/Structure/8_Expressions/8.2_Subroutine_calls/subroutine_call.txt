@@ -9,7 +9,9 @@ subroutine_call ::=
 	[[tf_call]]
 | [[system_tf_call]]
 | [[method_call]]
-| [ **std** :: ] randomize_call
+| [ **std** :: ] [[randomize_call]]
 
 ===== Backlinks =====
 [[function_subroutine_call]]
+[[2_Declarations:2.10_Assertion_declarations:sequence_match_item|sequence_match_item]]
+[[6_Behavioral_statements:6.9_Subroutine_call_statements:subroutine_call_statement|subroutine_call_statement]]

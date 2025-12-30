@@ -8,10 +8,10 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.3.3
 
 ===== Child pages =====
-[[+enable_terminal]]
-[[+inout_terminal]]
-[[+input_terminal]]
-[[+ncontrol_terminal]]
-[[+output_terminal]]
-[[+pcontrol_terminal]]
+[[3_Primitive_instances:3.3_Primitive_terminals:enable_terminal|enable terminal]]
+[[3_Primitive_instances:3.3_Primitive_terminals:inout_terminal|inout terminal]]
+[[3_Primitive_instances:3.3_Primitive_terminals:input_terminal|input terminal]]
+[[3_Primitive_instances:3.3_Primitive_terminals:ncontrol_terminal|ncontrol terminal]]
+[[3_Primitive_instances:3.3_Primitive_terminals:output_terminal|output terminal]]
+[[3_Primitive_instances:3.3_Primitive_terminals:pcontrol_terminal|pcontrol terminal]]
 

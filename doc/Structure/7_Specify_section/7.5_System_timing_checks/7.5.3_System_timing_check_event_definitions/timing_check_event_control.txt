@@ -14,6 +14,5 @@ timing_check_event_control ::=
 | [[edge_control_specifier]]
 
 ===== Backlinks =====
-[[timing_check_event]]
 [[controlled_timing_check_event]]
-
+[[timing_check_event]]

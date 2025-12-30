@@ -8,10 +8,10 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.8.8
 
 ===== Child pages =====
-[[+string_literal]]
-[[+quoted_string]]
-[[+triple_quoted_string]]
-[[+quoted_string_item]]
-[[+triple_quoted_string_item]]
-[[+string_escape_seq]]
+[[8_Expressions:8.8_Strings:string_literal|string literal]]
+[[8_Expressions:8.8_Strings:quoted_string|quoted string]]
+[[8_Expressions:8.8_Strings:triple_quoted_string|triple quoted string]]
+[[8_Expressions:8.8_Strings:quoted_string_item|quoted string item]]
+[[8_Expressions:8.8_Strings:triple_quoted_string_item|triple quoted string item]]
+[[8_Expressions:8.8_Strings:string_escape_seq|string escape seq]]
 

@@ -11,4 +11,5 @@ cross_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
+[[2_Declarations:2.11_Covergroup_declarations:cover_cross|cover_cross]]
 [[2_Declarations:2.11_Covergroup_declarations:select_expression|select_expression]]

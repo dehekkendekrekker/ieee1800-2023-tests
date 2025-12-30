@@ -6,11 +6,11 @@ Creation-Date: 2025-12-16T22:49:59+00:00
 Created Tuesday 16 December 2025
 
 clocking_declaration ::=
-	[ default ] clocking [ clocking_identifier ] clocking_event ;
+	[ default ] clocking [ [[9_General:9.3_Identifiers:clocking_identifier|clocking_identifier]] ] [[6_Behavioral_statements:6.5_Timing_control_statements:clocking_event|clocking_event]] ;
 { [[clocking_item]] }
-endclocking [ : clocking_identifier ]
-| global clocking [ clocking_identifier ] clocking_event ;
-endclocking [ : clocking_identifier ]
+endclocking [ : [[9_General:9.3_Identifiers:clocking_identifier|clocking_identifier]] ]
+| global clocking [ [[9_General:9.3_Identifiers:clocking_identifier|clocking_identifier]] ] [[6_Behavioral_statements:6.5_Timing_control_statements:clocking_event|clocking_event]] ;
+endclocking [ : [[9_General:9.3_Identifiers:clocking_identifier|clocking_identifier]] ]
 
 ===== Backlinks =====
 [[1_Source_text:1.8_Checker_items:checker_or_generate_item_declaration|checker_or_generate_item_declaration]]

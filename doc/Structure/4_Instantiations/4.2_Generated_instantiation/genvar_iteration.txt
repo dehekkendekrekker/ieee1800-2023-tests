@@ -8,10 +8,9 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.4.2
 
 genvar_iteration ::=
-	[[9_General:9.3_Identifiers:genvar_identifier|genvar_identifier]] [[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:assignment_operator|assignment_operator]] [[genvar_expression]]
+	[[9_General:9.3_Identifiers:genvar_identifier|genvar_identifier]] [[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:assignment_operator|assignment_operator]] [[8_Expressions:8.3_Expressions:genvar_expression|genvar_expression]]
 | [[8_Expressions:8.6_Operators:inc_or_dec_operator|inc_or_dec_operator]] [[9_General:9.3_Identifiers:genvar_identifier|genvar_identifier]]
 | [[9_General:9.3_Identifiers:genvar_identifier|genvar_identifier]] [[8_Expressions:8.6_Operators:inc_or_dec_operator|inc_or_dec_operator]]
 
 ===== Backlinks =====
 [[loop_generate_construct]]
-

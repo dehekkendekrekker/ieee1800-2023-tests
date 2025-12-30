@@ -12,4 +12,3 @@ edge_descriptor ::=
 
 ===== Backlinks =====
 [[edge_control_specifier]]
-

@@ -11,4 +11,10 @@ member_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
+[[8_Expressions:8.4_Primaries:constant_select|constant_select]]
+[[2_Declarations:2.11_Covergroup_declarations:coverage_option|coverage_option]]
 [[8_Expressions:8.4_Primaries:nonrange_select|nonrange_select]]
+[[6_Behavioral_statements:6.7_Case_statements:6.7.1_Patterns:pattern|pattern]]
+[[8_Expressions:8.4_Primaries:select|select]]
+[[6_Behavioral_statements:6.7_Case_statements:6.7.1_Patterns:structure_pattern_key|structure_pattern_key]]
+[[8_Expressions:8.3_Expressions:tagged_union_expression|tagged_union_expression]]

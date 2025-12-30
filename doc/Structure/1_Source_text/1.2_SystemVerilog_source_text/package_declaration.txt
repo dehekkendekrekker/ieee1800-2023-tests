@@ -6,9 +6,9 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 package_declaration ::=
-	{ attribute_instance } **package** [ [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:lifetime|lifetime]] ] package_identifier ;
-[ [[timeunits_declaration]] ] { { attribute_instance } [[1_Source_text:1.11_Package_items:package_item|package_item]] }
-**endpackage** [ : package_identifier ]
+	{ [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } **package** [ [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:lifetime|lifetime]] ] [[9_General:9.3_Identifiers:package_identifier|package_identifier]] ;
+[ [[timeunits_declaration]] ] { { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } [[1_Source_text:1.11_Package_items:package_item|package_item]] }
+**endpackage** [ : [[9_General:9.3_Identifiers:package_identifier|package_identifier]] ]
 
 ===== Backlinks =====
 [[description]]

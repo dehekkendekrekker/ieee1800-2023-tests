@@ -8,7 +8,8 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.2.2.1
 
 interface_class_type ::=
-	[[9_General:9.3_Identifiers:ps_class_identifier|ps_class_identifier]] [ [[4_Instantiations:4.1_Instantiations:parameter_value_assignment|parameter_value_assignment]] ]
+	[[9_General:9.3_Identifiers:ps_class_identifier|ps_class_identifier]] [ [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:parameter_value_assignment|parameter_value_assignment]] ]
 
 ===== Backlinks =====
-
+[[1_Source_text:1.2_SystemVerilog_source_text:class_declaration|class_declaration]]
+[[1_Source_text:1.2_SystemVerilog_source_text:interface_class_declaration|interface_class_declaration]]

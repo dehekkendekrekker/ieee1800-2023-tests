@@ -8,10 +8,9 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.3.2
 
 pulldown_strength ::=
-	( [[2_Declarations:2.2_Declaration_data_types:strength0|strength0]] , [[2_Declarations:2.2_Declaration_data_types:strength1|strength1]] )
-| ( [[2_Declarations:2.2_Declaration_data_types:strength1|strength1]] , [[2_Declarations:2.2_Declaration_data_types:strength0|strength0]] )
-| ( [[2_Declarations:2.2_Declaration_data_types:strength0|strength0]] )
+	( [[2_Declarations:2.2_Declaration_data_types:2.2.2_Strengths:strength0|strength0]] , [[2_Declarations:2.2_Declaration_data_types:2.2.2_Strengths:strength1|strength1]] )
+| ( [[2_Declarations:2.2_Declaration_data_types:2.2.2_Strengths:strength1|strength1]] , [[2_Declarations:2.2_Declaration_data_types:2.2.2_Strengths:strength0|strength0]] )
+| ( [[2_Declarations:2.2_Declaration_data_types:2.2.2_Strengths:strength0|strength0]] )
 
 ===== Backlinks =====
-[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:gate_instantiation]]
-
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:gate_instantiation|gate_instantiation]]

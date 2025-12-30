@@ -6,7 +6,7 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 Created Sunday 22 December 2025
 
 case_generate_item ::=
-	constant_expression { , constant_expression } : [[generate_block]]
+	[[8_Expressions:8.3_Expressions:constant_expression|constant_expression]] { , [[8_Expressions:8.3_Expressions:constant_expression|constant_expression]] } : [[generate_block]]
 | **default** [ : ] [[generate_block]]
 
 ===== Backlinks =====

@@ -11,4 +11,6 @@ function_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-[[1_Source_text:1.11_Package_items:dpi_import_export|dpi_import_export]]
+[[2_Declarations:2.6_Function_declarations:dpi_import_export|dpi_import_export]]
+[[2_Declarations:2.6_Function_declarations:function_body_declaration|function_body_declaration]]
+[[2_Declarations:2.6_Function_declarations:function_prototype|function_prototype]]

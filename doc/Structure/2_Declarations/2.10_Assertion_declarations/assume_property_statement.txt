@@ -10,21 +10,21 @@ IEEE 1800-2023 Section A.2.10, 16.14
 assume_property_statement ::=
 	**assume property** ( [[property_spec]] ) [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]
 
-===== property_spec permutations =====
+===== [[property_spec]] permutations =====
 
-==== Permutation 1: property_expr only ====
-assume property ( property_expr ) action_block
+==== Permutation 1: [[property_expr]] only ====
+assume property ( [[property_expr]] ) [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]
 
-==== Permutation 2: With clocking_event ====
-assume property ( @(posedge clk) property_expr ) action_block
+==== Permutation 2: With [[6_Behavioral_statements:6.5_Timing_control_statements:clocking_event|clocking_event]] ====
+assume property ( @(posedge clk) [[property_expr]] ) [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]
 
 ==== Permutation 3: With disable iff ====
-assume property ( disable iff (reset) property_expr ) action_block
+assume property ( disable iff (reset) [[property_expr]] ) [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]
 
-==== Permutation 4: With clocking_event and disable iff ====
-assume property ( @(posedge clk) disable iff (reset) property_expr ) action_block
+==== Permutation 4: With [[6_Behavioral_statements:6.5_Timing_control_statements:clocking_event|clocking_event]] and disable iff ====
+assume property ( @(posedge clk) disable iff (reset) [[property_expr]] ) [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]
 
-===== action_block permutations =====
+===== [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]] permutations =====
 * Pass statement only
 * Else statement only
 * Both pass and else
@@ -32,4 +32,3 @@ assume property ( @(posedge clk) disable iff (reset) property_expr ) action_bloc
 
 ===== Backlinks =====
 [[concurrent_assertion_statement]]
-

@@ -12,6 +12,5 @@ timing_check_condition ::=
 | ( [[scalar_timing_check_condition]] )
 
 ===== Backlinks =====
-[[timing_check_event]]
 [[controlled_timing_check_event]]
-
+[[timing_check_event]]

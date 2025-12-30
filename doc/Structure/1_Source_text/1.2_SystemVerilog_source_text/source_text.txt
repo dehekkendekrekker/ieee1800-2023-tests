@@ -9,4 +9,3 @@ source_text ::=
 	[ [[timeunits_declaration]] ] { [[description]] }
 
 ===== Backlinks =====
-(root production - no backlinks)

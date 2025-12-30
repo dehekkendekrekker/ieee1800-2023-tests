@@ -11,10 +11,10 @@ IEEE 1800-2023 Section A.1.8
 	Checker item grammar rules.
 
 ===== Checker Items =====
-* [[+checker_port_list]]
-* [[+checker_port_item]]
-* [[+checker_port_direction]]
-* [[+checker_or_generate_item]]
-* [[+checker_or_generate_item_declaration]]
-* [[+checker_generate_item]]
+* [[1_Source_text:1.8_Checker_items:checker_port_list|checker port list]]
+* [[1_Source_text:1.8_Checker_items:checker_port_item|checker port item]]
+* [[1_Source_text:1.8_Checker_items:checker_port_direction|checker port direction]]
+* [[1_Source_text:1.8_Checker_items:checker_or_generate_item|checker or generate item]]
+* [[1_Source_text:1.8_Checker_items:checker_or_generate_item_declaration|checker or generate item declaration]]
+* [[1_Source_text:1.8_Checker_items:checker_generate_item|checker generate item]]
 

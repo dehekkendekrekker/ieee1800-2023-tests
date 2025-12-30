@@ -11,6 +11,5 @@ rs_code_block ::=
 	**{** { [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:data_declaration|data_declaration]] } { [[6_Behavioral_statements:6.4_Statements:statement_or_null|statement_or_null]] } **}**
 
 ===== Backlinks =====
-[[rs_rule]]
 [[rs_prod]]
-
+[[rs_rule]]

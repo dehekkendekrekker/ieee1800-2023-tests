@@ -6,9 +6,9 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 type_declaration ::=
-	**typedef** [[2_Declarations:2.2_Declaration_data_types:data_type_or_incomplete_class_scoped_type|data_type_or_incomplete_class_scoped_type]] type_identifier { [[2_Declarations:2.5_Declaration_ranges:variable_dimension|variable_dimension]] } ;
-| **typedef** interface_port_identifier [[8_Expressions:8.4_Primaries:constant_bit_select|constant_bit_select]] . type_identifier type_identifier ;
-| **typedef** [ [[forward_type]] ] type_identifier ;
+	**typedef** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:data_type_or_incomplete_class_scoped_type|data_type_or_incomplete_class_scoped_type]] [[9_General:9.3_Identifiers:type_identifier|type_identifier]] { [[2_Declarations:2.5_Declaration_ranges:variable_dimension|variable_dimension]] } ;
+| **typedef** [[9_General:9.3_Identifiers:interface_port_identifier|interface_port_identifier]] [[8_Expressions:8.4_Primaries:constant_bit_select|constant_bit_select]] . [[9_General:9.3_Identifiers:type_identifier|type_identifier]] [[9_General:9.3_Identifiers:type_identifier|type_identifier]] ;
+| **typedef** [ [[forward_type]] ] [[9_General:9.3_Identifiers:type_identifier|type_identifier]] ;
 
 ===== Backlinks =====
 [[data_declaration]]

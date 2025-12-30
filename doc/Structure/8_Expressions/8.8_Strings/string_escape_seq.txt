@@ -15,4 +15,3 @@ string_escape_seq ::=
 ===== Backlinks =====
 [[quoted_string]]
 [[triple_quoted_string]]
-

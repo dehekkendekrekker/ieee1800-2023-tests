@@ -14,4 +14,3 @@ rs_production_identifier ::=
 [[6_Behavioral_statements:6.12_Randsequence:randsequence_statement|randsequence_statement]]
 [[6_Behavioral_statements:6.12_Randsequence:rs_production|rs_production]]
 [[6_Behavioral_statements:6.12_Randsequence:rs_production_item|rs_production_item]]
-

@@ -12,4 +12,3 @@ edge_indicator ::=
 
 ===== Backlinks =====
 [[edge_input_list]]
-

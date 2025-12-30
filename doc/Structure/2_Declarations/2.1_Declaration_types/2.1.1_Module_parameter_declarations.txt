@@ -6,7 +6,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 ===== Child pages =====
-[[+local_parameter_declaration]]
-[[+parameter_declaration]]
-[[+type_parameter_declaration]]
-[[+specparam_declaration]]
+[[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:local_parameter_declaration|local parameter declaration]]
+[[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:parameter_declaration|parameter declaration]]
+[[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:type_parameter_declaration|type parameter declaration]]
+[[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:specparam_declaration|specparam declaration]]

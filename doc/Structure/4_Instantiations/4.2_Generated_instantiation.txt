@@ -8,15 +8,15 @@ Created Sunday 22 December 2025
 IEEE 1800-2023 Section A.4.2
 
 ===== Child pages =====
-[[+generate_region]]
-[[+generate_item]]
-[[+generate_block]]
-[[+conditional_generate_construct]]
-[[+if_generate_construct]]
-[[+case_generate_construct]]
-[[+case_generate_item]]
-[[+loop_generate_construct]]
-[[+genvar_initialization]]
-[[+genvar_iteration]]
-[[+genvar_expression]]
+[[4_Instantiations:4.2_Generated_instantiation:generate_region|generate region]]
+[[4_Instantiations:4.2_Generated_instantiation:generate_item|generate item]]
+[[4_Instantiations:4.2_Generated_instantiation:generate_block|generate block]]
+[[4_Instantiations:4.2_Generated_instantiation:conditional_generate_construct|conditional generate construct]]
+[[4_Instantiations:4.2_Generated_instantiation:if_generate_construct|if generate construct]]
+[[4_Instantiations:4.2_Generated_instantiation:case_generate_construct|case generate construct]]
+[[4_Instantiations:4.2_Generated_instantiation:case_generate_item|case generate item]]
+[[4_Instantiations:4.2_Generated_instantiation:loop_generate_construct|loop generate construct]]
+[[4_Instantiations:4.2_Generated_instantiation:genvar_initialization|genvar initialization]]
+[[4_Instantiations:4.2_Generated_instantiation:genvar_iteration|genvar iteration]]
+[[8_Expressions:8.3_Expressions:genvar_expression|genvar expression]]
 

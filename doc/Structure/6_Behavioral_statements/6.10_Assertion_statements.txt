@@ -11,20 +11,20 @@ IEEE 1800-2023 Section A.6.10
 	Assertion statement grammar rules (immediate and deferred assertions).
 
 ===== Assertion Items =====
-* [[+assertion_item]]
-* [[+procedural_assertion_statement]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:assertion_item|assertion item]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:procedural_assertion_statement|procedural assertion statement]]
 
 ===== Immediate Assertions =====
-* [[+immediate_assertion_statement]]
-* [[+simple_immediate_assertion_statement]]
-* [[+simple_immediate_assert_statement]]
-* [[+simple_immediate_assume_statement]]
-* [[+simple_immediate_cover_statement]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:immediate_assertion_statement|immediate assertion statement]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:simple_immediate_assertion_statement|simple immediate assertion statement]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:simple_immediate_assert_statement|simple immediate assert statement]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:simple_immediate_assume_statement|simple immediate assume statement]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:simple_immediate_cover_statement|simple immediate cover statement]]
 
 ===== Deferred Assertions =====
-* [[+deferred_immediate_assertion_item]]
-* [[+deferred_immediate_assertion_statement]]
-* [[+deferred_immediate_assert_statement]]
-* [[+deferred_immediate_assume_statement]]
-* [[+deferred_immediate_cover_statement]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:deferred_immediate_assertion_item|deferred immediate assertion item]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:deferred_immediate_assertion_statement|deferred immediate assertion statement]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:deferred_immediate_assert_statement|deferred immediate assert statement]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:deferred_immediate_assume_statement|deferred immediate assume statement]]
+* [[6_Behavioral_statements:6.10_Assertion_statements:deferred_immediate_cover_statement|deferred immediate cover statement]]
 

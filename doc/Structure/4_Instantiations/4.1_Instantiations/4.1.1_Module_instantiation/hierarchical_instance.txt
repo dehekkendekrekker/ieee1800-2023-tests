@@ -11,5 +11,6 @@ hierarchical_instance ::=
 	[[name_of_instance]] **(** [ [[list_of_port_connections]] ] **)**
 
 ===== Backlinks =====
-[[interface_instantiation]]
-[[program_instantiation]]
+[[4_Instantiations:4.1_Instantiations:4.1.2_Interface_instantiation:interface_instantiation|interface_instantiation]]
+[[module_instantiation]]
+[[4_Instantiations:4.1_Instantiations:4.1.3_Program_instantiation:program_instantiation|program_instantiation]]

@@ -9,7 +9,7 @@ class_item_qualifier ::=
 	**static** | **protected** | **local**
 
 ===== Backlinks =====
-[[class_property]]
 [[class_method]]
-[[property_qualifier]]
+[[class_property]]
 [[method_qualifier]]
+[[property_qualifier]]

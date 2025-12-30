@@ -12,4 +12,3 @@ zero_or_one ::=
 
 ===== Backlinks =====
 [[edge_descriptor]]
-

@@ -10,4 +10,3 @@ udp_ansi_declaration ::=
 
 ===== Backlinks =====
 [[udp_declaration]]
-

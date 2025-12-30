@@ -6,10 +6,11 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 packed_dimension ::=
-	[ [[constant_range]] ]
+	[ [[8_Expressions:8.3_Expressions:constant_range|constant_range]] ]
 | [[unsized_dimension]]
 
 ===== Backlinks =====
-[[2_Declarations:2.2_Declaration_data_types:data_type|data_type]]
-[[2_Declarations:2.2_Declaration_data_types:enum_base_type|enum_base_type]]
+[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:data_type|data_type]]
+[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:enum_base_type|enum_base_type]]
+[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:implicit_data_type|implicit_data_type]]
 [[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:specparam_declaration|specparam_declaration]]

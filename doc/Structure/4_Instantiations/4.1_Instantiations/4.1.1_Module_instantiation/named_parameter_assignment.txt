@@ -8,7 +8,7 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.4.1.1
 
 named_parameter_assignment ::=
-	**.** parameter_identifier **(** [ [[8_Expressions:8.3_Expressions:param_expression|param_expression]] ] **)**
+	**.** [[9_General:9.3_Identifiers:parameter_identifier|parameter_identifier]] **(** [ [[8_Expressions:8.3_Expressions:param_expression|param_expression]] ] **)**
 
 ===== Backlinks =====
 [[list_of_parameter_value_assignments]]

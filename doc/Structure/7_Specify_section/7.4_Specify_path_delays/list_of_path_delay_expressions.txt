@@ -16,4 +16,3 @@ list_of_path_delay_expressions ::=
 
 ===== Backlinks =====
 [[path_delay_value]]
-

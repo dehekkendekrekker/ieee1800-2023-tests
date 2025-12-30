@@ -11,8 +11,7 @@ level_symbol ::=
 	0 | 1 | x | X | ? | b | B
 
 ===== Backlinks =====
-[[level_input_list]]
-[[edge_input_list]]
-[[edge_indicator]]
 [[current_state]]
-
+[[edge_indicator]]
+[[edge_input_list]]
+[[level_input_list]]

@@ -12,4 +12,3 @@ full_path_description ::=
 
 ===== Backlinks =====
 [[simple_path_declaration]]
-

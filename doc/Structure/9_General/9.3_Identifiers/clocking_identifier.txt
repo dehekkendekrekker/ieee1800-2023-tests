@@ -11,4 +11,7 @@ clocking_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
+[[1_Source_text:1.8_Checker_items:checker_or_generate_item_declaration|checker_or_generate_item_declaration]]
+[[6_Behavioral_statements:6.11_Clocking_block:clocking_declaration|clocking_declaration]]
 [[2_Declarations:2.9_Interface_declarations:modport_clocking_declaration|modport_clocking_declaration]]
+[[1_Source_text:1.4_Module_items:module_or_generate_item_declaration|module_or_generate_item_declaration]]

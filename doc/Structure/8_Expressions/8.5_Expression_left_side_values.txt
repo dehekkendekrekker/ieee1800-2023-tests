@@ -11,6 +11,6 @@ IEEE 1800-2023 Section A.8.5
 	Expression left-side value (lvalue) grammar rules.
 
 ===== Lvalue Rules =====
-* [[+net_lvalue]]
-* [[+variable_lvalue]]
-* [[+nonrange_variable_lvalue]]
+* [[8_Expressions:8.5_Expression_left_side_values:net_lvalue|net lvalue]]
+* [[8_Expressions:8.5_Expression_left_side_values:variable_lvalue|variable lvalue]]
+* [[8_Expressions:8.5_Expression_left_side_values:nonrange_variable_lvalue|nonrange variable lvalue]]

@@ -19,4 +19,3 @@ select_expression ::=
 
 ===== Backlinks =====
 [[bins_selection]]
-[[select_expression]]

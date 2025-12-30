@@ -14,4 +14,3 @@ input_identifier ::=
 
 ===== Backlinks =====
 [[specify_input_terminal_descriptor]]
-

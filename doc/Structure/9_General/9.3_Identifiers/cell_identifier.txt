@@ -11,4 +11,6 @@ cell_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-
+[[1_Source_text:1.5_Configuration_source_text:cell_clause|cell_clause]]
+[[1_Source_text:1.5_Configuration_source_text:design_statement|design_statement]]
+[[1_Source_text:1.5_Configuration_source_text:use_clause|use_clause]]

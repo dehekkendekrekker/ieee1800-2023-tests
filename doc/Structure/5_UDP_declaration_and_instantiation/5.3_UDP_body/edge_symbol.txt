@@ -12,4 +12,3 @@ edge_symbol ::=
 
 ===== Backlinks =====
 [[edge_indicator]]
-

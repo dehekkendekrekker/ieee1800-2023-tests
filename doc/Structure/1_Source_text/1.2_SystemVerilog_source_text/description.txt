@@ -11,8 +11,8 @@ description ::=
 | [[interface_declaration]]
 | [[program_declaration]]
 | [[package_declaration]]
-| { attribute_instance } [[1_Source_text:1.11_Package_items:package_item|package_item]]
-| { attribute_instance } [[1_Source_text:1.4_Module_items:bind_directive|bind_directive]]
+| { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } [[1_Source_text:1.11_Package_items:package_item|package_item]]
+| { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } [[1_Source_text:1.4_Module_items:bind_directive|bind_directive]]
 | [[1_Source_text:1.5_Configuration_source_text:config_declaration|config_declaration]]
 
 ===== Backlinks =====

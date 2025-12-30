@@ -12,3 +12,6 @@ edge_identifier ::=
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.11_Clocking_block:clocking_skew|clocking_skew]]
+[[6_Behavioral_statements:6.5_Timing_control_statements:event_expression|event_expression]]
+[[full_edge_sensitive_path_description]]
+[[parallel_edge_sensitive_path_description]]

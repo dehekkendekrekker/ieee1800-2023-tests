@@ -8,9 +8,10 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.4.1.1
 
 name_of_instance ::=
-	instance_identifier { [[2_Declarations:2.5_Declaration_ranges:unpacked_dimension|unpacked_dimension]] }
+	[[9_General:9.3_Identifiers:instance_identifier|instance_identifier]] { [[2_Declarations:2.5_Declaration_ranges:unpacked_dimension|unpacked_dimension]] }
 
 ===== Backlinks =====
+[[4_Instantiations:4.1_Instantiations:4.1.4_Checker_instantiation:checker_instantiation|checker_instantiation]]
 [[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:cmos_switch_instance|cmos_switch_instance]]
 [[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:enable_gate_instance|enable_gate_instance]]
 [[hierarchical_instance]]

@@ -12,4 +12,3 @@ quoted_string_item ::=
 
 ===== Backlinks =====
 [[quoted_string]]
-

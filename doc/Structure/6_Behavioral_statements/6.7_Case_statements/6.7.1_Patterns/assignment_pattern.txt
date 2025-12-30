@@ -13,4 +13,3 @@ assignment_pattern ::=
 
 ===== Backlinks =====
 [[assignment_pattern_expression]]
-

@@ -11,6 +11,6 @@ IEEE 1800-2023 Section A.8.6
 	Operator grammar rules.
 
 ===== Operator Rules =====
-* [[+unary_operator]]
-* [[+binary_operator]]
-* [[+inc_or_dec_operator]]
+* [[8_Expressions:8.6_Operators:unary_operator|unary operator]]
+* [[8_Expressions:8.6_Operators:binary_operator|binary operator]]
+* [[8_Expressions:8.6_Operators:inc_or_dec_operator|inc or dec operator]]

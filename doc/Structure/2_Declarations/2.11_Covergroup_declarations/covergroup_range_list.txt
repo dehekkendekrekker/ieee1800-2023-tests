@@ -11,5 +11,6 @@ covergroup_range_list ::=
 	[[covergroup_value_range]] { , [[covergroup_value_range]] }
 
 ===== Backlinks =====
+[[bins_or_options]]
 [[select_condition]]
 [[trans_item]]

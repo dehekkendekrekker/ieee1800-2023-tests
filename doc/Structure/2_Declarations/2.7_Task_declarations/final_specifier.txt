@@ -11,5 +11,5 @@ final_specifier ::=
 	**:** **final**
 
 ===== Backlinks =====
+[[1_Source_text:1.2_SystemVerilog_source_text:class_declaration|class_declaration]]
 [[dynamic_override_specifiers]]
-

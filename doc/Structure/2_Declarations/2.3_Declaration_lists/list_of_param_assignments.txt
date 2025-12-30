@@ -9,7 +9,7 @@ list_of_param_assignments ::=
 	[[2_Declarations:2.4_Declaration_assignments:param_assignment|param_assignment]] { , [[2_Declarations:2.4_Declaration_assignments:param_assignment|param_assignment]] }
 
 ===== Backlinks =====
-[[1_Source_text:1.3_Module_parameters_and_ports:parameter_port_list|parameter_port_list]]
-[[1_Source_text:1.3_Module_parameters_and_ports:parameter_port_declaration|parameter_port_declaration]]
 [[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:local_parameter_declaration|local_parameter_declaration]]
 [[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:parameter_declaration|parameter_declaration]]
+[[1_Source_text:1.3_Module_parameters_and_ports:parameter_port_declaration|parameter_port_declaration]]
+[[1_Source_text:1.3_Module_parameters_and_ports:parameter_port_list|parameter_port_list]]

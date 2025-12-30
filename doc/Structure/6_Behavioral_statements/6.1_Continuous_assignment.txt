@@ -8,8 +8,8 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.6.1
 
 ===== Child pages =====
-[[+continuous_assign]]
-[[+list_of_net_assignments]]
-[[+list_of_variable_assignments]]
-[[+net_alias]]
-[[+net_assignment]]
+[[6_Behavioral_statements:6.1_Continuous_assignment:continuous_assign|continuous assign]]
+[[6_Behavioral_statements:6.1_Continuous_assignment:list_of_net_assignments|list of net assignments]]
+[[6_Behavioral_statements:6.1_Continuous_assignment:list_of_variable_assignments|list of variable assignments]]
+[[6_Behavioral_statements:6.1_Continuous_assignment:net_alias|net alias]]
+[[6_Behavioral_statements:6.1_Continuous_assignment:net_assignment|net assignment]]

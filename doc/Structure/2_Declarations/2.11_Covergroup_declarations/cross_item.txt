@@ -13,4 +13,3 @@ cross_item ::=
 
 ===== Backlinks =====
 [[list_of_cross_items]]
-

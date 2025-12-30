@@ -13,5 +13,4 @@ delay3 ::=
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.1_Continuous_assignment:continuous_assign|continuous_assign]]
-[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:gate_instantiation|gate_instantiation]]
 [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:net_declaration|net_declaration]]

@@ -7,12 +7,11 @@ Created Friday 27 December 2025
 
 procedural_continuous_assignment ::=
 	**assign** [[variable_assignment]]
-| **deassign** variable_lvalue
+| **deassign** [[8_Expressions:8.5_Expression_left_side_values:variable_lvalue|variable_lvalue]]
 | **force** [[variable_assignment]]
-| **force** net_assignment
-| **release** variable_lvalue
-| **release** net_lvalue
+| **force** [[6_Behavioral_statements:6.1_Continuous_assignment:net_assignment|net_assignment]]
+| **release** [[8_Expressions:8.5_Expression_left_side_values:variable_lvalue|variable_lvalue]]
+| **release** [[8_Expressions:8.5_Expression_left_side_values:net_lvalue|net_lvalue]]
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.4_Statements:statement_item|statement_item]]
-

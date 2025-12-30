@@ -12,5 +12,4 @@ dpi_import_export ::=
 | **export** [[dpi_spec_string]] [ [[9_General:9.3_Identifiers:c_identifier|c_identifier]] **=** ] **task** [[9_General:9.3_Identifiers:task_identifier|task_identifier]] **;**
 
 ===== Backlinks =====
-[[2_Declarations:2.6_Function_declarations|2.6_Function_declarations]]
-[[package_or_generate_item_declaration]]
+[[1_Source_text:1.11_Package_items:package_or_generate_item_declaration|package_or_generate_item_declaration]]

@@ -8,16 +8,16 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.6.12
 
 ===== Child pages =====
-[[+randsequence_statement]]
-[[+rs_production]]
-[[+rs_rule]]
-[[+rs_production_list]]
-[[+rs_weight_specification]]
-[[+rs_code_block]]
-[[+rs_prod]]
-[[+rs_production_item]]
-[[+rs_if_else]]
-[[+rs_repeat]]
-[[+rs_case]]
-[[+rs_case_item]]
+[[6_Behavioral_statements:6.12_Randsequence:randsequence_statement|randsequence statement]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_production|rs production]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_rule|rs rule]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_production_list|rs production list]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_weight_specification|rs weight specification]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_code_block|rs code block]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_prod|rs prod]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_production_item|rs production item]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_if_else|rs if else]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_repeat|rs repeat]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_case|rs case]]
+[[6_Behavioral_statements:6.12_Randsequence:rs_case_item|rs case item]]
 

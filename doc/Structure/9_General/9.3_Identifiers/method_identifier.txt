@@ -12,4 +12,6 @@ method_identifier ::=
 
 ===== Backlinks =====
 [[8_Expressions:8.2_Subroutine_calls:array_method_name|array_method_name]]
-[[hierarchical_btf_identifier]]
+[[2_Declarations:2.11_Covergroup_declarations:hierarchical_btf_identifier|hierarchical_btf_identifier]]
+[[8_Expressions:8.2_Subroutine_calls:method_call_body|method_call_body]]
+[[2_Declarations:2.10_Assertion_declarations:sequence_method_call|sequence_method_call]]

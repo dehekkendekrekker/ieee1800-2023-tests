@@ -14,4 +14,3 @@ simple_path_declaration ::=
 ===== Backlinks =====
 [[path_declaration]]
 [[state_dependent_path_declaration]]
-

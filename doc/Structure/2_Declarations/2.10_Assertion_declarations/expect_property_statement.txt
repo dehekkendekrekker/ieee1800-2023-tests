@@ -12,21 +12,21 @@ expect_property_statement ::=
 
 Note: expect is a blocking property evaluation - used in procedural code to wait for a property.
 
-===== property_spec permutations =====
+===== [[property_spec]] permutations =====
 
-==== Permutation 1: property_expr only ====
-expect ( property_expr ) action_block
+==== Permutation 1: [[property_expr]] only ====
+expect ( [[property_expr]] ) [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]
 
-==== Permutation 2: With clocking_event ====
-expect ( @(posedge clk) property_expr ) action_block
+==== Permutation 2: With [[6_Behavioral_statements:6.5_Timing_control_statements:clocking_event|clocking_event]] ====
+expect ( @(posedge clk) [[property_expr]] ) [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]
 
 ==== Permutation 3: With disable iff ====
-expect ( disable iff (reset) property_expr ) action_block
+expect ( disable iff (reset) [[property_expr]] ) [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]
 
-==== Permutation 4: With clocking_event and disable iff ====
-expect ( @(posedge clk) disable iff (reset) property_expr ) action_block
+==== Permutation 4: With [[6_Behavioral_statements:6.5_Timing_control_statements:clocking_event|clocking_event]] and disable iff ====
+expect ( @(posedge clk) disable iff (reset) [[property_expr]] ) [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]
 
-===== action_block permutations =====
+===== [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]] permutations =====
 * Pass statement only
 * Else statement only
 * Both pass and else
@@ -34,4 +34,3 @@ expect ( @(posedge clk) disable iff (reset) property_expr ) action_block
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.4_Statements:statement_item|statement_item]]
-

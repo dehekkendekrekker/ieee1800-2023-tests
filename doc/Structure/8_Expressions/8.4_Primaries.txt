@@ -11,15 +11,15 @@ IEEE 1800-2023 Section A.8.4
 	Primary grammar rules.
 
 ===== Primary Rules =====
-* [[+primary]]
-* [[+constant_primary]]
-* [[+primary_literal]]
-* [[+implicit_class_handle]]
-* [[+class_qualifier]]
-* [[+select]]
-* [[+bit_select]]
-* [[+constant_select]]
-* [[+constant_bit_select]]
-* [[+cast]]
-* [[+constant_cast]]
+* [[8_Expressions:8.4_Primaries:primary|primary]]
+* [[8_Expressions:8.4_Primaries:constant_primary|constant primary]]
+* [[8_Expressions:8.4_Primaries:primary_literal|primary literal]]
+* [[8_Expressions:8.4_Primaries:implicit_class_handle|implicit class handle]]
+* [[8_Expressions:8.4_Primaries:class_qualifier|class qualifier]]
+* [[8_Expressions:8.4_Primaries:select|select]]
+* [[8_Expressions:8.4_Primaries:bit_select|bit select]]
+* [[8_Expressions:8.4_Primaries:constant_select|constant select]]
+* [[8_Expressions:8.4_Primaries:constant_bit_select|constant bit select]]
+* [[8_Expressions:8.4_Primaries:cast|cast]]
+* [[8_Expressions:8.4_Primaries:constant_cast|constant cast]]
 

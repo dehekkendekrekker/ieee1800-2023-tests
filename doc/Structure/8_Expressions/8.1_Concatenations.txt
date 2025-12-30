@@ -11,9 +11,9 @@ IEEE 1800-2023 Section A.8.1
 	Concatenation grammar rules.
 
 ===== Concatenation Rules =====
-* [[+concatenation]]
-* [[+constant_concatenation]]
-* [[+constant_multiple_concatenation]]
-* [[+multiple_concatenation]]
-* [[+streaming_concatenation]]
-* [[+empty_unpacked_array_concatenation]]
+* [[8_Expressions:8.1_Concatenations:concatenation|concatenation]]
+* [[8_Expressions:8.1_Concatenations:constant_concatenation|constant concatenation]]
+* [[8_Expressions:8.1_Concatenations:constant_multiple_concatenation|constant multiple concatenation]]
+* [[8_Expressions:8.1_Concatenations:multiple_concatenation|multiple concatenation]]
+* [[8_Expressions:8.1_Concatenations:streaming_concatenation|streaming concatenation]]
+* [[8_Expressions:8.1_Concatenations:empty_unpacked_array_concatenation|empty unpacked array concatenation]]

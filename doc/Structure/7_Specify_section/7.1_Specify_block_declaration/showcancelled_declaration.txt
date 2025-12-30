@@ -13,4 +13,3 @@ showcancelled_declaration ::=
 
 ===== Backlinks =====
 [[specify_item]]
-

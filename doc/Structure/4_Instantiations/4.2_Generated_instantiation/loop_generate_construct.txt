@@ -6,10 +6,10 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 Created Sunday 22 December 2025
 
 loop_generate_construct ::=
-	**for** ( [[genvar_initialization]] ; [[genvar_expression]] ; [[genvar_iteration]] )
+	**for** ( [[genvar_initialization]] ; [[8_Expressions:8.3_Expressions:genvar_expression|genvar_expression]] ; [[genvar_iteration]] )
 	[[generate_block]]
 
 ===== Backlinks =====
+[[1_Source_text:1.8_Checker_items:checker_generate_item|checker_generate_item]]
 [[1_Source_text:1.4_Module_items:module_common_item|module_common_item]]
 [[1_Source_text:1.7_Program_items:program_generate_item|program_generate_item]]
-[[1_Source_text:1.8_Checker_items:checker_generate_item|checker_generate_item]]

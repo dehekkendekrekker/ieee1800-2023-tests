@@ -11,7 +11,6 @@ output_port_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-[[5_UDP_declaration_and_instantiation:5.2_UDP_ports:udp_port_list]]
-[[5_UDP_declaration_and_instantiation:5.3_UDP_body:udp_initial_statement]]
-[[7_Specify_section:7.3_Specify_block_terminals:output_identifier]]
-
+[[7_Specify_section:7.3_Specify_block_terminals:output_identifier|output_identifier]]
+[[5_UDP_declaration_and_instantiation:5.3_UDP_body:udp_initial_statement|udp_initial_statement]]
+[[5_UDP_declaration_and_instantiation:5.2_UDP_ports:udp_port_list|udp_port_list]]

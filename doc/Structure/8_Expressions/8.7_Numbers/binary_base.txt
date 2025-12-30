@@ -12,4 +12,3 @@ binary_base ::=
 
 ===== Backlinks =====
 [[binary_number]]
-

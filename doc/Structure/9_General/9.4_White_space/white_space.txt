@@ -11,5 +11,4 @@ white_space ::=
 	space | tab | newline | formfeed | eof
 
 ===== Backlinks =====
-(lexical element - handled by scanner)
-
+[[9_General:9.3_Identifiers:escaped_identifier|escaped_identifier]]

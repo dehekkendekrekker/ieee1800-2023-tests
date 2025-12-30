@@ -8,13 +8,13 @@ Created Tuesday 16 December 2025
 IEEE 1800-2023 Section A.4.1
 
 ===== Child pages =====
-[[+module_instantiation]]
-[[+gate_instantiation]]
-[[+udp_instantiation]]
-[[+checker_instantiation]]
-[[+interface_instantiation]]
-[[+program_instantiation]]
-[[+list_of_checker_port_connections]]
-[[+named_checker_port_connection]]
-[[+ordered_checker_port_connection]]
+[[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:module_instantiation|module instantiation]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:gate_instantiation|gate instantiation]]
+[[5_UDP_declaration_and_instantiation:5.4_UDP_instantiation:udp_instantiation|udp instantiation]]
+[[4_Instantiations:4.1_Instantiations:4.1.4_Checker_instantiation:checker_instantiation|checker instantiation]]
+[[4_Instantiations:4.1_Instantiations:4.1.2_Interface_instantiation:interface_instantiation|interface instantiation]]
+[[4_Instantiations:4.1_Instantiations:4.1.3_Program_instantiation:program_instantiation|program instantiation]]
+[[4_Instantiations:4.1_Instantiations:4.1.4_Checker_instantiation:list_of_checker_port_connections|list of checker port connections]]
+[[4_Instantiations:4.1_Instantiations:4.1.4_Checker_instantiation:named_checker_port_connection|named checker port connection]]
+[[4_Instantiations:4.1_Instantiations:4.1.4_Checker_instantiation:ordered_checker_port_connection|ordered checker port connection]]
 

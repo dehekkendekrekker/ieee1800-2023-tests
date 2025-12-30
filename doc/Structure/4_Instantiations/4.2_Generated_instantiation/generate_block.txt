@@ -12,6 +12,6 @@ generate_block ::=
   **end** [ : [[9_General:9.3_Identifiers:generate_block_identifier|generate_block_identifier]] ]
 
 ===== Backlinks =====
-[[loop_generate_construct]]
-[[if_generate_construct]]
 [[case_generate_item]]
+[[if_generate_construct]]
+[[loop_generate_construct]]

@@ -12,4 +12,3 @@ trans_set ::=
 
 ===== Backlinks =====
 [[trans_list]]
-

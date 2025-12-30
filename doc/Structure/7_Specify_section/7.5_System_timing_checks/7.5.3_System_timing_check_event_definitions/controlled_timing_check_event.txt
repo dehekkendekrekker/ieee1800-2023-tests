@@ -11,5 +11,4 @@ controlled_timing_check_event ::=
 	[[timing_check_event_control]] [[specify_terminal_descriptor]] [ &&& [[timing_check_condition]] ]
 
 ===== Backlinks =====
-[[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments:controlled_reference_event]]
-
+[[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments:controlled_reference_event|controlled_reference_event]]

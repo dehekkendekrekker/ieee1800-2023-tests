@@ -13,8 +13,8 @@ data_type ::=
 | **enum** [ [[enum_base_type]] ] **{** [[enum_name_declaration]] { **,** [[enum_name_declaration]] } **}** { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
 | **string**
 | **chandle**
-| **virtual** [ **interface** ] [[9_General:9.3_Identifiers:interface_identifier|interface_identifier]] [ [[4_Instantiations:4.1_Instantiations:parameter_value_assignment|parameter_value_assignment]] ] [ **.** [[9_General:9.3_Identifiers:modport_identifier|modport_identifier]] ]
-| [ [[9_General:9.3_Identifiers:class_scope|class_scope]] | [[9_General:9.3_Identifiers:package_scope|package_scope]] ] [[9_General:9.3_Identifiers:type_identifier|type_identifier]] { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
+| **virtual** [ **interface** ] [[9_General:9.3_Identifiers:interface_identifier|interface_identifier]] [ [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:parameter_value_assignment|parameter_value_assignment]] ] [ **.** [[9_General:9.3_Identifiers:modport_identifier|modport_identifier]] ]
+| [ [[class_scope|class_scope]] | [[9_General:9.3_Identifiers:package_scope|package_scope]] ] [[9_General:9.3_Identifiers:type_identifier|type_identifier]] { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
 | [[class_type]]
 | **event**
 | [[9_General:9.3_Identifiers:ps_covergroup_identifier|ps_covergroup_identifier]]

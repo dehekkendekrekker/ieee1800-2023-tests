@@ -11,4 +11,5 @@ nonrange_select ::=
 	[ { . [[9_General:9.3_Identifiers:member_identifier|member_identifier]] [[bit_select]] } . [[9_General:9.3_Identifiers:member_identifier|member_identifier]] ] [[bit_select]]
 
 ===== Backlinks =====
-
+[[6_Behavioral_statements:6.5_Timing_control_statements:event_trigger|event_trigger]]
+[[8_Expressions:8.5_Expression_left_side_values:nonrange_variable_lvalue|nonrange_variable_lvalue]]

@@ -12,5 +12,3 @@ delay2 ::=
 | **#** **(** [[8_Expressions:8.3_Expressions:mintypmax_expression|mintypmax_expression]] [ **,** [[8_Expressions:8.3_Expressions:mintypmax_expression|mintypmax_expression]] ] **)**
 
 ===== Backlinks =====
-[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:gate_instantiation|gate_instantiation]]
-[[5_UDP_declaration_and_instantiation:5.4_UDP_instantiation:udp_instantiation|udp_instantiation]]

@@ -8,15 +8,15 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.7.5.3
 
 ===== Child pages =====
-[[+timing_check_event]]
-[[+controlled_timing_check_event]]
-[[+timing_check_event_control]]
-[[+specify_terminal_descriptor]]
-[[+edge_control_specifier]]
-[[+edge_descriptor]]
-[[+zero_or_one]]
-[[+z_or_x]]
-[[+timing_check_condition]]
-[[+scalar_timing_check_condition]]
-[[+scalar_constant]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:timing_check_event|timing check event]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:controlled_timing_check_event|controlled timing check event]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:timing_check_event_control|timing check event control]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:specify_terminal_descriptor|specify terminal descriptor]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:edge_control_specifier|edge control specifier]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:edge_descriptor|edge descriptor]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:zero_or_one|zero or one]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:z_or_x|z or x]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:timing_check_condition|timing check condition]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:scalar_timing_check_condition|scalar timing check condition]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions:scalar_constant|scalar constant]]
 

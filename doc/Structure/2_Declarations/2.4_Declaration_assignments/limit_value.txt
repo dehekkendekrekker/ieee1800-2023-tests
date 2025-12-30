@@ -13,4 +13,3 @@ limit_value ::=
 ===== Backlinks =====
 [[error_limit_value]]
 [[reject_limit_value]]
-

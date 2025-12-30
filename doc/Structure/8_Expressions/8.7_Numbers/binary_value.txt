@@ -12,4 +12,3 @@ binary_value ::=
 
 ===== Backlinks =====
 [[binary_number]]
-

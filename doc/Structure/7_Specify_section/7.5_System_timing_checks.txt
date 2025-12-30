@@ -8,7 +8,7 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.7.5
 
 ===== Child pages =====
-[[+7.5.1_System_timing_check_commands]]
-[[+7.5.2_System_timing_check_command_arguments]]
-[[+7.5.3_System_timing_check_event_definitions]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.1_System_timing_check_commands|7.5.1 System timing check commands]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments|7.5.2 System timing check command arguments]]
+[[7_Specify_section:7.5_System_timing_checks:7.5.3_System_timing_check_event_definitions|7.5.3 System timing check event definitions]]
 

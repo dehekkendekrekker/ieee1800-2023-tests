@@ -8,13 +8,13 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.3.1
 
 ===== Child pages =====
-[[+gate_instantiation]]
-[[+cmos_switch_instance]]
-[[+enable_gate_instance]]
-[[+mos_switch_instance]]
-[[+n_input_gate_instance]]
-[[+n_output_gate_instance]]
-[[+pass_switch_instance]]
-[[+pass_enable_switch_instance]]
-[[+pull_gate_instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:gate_instantiation|gate instantiation]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:cmos_switch_instance|cmos switch instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:enable_gate_instance|enable gate instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:mos_switch_instance|mos switch instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:n_input_gate_instance|n input gate instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:n_output_gate_instance|n output gate instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:pass_switch_instance|pass switch instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:pass_enable_switch_instance|pass enable switch instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:pull_gate_instance|pull gate instance]]
 

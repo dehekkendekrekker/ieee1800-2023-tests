@@ -9,6 +9,12 @@ expression_or_dist ::=
 	[[8_Expressions:8.3_Expressions:expression|expression]] [ **dist** { [[dist_list]] } ]
 
 ===== Backlinks =====
-[[constraint_expression]]
-[[1_Source_text:1.4_Module_items:module_or_generate_item_declaration|module_or_generate_item_declaration]]
+[[2_Declarations:2.10_Assertion_declarations:assert_property_statement|assert_property_statement]]
 [[1_Source_text:1.8_Checker_items:checker_or_generate_item_declaration|checker_or_generate_item_declaration]]
+[[constraint_expression]]
+[[2_Declarations:2.10_Assertion_declarations:cover_sequence_statement|cover_sequence_statement]]
+[[1_Source_text:1.4_Module_items:module_or_generate_item_declaration|module_or_generate_item_declaration]]
+[[2_Declarations:2.10_Assertion_declarations:property_case_item|property_case_item]]
+[[2_Declarations:2.10_Assertion_declarations:property_expr|property_expr]]
+[[2_Declarations:2.10_Assertion_declarations:property_spec|property_spec]]
+[[2_Declarations:2.10_Assertion_declarations:sequence_expr|sequence_expr]]

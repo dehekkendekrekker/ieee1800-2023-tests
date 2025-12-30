@@ -6,12 +6,13 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 package_scope ::=
-	package_identifier ::
+	[[package_identifier]] ::
 | **$unit** ::
 
 ===== Backlinks =====
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:blocking_assignment|blocking_assignment]]
 [[8_Expressions:8.4_Primaries:constant_primary|constant_primary]]
-[[2_Declarations:2.2_Declaration_data_types:data_type|data_type]]
+[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:data_type|data_type]]
 [[2_Declarations:2.12_Let_declarations:let_expression|let_expression]]
 [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:nettype_declaration|nettype_declaration]]
 [[8_Expressions:8.5_Expression_left_side_values:nonrange_variable_lvalue|nonrange_variable_lvalue]]
@@ -19,7 +20,6 @@ package_scope ::=
 [[ps_checker_identifier]]
 [[ps_class_identifier]]
 [[ps_covergroup_identifier]]
-[[ps_identifier]]
 [[ps_or_hierarchical_array_identifier]]
 [[ps_or_hierarchical_net_identifier]]
 [[ps_or_hierarchical_property_identifier]]

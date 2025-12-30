@@ -11,4 +11,5 @@ covergroup_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
+[[2_Declarations:2.11_Covergroup_declarations:covergroup_declaration|covergroup_declaration]]
 [[ps_covergroup_identifier]]

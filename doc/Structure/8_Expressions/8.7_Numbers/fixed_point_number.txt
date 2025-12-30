@@ -11,4 +11,5 @@ fixed_point_number ::=
 	[[unsigned_number]] **.** [[unsigned_number]]
 
 ===== Backlinks =====
-[[time_literal]]
+[[real_number]]
+[[8_Expressions:8.4_Primaries:time_literal|time_literal]]

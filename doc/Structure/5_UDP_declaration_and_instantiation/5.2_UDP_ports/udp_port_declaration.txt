@@ -13,5 +13,4 @@ udp_port_declaration ::=
 | [[udp_reg_declaration]] ;
 
 ===== Backlinks =====
-[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_declaration]]
-
+[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_declaration|udp_declaration]]

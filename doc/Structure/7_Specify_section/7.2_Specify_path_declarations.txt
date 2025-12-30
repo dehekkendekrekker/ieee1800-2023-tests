@@ -8,15 +8,15 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.7.2
 
 ===== Child pages =====
-[[+path_declaration]]
-[[+simple_path_declaration]]
-[[+parallel_path_description]]
-[[+full_path_description]]
-[[+edge_sensitive_path_declaration]]
-[[+parallel_edge_sensitive_path_description]]
-[[+full_edge_sensitive_path_description]]
-[[+state_dependent_path_declaration]]
-[[+data_source_expression]]
-[[+edge_identifier]]
-[[+polarity_operator]]
+[[7_Specify_section:7.2_Specify_path_declarations:path_declaration|path declaration]]
+[[7_Specify_section:7.2_Specify_path_declarations:simple_path_declaration|simple path declaration]]
+[[7_Specify_section:7.2_Specify_path_declarations:parallel_path_description|parallel path description]]
+[[7_Specify_section:7.2_Specify_path_declarations:full_path_description|full path description]]
+[[7_Specify_section:7.2_Specify_path_declarations:edge_sensitive_path_declaration|edge sensitive path declaration]]
+[[7_Specify_section:7.2_Specify_path_declarations:parallel_edge_sensitive_path_description|parallel edge sensitive path description]]
+[[7_Specify_section:7.2_Specify_path_declarations:full_edge_sensitive_path_description|full edge sensitive path description]]
+[[7_Specify_section:7.2_Specify_path_declarations:state_dependent_path_declaration|state dependent path declaration]]
+[[7_Specify_section:7.2_Specify_path_declarations:data_source_expression|data source expression]]
+[[7_Specify_section:7.2_Specify_path_declarations:edge_identifier|edge identifier]]
+[[7_Specify_section:7.2_Specify_path_declarations:polarity_operator|polarity operator]]
 

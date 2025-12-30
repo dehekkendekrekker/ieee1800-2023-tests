@@ -12,6 +12,7 @@ list_of_arguments ::=
 ===== Backlinks =====
 [[array_manipulation_call]]
 [[1_Source_text:1.9_Class_items:class_constructor_declaration|class_constructor_declaration]]
+[[1_Source_text:1.2_SystemVerilog_source_text:class_declaration|class_declaration]]
 [[2_Declarations:2.4_Declaration_assignments:class_new|class_new]]
 [[method_call_body]]
 [[6_Behavioral_statements:6.12_Randsequence:rs_production_item|rs_production_item]]

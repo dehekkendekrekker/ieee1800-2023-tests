@@ -12,4 +12,3 @@ clocking_decl_assign ::=
 
 ===== Backlinks =====
 [[list_of_clocking_decl_assign]]
-

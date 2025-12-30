@@ -11,4 +11,3 @@ case_inside_item ::=
 
 ===== Backlinks =====
 [[case_statement]]
-

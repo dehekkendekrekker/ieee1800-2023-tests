@@ -11,12 +11,12 @@ IEEE 1800-2023 Section A.2.5
 	Declaration range grammar rules.
 
 ===== Declaration Ranges =====
-* [[+unpacked_dimension]]
-* [[+packed_dimension]]
-* [[+associative_dimension]]
-* [[+variable_dimension]]
-* [[+queue_dimension]]
-* [[+unsized_dimension]]
-* [[+constant_range]]
-* [[+value_range]]
-* [[+range_list]]
+* [[2_Declarations:2.5_Declaration_ranges:unpacked_dimension|unpacked dimension]]
+* [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed dimension]]
+* [[2_Declarations:2.5_Declaration_ranges:associative_dimension|associative dimension]]
+* [[2_Declarations:2.5_Declaration_ranges:variable_dimension|variable dimension]]
+* [[2_Declarations:2.5_Declaration_ranges:queue_dimension|queue dimension]]
+* [[2_Declarations:2.5_Declaration_ranges:unsized_dimension|unsized dimension]]
+* [[8_Expressions:8.3_Expressions:constant_range|constant range]]
+* [[6_Behavioral_statements:6.7_Case_statements:value_range|value range]]
+* [[6_Behavioral_statements:6.7_Case_statements:range_list|range list]]

@@ -8,6 +8,6 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.4
 
 ===== Child pages =====
-[[+4.1_Instantiations]]
-[[+4.2_Generated_instantiation]]
+[[4_Instantiations:4.1_Instantiations|4.1 Instantiations]]
+[[4_Instantiations:4.2_Generated_instantiation|4.2 Generated instantiation]]
 

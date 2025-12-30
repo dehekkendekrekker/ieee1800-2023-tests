@@ -13,4 +13,3 @@ rs_production_list ::=
 
 ===== Backlinks =====
 [[rs_rule]]
-

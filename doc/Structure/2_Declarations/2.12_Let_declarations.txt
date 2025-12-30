@@ -8,12 +8,12 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.2.12
 
 ===== Child pages =====
-[[+let_declaration]]
-[[+let_identifier]]
-[[+let_port_list]]
-[[+let_port_item]]
-[[+let_formal_type]]
-[[+let_expression]]
-[[+let_list_of_arguments]]
-[[+let_actual_arg]]
+[[2_Declarations:2.12_Let_declarations:let_declaration|let declaration]]
+[[2_Declarations:2.12_Let_declarations:let_identifier|let identifier]]
+[[2_Declarations:2.12_Let_declarations:let_port_list|let port list]]
+[[2_Declarations:2.12_Let_declarations:let_port_item|let port item]]
+[[2_Declarations:2.12_Let_declarations:let_formal_type|let formal type]]
+[[2_Declarations:2.12_Let_declarations:let_expression|let expression]]
+[[2_Declarations:2.12_Let_declarations:let_list_of_arguments|let list of arguments]]
+[[2_Declarations:2.12_Let_declarations:let_actual_arg|let actual arg]]
 

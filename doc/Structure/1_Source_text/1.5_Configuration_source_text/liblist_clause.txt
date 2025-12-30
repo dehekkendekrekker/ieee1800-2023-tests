@@ -8,7 +8,7 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.1.5
 
 liblist_clause ::=
-	**liblist** { library_identifier }
+	**liblist** { [[9_General:9.3_Identifiers:library_identifier|library_identifier]] }
 
 ===== Backlinks =====
 [[config_rule_statement]]

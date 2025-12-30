@@ -13,4 +13,3 @@ next_state ::=
 
 ===== Backlinks =====
 [[sequential_entry]]
-

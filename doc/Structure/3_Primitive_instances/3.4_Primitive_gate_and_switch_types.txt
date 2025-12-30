@@ -8,11 +8,11 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.3.4
 
 ===== Child pages =====
-[[+cmos_switchtype]]
-[[+enable_gatetype]]
-[[+mos_switchtype]]
-[[+n_input_gatetype]]
-[[+n_output_gatetype]]
-[[+pass_en_switchtype]]
-[[+pass_switchtype]]
+[[3_Primitive_instances:3.4_Primitive_gate_and_switch_types:cmos_switchtype|cmos switchtype]]
+[[3_Primitive_instances:3.4_Primitive_gate_and_switch_types:enable_gatetype|enable gatetype]]
+[[3_Primitive_instances:3.4_Primitive_gate_and_switch_types:mos_switchtype|mos switchtype]]
+[[3_Primitive_instances:3.4_Primitive_gate_and_switch_types:n_input_gatetype|n input gatetype]]
+[[3_Primitive_instances:3.4_Primitive_gate_and_switch_types:n_output_gatetype|n output gatetype]]
+[[3_Primitive_instances:3.4_Primitive_gate_and_switch_types:pass_en_switchtype|pass en switchtype]]
+[[3_Primitive_instances:3.4_Primitive_gate_and_switch_types:pass_switchtype|pass switchtype]]
 

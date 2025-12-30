@@ -7,7 +7,7 @@ Created Friday 27 December 2025
 
 modport_tf_port ::=
 	[[1_Source_text:1.9_Class_items:method_prototype|method_prototype]]
-| tf_identifier
+| [[9_General:9.3_Identifiers:tf_identifier|tf_identifier]]
 
 ===== Backlinks =====
 [[modport_tf_ports_declaration]]

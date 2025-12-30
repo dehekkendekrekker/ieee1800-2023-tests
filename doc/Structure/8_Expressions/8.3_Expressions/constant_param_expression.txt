@@ -7,8 +7,8 @@ Created Friday 27 December 2025
 
 constant_param_expression ::=
 	[[constant_mintypmax_expression]]
-| [[2_Declarations:2.2_Declaration_data_types:data_type|data_type]]
+| [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:data_type|data_type]]
 | $
 
 ===== Backlinks =====
-(no backlinks)
+[[2_Declarations:2.4_Declaration_assignments:param_assignment|param_assignment]]

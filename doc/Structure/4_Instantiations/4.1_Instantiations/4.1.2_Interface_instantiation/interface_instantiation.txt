@@ -8,8 +8,8 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.4.1.2
 
 interface_instantiation ::=
-	interface_identifier [ [[parameter_value_assignment]] ] [[hierarchical_instance]] { **,** [[hierarchical_instance]] } **;**
+	[[9_General:9.3_Identifiers:interface_identifier|interface_identifier]] [ [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:parameter_value_assignment|parameter_value_assignment]] ] [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:hierarchical_instance|hierarchical_instance]] { **,** [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:hierarchical_instance|hierarchical_instance]] } **;**
 
 ===== Backlinks =====
-[[1_Source_text:1.4_Module_items:module_common_item|module_common_item]]
 [[1_Source_text:1.4_Module_items:bind_instantiation|bind_instantiation]]
+[[1_Source_text:1.4_Module_items:module_common_item|module_common_item]]

@@ -12,4 +12,3 @@ sequential_entry ::=
 
 ===== Backlinks =====
 [[sequential_body]]
-

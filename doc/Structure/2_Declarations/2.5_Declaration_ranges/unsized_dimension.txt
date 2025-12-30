@@ -10,4 +10,5 @@ unsized_dimension ::=
 
 ===== Backlinks =====
 [[packed_dimension]]
+[[2_Declarations:2.4_Declaration_assignments:variable_decl_assignment|variable_decl_assignment]]
 [[variable_dimension]]

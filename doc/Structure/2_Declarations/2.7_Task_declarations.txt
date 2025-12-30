@@ -6,11 +6,11 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 ===== Child pages =====
-[[+task_declaration]]
-[[+task_body_declaration]]
-[[+tf_item_declaration]]
-[[+tf_port_list]]
-[[+tf_port_item]]
-[[+tf_port_direction]]
-[[+tf_port_declaration]]
-[[+task_prototype]]
+[[2_Declarations:2.7_Task_declarations:task_declaration|task declaration]]
+[[2_Declarations:2.7_Task_declarations:task_body_declaration|task body declaration]]
+[[2_Declarations:2.7_Task_declarations:tf_item_declaration|tf item declaration]]
+[[2_Declarations:2.7_Task_declarations:tf_port_list|tf port list]]
+[[2_Declarations:2.7_Task_declarations:tf_port_item|tf port item]]
+[[2_Declarations:2.7_Task_declarations:tf_port_direction|tf port direction]]
+[[2_Declarations:2.7_Task_declarations:tf_port_declaration|tf port declaration]]
+[[2_Declarations:2.7_Task_declarations:task_prototype|task prototype]]

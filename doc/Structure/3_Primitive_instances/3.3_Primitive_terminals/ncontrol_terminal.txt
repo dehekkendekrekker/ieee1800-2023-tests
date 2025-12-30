@@ -11,5 +11,4 @@ ncontrol_terminal ::=
 	[[8_Expressions:8.3_Expressions:expression|expression]]
 
 ===== Backlinks =====
-[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:cmos_switch_instance]]
-
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:cmos_switch_instance|cmos_switch_instance]]

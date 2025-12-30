@@ -11,6 +11,16 @@ interface_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-[[2_Declarations:2.2_Declaration_data_types:data_type|data_type]]
+[[1_Source_text:1.4_Module_items:bind_target_scope|bind_target_scope]]
+[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:data_type|data_type]]
+[[2_Declarations:2.6_Function_declarations:function_body_declaration|function_body_declaration]]
 [[7_Specify_section:7.3_Specify_block_terminals:input_identifier|input_identifier]]
+[[1_Source_text:1.2_SystemVerilog_source_text:interface_ansi_header|interface_ansi_header]]
+[[1_Source_text:1.2_SystemVerilog_source_text:interface_declaration|interface_declaration]]
+[[4_Instantiations:4.1_Instantiations:4.1.2_Interface_instantiation:interface_instantiation|interface_instantiation]]
+[[1_Source_text:1.2_SystemVerilog_source_text:interface_nonansi_header|interface_nonansi_header]]
+[[2_Declarations:2.1_Declaration_types:2.1.2_Port_declarations:interface_port_declaration|interface_port_declaration]]
+[[1_Source_text:1.3_Module_parameters_and_ports:interface_port_header|interface_port_header]]
+[[2_Declarations:2.3_Declaration_lists:list_of_interface_identifiers|list_of_interface_identifiers]]
 [[7_Specify_section:7.3_Specify_block_terminals:output_identifier|output_identifier]]
+[[2_Declarations:2.7_Task_declarations:task_body_declaration|task_body_declaration]]

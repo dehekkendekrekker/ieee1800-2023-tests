@@ -12,4 +12,3 @@ octal_digit ::=
 
 ===== Backlinks =====
 [[octal_value]]
-

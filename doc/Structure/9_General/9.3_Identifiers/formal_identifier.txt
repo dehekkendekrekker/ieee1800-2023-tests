@@ -11,4 +11,3 @@ formal_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-

@@ -11,4 +11,5 @@ sequence_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-
+[[ps_or_hierarchical_sequence_identifier]]
+[[2_Declarations:2.10_Assertion_declarations:sequence_declaration|sequence_declaration]]

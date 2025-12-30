@@ -11,4 +11,5 @@ enum_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-[[2_Declarations:2.2_Declaration_data_types:enum_name_declaration|enum_name_declaration]]
+[[8_Expressions:8.4_Primaries:constant_primary|constant_primary]]
+[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:enum_name_declaration|enum_name_declaration]]

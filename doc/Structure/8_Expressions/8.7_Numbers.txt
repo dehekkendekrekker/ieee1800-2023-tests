@@ -11,10 +11,10 @@ IEEE 1800-2023 Section A.8.7
 	Number grammar rules.
 
 ===== Number Rules =====
-* [[+number]]
-* [[+integral_number]]
-* [[+real_number]]
-* [[+decimal_number]]
-* [[+binary_number]]
-* [[+octal_number]]
-* [[+hex_number]]
+* [[8_Expressions:8.7_Numbers:number|number]]
+* [[8_Expressions:8.7_Numbers:integral_number|integral number]]
+* [[8_Expressions:8.7_Numbers:real_number|real number]]
+* [[8_Expressions:8.7_Numbers:decimal_number|decimal number]]
+* [[8_Expressions:8.7_Numbers:binary_number|binary number]]
+* [[8_Expressions:8.7_Numbers:octal_number|octal number]]
+* [[8_Expressions:8.7_Numbers:hex_number|hex number]]

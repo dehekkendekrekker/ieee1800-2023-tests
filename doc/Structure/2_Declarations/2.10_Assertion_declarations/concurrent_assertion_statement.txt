@@ -16,22 +16,21 @@ concurrent_assertion_statement ::=
 
 ===== SVA-relevant paths =====
 
-==== assert_property_statement ====
+==== [[assert_property_statement]] ====
 [[assert_property_statement]]
 
-==== assume_property_statement ====
+==== [[assume_property_statement]] ====
 [[assume_property_statement]]
 
-==== cover_property_statement ====
+==== [[cover_property_statement]] ====
 [[cover_property_statement]]
 
-==== cover_sequence_statement ====
+==== [[cover_sequence_statement]] ====
 [[cover_sequence_statement]]
 
-==== restrict_property_statement ====
+==== [[restrict_property_statement]] ====
 [[restrict_property_statement]]
 
 ===== Backlinks =====
 [[concurrent_assertion_item]]
 [[6_Behavioral_statements:6.10_Assertion_statements:procedural_assertion_statement|procedural_assertion_statement]]
-

@@ -11,6 +11,5 @@ inout_terminal ::=
 	[[8_Expressions:8.5_Expression_left_side_values:net_lvalue|net_lvalue]]
 
 ===== Backlinks =====
-[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:pass_switch_instance]]
-[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:pass_enable_switch_instance]]
-
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:pass_enable_switch_instance|pass_enable_switch_instance]]
+[[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:pass_switch_instance|pass_switch_instance]]

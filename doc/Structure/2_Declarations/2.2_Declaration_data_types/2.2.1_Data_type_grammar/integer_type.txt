@@ -13,4 +13,3 @@ integer_type ::=
 
 ===== Backlinks =====
 [[simple_type]]
-

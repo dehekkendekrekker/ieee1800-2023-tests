@@ -17,4 +17,3 @@ covergroup_value_range ::=
 
 ===== Backlinks =====
 [[covergroup_range_list]]
-

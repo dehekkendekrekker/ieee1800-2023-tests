@@ -11,15 +11,15 @@ IEEE 1800-2023 Section A.1.11
 	Package item grammar rules.
 
 ===== Package Items =====
-* [[+package_item]]
-* [[+package_or_generate_item_declaration]]
-* [[+anonymous_program]]
-* [[+anonymous_program_item]]
-* [[+package_export_declaration]]
-* [[+dpi_import_export]]
-* [[+dpi_spec_string]]
-* [[+dpi_function_import_property]]
-* [[+dpi_task_import_property]]
-* [[+dpi_function_proto]]
-* [[+dpi_task_proto]]
+* [[1_Source_text:1.11_Package_items:package_item|package item]]
+* [[1_Source_text:1.11_Package_items:package_or_generate_item_declaration|package or generate item declaration]]
+* [[1_Source_text:1.11_Package_items:anonymous_program|anonymous program]]
+* [[1_Source_text:1.11_Package_items:anonymous_program_item|anonymous program item]]
+* [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:package_export_declaration|package export declaration]]
+* [[2_Declarations:2.6_Function_declarations:dpi_import_export|dpi import export]]
+* [[2_Declarations:2.6_Function_declarations:dpi_spec_string|dpi spec string]]
+* [[2_Declarations:2.6_Function_declarations:dpi_function_import_property|dpi function import property]]
+* [[2_Declarations:2.6_Function_declarations:dpi_task_import_property|dpi task import property]]
+* [[2_Declarations:2.6_Function_declarations:dpi_function_proto|dpi function proto]]
+* [[2_Declarations:2.6_Function_declarations:dpi_task_proto|dpi task proto]]
 

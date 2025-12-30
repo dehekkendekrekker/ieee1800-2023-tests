@@ -11,4 +11,3 @@ specparam_declaration ::=
 ===== Backlinks =====
 [[1_Source_text:1.4_Module_items:non_port_module_item|non_port_module_item]]
 [[7_Specify_section:7.1_Specify_block_declaration:specify_item|specify_item]]
-

@@ -11,4 +11,3 @@ expression_or_cond_pattern ::=
 
 ===== Backlinks =====
 [[cond_predicate]]
-

@@ -11,4 +11,6 @@ constraint_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-
+[[1_Source_text:1.10_Constraints:constraint_declaration|constraint_declaration]]
+[[1_Source_text:1.10_Constraints:constraint_prototype|constraint_prototype]]
+[[1_Source_text:1.10_Constraints:extern_constraint_declaration|extern_constraint_declaration]]

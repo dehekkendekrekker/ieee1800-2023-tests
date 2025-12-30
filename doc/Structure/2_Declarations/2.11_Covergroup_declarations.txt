@@ -11,12 +11,12 @@ IEEE 1800-2023 Section A.2.11
 	Covergroup declaration grammar rules.
 
 ===== Covergroup Rules =====
-* [[+covergroup_declaration]]
-* [[+coverage_spec_or_option]]
-* [[+coverage_option]]
-* [[+coverage_spec]]
-* [[+coverage_event]]
-* [[+cover_point]]
-* [[+cover_cross]]
-* [[+bins_or_empty]]
-* [[+bins_or_options]]
+* [[2_Declarations:2.11_Covergroup_declarations:covergroup_declaration|covergroup declaration]]
+* [[2_Declarations:2.11_Covergroup_declarations:coverage_spec_or_option|coverage spec or option]]
+* [[2_Declarations:2.11_Covergroup_declarations:coverage_option|coverage option]]
+* [[2_Declarations:2.11_Covergroup_declarations:coverage_spec|coverage spec]]
+* [[2_Declarations:2.11_Covergroup_declarations:coverage_event|coverage event]]
+* [[2_Declarations:2.11_Covergroup_declarations:cover_point|cover point]]
+* [[2_Declarations:2.11_Covergroup_declarations:cover_cross|cover cross]]
+* [[2_Declarations:2.11_Covergroup_declarations:bins_or_empty|bins or empty]]
+* [[2_Declarations:2.11_Covergroup_declarations:bins_or_options|bins or options]]

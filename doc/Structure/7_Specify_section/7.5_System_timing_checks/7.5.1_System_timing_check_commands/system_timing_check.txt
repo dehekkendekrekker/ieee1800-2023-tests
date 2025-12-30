@@ -22,5 +22,4 @@ system_timing_check ::=
 | [[nochange_timing_check|$nochange_timing_check]]
 
 ===== Backlinks =====
-[[7_Specify_section:7.1_Specify_block_declaration:specify_item]]
-
+[[7_Specify_section:7.1_Specify_block_declaration:specify_item|specify_item]]

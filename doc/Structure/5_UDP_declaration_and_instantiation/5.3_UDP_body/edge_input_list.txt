@@ -12,4 +12,3 @@ edge_input_list ::=
 
 ===== Backlinks =====
 [[seq_input_list]]
-

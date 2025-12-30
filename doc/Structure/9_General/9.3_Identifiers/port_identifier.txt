@@ -11,7 +11,16 @@ port_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
+[[1_Source_text:1.3_Module_parameters_and_ports:ansi_port_declaration|ansi_port_declaration]]
 [[7_Specify_section:7.3_Specify_block_terminals:input_identifier|input_identifier]]
+[[2_Declarations:2.3_Declaration_lists:list_of_port_identifiers|list_of_port_identifiers]]
+[[2_Declarations:2.3_Declaration_lists:list_of_tf_variable_identifiers|list_of_tf_variable_identifiers]]
 [[2_Declarations:2.3_Declaration_lists:list_of_udp_port_identifiers|list_of_udp_port_identifiers]]
+[[2_Declarations:2.3_Declaration_lists:list_of_variable_port_identifiers|list_of_variable_port_identifiers]]
+[[2_Declarations:2.9_Interface_declarations:modport_simple_port|modport_simple_port]]
+[[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:named_port_connection|named_port_connection]]
 [[7_Specify_section:7.3_Specify_block_terminals:output_identifier|output_identifier]]
+[[1_Source_text:1.3_Module_parameters_and_ports:port|port]]
+[[1_Source_text:1.3_Module_parameters_and_ports:port_reference|port_reference]]
+[[2_Declarations:2.7_Task_declarations:tf_port_item|tf_port_item]]
 [[5_UDP_declaration_and_instantiation:5.2_UDP_ports:udp_output_declaration|udp_output_declaration]]

@@ -8,5 +8,5 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.9.4
 
 ===== Child pages =====
-[[+white_space]]
+[[9_General:9.4_White_space:white_space|white space]]
 

@@ -11,7 +11,7 @@ package_or_generate_item_declaration ::=
 | [[2_Declarations:2.7_Task_declarations:task_declaration|task_declaration]]
 | [[2_Declarations:2.6_Function_declarations:function_declaration|function_declaration]]
 | [[1_Source_text:1.2_SystemVerilog_source_text:checker_declaration|checker_declaration]]
-| [[dpi_import_export]]
+| [[2_Declarations:2.6_Function_declarations:dpi_import_export|dpi_import_export]]
 | [[1_Source_text:1.10_Constraints:extern_constraint_declaration|extern_constraint_declaration]]
 | [[1_Source_text:1.2_SystemVerilog_source_text:class_declaration|class_declaration]]
 | [[1_Source_text:1.2_SystemVerilog_source_text:interface_class_declaration|interface_class_declaration]]
@@ -23,5 +23,5 @@ package_or_generate_item_declaration ::=
 | ;
 
 ===== Backlinks =====
-[[package_item]]
 [[1_Source_text:1.4_Module_items:module_or_generate_item_declaration|module_or_generate_item_declaration]]
+[[package_item]]

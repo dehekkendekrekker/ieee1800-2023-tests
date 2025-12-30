@@ -8,6 +8,6 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.9.1
 
 ===== Child pages =====
-[[+attribute_instance]]
-[[+attr_spec]]
-[[+attr_name]]
+[[9_General:9.1_Attributes:attribute_instance|attribute instance]]
+[[9_General:9.1_Attributes:attr_spec|attr spec]]
+[[9_General:9.1_Attributes:attr_name|attr name]]

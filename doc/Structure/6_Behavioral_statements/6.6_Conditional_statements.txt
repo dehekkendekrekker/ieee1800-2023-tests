@@ -11,9 +11,9 @@ IEEE 1800-2023 Section A.6.6
 	Conditional statement grammar rules.
 
 ===== Conditional Statements =====
-* [[+conditional_statement]]
-* [[+unique_priority]]
-* [[+cond_predicate]]
-* [[+expression_or_cond_pattern]]
-* [[+cond_pattern]]
+* [[6_Behavioral_statements:6.6_Conditional_statements:conditional_statement|conditional statement]]
+* [[6_Behavioral_statements:6.6_Conditional_statements:unique_priority|unique priority]]
+* [[6_Behavioral_statements:6.6_Conditional_statements:cond_predicate|cond predicate]]
+* [[6_Behavioral_statements:6.6_Conditional_statements:expression_or_cond_pattern|expression or cond pattern]]
+* [[6_Behavioral_statements:6.6_Conditional_statements:cond_pattern|cond pattern]]
 

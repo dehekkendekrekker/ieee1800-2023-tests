@@ -11,4 +11,4 @@ config_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-
+[[1_Source_text:1.5_Configuration_source_text:config_declaration|config_declaration]]

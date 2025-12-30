@@ -12,4 +12,3 @@ integer_covergroup_expression ::=
 
 ===== Backlinks =====
 [[select_expression]]
-

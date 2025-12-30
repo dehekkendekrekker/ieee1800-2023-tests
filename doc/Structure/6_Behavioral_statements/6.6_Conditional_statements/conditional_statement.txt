@@ -12,4 +12,3 @@ conditional_statement ::=
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.4_Statements:statement_item|statement_item]]
-

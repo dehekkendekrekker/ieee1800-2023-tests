@@ -11,5 +11,4 @@ udp_declaration_port_list ::=
 	[[udp_output_declaration]] , [[udp_input_declaration]] { , [[udp_input_declaration]] }
 
 ===== Backlinks =====
-[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_ansi_declaration]]
-
+[[5_UDP_declaration_and_instantiation:5.1_UDP_declaration:udp_ansi_declaration|udp_ansi_declaration]]

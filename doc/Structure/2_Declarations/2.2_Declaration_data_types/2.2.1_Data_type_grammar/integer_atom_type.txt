@@ -14,7 +14,7 @@ integer_atom_type ::=
 | **time**
 
 ===== Backlinks =====
-[[6_Behavioral_statements:6.7_Case_statements:assignment_pattern_expression_type|assignment_pattern_expression_type]]
+[[6_Behavioral_statements:6.7_Case_statements:6.7.1_Patterns:assignment_pattern_expression_type|assignment_pattern_expression_type]]
 [[data_type]]
 [[enum_base_type]]
 [[integer_type]]

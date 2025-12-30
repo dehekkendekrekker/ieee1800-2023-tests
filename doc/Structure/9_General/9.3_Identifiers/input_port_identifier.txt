@@ -11,6 +11,5 @@ input_port_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-[[5_UDP_declaration_and_instantiation:5.2_UDP_ports:udp_port_list]]
-[[7_Specify_section:7.3_Specify_block_terminals:input_identifier]]
-
+[[7_Specify_section:7.3_Specify_block_terminals:input_identifier|input_identifier]]
+[[5_UDP_declaration_and_instantiation:5.2_UDP_ports:udp_port_list|udp_port_list]]

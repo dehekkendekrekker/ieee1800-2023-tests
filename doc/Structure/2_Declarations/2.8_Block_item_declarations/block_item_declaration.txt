@@ -6,15 +6,15 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 block_item_declaration ::=
-	{ attribute_instance } [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:data_declaration|data_declaration]]
-| { attribute_instance } [[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:local_parameter_declaration|local_parameter_declaration]] ;
-| { attribute_instance } [[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:parameter_declaration|parameter_declaration]] ;
+	{ [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:data_declaration|data_declaration]]
+| { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } [[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:local_parameter_declaration|local_parameter_declaration]] ;
+| { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } [[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:parameter_declaration|parameter_declaration]] ;
 | { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } [[2_Declarations:2.12_Let_declarations:let_declaration|let_declaration]]
 
 ===== Backlinks =====
-[[2_Declarations:2.7_Task_declarations:tf_item_declaration|tf_item_declaration]]
-[[2_Declarations:2.6_Function_declarations:function_body_declaration|function_body_declaration]]
-[[2_Declarations:2.7_Task_declarations:task_body_declaration|task_body_declaration]]
 [[1_Source_text:1.9_Class_items:class_constructor_declaration|class_constructor_declaration]]
+[[2_Declarations:2.6_Function_declarations:function_body_declaration|function_body_declaration]]
 [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:par_block|par_block]]
 [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:seq_block|seq_block]]
+[[2_Declarations:2.7_Task_declarations:task_body_declaration|task_body_declaration]]
+[[2_Declarations:2.7_Task_declarations:tf_item_declaration|tf_item_declaration]]

@@ -7,12 +7,12 @@ Created Friday 27 December 2025
 
 bins_or_options ::=
 	[[coverage_option]]
-| [ **wildcard** ] [[bins_keyword]] bin_identifier [ [ [ covergroup_expression ] ] ] = { covergroup_range_list } [ **with** ( with_covergroup_expression ) ] [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
-| [ **wildcard** ] [[bins_keyword]] bin_identifier [ [ [ covergroup_expression ] ] ] = cover_point_identifier **with** ( with_covergroup_expression ) [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
-| [ **wildcard** ] [[bins_keyword]] bin_identifier [ [ [ covergroup_expression ] ] ] = set_covergroup_expression [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
-| [ **wildcard** ] [[bins_keyword]] bin_identifier [ [ ] ] = trans_list [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
-| [[bins_keyword]] bin_identifier [ [ [ covergroup_expression ] ] ] = **default** [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
-| [[bins_keyword]] bin_identifier = **default** **sequence** [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
+| [ **wildcard** ] [[bins_keyword]] [[9_General:9.3_Identifiers:bin_identifier|bin_identifier]] [ [ [ [[covergroup_expression]] ] ] ] = { [[covergroup_range_list]] } [ **with** ( [[with_covergroup_expression]] ) ] [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
+| [ **wildcard** ] [[bins_keyword]] [[9_General:9.3_Identifiers:bin_identifier|bin_identifier]] [ [ [ [[covergroup_expression]] ] ] ] = [[9_General:9.3_Identifiers:cover_point_identifier|cover_point_identifier]] **with** ( [[with_covergroup_expression]] ) [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
+| [ **wildcard** ] [[bins_keyword]] [[9_General:9.3_Identifiers:bin_identifier|bin_identifier]] [ [ [ [[covergroup_expression]] ] ] ] = [[set_covergroup_expression]] [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
+| [ **wildcard** ] [[bins_keyword]] [[9_General:9.3_Identifiers:bin_identifier|bin_identifier]] [ [ ] ] = [[trans_list]] [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
+| [[bins_keyword]] [[9_General:9.3_Identifiers:bin_identifier|bin_identifier]] [ [ [ [[covergroup_expression]] ] ] ] = **default** [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
+| [[bins_keyword]] [[9_General:9.3_Identifiers:bin_identifier|bin_identifier]] = **default** **sequence** [ **iff** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
 
 ===== Backlinks =====
 [[bins_or_empty]]

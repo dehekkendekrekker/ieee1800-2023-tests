@@ -11,4 +11,4 @@ clocking_drive ::=
 	[[clockvar_expression]] **<=** [ [[cycle_delay]] ] [[8_Expressions:8.3_Expressions:expression|expression]]
 
 ===== Backlinks =====
-
+[[6_Behavioral_statements:6.4_Statements:statement_item|statement_item]]

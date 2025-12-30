@@ -6,11 +6,11 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 net_declaration ::=
-	[[2_Declarations:2.2_Declaration_data_types:net_type|net_type]] [ [[2_Declarations:2.2_Declaration_data_types:drive_strength|drive_strength]] | [[2_Declarations:2.2_Declaration_data_types:charge_strength|charge_strength]] ] [ **vectored** | **scalared** ]
-[[2_Declarations:2.2_Declaration_data_types:data_type_or_implicit|data_type_or_implicit]] [ [[2_Declarations:2.2_Declaration_data_types:delay3|delay3]] ] [[2_Declarations:2.3_Declaration_lists:list_of_net_decl_assignments|list_of_net_decl_assignments]] ;
-| nettype_identifier [ [[6_Behavioral_statements:6.5_Timing_control_statements:delay_control|delay_control]] ] [[2_Declarations:2.3_Declaration_lists:list_of_net_decl_assignments|list_of_net_decl_assignments]] ;
-| **interconnect** [[2_Declarations:2.2_Declaration_data_types:implicit_data_type|implicit_data_type]] [ # [[2_Declarations:2.2_Declaration_data_types:delay_value|delay_value]] ] net_identifier { [[2_Declarations:2.5_Declaration_ranges:unpacked_dimension|unpacked_dimension]] }
-[ , net_identifier { [[2_Declarations:2.5_Declaration_ranges:unpacked_dimension|unpacked_dimension]] } ] ;
+	[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:net_type|net_type]] [ [[2_Declarations:2.2_Declaration_data_types:2.2.2_Strengths:drive_strength|drive_strength]] | [[2_Declarations:2.2_Declaration_data_types:2.2.2_Strengths:charge_strength|charge_strength]] ] [ **vectored** | **scalared** ]
+[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:data_type_or_implicit|data_type_or_implicit]] [ [[2_Declarations:2.2_Declaration_data_types:2.2.3_Delays:delay3|delay3]] ] [[2_Declarations:2.3_Declaration_lists:list_of_net_decl_assignments|list_of_net_decl_assignments]] ;
+| [[9_General:9.3_Identifiers:nettype_identifier|nettype_identifier]] [ [[6_Behavioral_statements:6.5_Timing_control_statements:delay_control|delay_control]] ] [[2_Declarations:2.3_Declaration_lists:list_of_net_decl_assignments|list_of_net_decl_assignments]] ;
+| **interconnect** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:implicit_data_type|implicit_data_type]] [ # [[2_Declarations:2.2_Declaration_data_types:2.2.3_Delays:delay_value|delay_value]] ] [[9_General:9.3_Identifiers:net_identifier|net_identifier]] { [[2_Declarations:2.5_Declaration_ranges:unpacked_dimension|unpacked_dimension]] }
+[ , [[9_General:9.3_Identifiers:net_identifier|net_identifier]] { [[2_Declarations:2.5_Declaration_ranges:unpacked_dimension|unpacked_dimension]] } ] ;
 
 ===== Backlinks =====
 [[1_Source_text:1.11_Package_items:package_or_generate_item_declaration|package_or_generate_item_declaration]]

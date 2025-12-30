@@ -11,4 +11,8 @@ library_identifier ::=
 	[[identifier]]
 
 ===== Backlinks =====
-
+[[1_Source_text:1.5_Configuration_source_text:cell_clause|cell_clause]]
+[[1_Source_text:1.5_Configuration_source_text:design_statement|design_statement]]
+[[1_Source_text:1.5_Configuration_source_text:liblist_clause|liblist_clause]]
+[[1_Source_text:1.1_Library_source_text:library_declaration|library_declaration]]
+[[1_Source_text:1.5_Configuration_source_text:use_clause|use_clause]]

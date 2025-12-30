@@ -12,4 +12,3 @@ select_condition ::=
 
 ===== Backlinks =====
 [[select_expression]]
-

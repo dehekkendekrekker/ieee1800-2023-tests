@@ -10,5 +10,5 @@ tf_item_declaration ::=
 | [[tf_port_declaration]]
 
 ===== Backlinks =====
-[[task_body_declaration]]
 [[2_Declarations:2.6_Function_declarations:function_body_declaration|function_body_declaration]]
+[[task_body_declaration]]

@@ -13,4 +13,3 @@ pulsestyle_declaration ::=
 
 ===== Backlinks =====
 [[specify_item]]
-

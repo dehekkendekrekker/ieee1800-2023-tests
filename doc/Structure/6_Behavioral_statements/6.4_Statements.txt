@@ -11,9 +11,9 @@ IEEE 1800-2023 Section A.6.4
 	Statement grammar rules.
 
 ===== Statement Rules =====
-* [[+statement_or_null]]
-* [[+statement]]
-* [[+statement_item]]
-* [[+function_statement]]
-* [[+function_statement_or_null]]
+* [[6_Behavioral_statements:6.4_Statements:statement_or_null|statement or null]]
+* [[6_Behavioral_statements:6.4_Statements:statement|statement]]
+* [[6_Behavioral_statements:6.4_Statements:statement_item|statement item]]
+* [[6_Behavioral_statements:6.4_Statements:function_statement|function statement]]
+* [[6_Behavioral_statements:6.4_Statements:function_statement_or_null|function statement or null]]
 

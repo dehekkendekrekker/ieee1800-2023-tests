@@ -12,7 +12,8 @@ unsigned_number ::=
 
 ===== Backlinks =====
 [[decimal_number]]
-[[2_Declarations:2.2_Declaration_data_types:delay_value|delay_value]]
+[[2_Declarations:2.2_Declaration_data_types:2.2.3_Delays:delay_value|delay_value]]
 [[fixed_point_number]]
+[[real_number]]
 [[size]]
-[[time_literal]]
+[[8_Expressions:8.4_Primaries:time_literal|time_literal]]

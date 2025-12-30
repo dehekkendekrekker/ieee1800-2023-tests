@@ -11,10 +11,10 @@ IEEE 1800-2023 Section A.6.8
 	Looping statement grammar rules.
 
 ===== Looping Statements =====
-* [[+loop_statement]]
-* [[+for_initialization]]
-* [[+for_variable_declaration]]
-* [[+for_step]]
-* [[+for_step_assignment]]
-* [[+loop_variables]]
+* [[6_Behavioral_statements:6.8_Looping_statements:loop_statement|loop statement]]
+* [[6_Behavioral_statements:6.8_Looping_statements:for_initialization|for initialization]]
+* [[6_Behavioral_statements:6.8_Looping_statements:for_variable_declaration|for variable declaration]]
+* [[6_Behavioral_statements:6.8_Looping_statements:for_step|for step]]
+* [[6_Behavioral_statements:6.8_Looping_statements:for_step_assignment|for step assignment]]
+* [[6_Behavioral_statements:6.8_Looping_statements:loop_variables|loop variables]]
 

@@ -12,4 +12,3 @@ scalar_constant ::=
 
 ===== Backlinks =====
 [[scalar_timing_check_condition]]
-

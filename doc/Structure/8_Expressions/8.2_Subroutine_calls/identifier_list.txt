@@ -12,4 +12,3 @@ identifier_list ::=
 
 ===== Backlinks =====
 [[randomize_call]]
-

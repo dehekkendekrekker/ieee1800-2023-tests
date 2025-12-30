@@ -8,8 +8,8 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.2.2.1
 
 type_identifier_or_class_type ::=
-	type_identifier
-| class_type
+	[[9_General:9.3_Identifiers:type_identifier|type_identifier]]
+| [[class_type]]
 
 ===== Backlinks =====
-(no backlinks)
+[[incomplete_class_scoped_type]]

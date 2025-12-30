@@ -9,6 +9,6 @@ module_keyword ::=
 	**module** | **macromodule**
 
 ===== Backlinks =====
-[[module_nonansi_header]]
 [[module_ansi_header]]
 [[module_declaration]]
+[[module_nonansi_header]]

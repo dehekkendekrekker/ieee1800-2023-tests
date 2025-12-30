@@ -10,4 +10,4 @@ random_qualifier ::=
 
 ===== Backlinks =====
 [[property_qualifier]]
-[[2_Declarations:2.2_Declaration_data_types:struct_union_member|struct_union_member]]
+[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:struct_union_member|struct_union_member]]

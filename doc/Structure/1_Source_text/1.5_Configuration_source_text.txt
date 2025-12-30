@@ -8,12 +8,12 @@ Created Friday 27 December 2025
 IEEE 1800-2023 Section A.1.5
 
 ===== Child pages =====
-[[+config_declaration]]
-[[+design_statement]]
-[[+config_rule_statement]]
-[[+default_clause]]
-[[+inst_clause]]
-[[+inst_name]]
-[[+cell_clause]]
-[[+liblist_clause]]
-[[+use_clause]]
+[[1_Source_text:1.5_Configuration_source_text:config_declaration|config declaration]]
+[[1_Source_text:1.5_Configuration_source_text:design_statement|design statement]]
+[[1_Source_text:1.5_Configuration_source_text:config_rule_statement|config rule statement]]
+[[1_Source_text:1.5_Configuration_source_text:default_clause|default clause]]
+[[1_Source_text:1.5_Configuration_source_text:inst_clause|inst clause]]
+[[1_Source_text:1.5_Configuration_source_text:inst_name|inst name]]
+[[1_Source_text:1.5_Configuration_source_text:cell_clause|cell clause]]
+[[1_Source_text:1.5_Configuration_source_text:liblist_clause|liblist clause]]
+[[1_Source_text:1.5_Configuration_source_text:use_clause|use clause]]

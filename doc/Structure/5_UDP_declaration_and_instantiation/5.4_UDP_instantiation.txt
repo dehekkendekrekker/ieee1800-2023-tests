@@ -8,6 +8,6 @@ Created Saturday 28 December 2025
 IEEE 1800-2023 Section A.5.4
 
 ===== Child pages =====
-[[+udp_instantiation]]
-[[+udp_instance]]
+[[5_UDP_declaration_and_instantiation:5.4_UDP_instantiation:udp_instantiation|udp instantiation]]
+[[5_UDP_declaration_and_instantiation:5.4_UDP_instantiation:udp_instance|udp instance]]
 

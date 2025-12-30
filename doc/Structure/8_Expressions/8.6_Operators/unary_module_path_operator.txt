@@ -11,5 +11,3 @@ unary_module_path_operator ::=
 	**!** | **~** | **&** | **~&** | **|** | **~|** | **^** | **~^** | **^~**
 
 ===== Backlinks =====
-[[8_Expressions:8.3_Expressions:module_path_unary_expression|module_path_unary_expression]]
-

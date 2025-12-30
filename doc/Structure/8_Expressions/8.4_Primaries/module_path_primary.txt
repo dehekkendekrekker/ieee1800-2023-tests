@@ -14,5 +14,3 @@ module_path_primary ::=
 | **(** [[8_Expressions:8.3_Expressions:module_path_mintypmax_expression|module_path_mintypmax_expression]] **)**
 
 ===== Backlinks =====
-[[8_Expressions:8.3_Expressions:module_path_expression|module_path_expression]]
-

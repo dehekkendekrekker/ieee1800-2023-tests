@@ -6,8 +6,9 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 Created Friday 27 December 2025
 
 class_new ::=
-	[ [[9_General:9.3_Identifiers:class_scope|class_scope]] ] **new** [ ( [[8_Expressions:8.2_Subroutine_calls:list_of_arguments|list_of_arguments]] ) ]
+	[ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:class_scope|class_scope]] ] **new** [ ( [[8_Expressions:8.2_Subroutine_calls:list_of_arguments|list_of_arguments]] ) ]
 | **new** [[8_Expressions:8.3_Expressions:expression|expression]]
 
 ===== Backlinks =====
+[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:blocking_assignment|blocking_assignment]]
 [[variable_decl_assignment]]

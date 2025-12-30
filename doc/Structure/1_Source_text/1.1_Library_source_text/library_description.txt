@@ -15,4 +15,3 @@ library_description ::=
 
 ===== Backlinks =====
 [[library_text]]
-

@@ -12,4 +12,3 @@ include_statement ::=
 
 ===== Backlinks =====
 [[library_description]]
-

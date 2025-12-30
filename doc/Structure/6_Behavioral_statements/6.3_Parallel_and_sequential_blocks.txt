@@ -11,8 +11,8 @@ IEEE 1800-2023 Section A.6.3
 	Parallel and sequential block grammar rules.
 
 ===== Blocks =====
-* [[+action_block]]
-* [[+seq_block]]
-* [[+par_block]]
-* [[+join_keyword]]
+* [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action block]]
+* [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:seq_block|seq block]]
+* [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:par_block|par block]]
+* [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:join_keyword|join keyword]]
 
