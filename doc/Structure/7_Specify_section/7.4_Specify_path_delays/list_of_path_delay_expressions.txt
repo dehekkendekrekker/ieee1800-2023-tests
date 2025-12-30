@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.4
 
-[[t_path_delay_expression]]
+list_of_path_delay_expressions ::=
+	[[t_path_delay_expression]]
 | [[trise_path_delay_expression]] , [[tfall_path_delay_expression]]
 | [[trise_path_delay_expression]] , [[tfall_path_delay_expression]] , [[tz_path_delay_expression]]
 | [[t01_path_delay_expression]] , [[t10_path_delay_expression]] , [[t0z_path_delay_expression]] , [[tz1_path_delay_expression]] , [[t1z_path_delay_expression]] , [[tz0_path_delay_expression]]

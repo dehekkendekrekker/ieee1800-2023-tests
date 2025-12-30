@@ -5,7 +5,8 @@ Creation-Date: 2025-12-16T22:49:59+00:00
 ====== clocking declaration ======
 Created Tuesday 16 December 2025
 
-[ default ] clocking [ clocking_identifier ] clocking_event ;
+clocking_declaration ::=
+	[ default ] clocking [ clocking_identifier ] clocking_event ;
 { [[clocking_item]] }
 endclocking [ : clocking_identifier ]
 | global clocking [ clocking_identifier ] clocking_event ;

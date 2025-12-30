@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== unique priority ======
 Created Friday 27 December 2025
 
-**unique** | **unique0** | **priority**
+unique_priority ::=
+	**unique** | **unique0** | **priority**
 
 ===== Backlinks =====
 [[conditional_statement]]

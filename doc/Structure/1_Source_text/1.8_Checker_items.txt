@@ -7,7 +7,8 @@ Created Tuesday 16 December 2025
 
 IEEE 1800-2023 Section A.1.8
 
-Checker item grammar rules.
+1.8_Checker_items ::=
+	Checker item grammar rules.
 
 ===== Checker Items =====
 * [[+checker_port_list]]

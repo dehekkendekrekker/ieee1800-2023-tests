@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.5.3
 
-[[level_input_list]] : [[output_symbol]] ;
+combinational_entry ::=
+	[[level_input_list]] : [[output_symbol]] ;
 
 ===== Backlinks =====
 [[combinational_body]]

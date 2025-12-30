@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.8.2
 
-[[9_General:9.3_Identifiers:method_identifier|method_identifier]] | **unique** | **and** | **or** | **xor**
+array_method_name ::=
+	[[9_General:9.3_Identifiers:method_identifier|method_identifier]] | **unique** | **and** | **or** | **xor**
 
 ===== Backlinks =====
 [[array_manipulation_call]]

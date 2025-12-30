@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.6.12
 
-**{** { [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:data_declaration|data_declaration]] } { [[6_Behavioral_statements:6.4_Statements:statement_or_null|statement_or_null]] } **}**
+rs_code_block ::=
+	**{** { [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:data_declaration|data_declaration]] } { [[6_Behavioral_statements:6.4_Statements:statement_or_null|statement_or_null]] } **}**
 
 ===== Backlinks =====
 [[rs_rule]]

@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.5.3
 
-[[8_Expressions:8.3_Expressions:expression|expression]]
+scalar_timing_check_condition ::=
+	[[8_Expressions:8.3_Expressions:expression|expression]]
 | ~ [[8_Expressions:8.3_Expressions:expression|expression]]
 | [[8_Expressions:8.3_Expressions:expression|expression]] == [[scalar_constant]]
 | [[8_Expressions:8.3_Expressions:expression|expression]] === [[scalar_constant]]

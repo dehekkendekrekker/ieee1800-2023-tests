@@ -5,7 +5,8 @@ Creation-Date: 2025-12-16T21:23:56+00:00
 ====== deferred immediate assertion item ======
 Created Tuesday 16 December 2025
 
- [ block_identifier : ] [[deferred_immediate_assertion_statement]]
+deferred_immediate_assertion_item ::=
+	 [ block_identifier : ] [[deferred_immediate_assertion_statement]]
 
 ===== Backlinks =====
 [[assertion_item]]

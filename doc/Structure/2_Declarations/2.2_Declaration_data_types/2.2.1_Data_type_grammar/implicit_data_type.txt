@@ -5,7 +5,8 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== implicit data type ======
 Created Sunday 22 December 2025
 
-[ [[signing]] ] { [[packed_dimension]] }
+implicit_data_type ::=
+	[ [[signing]] ] { [[packed_dimension]] }
 
 ===== Backlinks =====
 [[data_type_or_implicit]]

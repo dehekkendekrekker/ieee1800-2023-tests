@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== class item ======
 Created Friday 27 December 2025
 
-{ attribute_instance } [[class_property]]
+class_item ::=
+	{ attribute_instance } [[class_property]]
 | { attribute_instance } [[class_method]]
 | { attribute_instance } [[class_constraint]]
 | { attribute_instance } [[1_Source_text:1.2_SystemVerilog_source_text:class_declaration|class_declaration]]

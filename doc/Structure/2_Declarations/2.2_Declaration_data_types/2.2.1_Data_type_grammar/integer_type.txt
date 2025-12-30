@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.2.2.1
 
-[[integer_vector_type]]
+integer_type ::=
+	[[integer_vector_type]]
 | [[integer_atom_type]]
 
 ===== Backlinks =====

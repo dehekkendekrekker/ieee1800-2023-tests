@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.1
 
-[[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:specparam_declaration|specparam_declaration]]
+specify_item ::=
+	[[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:specparam_declaration|specparam_declaration]]
 | [[pulsestyle_declaration]]
 | [[showcancelled_declaration]]
 | [[7_Specify_section:7.2_Specify_path_declarations:path_declaration|path_declaration]]

@@ -7,7 +7,8 @@ Created Wednesday 17 December 2025
 
 IEEE 1800-2023 Section A.6.5
 
-Timing control statement grammar rules.
+6.5_Timing_control_statements ::=
+	Timing control statement grammar rules.
 
 ===== Timing Control =====
 * [[+procedural_timing_control_statement]]

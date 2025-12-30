@@ -7,7 +7,8 @@ Created Friday 27 December 2025
 
 IEEE 1800-2023 Section A.4.1.1
 
-instance_identifier { [[2_Declarations:2.5_Declaration_ranges:unpacked_dimension|unpacked_dimension]] }
+name_of_instance ::=
+	instance_identifier { [[2_Declarations:2.5_Declaration_ranges:unpacked_dimension|unpacked_dimension]] }
 
 ===== Backlinks =====
 [[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:cmos_switch_instance|cmos_switch_instance]]

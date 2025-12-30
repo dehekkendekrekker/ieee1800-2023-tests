@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.2.2.1
 
-[[integer_atom_type]] [ [[signing]] ]
+enum_base_type ::=
+	[[integer_atom_type]] [ [[signing]] ]
 | [[integer_vector_type]] [ [[signing]] ] [ [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] ]
 | [[9_General:9.3_Identifiers:type_identifier|type_identifier]] [ [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] ]
 

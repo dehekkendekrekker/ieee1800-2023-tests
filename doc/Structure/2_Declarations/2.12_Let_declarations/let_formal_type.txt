@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.2.12
 
-[[2_Declarations:2.2_Declaration_data_types:data_type_or_implicit|data_type_or_implicit]]
+let_formal_type ::=
+	[[2_Declarations:2.2_Declaration_data_types:data_type_or_implicit|data_type_or_implicit]]
 | **untyped**
 
 ===== Backlinks =====

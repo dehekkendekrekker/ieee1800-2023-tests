@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== constant primary ======
 Created Friday 27 December 2025
 
-[[primary_literal]]
+constant_primary ::=
+	[[primary_literal]]
 | [[9_General:9.3_Identifiers:ps_parameter_identifier|ps_parameter_identifier]] [[constant_select]]
 | specparam_identifier [ [ [[8_Expressions:8.3_Expressions:constant_range_expression|constant_range_expression]] ] ]
 | genvar_identifier

@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.9.3
 
-[[identifier]]
+module_identifier ::=
+	[[identifier]]
 
 ===== Backlinks =====
 [[1_Source_text:1.2_SystemVerilog_source_text:module_declaration|module_declaration]]

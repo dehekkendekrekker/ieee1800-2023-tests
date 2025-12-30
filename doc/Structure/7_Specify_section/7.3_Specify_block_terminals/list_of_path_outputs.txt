@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.3
 
-[[specify_output_terminal_descriptor]] { , [[specify_output_terminal_descriptor]] }
+list_of_path_outputs ::=
+	[[specify_output_terminal_descriptor]] { , [[specify_output_terminal_descriptor]] }
 
 ===== Backlinks =====
 [[7_Specify_section:7.1_Specify_block_declaration:pulsestyle_declaration]]

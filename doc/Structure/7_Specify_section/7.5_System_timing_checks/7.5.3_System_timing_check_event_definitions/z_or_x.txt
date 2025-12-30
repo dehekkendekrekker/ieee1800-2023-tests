@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.5.3
 
-x | X | z | Z
+z_or_x ::=
+	x | X | z | Z
 
 ===== Backlinks =====
 [[edge_descriptor]]

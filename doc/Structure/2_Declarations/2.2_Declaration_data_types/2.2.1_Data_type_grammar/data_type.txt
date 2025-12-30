@@ -5,7 +5,8 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== data type ======
 Created Sunday 22 December 2025
 
-[[integer_vector_type]] [ [[signing]] ] { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
+data_type ::=
+	[[integer_vector_type]] [ [[signing]] ] { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
 | [[integer_atom_type]] [ [[signing]] ]
 | [[non_integer_type]]
 | [[struct_union]] [ **packed** [ [[signing]] ] ] **{** [[struct_union_member]] { [[struct_union_member]] } **}** { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }

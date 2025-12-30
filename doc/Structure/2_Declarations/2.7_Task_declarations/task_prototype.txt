@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== task prototype ======
 Created Friday 27 December 2025
 
-**task** [ dynamic_override_specifiers ] task_identifier [ ( [ [[tf_port_list]] ] ) ]
+task_prototype ::=
+	**task** [ dynamic_override_specifiers ] task_identifier [ ( [ [[tf_port_list]] ] ) ]
 
 ===== Backlinks =====
 [[1_Source_text:1.11_Package_items:dpi_task_proto|dpi_task_proto]]

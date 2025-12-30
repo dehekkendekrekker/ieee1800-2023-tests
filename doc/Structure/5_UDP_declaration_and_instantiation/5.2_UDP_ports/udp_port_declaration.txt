@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.5.2
 
-[[udp_output_declaration]] ;
+udp_port_declaration ::=
+	[[udp_output_declaration]] ;
 | [[udp_input_declaration]] ;
 | [[udp_reg_declaration]] ;
 

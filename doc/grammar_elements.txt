@@ -750,7 +750,7 @@ primary
 primary_literal
 range_expression
 select
-time_literal
+Rtime_literal
 time_unit
 
 ===== A8.5 =====

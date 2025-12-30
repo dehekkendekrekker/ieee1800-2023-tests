@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.2.11
 
-[[2_Declarations:2.6_Function_declarations:function_declaration|function_declaration]]
+cross_body_item ::=
+	[[2_Declarations:2.6_Function_declarations:function_declaration|function_declaration]]
 | [[bins_selection_or_option]] ;
 
 ===== Backlinks =====

@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.3.3
 
-[[8_Expressions:8.5_Expression_left_side_values:net_lvalue|net_lvalue]]
+output_terminal ::=
+	[[8_Expressions:8.5_Expression_left_side_values:net_lvalue|net_lvalue]]
 
 ===== Backlinks =====
 [[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:cmos_switch_instance|cmos_switch_instance]]

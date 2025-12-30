@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.6.12
 
-[[9_General:9.3_Identifiers:rs_production_identifier|rs_production_identifier]] [ ( [[8_Expressions:8.2_Subroutine_calls:list_of_arguments|list_of_arguments]] ) ]
+rs_production_item ::=
+	[[9_General:9.3_Identifiers:rs_production_identifier|rs_production_identifier]] [ ( [[8_Expressions:8.2_Subroutine_calls:list_of_arguments|list_of_arguments]] ) ]
 
 ===== Backlinks =====
 [[rs_production_list]]

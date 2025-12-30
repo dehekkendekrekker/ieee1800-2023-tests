@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== gate instantiation ======
 Created Friday 27 December 2025
 
-cmos_switchtype [ delay3 ] cmos_switch_instance { , cmos_switch_instance } ;
+gate_instantiation ::=
+	cmos_switchtype [ delay3 ] cmos_switch_instance { , cmos_switch_instance } ;
 | mos_switchtype [ delay3 ] mos_switch_instance { , mos_switch_instance } ;
 | enable_gatetype [ drive_strength ] [ delay3 ] enable_gate_instance { , enable_gate_instance } ;
 | n_input_gatetype [ drive_strength ] [ delay2 ] n_input_gate_instance { , n_input_gate_instance } ;

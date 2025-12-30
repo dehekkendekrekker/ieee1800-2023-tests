@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== empty unpacked array concatenation ======
 Created Friday 27 December 2025
 
-{ }
+empty_unpacked_array_concatenation ::=
+	{ }
 
 ===== Backlinks =====
 [[8_Expressions:8.4_Primaries:primary|primary]]

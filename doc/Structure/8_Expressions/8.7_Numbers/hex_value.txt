@@ -7,7 +7,8 @@ Created Sunday 29 December 2025
 
 IEEE 1800-2023 Section A.8.7
 
-[[hex_digit]] { **_** | [[hex_digit]] }
+hex_value ::=
+	[[hex_digit]] { **_** | [[hex_digit]] }
 
 ===== Backlinks =====
 [[hex_number]]

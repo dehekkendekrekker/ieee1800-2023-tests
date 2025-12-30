@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.5.3
 
-[[seq_input_list]] : [[current_state]] : [[next_state]] ;
+sequential_entry ::=
+	[[seq_input_list]] : [[current_state]] : [[next_state]] ;
 
 ===== Backlinks =====
 [[sequential_body]]

@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.2
 
-[[simple_path_declaration]] ;
+path_declaration ::=
+	[[simple_path_declaration]] ;
 | [[edge_sensitive_path_declaration]] ;
 | [[state_dependent_path_declaration]] ;
 

@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.9.3
 
-[[identifier]]
+input_port_identifier ::=
+	[[identifier]]
 
 ===== Backlinks =====
 [[5_UDP_declaration_and_instantiation:5.2_UDP_ports:udp_port_list]]

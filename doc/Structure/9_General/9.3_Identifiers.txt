@@ -7,7 +7,8 @@ Created Tuesday 16 December 2025
 
 IEEE 1800-2023 Section A.9.3
 
-Identifier grammar rules.
+9.3_Identifiers ::=
+	Identifier grammar rules.
 
 ===== Identifier Rules =====
 * [[+identifier]]

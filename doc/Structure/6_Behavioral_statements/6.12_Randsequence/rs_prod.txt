@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.6.12
 
-[[rs_production_item]]
+rs_prod ::=
+	[[rs_production_item]]
 | [[rs_code_block]]
 | [[rs_if_else]]
 | [[rs_repeat]]

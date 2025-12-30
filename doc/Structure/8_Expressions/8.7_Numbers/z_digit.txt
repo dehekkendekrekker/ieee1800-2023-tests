@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.8.7
 
-**z** | **Z** | **?**
+z_digit ::=
+	**z** | **Z** | **?**
 
 ===== Backlinks =====
 [[binary_digit]]

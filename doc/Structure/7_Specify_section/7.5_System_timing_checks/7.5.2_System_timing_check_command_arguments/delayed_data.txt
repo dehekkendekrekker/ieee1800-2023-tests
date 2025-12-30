@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.5.2
 
-[[9_General:9.3_Identifiers:terminal_identifier|terminal_identifier]]
+delayed_data ::=
+	[[9_General:9.3_Identifiers:terminal_identifier|terminal_identifier]]
 | [[9_General:9.3_Identifiers:terminal_identifier|terminal_identifier]] [ [[8_Expressions:8.3_Expressions:constant_mintypmax_expression|constant_mintypmax_expression]] ]
 
 ===== Backlinks =====

@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.2.12
 
-{ attribute_instance } [[let_formal_type]] formal_port_identifier { [[2_Declarations:2.2_Declaration_data_types:variable_dimension|variable_dimension]] } [ **=** [[8_Expressions:8.3_Expressions:expression|expression]] ]
+let_port_item ::=
+	{ attribute_instance } [[let_formal_type]] formal_port_identifier { [[2_Declarations:2.2_Declaration_data_types:variable_dimension|variable_dimension]] } [ **=** [[8_Expressions:8.3_Expressions:expression|expression]] ]
 
 ===== Backlinks =====
 [[let_port_list]]

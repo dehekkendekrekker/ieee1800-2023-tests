@@ -7,7 +7,8 @@ Created Sunday 22 December 2025
 
 IEEE 1800-2023 Section A.6.4
 
-Statement grammar rules.
+6.4_Statements ::=
+	Statement grammar rules.
 
 ===== Statement Rules =====
 * [[+statement_or_null]]

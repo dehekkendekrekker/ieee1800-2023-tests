@@ -5,7 +5,8 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== case generate construct ======
 Created Sunday 22 December 2025
 
-**case** ( constant_expression )
+case_generate_construct ::=
+	**case** ( constant_expression )
 	[[case_generate_item]] { [[case_generate_item]] }
 **endcase**
 

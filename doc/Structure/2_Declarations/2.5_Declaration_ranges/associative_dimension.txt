@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== associative dimension ======
 Created Friday 27 December 2025
 
-[ [[2_Declarations:2.2_Declaration_data_types:data_type|data_type]] ]
+associative_dimension ::=
+	[ [[2_Declarations:2.2_Declaration_data_types:data_type|data_type]] ]
 | [ * ]
 
 ===== Backlinks =====

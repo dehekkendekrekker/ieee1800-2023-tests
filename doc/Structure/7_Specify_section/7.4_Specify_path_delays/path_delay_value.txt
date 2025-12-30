@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.4
 
-[[list_of_path_delay_expressions]]
+path_delay_value ::=
+	[[list_of_path_delay_expressions]]
 | ( [[list_of_path_delay_expressions]] )
 
 ===== Backlinks =====

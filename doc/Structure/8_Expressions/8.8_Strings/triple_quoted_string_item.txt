@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.8.8
 
-any_ASCII_character except **\\**
+triple_quoted_string_item ::=
+	any_ASCII_character except **\\**
 
 ===== Backlinks =====
 [[triple_quoted_string]]

@@ -5,7 +5,8 @@ Creation-Date: 2025-12-16T21:26:52+00:00
 ====== statement or null ======
 Created Tuesday 16 December 2025
 
-[[statement]]
+statement_or_null ::=
+	[[statement]]
 | { attribute_instance } ;
 
 ===== Backlinks =====

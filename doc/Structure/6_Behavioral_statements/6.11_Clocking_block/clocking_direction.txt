@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.6.11
 
-**input** [ [[clocking_skew]] ]
+clocking_direction ::=
+	**input** [ [[clocking_skew]] ]
 | **output** [ [[clocking_skew]] ]
 | **input** [ [[clocking_skew]] ] **output** [ [[clocking_skew]] ]
 | **inout**

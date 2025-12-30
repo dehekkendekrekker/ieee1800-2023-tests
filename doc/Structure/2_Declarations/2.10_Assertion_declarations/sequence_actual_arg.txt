@@ -5,7 +5,8 @@ Creation-Date: 2025-12-16T23:32:21+00:00
 ====== sequence actual arg ======
 Created Tuesday 16 December 2025
 
-event_expression
+sequence_actual_arg ::=
+	event_expression
 | [[sequence_expr]]
 | **$**
 

@@ -7,7 +7,8 @@ Created Sunday 29 December 2025
 
 IEEE 1800-2023 Section A.8.7
 
-**'** [ **s** | **S** ] **o** | **'** [ **s** | **S** ] **O**
+octal_base ::=
+	**'** [ **s** | **S** ] **o** | **'** [ **s** | **S** ] **O**
 
 ===== Backlinks =====
 [[octal_number]]

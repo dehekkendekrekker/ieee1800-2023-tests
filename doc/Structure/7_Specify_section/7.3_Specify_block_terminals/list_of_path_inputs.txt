@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.3
 
-[[specify_input_terminal_descriptor]] { , [[specify_input_terminal_descriptor]] }
+list_of_path_inputs ::=
+	[[specify_input_terminal_descriptor]] { , [[specify_input_terminal_descriptor]] }
 
 ===== Backlinks =====
 [[7_Specify_section:7.2_Specify_path_declarations:full_path_description]]

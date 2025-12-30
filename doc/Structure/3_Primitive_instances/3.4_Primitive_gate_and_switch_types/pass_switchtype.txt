@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.3.4
 
-**tran** | **rtran**
+pass_switchtype ::=
+	**tran** | **rtran**
 
 ===== Backlinks =====
 [[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:gate_instantiation]]

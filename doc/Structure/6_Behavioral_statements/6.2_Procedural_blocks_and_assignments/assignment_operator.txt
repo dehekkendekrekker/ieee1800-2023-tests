@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== assignment operator ======
 Created Friday 27 December 2025
 
-= | += | -= | *= | /= | %= | &= | |= | ^= | <<= | >>= | <<<= | >>>=
+assignment_operator ::=
+	= | += | -= | *= | /= | %= | &= | |= | ^= | <<= | >>= | <<<= | >>>=
 
 ===== Backlinks =====
 [[4_Instantiations:4.2_Generated_instantiation:genvar_iteration|genvar_iteration]]

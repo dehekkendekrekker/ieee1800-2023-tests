@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.8.3
 
-[[8_Expressions:8.3_Expressions:constant_expression|constant_expression]]
+genvar_expression ::=
+	[[8_Expressions:8.3_Expressions:constant_expression|constant_expression]]
 
 ===== Backlinks =====
 [[loop_generate_construct]]

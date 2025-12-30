@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.2.2.1
 
-type_identifier
+type_identifier_or_class_type ::=
+	type_identifier
 | class_type
 
 ===== Backlinks =====

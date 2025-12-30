@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.5.3
 
-**edge** [ [[edge_descriptor]] { , [[edge_descriptor]] } ]
+edge_control_specifier ::=
+	**edge** [ [[edge_descriptor]] { , [[edge_descriptor]] } ]
 
 ===== Backlinks =====
 [[timing_check_event_control]]

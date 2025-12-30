@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.9.3
 
-[[identifier]]
+rs_production_identifier ::=
+	[[identifier]]
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.12_Randsequence:randsequence_statement|randsequence_statement]]

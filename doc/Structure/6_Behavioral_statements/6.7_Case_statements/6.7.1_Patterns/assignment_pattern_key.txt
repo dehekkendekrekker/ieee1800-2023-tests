@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== assignment pattern key ======
 Created Friday 27 December 2025
 
-simple_type | **default**
+assignment_pattern_key ::=
+	simple_type | **default**
 
 ===== Backlinks =====
 [[structure_pattern_key]]

@@ -7,7 +7,8 @@ Created Tuesday 16 December 2025
 
 IEEE 1800-2023 Section A.1.11
 
-Package item grammar rules.
+1.11_Package_items ::=
+	Package item grammar rules.
 
 ===== Package Items =====
 * [[+package_item]]

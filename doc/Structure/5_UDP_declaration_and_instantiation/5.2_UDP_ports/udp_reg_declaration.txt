@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.5.2
 
-{ [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } **reg** [[9_General:9.3_Identifiers:variable_identifier|variable_identifier]]
+udp_reg_declaration ::=
+	{ [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } **reg** [[9_General:9.3_Identifiers:variable_identifier|variable_identifier]]
 
 ===== Backlinks =====
 [[udp_port_declaration]]

@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.3.4
 
-**and** | **nand** | **or** | **nor** | **xor** | **xnor**
+n_input_gatetype ::=
+	**and** | **nand** | **or** | **nor** | **xor** | **xnor**
 
 ===== Backlinks =====
 [[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:gate_instantiation]]

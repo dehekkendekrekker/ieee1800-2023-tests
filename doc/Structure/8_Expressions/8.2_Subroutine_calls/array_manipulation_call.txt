@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.8.2
 
-[[array_method_name]] { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] }
+array_manipulation_call ::=
+	[[array_method_name]] { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] }
 [ ( [[list_of_arguments]] ) ]
 [ **with** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
 

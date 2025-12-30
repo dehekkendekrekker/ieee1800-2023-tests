@@ -7,7 +7,8 @@ Created Sunday 22 December 2025
 
 IEEE 1800-2023 Section A.8.3
 
-Expression grammar rules.
+8.3_Expressions ::=
+	Expression grammar rules.
 
 ===== Expression Rules =====
 * [[+expression]]

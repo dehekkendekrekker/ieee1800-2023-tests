@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.8.4
 
-[ { . [[9_General:9.3_Identifiers:member_identifier|member_identifier]] [[bit_select]] } . [[9_General:9.3_Identifiers:member_identifier|member_identifier]] ] [[bit_select]]
+nonrange_select ::=
+	[ { . [[9_General:9.3_Identifiers:member_identifier|member_identifier]] [[bit_select]] } . [[9_General:9.3_Identifiers:member_identifier|member_identifier]] ] [[bit_select]]
 
 ===== Backlinks =====
 

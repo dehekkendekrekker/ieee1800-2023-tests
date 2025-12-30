@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.8.2
 
-[[array_manipulation_call]] | [[randomize_call]]
+built_in_method_call ::=
+	[[array_manipulation_call]] | [[randomize_call]]
 
 ===== Backlinks =====
 (no backlinks)

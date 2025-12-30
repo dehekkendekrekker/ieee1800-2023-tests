@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.5.3
 
-[ [[udp_initial_statement]] ] **table** [[sequential_entry]] { [[sequential_entry]] } **endtable**
+sequential_body ::=
+	[ [[udp_initial_statement]] ] **table** [[sequential_entry]] { [[sequential_entry]] } **endtable**
 
 ===== Backlinks =====
 [[udp_body]]

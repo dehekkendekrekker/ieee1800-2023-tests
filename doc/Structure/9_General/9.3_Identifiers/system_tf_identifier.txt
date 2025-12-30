@@ -7,7 +7,8 @@ Created Sunday 29 December 2025
 
 IEEE 1800-2023 Section A.9.3
 
-**$** [ **a-zA-Z0-9_$** ] { [ **a-zA-Z0-9_$** ] }
+system_tf_identifier ::=
+	**$** [ **a-zA-Z0-9_$** ] { [ **a-zA-Z0-9_$** ] }
 
 ===== Backlinks =====
 [[8_Expressions:8.2_Subroutine_calls:system_tf_call|system_tf_call]]

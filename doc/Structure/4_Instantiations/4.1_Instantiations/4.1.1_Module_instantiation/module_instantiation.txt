@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== module instantiation ======
 Created Friday 27 December 2025
 
-module_identifier [ parameter_value_assignment ] hierarchical_instance { , hierarchical_instance } ;
+module_instantiation ::=
+	module_identifier [ parameter_value_assignment ] hierarchical_instance { , hierarchical_instance } ;
 
 ===== Backlinks =====
 [[1_Source_text:1.4_Module_items:module_or_generate_item|module_or_generate_item]]

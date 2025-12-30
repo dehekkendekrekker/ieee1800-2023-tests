@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.9.3
 
-[[identifier]]
+enum_identifier ::=
+	[[identifier]]
 
 ===== Backlinks =====
 [[2_Declarations:2.2_Declaration_data_types:enum_name_declaration|enum_name_declaration]]

@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== primary literal ======
 Created Friday 27 December 2025
 
-[[8_Expressions:8.7_Numbers:number|number]]
+primary_literal ::=
+	[[8_Expressions:8.7_Numbers:number|number]]
 | [[8_Expressions:8.7_Numbers:time_literal|time_literal]]
 | [[8_Expressions:8.7_Numbers:unbased_unsized_literal|unbased_unsized_literal]]
 | [[8_Expressions:8.8_Strings:string_literal|string_literal]]

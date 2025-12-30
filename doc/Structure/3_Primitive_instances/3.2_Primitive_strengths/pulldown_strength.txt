@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.3.2
 
-( [[2_Declarations:2.2_Declaration_data_types:strength0|strength0]] , [[2_Declarations:2.2_Declaration_data_types:strength1|strength1]] )
+pulldown_strength ::=
+	( [[2_Declarations:2.2_Declaration_data_types:strength0|strength0]] , [[2_Declarations:2.2_Declaration_data_types:strength1|strength1]] )
 | ( [[2_Declarations:2.2_Declaration_data_types:strength1|strength1]] , [[2_Declarations:2.2_Declaration_data_types:strength0|strength0]] )
 | ( [[2_Declarations:2.2_Declaration_data_types:strength0|strength0]] )
 

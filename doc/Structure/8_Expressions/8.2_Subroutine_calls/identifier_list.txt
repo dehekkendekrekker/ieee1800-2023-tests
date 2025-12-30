@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.8.2
 
-[[9_General:9.3_Identifiers:identifier|identifier]] { , [[9_General:9.3_Identifiers:identifier|identifier]] }
+identifier_list ::=
+	[[9_General:9.3_Identifiers:identifier|identifier]] { , [[9_General:9.3_Identifiers:identifier|identifier]] }
 
 ===== Backlinks =====
 [[randomize_call]]

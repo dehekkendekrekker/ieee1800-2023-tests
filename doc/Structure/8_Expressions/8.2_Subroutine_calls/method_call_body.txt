@@ -5,7 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== method call body ======
 Created Friday 27 December 2025
 
-method_identifier { attribute_instance } [ ( [[list_of_arguments]] ) ]
+method_call_body ::=
+	method_identifier { attribute_instance } [ ( [[list_of_arguments]] ) ]
 | built_in_method_call
 
 ===== Backlinks =====

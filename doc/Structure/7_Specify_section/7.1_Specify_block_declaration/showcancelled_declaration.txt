@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.1
 
-**showcancelled** [[7_Specify_section:7.3_Specify_block_terminals:list_of_path_outputs|list_of_path_outputs]] ;
+showcancelled_declaration ::=
+	**showcancelled** [[7_Specify_section:7.3_Specify_block_terminals:list_of_path_outputs|list_of_path_outputs]] ;
 | **noshowcancelled** [[7_Specify_section:7.3_Specify_block_terminals:list_of_path_outputs|list_of_path_outputs]] ;
 
 ===== Backlinks =====

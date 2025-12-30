@@ -7,7 +7,8 @@ Created Friday 27 December 2025
 
 IEEE 1800-2023 Section A.1.5
 
-topmodule_identifier { **.** instance_identifier }
+inst_name ::=
+	topmodule_identifier { **.** instance_identifier }
 
 ===== Backlinks =====
 [[inst_clause]]

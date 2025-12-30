@@ -5,7 +5,8 @@ Creation-Date: 2025-12-16T21:27:04+00:00
 ====== statement ======
 Created Tuesday 16 December 2025
 
-[ block_identifier : ] { attribute_instance } [[statement_item]]
+statement ::=
+	[ block_identifier : ] { attribute_instance } [[statement_item]]
 
 
 ===== Backlinks =====

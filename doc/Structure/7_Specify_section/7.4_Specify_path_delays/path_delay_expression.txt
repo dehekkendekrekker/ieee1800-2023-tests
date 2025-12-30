@@ -7,7 +7,8 @@ Created Saturday 28 December 2025
 
 IEEE 1800-2023 Section A.7.4
 
-[[8_Expressions:8.3_Expressions:constant_mintypmax_expression|constant_mintypmax_expression]]
+path_delay_expression ::=
+	[[8_Expressions:8.3_Expressions:constant_mintypmax_expression|constant_mintypmax_expression]]
 
 ===== Backlinks =====
 [[t_path_delay_expression]]

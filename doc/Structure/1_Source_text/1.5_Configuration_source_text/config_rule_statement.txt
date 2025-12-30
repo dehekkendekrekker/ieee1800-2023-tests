@@ -7,7 +7,8 @@ Created Friday 27 December 2025
 
 IEEE 1800-2023 Section A.1.5
 
-[[default_clause]] [[liblist_clause]] **;**
+config_rule_statement ::=
+	[[default_clause]] [[liblist_clause]] **;**
 | [[inst_clause]] [[liblist_clause]] **;**
 | [[inst_clause]] [[use_clause]] **;**
 | [[cell_clause]] [[liblist_clause]] **;**
