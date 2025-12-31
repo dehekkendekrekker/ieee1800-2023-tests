@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== z digit ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.8.7
-
-z_digit ::=
-	**z** | **Z** | **?**
+z_digit ::= z | Z | 
 
 ===== Backlinks =====
 [[8_Expressions:8.7_Numbers:binary_digit|binary_digit]]

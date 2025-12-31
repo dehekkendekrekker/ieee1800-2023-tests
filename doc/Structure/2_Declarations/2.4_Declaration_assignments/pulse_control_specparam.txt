@@ -5,12 +5,9 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== pulse control specparam ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.4
-
-pulse_control_specparam ::=
-	**PATHPULSE$** = ( [[2_Declarations:2.4_Declaration_assignments:reject_limit_value|reject_limit_value]] [ , [[2_Declarations:2.4_Declaration_assignments:error_limit_value|error_limit_value]] ] )
-| **PATHPULSE$** [[7_Specify_section:7.3_Specify_block_terminals:specify_input_terminal_descriptor|specify_input_terminal_descriptor]] **$** [[7_Specify_section:7.3_Specify_block_terminals:specify_output_terminal_descriptor|specify_output_terminal_descriptor]]
-  = ( [[2_Declarations:2.4_Declaration_assignments:reject_limit_value|reject_limit_value]] [ , [[2_Declarations:2.4_Declaration_assignments:error_limit_value|error_limit_value]] ] )
+pulse_control_specparam ::= PATHPULSE$ = ( [[2_Declarations:2.4_Declaration_assignments:reject_limit_value|reject_limit_value]] [ , [[2_Declarations:2.4_Declaration_assignments:error_limit_value|error_limit_value]] ] )
+| PATHPULSE$specify_input_terminal_descriptor$specify_output_terminal_descriptor
+= ( [[2_Declarations:2.4_Declaration_assignments:reject_limit_value|reject_limit_value]] [ , [[2_Declarations:2.4_Declaration_assignments:error_limit_value|error_limit_value]] ] )
 
 ===== Backlinks =====
 [[2_Declarations:2.4_Declaration_assignments:specparam_assignment|specparam_assignment]]

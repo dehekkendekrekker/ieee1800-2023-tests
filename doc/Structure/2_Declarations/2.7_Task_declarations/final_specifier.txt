@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== final specifier ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.7
-
-final_specifier ::=
-	**:** **final**
+final_specifier ::= : **final**
 
 ===== Backlinks =====
 [[1_Source_text:1.2_SystemVerilog_source_text:class_declaration|class_declaration]]

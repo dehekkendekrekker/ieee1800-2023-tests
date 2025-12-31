@@ -5,11 +5,8 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== initial or extends specifier ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.7
-
-initial_or_extends_specifier ::=
-	**:** **initial**
-| **:** **extends**
+initial_or_extends_specifier ::= : **initial**
+| : **extends**
 
 ===== Backlinks =====
 [[2_Declarations:2.7_Task_declarations:dynamic_override_specifiers|dynamic_override_specifiers]]

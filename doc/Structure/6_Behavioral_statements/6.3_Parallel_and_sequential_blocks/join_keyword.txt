@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== join keyword ======
 Created Friday 27 December 2025
 
-join_keyword ::=
-	**join** | **join_any** | **join_none**
+join_keyword ::= **join** | **join_any** | **join_none**
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:par_block|par_block]]

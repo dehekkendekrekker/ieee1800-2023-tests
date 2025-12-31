@@ -5,8 +5,7 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== conditional generate construct ======
 Created Sunday 22 December 2025
 
-conditional_generate_construct ::=
-	[[4_Instantiations:4.2_Generated_instantiation:if_generate_construct|if_generate_construct]]
+conditional_generate_construct ::= [[4_Instantiations:4.2_Generated_instantiation:if_generate_construct|if_generate_construct]]
 | [[4_Instantiations:4.2_Generated_instantiation:case_generate_construct|case_generate_construct]]
 
 ===== Backlinks =====

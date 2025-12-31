@@ -5,7 +5,6 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== source text ======
 Created Friday 27 December 2025
 
-source_text ::=
-	[ [[1_Source_text:1.2_SystemVerilog_source_text:timeunits_declaration|timeunits_declaration]] ] { [[1_Source_text:1.2_SystemVerilog_source_text:description|description]] }
+source_text ::= [ [[1_Source_text:1.2_SystemVerilog_source_text:timeunits_declaration|timeunits_declaration]] ] { [[1_Source_text:1.2_SystemVerilog_source_text:description|description]] }
 
 ===== Backlinks =====

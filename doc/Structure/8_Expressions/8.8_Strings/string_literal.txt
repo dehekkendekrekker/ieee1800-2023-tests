@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== string literal ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.8.8
-
-string_literal ::=
-	[[8_Expressions:8.8_Strings:quoted_string|quoted_string]]
+string_literal ::= [[8_Expressions:8.8_Strings:quoted_string|quoted_string]]
 | [[8_Expressions:8.8_Strings:triple_quoted_string|triple_quoted_string]]
 
 ===== Backlinks =====

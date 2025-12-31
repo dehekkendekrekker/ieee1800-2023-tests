@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== integer covergroup expression ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.11
-
-integer_covergroup_expression ::=
-	[[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] | **$**
+integer_covergroup_expression ::= [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] | 
 
 ===== Backlinks =====
 [[2_Declarations:2.11_Covergroup_declarations:select_expression|select_expression]]

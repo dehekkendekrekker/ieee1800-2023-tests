@@ -5,8 +5,7 @@ Creation-Date: 2025-12-17T01:18:58+00:00
 ====== action block ======
 Created Wednesday 17 December 2025
 
-action_block ::=
-	[[6_Behavioral_statements:6.4_Statements:statement_or_null|statement_or_null]]
+action_block ::= [[6_Behavioral_statements:6.4_Statements:statement_or_null|statement_or_null]]
 | [ [[6_Behavioral_statements:6.4_Statements:statement|statement]] ] **else** [[6_Behavioral_statements:6.4_Statements:statement_or_null|statement_or_null]]
 
 ===== Backlinks =====

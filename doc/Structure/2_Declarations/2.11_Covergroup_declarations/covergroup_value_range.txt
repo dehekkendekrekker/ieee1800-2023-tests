@@ -5,15 +5,12 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== covergroup value range ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.11
-
-covergroup_value_range ::=
-	[[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]]
-| **[** [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] **:** [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] **]**
-| **[** **$** **:** [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] **]**
-| **[** [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] **:** **$** **]**
-| **[** [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] **+/-** [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] **]**
-| **[** [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] **+%-** [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] **]**
+covergroup_value_range ::= [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]]
+| [ [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] : [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] ]
+| [  : [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] ]
+| [ [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] :  ]
+| [ [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] +/- [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] ]
+| [ [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] +- [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]] ]
 
 ===== Backlinks =====
 [[2_Declarations:2.11_Covergroup_declarations:covergroup_range_list|covergroup_range_list]]

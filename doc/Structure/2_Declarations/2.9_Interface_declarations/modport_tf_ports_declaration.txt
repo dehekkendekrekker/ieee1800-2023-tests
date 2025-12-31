@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== modport tf ports declaration ======
 Created Friday 27 December 2025
 
-modport_tf_ports_declaration ::=
-	[[2_Declarations:2.9_Interface_declarations:import_export|import_export]] [[2_Declarations:2.9_Interface_declarations:modport_tf_port|modport_tf_port]] { , [[2_Declarations:2.9_Interface_declarations:modport_tf_port|modport_tf_port]] }
+modport_tf_ports_declaration ::= [[2_Declarations:2.9_Interface_declarations:import_export|import_export]] [[2_Declarations:2.9_Interface_declarations:modport_tf_port|modport_tf_port]] { , [[2_Declarations:2.9_Interface_declarations:modport_tf_port|modport_tf_port]] }
 
 ===== Backlinks =====
 [[2_Declarations:2.9_Interface_declarations:modport_ports_declaration|modport_ports_declaration]]

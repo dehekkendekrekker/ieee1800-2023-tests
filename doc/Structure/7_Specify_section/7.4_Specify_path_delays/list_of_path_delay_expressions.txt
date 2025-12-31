@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== list of path delay expressions ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.7.4
-
-list_of_path_delay_expressions ::=
-	[[7_Specify_section:7.4_Specify_path_delays:t_path_delay_expression|t_path_delay_expression]]
+list_of_path_delay_expressions ::= [[7_Specify_section:7.4_Specify_path_delays:t_path_delay_expression|t_path_delay_expression]]
 | [[7_Specify_section:7.4_Specify_path_delays:trise_path_delay_expression|trise_path_delay_expression]] , [[7_Specify_section:7.4_Specify_path_delays:tfall_path_delay_expression|tfall_path_delay_expression]]
 | [[7_Specify_section:7.4_Specify_path_delays:trise_path_delay_expression|trise_path_delay_expression]] , [[7_Specify_section:7.4_Specify_path_delays:tfall_path_delay_expression|tfall_path_delay_expression]] , [[7_Specify_section:7.4_Specify_path_delays:tz_path_delay_expression|tz_path_delay_expression]]
 | [[7_Specify_section:7.4_Specify_path_delays:t01_path_delay_expression|t01_path_delay_expression]] , [[7_Specify_section:7.4_Specify_path_delays:t10_path_delay_expression|t10_path_delay_expression]] , [[7_Specify_section:7.4_Specify_path_delays:t0z_path_delay_expression|t0z_path_delay_expression]] , [[7_Specify_section:7.4_Specify_path_delays:tz1_path_delay_expression|tz1_path_delay_expression]] , [[7_Specify_section:7.4_Specify_path_delays:t1z_path_delay_expression|t1z_path_delay_expression]] , [[7_Specify_section:7.4_Specify_path_delays:tz0_path_delay_expression|tz0_path_delay_expression]]

@@ -5,10 +5,9 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== constraint expression ======
 Created Friday 27 December 2025
 
-constraint_expression ::=
-	[ **soft** ] [[1_Source_text:1.10_Constraints:expression_or_dist|expression_or_dist]] ;
+constraint_expression ::= [ **soft** ] [[1_Source_text:1.10_Constraints:expression_or_dist|expression_or_dist]] ;
 | [[1_Source_text:1.10_Constraints:uniqueness_constraint|uniqueness_constraint]] ;
-| [[8_Expressions:8.3_Expressions:expression|expression]] –> [[1_Source_text:1.10_Constraints:constraint_set|constraint_set]]
+| [[8_Expressions:8.3_Expressions:expression|expression]] > [[1_Source_text:1.10_Constraints:constraint_set|constraint_set]]
 | **if** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) [[1_Source_text:1.10_Constraints:constraint_set|constraint_set]] [ **else** [[1_Source_text:1.10_Constraints:constraint_set|constraint_set]] ]
 | **foreach** ( [[9_General:9.3_Identifiers:ps_or_hierarchical_array_identifier|ps_or_hierarchical_array_identifier]] [ [[6_Behavioral_statements:6.8_Looping_statements:loop_variables|loop_variables]] ] ) [[1_Source_text:1.10_Constraints:constraint_set|constraint_set]]
 | **disable** **soft** [[1_Source_text:1.10_Constraints:constraint_primary|constraint_primary]] ;

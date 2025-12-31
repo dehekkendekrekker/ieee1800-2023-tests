@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== list of udp port identifiers ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.3
-
-list_of_udp_port_identifiers ::=
-	[[9_General:9.3_Identifiers:port_identifier|port_identifier]] { , [[9_General:9.3_Identifiers:port_identifier|port_identifier]] }
+list_of_udp_port_identifiers ::= [[9_General:9.3_Identifiers:port_identifier|port_identifier]] { , [[9_General:9.3_Identifiers:port_identifier|port_identifier]] }
 
 ===== Backlinks =====
 [[5_UDP_declaration_and_instantiation:5.2_UDP_ports:udp_input_declaration|udp_input_declaration]]

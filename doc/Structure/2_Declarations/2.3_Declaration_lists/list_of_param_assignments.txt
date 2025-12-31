@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== list of param assignments ======
 Created Friday 27 December 2025
 
-list_of_param_assignments ::=
-	[[2_Declarations:2.4_Declaration_assignments:param_assignment|param_assignment]] { , [[2_Declarations:2.4_Declaration_assignments:param_assignment|param_assignment]] }
+list_of_param_assignments ::= [[2_Declarations:2.4_Declaration_assignments:param_assignment|param_assignment]] { , [[2_Declarations:2.4_Declaration_assignments:param_assignment|param_assignment]] }
 
 ===== Backlinks =====
 [[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:local_parameter_declaration|local_parameter_declaration]]

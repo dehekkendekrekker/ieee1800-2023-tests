@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== checker port direction ======
 Created Friday 27 December 2025
 
-checker_port_direction ::=
-	**input** | **output**
+checker_port_direction ::= **input** | **output**
 
 ===== Backlinks =====
 [[1_Source_text:1.8_Checker_items:checker_port_item|checker_port_item]]

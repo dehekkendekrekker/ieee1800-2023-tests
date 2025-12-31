@@ -5,13 +5,10 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== timeunits declaration ======
 Created Friday 27 December 2025
 
-IEEE 1800-2023 Section A.1.2
-
-timeunits_declaration ::=
-	**timeunit** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] [ **/** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] ] **;**
-| **timeprecision** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] **;**
-| **timeunit** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] **;** **timeprecision** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] **;**
-| **timeprecision** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] **;** **timeunit** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] **;**
+timeunits_declaration ::= **timeunit** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] [ / [[8_Expressions:8.4_Primaries:time_literal|time_literal]] ] ;
+| **timeprecision** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] ;
+| **timeunit** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] ; **timeprecision** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] ;
+| **timeprecision** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] ; **timeunit** [[8_Expressions:8.4_Primaries:time_literal|time_literal]] ;
 
 ===== Backlinks =====
 [[1_Source_text:1.2_SystemVerilog_source_text:interface_declaration|interface_declaration]]

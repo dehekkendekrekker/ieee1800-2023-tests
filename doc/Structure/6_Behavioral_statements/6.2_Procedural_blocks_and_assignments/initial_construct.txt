@@ -5,8 +5,7 @@ Creation-Date: 2025-12-16T21:33:26+00:00
 ====== initial construct ======
 Created Tuesday 16 December 2025
 
-initial_construct ::=
-	**initial** [[6_Behavioral_statements:6.4_Statements:statement_or_null|statement_or_null]]
+initial_construct ::= **initial** [[6_Behavioral_statements:6.4_Statements:statement_or_null|statement_or_null]]
 
 ===== Backlinks =====
 [[1_Source_text:1.8_Checker_items:checker_or_generate_item|checker_or_generate_item]]

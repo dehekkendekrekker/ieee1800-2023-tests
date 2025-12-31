@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== array manipulation call ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.8.2
-
-array_manipulation_call ::=
-	[[8_Expressions:8.2_Subroutine_calls:array_method_name|array_method_name]] { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] }
+array_manipulation_call ::= [[8_Expressions:8.2_Subroutine_calls:array_method_name|array_method_name]] { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] }
 [ ( [[8_Expressions:8.2_Subroutine_calls:list_of_arguments|list_of_arguments]] ) ]
 [ **with** ( [[8_Expressions:8.3_Expressions:expression|expression]] ) ]
 

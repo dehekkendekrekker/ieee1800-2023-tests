@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== setup timing check ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.7.5.1
-
-setup_timing_check ::=
-	**$setup** ( [[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments:data_event|data_event]] , [[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments:reference_event|reference_event]] , [[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments:timing_check_limit|timing_check_limit]] [ , [ [[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments:notifier|notifier]] ] ] ) ;
+$setup_timing_check ::= **$setup** ( [[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments:data_event|data_event]] , [[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments:reference_event|reference_event]] , [[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments:timing_check_limit|timing_check_limit]] [ , [ [[7_Specify_section:7.5_System_timing_checks:7.5.2_System_timing_check_command_arguments:notifier|notifier]] ] ] ) ;
 
 ===== Backlinks =====
 [[7_Specify_section:7.5_System_timing_checks:7.5.1_System_timing_check_commands:system_timing_check|system_timing_check]]

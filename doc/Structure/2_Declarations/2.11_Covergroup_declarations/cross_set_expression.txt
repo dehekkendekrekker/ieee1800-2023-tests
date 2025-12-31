@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== cross set expression ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.11
-
-cross_set_expression ::=
-	[[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]]
+cross_set_expression ::= [[2_Declarations:2.11_Covergroup_declarations:covergroup_expression|covergroup_expression]]
 
 ===== Backlinks =====
 [[2_Declarations:2.11_Covergroup_declarations:select_expression|select_expression]]

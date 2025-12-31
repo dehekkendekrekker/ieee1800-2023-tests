@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== class variable identifier ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.9.3
-
-class_variable_identifier ::=
-	[[9_General:9.3_Identifiers:variable_identifier|variable_identifier]]
+class_variable_identifier ::= [[9_General:9.3_Identifiers:variable_identifier|variable_identifier]]
 
 ===== Backlinks =====
 [[2_Declarations:2.4_Declaration_assignments:variable_decl_assignment|variable_decl_assignment]]

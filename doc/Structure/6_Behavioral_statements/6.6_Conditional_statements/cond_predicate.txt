@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== cond predicate ======
 Created Friday 27 December 2025
 
-cond_predicate ::=
-	[[6_Behavioral_statements:6.6_Conditional_statements:expression_or_cond_pattern|expression_or_cond_pattern]] { &&& [[6_Behavioral_statements:6.6_Conditional_statements:expression_or_cond_pattern|expression_or_cond_pattern]] }
+cond_predicate ::= [[6_Behavioral_statements:6.6_Conditional_statements:expression_or_cond_pattern|expression_or_cond_pattern]] { &&& [[6_Behavioral_statements:6.6_Conditional_statements:expression_or_cond_pattern|expression_or_cond_pattern]] }
 
 ===== Backlinks =====
 [[8_Expressions:8.3_Expressions:conditional_expression|conditional_expression]]

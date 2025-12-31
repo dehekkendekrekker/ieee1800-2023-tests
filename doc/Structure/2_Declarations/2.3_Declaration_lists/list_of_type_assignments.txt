@@ -5,10 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== list of type assignments ======
 Created Friday 27 December 2025
 
-IEEE 1800-2023 Section A.2.3
-
-list_of_type_assignments ::=
-	[[2_Declarations:2.4_Declaration_assignments:type_assignment|type_assignment]] { **,** [[2_Declarations:2.4_Declaration_assignments:type_assignment|type_assignment]] }
+list_of_type_assignments ::= [[2_Declarations:2.4_Declaration_assignments:type_assignment|type_assignment]] { , [[2_Declarations:2.4_Declaration_assignments:type_assignment|type_assignment]] }
 
 ===== Backlinks =====
 [[2_Declarations:2.1_Declaration_types:2.1.1_Module_parameter_declarations:type_parameter_declaration|type_parameter_declaration]]

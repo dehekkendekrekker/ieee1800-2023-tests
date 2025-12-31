@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== level symbol ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.5.3
-
-level_symbol ::=
-	0 | 1 | x | X | ? | b | B
+level_symbol ::=  |  | x | X |  | b | B
 
 ===== Backlinks =====
 [[5_UDP_declaration_and_instantiation:5.3_UDP_body:current_state|current_state]]

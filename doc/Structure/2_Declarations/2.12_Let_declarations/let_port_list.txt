@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== let port list ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.12
-
-let_port_list ::=
-	[[2_Declarations:2.12_Let_declarations:let_port_item|let_port_item]] { **,** [[2_Declarations:2.12_Let_declarations:let_port_item|let_port_item]] }
+let_port_list ::= [[2_Declarations:2.12_Let_declarations:let_port_item|let_port_item]] { , [[2_Declarations:2.12_Let_declarations:let_port_item|let_port_item]] }
 
 ===== Backlinks =====
 [[2_Declarations:2.12_Let_declarations:let_declaration|let_declaration]]

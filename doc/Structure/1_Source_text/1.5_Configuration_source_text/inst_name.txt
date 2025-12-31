@@ -5,10 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== inst name ======
 Created Friday 27 December 2025
 
-IEEE 1800-2023 Section A.1.5
-
-inst_name ::=
-	[[9_General:9.3_Identifiers:topmodule_identifier|topmodule_identifier]] { **.** [[9_General:9.3_Identifiers:instance_identifier|instance_identifier]] }
+inst_name ::= [[9_General:9.3_Identifiers:topmodule_identifier|topmodule_identifier]] { . [[9_General:9.3_Identifiers:instance_identifier|instance_identifier]] }
 
 ===== Backlinks =====
 [[1_Source_text:1.5_Configuration_source_text:inst_clause|inst_clause]]

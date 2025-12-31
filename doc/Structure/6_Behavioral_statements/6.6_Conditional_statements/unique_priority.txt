@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== unique priority ======
 Created Friday 27 December 2025
 
-unique_priority ::=
-	**unique** | **unique0** | **priority**
+unique_priority ::= **unique** | **unique0** | **priority**
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.7_Case_statements:case_statement|case_statement]]

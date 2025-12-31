@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== tzx path delay expression ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.7.4
-
-tzx_path_delay_expression ::=
-	[[7_Specify_section:7.4_Specify_path_delays:path_delay_expression|path_delay_expression]]
+tzx_path_delay_expression ::= [[7_Specify_section:7.4_Specify_path_delays:path_delay_expression|path_delay_expression]]
 
 ===== Backlinks =====
 [[7_Specify_section:7.4_Specify_path_delays:list_of_path_delay_expressions|list_of_path_delay_expressions]]

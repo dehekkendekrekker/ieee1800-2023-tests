@@ -5,15 +5,14 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== data type ======
 Created Sunday 22 December 2025
 
-data_type ::=
-	[[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:integer_vector_type|integer_vector_type]] [ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:signing|signing]] ] { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
+data_type ::= [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:integer_vector_type|integer_vector_type]] [ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:signing|signing]] ] { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
 | [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:integer_atom_type|integer_atom_type]] [ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:signing|signing]] ]
 | [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:non_integer_type|non_integer_type]]
-| [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:struct_union|struct_union]] [ **packed** [ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:signing|signing]] ] ] **{** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:struct_union_member|struct_union_member]] { [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:struct_union_member|struct_union_member]] } **}** { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
-| **enum** [ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:enum_base_type|enum_base_type]] ] **{** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:enum_name_declaration|enum_name_declaration]] { **,** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:enum_name_declaration|enum_name_declaration]] } **}** { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
+| [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:struct_union|struct_union]] [ **packed** [ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:signing|signing]] ] ] { [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:struct_union_member|struct_union_member]] { [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:struct_union_member|struct_union_member]] } } { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
+| **enum** [ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:enum_base_type|enum_base_type]] ] { [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:enum_name_declaration|enum_name_declaration]] { , [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:enum_name_declaration|enum_name_declaration]] } } { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
 | **string**
 | **chandle**
-| **virtual** [ **interface** ] [[9_General:9.3_Identifiers:interface_identifier|interface_identifier]] [ [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:parameter_value_assignment|parameter_value_assignment]] ] [ **.** [[9_General:9.3_Identifiers:modport_identifier|modport_identifier]] ]
+| **virtual** [ **interface** ] [[9_General:9.3_Identifiers:interface_identifier|interface_identifier]] [ [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:parameter_value_assignment|parameter_value_assignment]] ] [ . [[9_General:9.3_Identifiers:modport_identifier|modport_identifier]] ]
 | [ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:class_scope|class_scope]] | [[9_General:9.3_Identifiers:package_scope|package_scope]] ] [[9_General:9.3_Identifiers:type_identifier|type_identifier]] { [[2_Declarations:2.5_Declaration_ranges:packed_dimension|packed_dimension]] }
 | [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:class_type|class_type]]
 | **event**

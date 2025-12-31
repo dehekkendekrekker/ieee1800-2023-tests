@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== assignment pattern expression type ======
 Created Friday 27 December 2025
 
-assignment_pattern_expression_type ::=
-	[[9_General:9.3_Identifiers:ps_type_identifier|ps_type_identifier]]
+assignment_pattern_expression_type ::= [[9_General:9.3_Identifiers:ps_type_identifier|ps_type_identifier]]
 | [[9_General:9.3_Identifiers:ps_parameter_identifier|ps_parameter_identifier]]
 | [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:integer_atom_type|integer_atom_type]]
 | [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:type_reference|type_reference]]

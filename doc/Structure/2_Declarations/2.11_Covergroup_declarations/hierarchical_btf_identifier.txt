@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== hierarchical btf identifier ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.9.3
-
-hierarchical_btf_identifier ::=
-	[[9_General:9.3_Identifiers:hierarchical_tf_identifier|hierarchical_tf_identifier]]
+hierarchical_btf_identifier ::= [[9_General:9.3_Identifiers:hierarchical_tf_identifier|hierarchical_tf_identifier]]
 | [[9_General:9.3_Identifiers:hierarchical_block_identifier|hierarchical_block_identifier]]
 | [ [[9_General:9.3_Identifiers:hierarchical_identifier|hierarchical_identifier]] . | [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:class_scope|class_scope]] ] [[9_General:9.3_Identifiers:method_identifier|method_identifier]]
 

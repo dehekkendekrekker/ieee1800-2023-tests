@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== for step assignment ======
 Created Friday 27 December 2025
 
-for_step_assignment ::=
-	[[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:operator_assignment|operator_assignment]]
+for_step_assignment ::= [[6_Behavioral_statements:6.2_Procedural_blocks_and_assignments:operator_assignment|operator_assignment]]
 | [[8_Expressions:8.3_Expressions:inc_or_dec_expression|inc_or_dec_expression]]
 | [[8_Expressions:8.2_Subroutine_calls:function_subroutine_call|function_subroutine_call]]
 

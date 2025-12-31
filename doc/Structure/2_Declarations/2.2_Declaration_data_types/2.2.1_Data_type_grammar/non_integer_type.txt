@@ -5,8 +5,7 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== non integer type ======
 Created Sunday 22 December 2025
 
-non_integer_type ::=
-	**shortreal**
+non_integer_type ::= **shortreal**
 | **real**
 | **realtime**
 

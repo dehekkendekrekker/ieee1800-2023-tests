@@ -5,9 +5,7 @@ Creation-Date: 2025-12-16T21:27:04+00:00
 ====== statement ======
 Created Tuesday 16 December 2025
 
-statement ::=
-	[ [[9_General:9.3_Identifiers:block_identifier|block_identifier]] : ] { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } [[6_Behavioral_statements:6.4_Statements:statement_item|statement_item]]
-
+statement ::= [ [[9_General:9.3_Identifiers:block_identifier|block_identifier]] : ] { [[9_General:9.1_Attributes:attribute_instance|attribute_instance]] } [[6_Behavioral_statements:6.4_Statements:statement_item|statement_item]]
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.3_Parallel_and_sequential_blocks:action_block|action_block]]

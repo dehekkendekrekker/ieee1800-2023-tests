@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== select condition ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.11
-
-select_condition ::=
-	**binsof** ( [[2_Declarations:2.11_Covergroup_declarations:bins_expression|bins_expression]] ) [ **intersect** { [[2_Declarations:2.11_Covergroup_declarations:covergroup_range_list|covergroup_range_list]] } ]
+select_condition ::= **binsof** ( [[2_Declarations:2.11_Covergroup_declarations:bins_expression|bins_expression]] ) [ **intersect** { [[2_Declarations:2.11_Covergroup_declarations:covergroup_range_list|covergroup_range_list]] } ]
 
 ===== Backlinks =====
 [[2_Declarations:2.11_Covergroup_declarations:select_expression|select_expression]]

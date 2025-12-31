@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== clocking event ======
 Created Friday 27 December 2025
 
-clocking_event ::=
-	@ [[9_General:9.3_Identifiers:ps_identifier|ps_identifier]]
+clocking_event ::= @ [[9_General:9.3_Identifiers:ps_identifier|ps_identifier]]
 | @ [[9_General:9.3_Identifiers:hierarchical_identifier|hierarchical_identifier]]
 | @ ( [[6_Behavioral_statements:6.5_Timing_control_statements:event_expression|event_expression]] )
 

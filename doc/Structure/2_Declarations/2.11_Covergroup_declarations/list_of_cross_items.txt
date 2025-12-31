@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== list of cross items ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.11
-
-list_of_cross_items ::=
-	[[2_Declarations:2.11_Covergroup_declarations:cross_item|cross_item]] , [[2_Declarations:2.11_Covergroup_declarations:cross_item|cross_item]] { , [[2_Declarations:2.11_Covergroup_declarations:cross_item|cross_item]] }
+list_of_cross_items ::= [[2_Declarations:2.11_Covergroup_declarations:cross_item|cross_item]] , [[2_Declarations:2.11_Covergroup_declarations:cross_item|cross_item]] { , [[2_Declarations:2.11_Covergroup_declarations:cross_item|cross_item]] }
 
 ===== Backlinks =====
 [[2_Declarations:2.11_Covergroup_declarations:cover_cross|cover_cross]]

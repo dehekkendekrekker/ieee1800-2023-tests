@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== coverage option ======
 Created Friday 27 December 2025
 
-coverage_option ::=
-	**option** . [[9_General:9.3_Identifiers:member_identifier|member_identifier]] = [[8_Expressions:8.3_Expressions:expression|expression]]
+coverage_option ::= **option** . [[9_General:9.3_Identifiers:member_identifier|member_identifier]] = [[8_Expressions:8.3_Expressions:expression|expression]]
 | **type_option** . [[9_General:9.3_Identifiers:member_identifier|member_identifier]] = [[8_Expressions:8.3_Expressions:constant_expression|constant_expression]]
 
 ===== Backlinks =====

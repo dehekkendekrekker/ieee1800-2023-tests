@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== net port type ======
 Created Friday 27 December 2025
 
-net_port_type ::=
-	[ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:net_type|net_type]] ] [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:data_type_or_implicit|data_type_or_implicit]]
+net_port_type ::= [ [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:net_type|net_type]] ] [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:data_type_or_implicit|data_type_or_implicit]]
 | [[9_General:9.3_Identifiers:nettype_identifier|nettype_identifier]]
 | **interconnect** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:implicit_data_type|implicit_data_type]]
 

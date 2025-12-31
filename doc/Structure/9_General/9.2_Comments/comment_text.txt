@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== comment text ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.9.2
-
-comment_text ::=
-	{ Any_ASCII_character }
+comment_text ::= { Any_ASCII_character }
 
 ===== Backlinks =====
 [[9_General:9.2_Comments:block_comment|block_comment]]

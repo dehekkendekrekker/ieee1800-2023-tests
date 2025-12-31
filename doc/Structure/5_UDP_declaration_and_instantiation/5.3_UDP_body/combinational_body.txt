@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== combinational body ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.5.3
-
-combinational_body ::=
-	**table** [[5_UDP_declaration_and_instantiation:5.3_UDP_body:combinational_entry|combinational_entry]] { [[5_UDP_declaration_and_instantiation:5.3_UDP_body:combinational_entry|combinational_entry]] } **endtable**
+combinational_body ::= **table** [[5_UDP_declaration_and_instantiation:5.3_UDP_body:combinational_entry|combinational_entry]] { [[5_UDP_declaration_and_instantiation:5.3_UDP_body:combinational_entry|combinational_entry]] } **endtable**
 
 ===== Backlinks =====
 [[5_UDP_declaration_and_instantiation:5.3_UDP_body:udp_body|udp_body]]

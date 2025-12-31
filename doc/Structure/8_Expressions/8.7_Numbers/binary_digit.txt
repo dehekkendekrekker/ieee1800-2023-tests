@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== binary digit ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.8.7
-
-binary_digit ::=
-	[[8_Expressions:8.7_Numbers:x_digit|x_digit]] | [[8_Expressions:8.7_Numbers:z_digit|z_digit]] | **0** | **1**
+binary_digit ::= [[8_Expressions:8.7_Numbers:x_digit|x_digit]] | [[8_Expressions:8.7_Numbers:z_digit|z_digit]] |  | 
 
 ===== Backlinks =====
 [[8_Expressions:8.7_Numbers:binary_value|binary_value]]

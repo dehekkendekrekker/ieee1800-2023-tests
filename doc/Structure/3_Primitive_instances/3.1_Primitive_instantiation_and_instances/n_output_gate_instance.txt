@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== n output gate instance ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.3.1
-
-n_output_gate_instance ::=
-	[ [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:name_of_instance|name_of_instance]] ] ( [[3_Primitive_instances:3.3_Primitive_terminals:output_terminal|output_terminal]] { , [[3_Primitive_instances:3.3_Primitive_terminals:output_terminal|output_terminal]] } , [[3_Primitive_instances:3.3_Primitive_terminals:input_terminal|input_terminal]] )
+n_output_gate_instance ::= [ [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:name_of_instance|name_of_instance]] ] ( [[3_Primitive_instances:3.3_Primitive_terminals:output_terminal|output_terminal]] { , [[3_Primitive_instances:3.3_Primitive_terminals:output_terminal|output_terminal]] } , [[3_Primitive_instances:3.3_Primitive_terminals:input_terminal|input_terminal]] )
 
 ===== Backlinks =====
 [[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:gate_instantiation|gate_instantiation]]

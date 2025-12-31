@@ -5,23 +5,9 @@ Creation-Date: 2025-12-16T21:46:24+00:00
 ====== assertion item declaration ======
 Created Tuesday 16 December 2025
 
-IEEE 1800-2023 Section A.2.10
-
-assertion_item_declaration ::=
-	[[2_Declarations:2.10_Assertion_declarations:property_declaration|property_declaration]]
-	| [[2_Declarations:2.10_Assertion_declarations:sequence_declaration|sequence_declaration]]
-	| [[2_Declarations:2.12_Let_declarations:let_declaration|let_declaration]]
-
-===== SVA-relevant paths =====
-
-==== Property declaration ====
-[[2_Declarations:2.10_Assertion_declarations:property_declaration|property_declaration]]
-
-==== Sequence declaration ====
-[[2_Declarations:2.10_Assertion_declarations:sequence_declaration|sequence_declaration]]
-
-==== Let declaration ====
-[[2_Declarations:2.12_Let_declarations:let_declaration|let_declaration]] (for reusable expressions)
+assertion_item_declaration ::= [[2_Declarations:2.10_Assertion_declarations:property_declaration|property_declaration]]
+| [[2_Declarations:2.10_Assertion_declarations:sequence_declaration|sequence_declaration]]
+| [[2_Declarations:2.12_Let_declarations:let_declaration|let_declaration]]
 
 ===== Backlinks =====
 [[1_Source_text:1.8_Checker_items:checker_or_generate_item_declaration|checker_or_generate_item_declaration]]

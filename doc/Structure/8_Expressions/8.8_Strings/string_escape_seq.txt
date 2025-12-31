@@ -5,12 +5,9 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== string escape seq ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.8.8
-
-string_escape_seq ::=
-	**\\** any_ASCII_character
-| **\\** one_to_three_digit_octal_number
-| **\\x** one_to_two_digit_hex_number
+string_escape_seq ::= any_ASCII_character
+| one_to_three_digit_octal_number
+| x one_to_two_digit_hex_number
 
 ===== Backlinks =====
 [[8_Expressions:8.8_Strings:quoted_string|quoted_string]]

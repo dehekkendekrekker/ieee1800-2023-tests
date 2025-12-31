@@ -5,11 +5,8 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== let list of arguments ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.12
-
-let_list_of_arguments ::=
-	[ [[2_Declarations:2.12_Let_declarations:let_actual_arg|let_actual_arg]] ] { **,** [ [[2_Declarations:2.12_Let_declarations:let_actual_arg|let_actual_arg]] ] } { **,** **.** identifier **(** [ [[2_Declarations:2.12_Let_declarations:let_actual_arg|let_actual_arg]] ] **)** }
-| **.** identifier **(** [ [[2_Declarations:2.12_Let_declarations:let_actual_arg|let_actual_arg]] ] **)** { **,** **.** identifier **(** [ [[2_Declarations:2.12_Let_declarations:let_actual_arg|let_actual_arg]] ] **)** }
+let_list_of_arguments ::= [ [[2_Declarations:2.12_Let_declarations:let_actual_arg|let_actual_arg]] ] { , [ [[2_Declarations:2.12_Let_declarations:let_actual_arg|let_actual_arg]] ] } { , . [[9_General:9.3_Identifiers:identifier|identifier]] ( [ [[2_Declarations:2.12_Let_declarations:let_actual_arg|let_actual_arg]] ] ) }
+| . [[9_General:9.3_Identifiers:identifier|identifier]] ( [ [[2_Declarations:2.12_Let_declarations:let_actual_arg|let_actual_arg]] ] ) { , . [[9_General:9.3_Identifiers:identifier|identifier]] ( [ [[2_Declarations:2.12_Let_declarations:let_actual_arg|let_actual_arg]] ] ) }
 
 ===== Backlinks =====
 [[2_Declarations:2.12_Let_declarations:let_expression|let_expression]]

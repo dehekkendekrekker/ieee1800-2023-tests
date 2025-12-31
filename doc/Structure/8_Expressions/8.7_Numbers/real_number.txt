@@ -5,9 +5,8 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== real number ======
 Created Friday 27 December 2025
 
-real_number ::=
-	[[8_Expressions:8.7_Numbers:fixed_point_number|fixed_point_number]]
-| [[8_Expressions:8.7_Numbers:unsigned_number|unsigned_number]] [ . [[8_Expressions:8.7_Numbers:unsigned_number|unsigned_number]] ] exp [ sign ] [[8_Expressions:8.7_Numbers:unsigned_number|unsigned_number]]
+real_number ::= [[8_Expressions:8.7_Numbers:fixed_point_number|fixed_point_number]]
+| [[8_Expressions:8.7_Numbers:unsigned_number|unsigned_number]] [ . [[8_Expressions:8.7_Numbers:unsigned_number|unsigned_number]] ] [[8_Expressions:8.7_Numbers:exp|exp]] [ [[8_Expressions:8.7_Numbers:sign|sign]] ] [[8_Expressions:8.7_Numbers:unsigned_number|unsigned_number]]
 
 ===== Backlinks =====
 [[2_Declarations:2.2_Declaration_data_types:2.2.3_Delays:delay_value|delay_value]]

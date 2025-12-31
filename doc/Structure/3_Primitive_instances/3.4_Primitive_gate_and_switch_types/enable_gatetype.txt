@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== enable gatetype ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.3.4
-
-enable_gatetype ::=
-	**bufif0** | **bufif1** | **notif0** | **notif1**
+enable_gatetype ::= bufif0 | bufif1 | notif0 | notif1
 
 ===== Backlinks =====
 [[3_Primitive_instances:3.1_Primitive_instantiation_and_instances:gate_instantiation|gate_instantiation]]

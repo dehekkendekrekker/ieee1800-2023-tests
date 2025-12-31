@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== hex number ======
 Created Friday 27 December 2025
 
-hex_number ::=
-	[ [[8_Expressions:8.7_Numbers:size|size]] ] [[8_Expressions:8.7_Numbers:hex_base|hex_base]] [[8_Expressions:8.7_Numbers:hex_value|hex_value]]
+hex_number ::= [ [[8_Expressions:8.7_Numbers:size|size]] ] [[8_Expressions:8.7_Numbers:hex_base|hex_base]] [[8_Expressions:8.7_Numbers:hex_value|hex_value]]
 
 ===== Backlinks =====
 [[8_Expressions:8.7_Numbers:integral_number|integral_number]]

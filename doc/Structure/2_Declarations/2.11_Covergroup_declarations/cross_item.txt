@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== cross item ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.11
-
-cross_item ::=
-	[[9_General:9.3_Identifiers:cover_point_identifier|cover_point_identifier]]
+cross_item ::= [[9_General:9.3_Identifiers:cover_point_identifier|cover_point_identifier]]
 | [[9_General:9.3_Identifiers:variable_identifier|variable_identifier]]
 
 ===== Backlinks =====

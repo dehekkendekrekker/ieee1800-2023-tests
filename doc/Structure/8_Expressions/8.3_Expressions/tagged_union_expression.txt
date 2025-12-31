@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== tagged union expression ======
 Created Friday 27 December 2025
 
-tagged_union_expression ::=
-	**tagged** [[9_General:9.3_Identifiers:member_identifier|member_identifier]] [ [[8_Expressions:8.4_Primaries:primary|primary]] ]
+tagged_union_expression ::= **tagged** [[9_General:9.3_Identifiers:member_identifier|member_identifier]] [ [[8_Expressions:8.4_Primaries:primary|primary]] ]
 
 ===== Backlinks =====
 [[8_Expressions:8.3_Expressions:expression|expression]]

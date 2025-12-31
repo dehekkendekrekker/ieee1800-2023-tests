@@ -5,8 +5,7 @@ Creation-Date: 2025-12-16T23:53:21+00:00
 ====== property port list ======
 Created Tuesday 16 December 2025
 
-property_port_list ::=
-	[[2_Declarations:2.10_Assertion_declarations:property_port_item|property_port_item]] { , [[2_Declarations:2.10_Assertion_declarations:property_port_item|property_port_item]] }
+property_port_list ::= [[2_Declarations:2.10_Assertion_declarations:property_port_item|property_port_item]] { , [[2_Declarations:2.10_Assertion_declarations:property_port_item|property_port_item]] }
 
 ===== Backlinks =====
 [[2_Declarations:2.10_Assertion_declarations:property_declaration|property_declaration]]

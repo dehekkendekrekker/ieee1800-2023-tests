@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== rs prod ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.6.12
-
-rs_prod ::=
-	[[6_Behavioral_statements:6.12_Randsequence:rs_production_item|rs_production_item]]
+rs_prod ::= [[6_Behavioral_statements:6.12_Randsequence:rs_production_item|rs_production_item]]
 | [[6_Behavioral_statements:6.12_Randsequence:rs_code_block|rs_code_block]]
 | [[6_Behavioral_statements:6.12_Randsequence:rs_if_else|rs_if_else]]
 | [[6_Behavioral_statements:6.12_Randsequence:rs_repeat|rs_repeat]]

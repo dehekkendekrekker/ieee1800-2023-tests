@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== covergroup range list ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.11
-
-covergroup_range_list ::=
-	[[2_Declarations:2.11_Covergroup_declarations:covergroup_value_range|covergroup_value_range]] { , [[2_Declarations:2.11_Covergroup_declarations:covergroup_value_range|covergroup_value_range]] }
+covergroup_range_list ::= [[2_Declarations:2.11_Covergroup_declarations:covergroup_value_range|covergroup_value_range]] { , [[2_Declarations:2.11_Covergroup_declarations:covergroup_value_range|covergroup_value_range]] }
 
 ===== Backlinks =====
 [[2_Declarations:2.11_Covergroup_declarations:bins_or_options|bins_or_options]]

@@ -5,26 +5,8 @@ Creation-Date: 2025-12-16T21:22:40+00:00
 ====== concurrent assertion item ======
 Created Tuesday 16 December 2025
 
-IEEE 1800-2023 Section A.2.10
-
-concurrent_assertion_item ::=
-	[ [[9_General:9.3_Identifiers:block_identifier|block_identifier]] : ] [[2_Declarations:2.10_Assertion_declarations:concurrent_assertion_statement|concurrent_assertion_statement]]
-	| [[4_Instantiations:4.1_Instantiations:4.1.4_Checker_instantiation:checker_instantiation|checker_instantiation]]
-
-===== Syntax permutations =====
-
-==== Permutation 1: Labeled assertion ====
-label : [[2_Declarations:2.10_Assertion_declarations:concurrent_assertion_statement|concurrent_assertion_statement]]
-
-==== Permutation 2: Unlabeled assertion ====
-[[2_Declarations:2.10_Assertion_declarations:concurrent_assertion_statement|concurrent_assertion_statement]]
-
-==== Permutation 3: Checker instantiation ====
-[[4_Instantiations:4.1_Instantiations:4.1.4_Checker_instantiation:checker_instantiation|checker_instantiation]]
-
-===== SVA-relevant paths =====
-[[2_Declarations:2.10_Assertion_declarations:concurrent_assertion_statement|concurrent_assertion_statement]]
-[[4_Instantiations:4.1_Instantiations:4.1.4_Checker_instantiation:checker_instantiation|checker_instantiation]]
+concurrent_assertion_item ::= [ [[9_General:9.3_Identifiers:block_identifier|block_identifier]] : ] [[2_Declarations:2.10_Assertion_declarations:concurrent_assertion_statement|concurrent_assertion_statement]]
+| [[4_Instantiations:4.1_Instantiations:4.1.4_Checker_instantiation:checker_instantiation|checker_instantiation]]
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.10_Assertion_statements:assertion_item|assertion_item]]

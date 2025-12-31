@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== rs production item ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.6.12
-
-rs_production_item ::=
-	[[9_General:9.3_Identifiers:rs_production_identifier|rs_production_identifier]] [ ( [[8_Expressions:8.2_Subroutine_calls:list_of_arguments|list_of_arguments]] ) ]
+rs_production_item ::= [[9_General:9.3_Identifiers:rs_production_identifier|rs_production_identifier]] [ ( [[8_Expressions:8.2_Subroutine_calls:list_of_arguments|list_of_arguments]] ) ]
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.12_Randsequence:rs_case_item|rs_case_item]]

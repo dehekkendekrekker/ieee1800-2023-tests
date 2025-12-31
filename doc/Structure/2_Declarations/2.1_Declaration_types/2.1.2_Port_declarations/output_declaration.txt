@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== output declaration ======
 Created Friday 27 December 2025
 
-output_declaration ::=
-	**output** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:net_port_type|net_port_type]] [[2_Declarations:2.3_Declaration_lists:list_of_port_identifiers|list_of_port_identifiers]]
+output_declaration ::= **output** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:net_port_type|net_port_type]] [[2_Declarations:2.3_Declaration_lists:list_of_port_identifiers|list_of_port_identifiers]]
 | **output** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:variable_port_type|variable_port_type]] [[2_Declarations:2.3_Declaration_lists:list_of_variable_port_identifiers|list_of_variable_port_identifiers]]
 
 ===== Backlinks =====

@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== for step ======
 Created Friday 27 December 2025
 
-for_step ::=
-	[[6_Behavioral_statements:6.8_Looping_statements:for_step_assignment|for_step_assignment]] { , [[6_Behavioral_statements:6.8_Looping_statements:for_step_assignment|for_step_assignment]] }
+for_step ::= [[6_Behavioral_statements:6.8_Looping_statements:for_step_assignment|for_step_assignment]] { , [[6_Behavioral_statements:6.8_Looping_statements:for_step_assignment|for_step_assignment]] }
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.8_Looping_statements:loop_statement|loop_statement]]

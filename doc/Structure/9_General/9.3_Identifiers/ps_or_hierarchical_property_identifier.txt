@@ -5,8 +5,7 @@ Creation-Date: 2025-12-16T23:29:03+00:00
 ====== ps or hierarchical property identifier ======
 Created Tuesday 16 December 2025
 
-ps_or_hierarchical_property_identifier ::=
-	[ [[9_General:9.3_Identifiers:package_scope|package_scope]] ] [[9_General:9.3_Identifiers:property_identifier|property_identifier]]
+ps_or_hierarchical_property_identifier ::= [ [[9_General:9.3_Identifiers:package_scope|package_scope]] ] [[9_General:9.3_Identifiers:property_identifier|property_identifier]]
 | [[9_General:9.3_Identifiers:hierarchical_property_identifier|hierarchical_property_identifier]]
 
 ===== Backlinks =====

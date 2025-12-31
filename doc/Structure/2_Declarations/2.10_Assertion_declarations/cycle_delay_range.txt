@@ -5,41 +5,10 @@ Creation-Date: 2025-12-17T00:35:04+00:00
 ====== cycle delay range ======
 Created Wednesday 17 December 2025
 
-IEEE 1800-2023 Section A.2.10, 16.7
-
-cycle_delay_range ::=
-	**##** [[8_Expressions:8.4_Primaries:constant_primary|constant_primary]]
-	| **##** [ [[2_Declarations:2.10_Assertion_declarations:cycle_delay_const_range_expression|cycle_delay_const_range_expression]] ]
-	| **##[*]**
-	| **##[+]**
-
-===== Permutations =====
-
-==== ##N (fixed delay) ====
-Exact N cycle delay.
-	##0  - same cycle (overlap)
-	##1  - next cycle
-	##2  - two cycles later
-	##10 - ten cycles later
-
-==== ##[min:max] (range delay) ====
-Between min and max cycles.
-	##[0:1]   - zero or one cycle
-	##[1:4]   - one to four cycles
-	##[1:10]  - one to ten cycles
-
-==== ##[min:$] (unbounded range) ====
-At least min cycles, unbounded upper.
-	##[0:$]   - any number of cycles
-	##[1:$]   - at least one cycle
-
-==== ##[*] (shorthand for ##[0:$]) ====
-Zero or more cycles.
-	##[*]
-
-==== ##[+] (shorthand for ##[1:$]) ====
-One or more cycles.
-	##[+]
+cycle_delay_range ::= ## [[8_Expressions:8.4_Primaries:constant_primary|constant_primary]]
+| ## [ [[2_Declarations:2.10_Assertion_declarations:cycle_delay_const_range_expression|cycle_delay_const_range_expression]] ]
+| ##[*]
+| ##[+]
 
 ===== Backlinks =====
 [[2_Declarations:2.10_Assertion_declarations:sequence_expr|sequence_expr]]

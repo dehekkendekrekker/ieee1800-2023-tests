@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== specify input terminal descriptor ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.7.3
-
-specify_input_terminal_descriptor ::=
-	[[7_Specify_section:7.3_Specify_block_terminals:input_identifier|input_identifier]] [ [ [[8_Expressions:8.3_Expressions:constant_range_expression|constant_range_expression]] ] ]
+specify_input_terminal_descriptor ::= [[7_Specify_section:7.3_Specify_block_terminals:input_identifier|input_identifier]] [ [ [[8_Expressions:8.3_Expressions:constant_range_expression|constant_range_expression]] ] ]
 
 ===== Backlinks =====
 [[7_Specify_section:7.3_Specify_block_terminals:list_of_path_inputs|list_of_path_inputs]]

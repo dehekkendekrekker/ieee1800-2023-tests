@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== lifetime ======
 Created Friday 27 December 2025
 
-lifetime ::=
-	**static** | **automatic**
+lifetime ::= **static** | **automatic**
 
 ===== Backlinks =====
 [[2_Declarations:2.1_Declaration_types:2.1.3_Type_declarations:data_declaration|data_declaration]]

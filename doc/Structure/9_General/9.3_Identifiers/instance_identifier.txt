@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== instance identifier ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.9.3
-
-instance_identifier ::=
-	[[9_General:9.3_Identifiers:identifier|identifier]]
+instance_identifier ::= [[9_General:9.3_Identifiers:identifier|identifier]]
 
 ===== Backlinks =====
 [[1_Source_text:1.5_Configuration_source_text:inst_name|inst_name]]

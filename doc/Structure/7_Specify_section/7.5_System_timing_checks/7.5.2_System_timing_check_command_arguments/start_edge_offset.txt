@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== start edge offset ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.7.5.2
-
-start_edge_offset ::=
-	[[8_Expressions:8.3_Expressions:mintypmax_expression|mintypmax_expression]]
+start_edge_offset ::= [[8_Expressions:8.3_Expressions:mintypmax_expression|mintypmax_expression]]
 
 ===== Backlinks =====
 [[7_Specify_section:7.5_System_timing_checks:7.5.1_System_timing_check_commands:nochange_timing_check|nochange_timing_check]]

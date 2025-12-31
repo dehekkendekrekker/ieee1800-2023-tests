@@ -5,9 +5,7 @@ Creation-Date: 2025-12-17T00:21:47+00:00
 ====== sequence port list ======
 Created Wednesday 17 December 2025
 
-
-sequence_port_list ::=
-	[[2_Declarations:2.10_Assertion_declarations:sequence_port_item|sequence_port_item]] { , [[2_Declarations:2.10_Assertion_declarations:sequence_port_item|sequence_port_item]] }
+sequence_port_list ::= [[2_Declarations:2.10_Assertion_declarations:sequence_port_item|sequence_port_item]] { , [[2_Declarations:2.10_Assertion_declarations:sequence_port_item|sequence_port_item]] }
 
 ===== Backlinks =====
 [[2_Declarations:2.10_Assertion_declarations:sequence_declaration|sequence_declaration]]

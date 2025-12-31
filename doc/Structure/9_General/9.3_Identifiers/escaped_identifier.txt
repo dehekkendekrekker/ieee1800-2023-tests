@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== escaped identifier ======
 Created Friday 27 December 2025
 
-escaped_identifier ::=
-	\ { any_printable_ASCII_character_except_white_space } [[9_General:9.4_White_space:white_space|white_space]]
+escaped_identifier ::=  { any_printable_ASCII_character_except_white_space } [[9_General:9.4_White_space:white_space|white_space]]
 
 ===== Backlinks =====
 [[9_General:9.3_Identifiers:identifier|identifier]]

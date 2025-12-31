@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== module path multiple concatenation ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.8.1
-
-module_path_multiple_concatenation ::=
-	**{** [[8_Expressions:8.3_Expressions:constant_expression|constant_expression]] [[8_Expressions:8.1_Concatenations:module_path_concatenation|module_path_concatenation]] **}**
+module_path_multiple_concatenation ::= { [[8_Expressions:8.3_Expressions:constant_expression|constant_expression]] [[8_Expressions:8.1_Concatenations:module_path_concatenation|module_path_concatenation]] }
 
 ===== Backlinks =====
 [[8_Expressions:8.4_Primaries:module_path_primary|module_path_primary]]

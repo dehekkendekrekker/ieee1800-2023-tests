@@ -5,10 +5,8 @@ Creation-Date: 2025-12-17T00:39:23+00:00
 ====== sequence list of arguments ======
 Created Wednesday 17 December 2025
 
-sequence_list_of_arguments ::=
-	[ [[2_Declarations:2.10_Assertion_declarations:sequence_actual_arg|sequence_actual_arg]] ] { , [ [[2_Declarations:2.10_Assertion_declarations:sequence_actual_arg|sequence_actual_arg]] ] } { , . identifier ( [ [[2_Declarations:2.10_Assertion_declarations:sequence_actual_arg|sequence_actual_arg]] ] ) }
-| . identifier ( [ [[2_Declarations:2.10_Assertion_declarations:sequence_actual_arg|sequence_actual_arg]] ] ) { , . identifier ( [ [[2_Declarations:2.10_Assertion_declarations:sequence_actual_arg|sequence_actual_arg]] ] ) } 
-
+sequence_list_of_arguments ::= [ [[2_Declarations:2.10_Assertion_declarations:sequence_actual_arg|sequence_actual_arg]] ] { , [ [[2_Declarations:2.10_Assertion_declarations:sequence_actual_arg|sequence_actual_arg]] ] } { , . [[9_General:9.3_Identifiers:identifier|identifier]] ( [ [[2_Declarations:2.10_Assertion_declarations:sequence_actual_arg|sequence_actual_arg]] ] ) }
+| . [[9_General:9.3_Identifiers:identifier|identifier]] ( [ [[2_Declarations:2.10_Assertion_declarations:sequence_actual_arg|sequence_actual_arg]] ] ) { , . [[9_General:9.3_Identifiers:identifier|identifier]] ( [ [[2_Declarations:2.10_Assertion_declarations:sequence_actual_arg|sequence_actual_arg]] ] ) }
 
 ===== Backlinks =====
 [[2_Declarations:2.10_Assertion_declarations:sequence_instance|sequence_instance]]

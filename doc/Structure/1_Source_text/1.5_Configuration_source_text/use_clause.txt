@@ -5,12 +5,9 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== use clause ======
 Created Friday 27 December 2025
 
-IEEE 1800-2023 Section A.1.5
-
-use_clause ::=
-	**use** [ [[9_General:9.3_Identifiers:library_identifier|library_identifier]] **.** ] [[9_General:9.3_Identifiers:cell_identifier|cell_identifier]] [ **:** **config** ]
-| **use** [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:named_parameter_assignment|named_parameter_assignment]] { **,** [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:named_parameter_assignment|named_parameter_assignment]] } [ **:** **config** ]
-| **use** [ [[9_General:9.3_Identifiers:library_identifier|library_identifier]] **.** ] [[9_General:9.3_Identifiers:cell_identifier|cell_identifier]] [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:named_parameter_assignment|named_parameter_assignment]] { **,** [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:named_parameter_assignment|named_parameter_assignment]] } [ **:** **config** ]
+use_clause ::= **use** [ [[9_General:9.3_Identifiers:library_identifier|library_identifier]] . ] [[9_General:9.3_Identifiers:cell_identifier|cell_identifier]] [ : **config** ]
+| **use** [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:named_parameter_assignment|named_parameter_assignment]] { , [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:named_parameter_assignment|named_parameter_assignment]] } [ : **config** ]
+| **use** [ [[9_General:9.3_Identifiers:library_identifier|library_identifier]] . ] [[9_General:9.3_Identifiers:cell_identifier|cell_identifier]] [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:named_parameter_assignment|named_parameter_assignment]] { , [[4_Instantiations:4.1_Instantiations:4.1.1_Module_instantiation:named_parameter_assignment|named_parameter_assignment]] } [ : **config** ]
 
 ===== Backlinks =====
 [[1_Source_text:1.5_Configuration_source_text:config_rule_statement|config_rule_statement]]

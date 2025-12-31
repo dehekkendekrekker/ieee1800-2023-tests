@@ -5,10 +5,7 @@ Creation-Date: 2025-12-29T00:00:00+00:00
 ====== decimal base ======
 Created Sunday 29 December 2025
 
-IEEE 1800-2023 Section A.8.7
-
-decimal_base ::=
-	**'** [ **s** | **S** ] **d** | **'** [ **s** | **S** ] **D**
+decimal_base ::= '[**s**|**S**]d|'[**s**|**S**]D
 
 ===== Backlinks =====
 [[8_Expressions:8.7_Numbers:decimal_number|decimal_number]]

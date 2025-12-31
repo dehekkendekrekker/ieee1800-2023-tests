@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== triple quoted string ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.8.8
-
-triple_quoted_string ::=
-	**"""** { [[8_Expressions:8.8_Strings:triple_quoted_string_item|triple_quoted_string_item]] | [[8_Expressions:8.8_Strings:string_escape_seq|string_escape_seq]] } **"""**
+triple_quoted_string ::= """ { [[8_Expressions:8.8_Strings:triple_quoted_string_item|triple_quoted_string_item]] | [[8_Expressions:8.8_Strings:string_escape_seq|string_escape_seq]] } """
 
 ===== Backlinks =====
 [[8_Expressions:8.8_Strings:string_literal|string_literal]]

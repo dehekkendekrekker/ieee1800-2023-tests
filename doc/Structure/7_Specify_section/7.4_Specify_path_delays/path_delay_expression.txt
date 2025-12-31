@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== path delay expression ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.7.4
-
-path_delay_expression ::=
-	[[8_Expressions:8.3_Expressions:constant_mintypmax_expression|constant_mintypmax_expression]]
+path_delay_expression ::= [[8_Expressions:8.3_Expressions:constant_mintypmax_expression|constant_mintypmax_expression]]
 
 ===== Backlinks =====
 [[7_Specify_section:7.4_Specify_path_delays:t01_path_delay_expression|t01_path_delay_expression]]

@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== clocking direction ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.6.11
-
-clocking_direction ::=
-	**input** [ [[6_Behavioral_statements:6.11_Clocking_block:clocking_skew|clocking_skew]] ]
+clocking_direction ::= **input** [ [[6_Behavioral_statements:6.11_Clocking_block:clocking_skew|clocking_skew]] ]
 | **output** [ [[6_Behavioral_statements:6.11_Clocking_block:clocking_skew|clocking_skew]] ]
 | **input** [ [[6_Behavioral_statements:6.11_Clocking_block:clocking_skew|clocking_skew]] ] **output** [ [[6_Behavioral_statements:6.11_Clocking_block:clocking_skew|clocking_skew]] ]
 | **inout**

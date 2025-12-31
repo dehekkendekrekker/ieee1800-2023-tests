@@ -5,13 +5,10 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== trans range list ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.11
-
-trans_range_list ::=
-	[[2_Declarations:2.11_Covergroup_declarations:trans_item|trans_item]]
-| [[2_Declarations:2.11_Covergroup_declarations:trans_item|trans_item]] **[*** [[2_Declarations:2.11_Covergroup_declarations:repeat_range|repeat_range]] **]**
-| [[2_Declarations:2.11_Covergroup_declarations:trans_item|trans_item]] **[–>** [[2_Declarations:2.11_Covergroup_declarations:repeat_range|repeat_range]] **]**
-| [[2_Declarations:2.11_Covergroup_declarations:trans_item|trans_item]] **[=** [[2_Declarations:2.11_Covergroup_declarations:repeat_range|repeat_range]] **]**
+trans_range_list ::= [[2_Declarations:2.11_Covergroup_declarations:trans_item|trans_item]]
+| [[2_Declarations:2.11_Covergroup_declarations:trans_item|trans_item]] [* [[2_Declarations:2.11_Covergroup_declarations:repeat_range|repeat_range]] ]
+| [[2_Declarations:2.11_Covergroup_declarations:trans_item|trans_item]] [> [[2_Declarations:2.11_Covergroup_declarations:repeat_range|repeat_range]] ]
+| [[2_Declarations:2.11_Covergroup_declarations:trans_item|trans_item]] [= [[2_Declarations:2.11_Covergroup_declarations:repeat_range|repeat_range]] ]
 
 ===== Backlinks =====
 [[2_Declarations:2.11_Covergroup_declarations:trans_set|trans_set]]

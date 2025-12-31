@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== class qualifier ======
 Created Friday 27 December 2025
 
-class_qualifier ::=
-	[ **local** :: ] [ [[8_Expressions:8.4_Primaries:implicit_class_handle|implicit_class_handle]] . | [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:class_scope|class_scope]] ]
+class_qualifier ::= [ **local** :: ] [ [[8_Expressions:8.4_Primaries:implicit_class_handle|implicit_class_handle]] . | [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:class_scope|class_scope]] ]
 
 ===== Backlinks =====
 [[8_Expressions:8.4_Primaries:primary|primary]]

@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== modport clocking declaration ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.9
-
-modport_clocking_declaration ::=
-	**clocking** [[9_General:9.3_Identifiers:clocking_identifier|clocking_identifier]]
+modport_clocking_declaration ::= **clocking** [[9_General:9.3_Identifiers:clocking_identifier|clocking_identifier]]
 
 ===== Backlinks =====
 [[2_Declarations:2.9_Interface_declarations:modport_ports_declaration|modport_ports_declaration]]

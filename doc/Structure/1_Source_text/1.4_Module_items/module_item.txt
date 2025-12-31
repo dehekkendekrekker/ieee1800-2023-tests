@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== module item ======
 Created Friday 27 December 2025
 
-module_item ::=
-	[[1_Source_text:1.3_Module_parameters_and_ports:port_declaration|port_declaration]] ;
+module_item ::= [[1_Source_text:1.3_Module_parameters_and_ports:port_declaration|port_declaration]] ;
 | [[1_Source_text:1.4_Module_items:non_port_module_item|non_port_module_item]]
 
 ===== Backlinks =====

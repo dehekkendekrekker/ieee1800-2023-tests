@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== inout port identifier ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.9.3
-
-inout_port_identifier ::=
-	[[9_General:9.3_Identifiers:identifier|identifier]]
+inout_port_identifier ::= [[9_General:9.3_Identifiers:identifier|identifier]]
 
 ===== Backlinks =====
 [[7_Specify_section:7.3_Specify_block_terminals:input_identifier|input_identifier]]

@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== dynamic override specifiers ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.2.7
-
-dynamic_override_specifiers ::=
-	[ [[2_Declarations:2.7_Task_declarations:initial_or_extends_specifier|initial_or_extends_specifier]] ] [ [[2_Declarations:2.7_Task_declarations:final_specifier|final_specifier]] ]
+dynamic_override_specifiers ::= [ [[2_Declarations:2.7_Task_declarations:initial_or_extends_specifier|initial_or_extends_specifier]] ] [ [[2_Declarations:2.7_Task_declarations:final_specifier|final_specifier]] ]
 
 ===== Backlinks =====
 [[1_Source_text:1.10_Constraints:constraint_declaration|constraint_declaration]]

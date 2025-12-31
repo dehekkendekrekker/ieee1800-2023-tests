@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== type identifier ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.9.3
-
-type_identifier ::=
-	[[9_General:9.3_Identifiers:identifier|identifier]]
+type_identifier ::= [[9_General:9.3_Identifiers:identifier|identifier]]
 
 ===== Backlinks =====
 [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:data_type|data_type]]

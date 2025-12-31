@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== package scope ======
 Created Friday 27 December 2025
 
-package_scope ::=
-	[[9_General:9.3_Identifiers:package_identifier|package_identifier]] ::
+package_scope ::= [[9_General:9.3_Identifiers:package_identifier|package_identifier]] ::
 | **$unit** ::
 
 ===== Backlinks =====

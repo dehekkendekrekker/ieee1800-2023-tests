@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== expression or dist ======
 Created Friday 27 December 2025
 
-expression_or_dist ::=
-	[[8_Expressions:8.3_Expressions:expression|expression]] [ **dist** { [[1_Source_text:1.10_Constraints:dist_list|dist_list]] } ]
+expression_or_dist ::= [[8_Expressions:8.3_Expressions:expression|expression]] [ **dist** { [[1_Source_text:1.10_Constraints:dist_list|dist_list]] } ]
 
 ===== Backlinks =====
 [[2_Declarations:2.10_Assertion_declarations:assert_property_statement|assert_property_statement]]

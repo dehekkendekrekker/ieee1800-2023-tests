@@ -5,31 +5,11 @@ Creation-Date: 2025-12-16T21:19:43+00:00
 ====== concurrent assertion statement ======
 Created Tuesday 16 December 2025
 
-IEEE 1800-2023 Section A.2.10
-
-concurrent_assertion_statement ::=
-	[[2_Declarations:2.10_Assertion_declarations:assert_property_statement|assert_property_statement]]
-	| [[2_Declarations:2.10_Assertion_declarations:assume_property_statement|assume_property_statement]]
-	| [[2_Declarations:2.10_Assertion_declarations:cover_property_statement|cover_property_statement]]
-	| [[2_Declarations:2.10_Assertion_declarations:cover_sequence_statement|cover_sequence_statement]]
-	| [[2_Declarations:2.10_Assertion_declarations:restrict_property_statement|restrict_property_statement]]
-
-===== SVA-relevant paths =====
-
-==== [[2_Declarations:2.10_Assertion_declarations:assert_property_statement|assert_property_statement]] ====
-[[2_Declarations:2.10_Assertion_declarations:assert_property_statement|assert_property_statement]]
-
-==== [[2_Declarations:2.10_Assertion_declarations:assume_property_statement|assume_property_statement]] ====
-[[2_Declarations:2.10_Assertion_declarations:assume_property_statement|assume_property_statement]]
-
-==== [[2_Declarations:2.10_Assertion_declarations:cover_property_statement|cover_property_statement]] ====
-[[2_Declarations:2.10_Assertion_declarations:cover_property_statement|cover_property_statement]]
-
-==== [[2_Declarations:2.10_Assertion_declarations:cover_sequence_statement|cover_sequence_statement]] ====
-[[2_Declarations:2.10_Assertion_declarations:cover_sequence_statement|cover_sequence_statement]]
-
-==== [[2_Declarations:2.10_Assertion_declarations:restrict_property_statement|restrict_property_statement]] ====
-[[2_Declarations:2.10_Assertion_declarations:restrict_property_statement|restrict_property_statement]]
+concurrent_assertion_statement ::= [[2_Declarations:2.10_Assertion_declarations:assert_property_statement|assert_property_statement]]
+| [[2_Declarations:2.10_Assertion_declarations:assume_property_statement|assume_property_statement]]
+| [[2_Declarations:2.10_Assertion_declarations:cover_property_statement|cover_property_statement]]
+| [[2_Declarations:2.10_Assertion_declarations:cover_sequence_statement|cover_sequence_statement]]
+| [[2_Declarations:2.10_Assertion_declarations:restrict_property_statement|restrict_property_statement]]
 
 ===== Backlinks =====
 [[2_Declarations:2.10_Assertion_declarations:concurrent_assertion_item|concurrent_assertion_item]]

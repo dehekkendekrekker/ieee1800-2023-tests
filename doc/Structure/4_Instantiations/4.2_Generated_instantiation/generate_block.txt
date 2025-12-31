@@ -5,11 +5,10 @@ Creation-Date: 2025-12-22T00:00:00+00:00
 ====== generate block ======
 Created Sunday 22 December 2025
 
-generate_block ::=
-	[[4_Instantiations:4.2_Generated_instantiation:generate_item|generate_item]]
+generate_block ::= [[4_Instantiations:4.2_Generated_instantiation:generate_item|generate_item]]
 | [ [[9_General:9.3_Identifiers:generate_block_identifier|generate_block_identifier]] : ] **begin** [ : [[9_General:9.3_Identifiers:generate_block_identifier|generate_block_identifier]] ]
-	{ [[4_Instantiations:4.2_Generated_instantiation:generate_item|generate_item]] }
-  **end** [ : [[9_General:9.3_Identifiers:generate_block_identifier|generate_block_identifier]] ]
+{ [[4_Instantiations:4.2_Generated_instantiation:generate_item|generate_item]] }
+**end** [ : [[9_General:9.3_Identifiers:generate_block_identifier|generate_block_identifier]] ]
 
 ===== Backlinks =====
 [[4_Instantiations:4.2_Generated_instantiation:case_generate_item|case_generate_item]]

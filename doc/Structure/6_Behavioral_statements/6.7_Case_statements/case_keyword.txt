@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== case keyword ======
 Created Friday 27 December 2025
 
-case_keyword ::=
-	**case** | **casez** | **casex**
+case_keyword ::= **case** | **casez** | **casex**
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.7_Case_statements:case_statement|case_statement]]

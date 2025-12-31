@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== randcase item ======
 Created Friday 27 December 2025
 
-randcase_item ::=
-	[[8_Expressions:8.3_Expressions:expression|expression]] : [[6_Behavioral_statements:6.4_Statements:statement_or_null|statement_or_null]]
+randcase_item ::= [[8_Expressions:8.3_Expressions:expression|expression]] : [[6_Behavioral_statements:6.4_Statements:statement_or_null|statement_or_null]]
 
 ===== Backlinks =====
 [[6_Behavioral_statements:6.7_Case_statements:randcase_statement|randcase_statement]]

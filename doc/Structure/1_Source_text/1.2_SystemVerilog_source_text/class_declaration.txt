@@ -5,8 +5,7 @@ Creation-Date: 2025-12-27T00:00:00+00:00
 ====== class declaration ======
 Created Friday 27 December 2025
 
-class_declaration ::=
-	[ **virtual** ] **class** [ [[2_Declarations:2.7_Task_declarations:final_specifier|final_specifier]] ] [[9_General:9.3_Identifiers:class_identifier|class_identifier]] [ [[1_Source_text:1.3_Module_parameters_and_ports:parameter_port_list|parameter_port_list]] ]
+class_declaration ::= [ **virtual** ] **class** [ [[2_Declarations:2.7_Task_declarations:final_specifier|final_specifier]] ] [[9_General:9.3_Identifiers:class_identifier|class_identifier]] [ [[1_Source_text:1.3_Module_parameters_and_ports:parameter_port_list|parameter_port_list]] ]
 [ **extends** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:class_type|class_type]] [ ( [ [[8_Expressions:8.2_Subroutine_calls:list_of_arguments|list_of_arguments]] | **default** ] ) ] ]
 [ **implements** [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:interface_class_type|interface_class_type]] { , [[2_Declarations:2.2_Declaration_data_types:2.2.1_Data_type_grammar:interface_class_type|interface_class_type]] } ] ;
 { [[1_Source_text:1.9_Class_items:class_item|class_item]] }

@@ -5,10 +5,7 @@ Creation-Date: 2025-12-29T00:00:00+00:00
 ====== hex base ======
 Created Sunday 29 December 2025
 
-IEEE 1800-2023 Section A.8.7
-
-hex_base ::=
-	**'** [ **s** | **S** ] **h** | **'** [ **s** | **S** ] **H**
+hex_base ::= '[**s**|**S**]h|'[**s**|**S**]H
 
 ===== Backlinks =====
 [[8_Expressions:8.7_Numbers:hex_number|hex_number]]

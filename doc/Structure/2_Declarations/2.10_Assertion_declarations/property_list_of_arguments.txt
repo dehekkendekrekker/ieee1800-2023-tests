@@ -5,9 +5,8 @@ Creation-Date: 2025-12-16T23:30:31+00:00
 ====== property list of arguments ======
 Created Tuesday 16 December 2025
 
-property_list_of_arguments ::=
-	[ [[2_Declarations:2.10_Assertion_declarations:property_actual_arg|property_actual_arg]] ] { , [ [[2_Declarations:2.10_Assertion_declarations:property_actual_arg|property_actual_arg]] ] } { , . identifier ( [ [[2_Declarations:2.10_Assertion_declarations:property_actual_arg|property_actual_arg]] ] ) }
-| . identifier ( [ [[2_Declarations:2.10_Assertion_declarations:property_actual_arg|property_actual_arg]] ] ) { , . identifier ( [ [[2_Declarations:2.10_Assertion_declarations:property_actual_arg|property_actual_arg]] ] ) }
+property_list_of_arguments ::= [ [[2_Declarations:2.10_Assertion_declarations:property_actual_arg|property_actual_arg]] ] { , [ [[2_Declarations:2.10_Assertion_declarations:property_actual_arg|property_actual_arg]] ] } { , . [[9_General:9.3_Identifiers:identifier|identifier]] ( [ [[2_Declarations:2.10_Assertion_declarations:property_actual_arg|property_actual_arg]] ] ) }
+| . [[9_General:9.3_Identifiers:identifier|identifier]] ( [ [[2_Declarations:2.10_Assertion_declarations:property_actual_arg|property_actual_arg]] ] ) { , . [[9_General:9.3_Identifiers:identifier|identifier]] ( [ [[2_Declarations:2.10_Assertion_declarations:property_actual_arg|property_actual_arg]] ] ) }
 
 ===== Backlinks =====
 [[2_Declarations:2.10_Assertion_declarations:property_instance|property_instance]]

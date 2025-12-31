@@ -5,9 +5,7 @@ Creation-Date: 2025-12-17T00:37:52+00:00
 ====== sequence method call ======
 Created Wednesday 17 December 2025
 
-sequence_method_call ::=
-	[[2_Declarations:2.10_Assertion_declarations:sequence_instance|sequence_instance]] . [[9_General:9.3_Identifiers:method_identifier|method_identifier]]
-
+sequence_method_call ::= [[2_Declarations:2.10_Assertion_declarations:sequence_instance|sequence_instance]] . [[9_General:9.3_Identifiers:method_identifier|method_identifier]]
 
 ===== Backlinks =====
 [[8_Expressions:8.4_Primaries:primary|primary]]

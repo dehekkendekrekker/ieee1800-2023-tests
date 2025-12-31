@@ -5,10 +5,7 @@ Creation-Date: 2025-12-28T00:00:00+00:00
 ====== ps checker identifier ======
 Created Saturday 28 December 2025
 
-IEEE 1800-2023 Section A.9.3
-
-ps_checker_identifier ::=
-	[ [[9_General:9.3_Identifiers:package_scope|package_scope]] ] [[9_General:9.3_Identifiers:checker_identifier|checker_identifier]]
+ps_checker_identifier ::= [ [[9_General:9.3_Identifiers:package_scope|package_scope]] ] [[9_General:9.3_Identifiers:checker_identifier|checker_identifier]]
 
 ===== Backlinks =====
 [[4_Instantiations:4.1_Instantiations:4.1.4_Checker_instantiation:checker_instantiation|checker_instantiation]]
