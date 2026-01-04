@@ -37,7 +37,7 @@ description ::=
 | config_declaration
 
 interface_ansi_header ::=
-	{ attribute_instance } interface [ lifetime ] interface_identifier
+	{ attribute_instance } "interface" [ lifetime ] interface_identifier
 { package_import_declaration } [ parameter_port_list ] [ list_of_port_declarations ] ";"
 
 interface_class_declaration ::=
@@ -53,7 +53,7 @@ endinterface [ ":" interface_identifier ]
 | interface_ansi_header
 [ timeunits_declaration ] { non_port_interface_item }
 endinterface [ ":" interface_identifier ]
-| { attribute_instance } interface interface_identifier "(" . * ")" ";"
+| { attribute_instance } interface interface_identifier "(" "." "*" ")" ";"
 [ timeunits_declaration ] { interface_item }
 endinterface [ ":" interface_identifier ]
 | extern interface_nonansi_header
@@ -74,7 +74,7 @@ endmodule [ ":" module_identifier ]
 | module_ansi_header
 [ timeunits_declaration ] { non_port_module_item }
 endmodule [ ":" module_identifier ]
-| { attribute_instance } module_keyword [ lifetime ] module_identifier "(" . * ")" ";"
+| { attribute_instance } module_keyword [ lifetime ] module_identifier "(" "." "*" ")" ";"
 [ timeunits_declaration ] { module_item }
 endmodule [ ":" module_identifier ]
 | extern module_nonansi_header
@@ -103,7 +103,7 @@ endprogram [ ":" program_identifier ]
 | program_ansi_header
 [ timeunits_declaration ] { non_port_program_item }
 endprogram [ ":" program_identifier ]
-| { attribute_instance } program program_identifier "(" . * ")" ";"
+| { attribute_instance } program program_identifier "(" "." "*" ")" ";"
 [ timeunits_declaration ] { program_item }
 endprogram [ ":" program_identifier ]
 | extern program_nonansi_header
@@ -117,20 +117,20 @@ source_text ::=
 	[ timeunits_declaration ] { description }
 
 timeunits_declaration ::=
-	timeunit time_literal [ / time_literal ] ";"
+	timeunit time_literal [ "/" time_literal ] ";"
 | timeprecision time_literal ";"
 | timeunit time_literal ";" timeprecision time_literal ";"
 | timeprecision time_literal ";" timeunit time_literal ";"
 
 ansi_port_declaration ::=
 	[ net_port_header | interface_port_header ] port_identifier { unpacked_dimension }
-[ = constant_expression ]
-| [ variable_port_header ] port_identifier { variable_dimension } [ = constant_expression ]
-| [ port_direction ] . port_identifier "(" [ expression ] ")"
+[ "=" constant_expression ]
+| [ variable_port_header ] port_identifier { variable_dimension } [ "=" constant_expression ]
+| [ port_direction ] "." port_identifier "(" [ expression ] ")"
 
 interface_port_header ::=
-	interface_identifier [ . modport_identifier ]
-| interface [ . modport_identifier ]
+	interface_identifier [ "." modport_identifier ]
+| interface [ "." modport_identifier ]
 
 list_of_port_declarations ::=
 	"(" [ { attribute_instance } ansi_port_declaration { "," { attribute_instance } ansi_port_declaration } ] ")"
@@ -148,13 +148,13 @@ parameter_port_declaration ::=
 | type_parameter_declaration
 
 parameter_port_list ::=
-	# "(" list_of_param_assignments { "," parameter_port_declaration } ")"
-| # "(" parameter_port_declaration { "," parameter_port_declaration } ")"
-| #"(" ")"
+	"#" "(" list_of_param_assignments { "," parameter_port_declaration } ")"
+| "#" "(" parameter_port_declaration { "," parameter_port_declaration } ")"
+| "#( )"
 
 port ::=
 	[ port_expression ]
-| . port_identifier "(" [ port_expression ] ")"
+| "." port_identifier "(" [ port_expression ] ")"
 
 port_declaration ::=
 	{ attribute_instance } inout_declaration
@@ -249,13 +249,13 @@ parameter_override ::=
 	defparam list_of_defparam_assignments ";"
 
 severity_system_task ::=
-	$fatal [ "(" finish_number [ "," list_of_arguments ] ")" ] ";"
-| $error [ "(" [ list_of_arguments ] ")" ] ";"
-| $warning [ "(" [ list_of_arguments ] ")" ] ";"
-| $info [ "(" [ list_of_arguments ] ")" ] ";"
+	"$fatal" [ "(" finish_number [ "," list_of_arguments ] ")" ] ";"
+| "$error" [ "(" [ list_of_arguments ] ")" ] ";"
+| "$warning" [ "(" [ list_of_arguments ] ")" ] ";"
+| "$info" [ "(" [ list_of_arguments ] ")" ] ";"
 
 cell_clause ::=
-	cell [ library_identifier . ] cell_identifier
+	cell [ library_identifier "." ] cell_identifier
 
 config_declaration ::=
 	config config_identifier ";"
@@ -275,21 +275,21 @@ default_clause ::=
 	default
 
 design_statement ::=
-	design { [ library_identifier . ] cell_identifier } ";"
+	design { [ library_identifier "." ] cell_identifier } ";"
 
 inst_clause ::=
 	instance inst_name
 
 inst_name ::=
-	topmodule_identifier { . instance_identifier }
+	topmodule_identifier { "." instance_identifier }
 
 liblist_clause ::=
 	liblist { library_identifier }
 
 use_clause ::=
-	use [ library_identifier . ] cell_identifier [ ":" config ]
+	use [ library_identifier "." ] cell_identifier [ ":" config ]
 | use named_parameter_assignment { "," named_parameter_assignment } [ ":" config ]
-| use [ library_identifier . ] cell_identifier named_parameter_assignment { "," named_parameter_assignment } [ ":" config ]
+| use [ library_identifier "." ] cell_identifier named_parameter_assignment { "," named_parameter_assignment } [ ":" config ]
 
 extern_tf_declaration ::=
 	extern method_prototype ";"
@@ -362,7 +362,7 @@ checker_port_direction ::=
 
 checker_port_item ::=
 	{ attribute_instance } [ checker_port_direction ] property_formal_type formal_port_identifier
-{ variable_dimension } [ = property_actual_arg ]
+{ variable_dimension } [ "=" property_actual_arg ]
 
 checker_port_list ::=
 	checker_port_item { "," checker_port_item }
@@ -380,7 +380,7 @@ class_constructor_arg_list ::=
 class_constructor_declaration ::=
 	function [ class_scope ] new [ "(" [ class_constructor_arg_list ] ")" ] ";"
 { block_item_declaration }
-[ super . new [ "(" [ list_of_arguments | default ] ")" ] ";" ]
+[ super "." new [ "(" [ list_of_arguments | default ] ")" ] ";" ]
 { function_statement_or_null }
 endfunction [ ":" new ]
 
@@ -411,7 +411,7 @@ class_method ::=
 
 class_property ::=
 	{ property_qualifier } data_declaration
-| const { class_item_qualifier } data_type const_identifier [ = constant_expression ] ";"
+| const { class_item_qualifier } data_type const_identifier [ "=" constant_expression ] ";"
 
 interface_class_item ::=
 	type_declaration
@@ -451,13 +451,13 @@ constraint_declaration ::=
 constraint_expression ::=
 	[ soft ] expression_or_dist ";"
 | uniqueness_constraint ";"
-| expression –> constraint_set
+| expression "->" constraint_set
 | if "(" expression ")" constraint_set [ else constraint_set ]
 | foreach "(" ps_or_hierarchical_array_identifier [ loop_variables ] ")" constraint_set
 | disable soft constraint_primary ";"
 
 constraint_primary ::=
-	[ implicit_class_handle . | class_scope ] hierarchical_identifier select [ "(" ")" ]
+	[ implicit_class_handle "." | class_scope ] hierarchical_identifier select [ "(" ")" ]
 
 constraint_prototype ::=
 	[ constraint_prototype_qualifier ] [ static ] constraint [ dynamic_override_specifiers ] constraint_identifier ";"
@@ -471,14 +471,14 @@ constraint_set ::=
 
 dist_item ::=
 	value_range [ dist_weight ]
-| default :/ expression
+| default ":/" expression
 
 dist_list ::=
 	dist_item { "," dist_item }
 
 dist_weight ::=
-	:= expression
-| :/ expression
+	":=" expression
+| ":/" expression
 
 expression_or_dist ::=
 	expression [ dist { dist_list } ]
@@ -550,7 +550,7 @@ input_declaration ::=
 
 interface_port_declaration ::=
 	interface_identifier list_of_interface_identifiers
-| interface_identifier . modport_identifier list_of_interface_identifiers
+| interface_identifier "." modport_identifier list_of_interface_identifiers
 
 output_declaration ::=
 	output net_port_type list_of_port_identifiers
@@ -578,7 +578,7 @@ net_declaration ::=
 	net_type [ drive_strength | charge_strength ] [ vectored | scalared ]
 data_type_or_implicit [ delay3 ] list_of_net_decl_assignments ";"
 | nettype_identifier [ delay_control ] list_of_net_decl_assignments ";"
-| interconnect implicit_data_type [ # delay_value ] net_identifier { unpacked_dimension }
+| interconnect implicit_data_type [ "#" delay_value ] net_identifier { unpacked_dimension }
 [ "," net_identifier { unpacked_dimension } ] ";"
 
 nettype_declaration ::=
@@ -586,7 +586,7 @@ nettype_declaration ::=
 | nettype [ package_scope | class_scope ] nettype_identifier nettype_identifier ";"
 
 package_export_declaration ::=
-	export *::* ";"
+	export "*::*" ";"
 | export package_import_item { "," package_import_item } ";"
 
 package_import_declaration ::=
@@ -594,11 +594,11 @@ package_import_declaration ::=
 
 package_import_item ::=
 	package_identifier "::" identifier
-| package_identifier "::" *
+| package_identifier "::" "*"
 
 type_declaration ::=
 	typedef data_type_or_incomplete_class_scoped_type type_identifier { variable_dimension } ";"
-| typedef interface_port_identifier constant_bit_select . type_identifier type_identifier ";"
+| typedef interface_port_identifier constant_bit_select "." type_identifier type_identifier ";"
 | typedef [ forward_type ] type_identifier ";"
 
 casting_type ::=
@@ -609,7 +609,7 @@ casting_type ::=
 | const
 
 class_scope ::=
-	class_type ::
+	class_type "::"
 
 class_type ::=
 	ps_class_identifier [ parameter_value_assignment ]
@@ -623,7 +623,7 @@ data_type ::=
 | enum [ enum_base_type ] { enum_name_declaration { "," enum_name_declaration } } { packed_dimension }
 | string
 | chandle
-| virtual [ interface ] interface_identifier [ parameter_value_assignment ] [ . modport_identifier ]
+| virtual [ interface ] interface_identifier [ parameter_value_assignment ] [ "." modport_identifier ]
 | [ class_scope | package_scope ] type_identifier { packed_dimension }
 | class_type
 | event
@@ -648,7 +648,7 @@ enum_base_type ::=
 | type_identifier [ packed_dimension ]
 
 enum_name_declaration ::=
-	enum_identifier [ [ integral_number [ ":" integral_number ] ] ] [ = constant_expression ]
+	enum_identifier [ [ integral_number [ ":" integral_number ] ] ] [ "=" constant_expression ]
 
 implicit_data_type ::=
 	[ signing ] { packed_dimension }
@@ -747,12 +747,12 @@ delay_value ::=
 | 1step
 
 delay2 ::=
-	# delay_value
-| # "(" mintypmax_expression [ "," mintypmax_expression ] ")"
+	"#" delay_value
+| "#" "(" mintypmax_expression [ "," mintypmax_expression ] ")"
 
 delay3 ::=
-	# delay_value
-| # "(" mintypmax_expression [ "," mintypmax_expression [ "," mintypmax_expression ] ] ")"
+	"#" delay_value
+| "#" "(" mintypmax_expression [ "," mintypmax_expression [ "," mintypmax_expression ] ] ")"
 
 list_of_defparam_assignments ::=
 	defparam_assignment { "," defparam_assignment }
@@ -776,8 +776,8 @@ list_of_specparam_assignments ::=
 	specparam_assignment { "," specparam_assignment }
 
 list_of_tf_variable_identifiers ::=
-	port_identifier { variable_dimension } [ = expression ]
-{ "," port_identifier { variable_dimension } [ = expression ] }
+	port_identifier { variable_dimension } [ "=" expression ]
+{ "," port_identifier { variable_dimension } [ "=" expression ] }
 
 list_of_type_assignments ::=
 	type_assignment { "," type_assignment }
@@ -792,15 +792,15 @@ list_of_variable_identifiers ::=
 	variable_identifier { variable_dimension } { "," variable_identifier { variable_dimension } }
 
 list_of_variable_port_identifiers ::=
-	port_identifier { variable_dimension } [ = constant_expression ]
-{ "," port_identifier { variable_dimension } [ = constant_expression ] }
+	port_identifier { variable_dimension } [ "=" constant_expression ]
+{ "," port_identifier { variable_dimension } [ "=" constant_expression ] }
 
 class_new ::=
 	[ class_scope ] new [ "(" list_of_arguments ")" ]
 | new expression
 
 defparam_assignment ::=
-	hierarchical_parameter_identifier = constant_mintypmax_expression
+	hierarchical_parameter_identifier "=" constant_mintypmax_expression
 
 dynamic_array_new ::=
 	new [ expression ] [ "(" expression ")" ]
@@ -812,49 +812,48 @@ limit_value ::=
 	constant_mintypmax_expression
 
 net_decl_assignment ::=
-	net_identifier { unpacked_dimension } [ = expression ]
+	net_identifier { unpacked_dimension } [ "=" expression ]
 
 param_assignment ::=
-	parameter_identifier { variable_dimension } [ = constant_param_expression ]
+	parameter_identifier { variable_dimension } [ "=" constant_param_expression ]
 
 pulse_control_specparam ::=
-	PATHPULSE$ = "(" reject_limit_value [ "," error_limit_value ] ")"
-| PATHPULSE$specify_input_terminal_descriptor$specify_output_terminal_descriptor
- = "(" reject_limit_value [ "," error_limit_value ] ")"
+	"PATHPULSE$" "=" "(" reject_limit_value [ "," error_limit_value ] ")"
+| "PATHPULSE$"specify_input_terminal_descriptor"$"specify_output_terminal_descriptor "= (" reject_limit_value [ "," error_limit_value ] ")"
 
 reject_limit_value ::=
 	limit_value
 
 specparam_assignment ::=
-	specparam_identifier = constant_mintypmax_expression
+	specparam_identifier "=" constant_mintypmax_expression
 | pulse_control_specparam
 
 type_assignment ::=
-	type_identifier [ = data_type_or_incomplete_class_scoped_type ]
+	type_identifier [ "=" data_type_or_incomplete_class_scoped_type ]
 
 variable_decl_assignment ::=
-	variable_identifier { variable_dimension } [ = expression ]
+	variable_identifier { variable_dimension } [ "=" expression ]
 | dynamic_array_variable_identifier unsized_dimension { variable_dimension }
-[ = dynamic_array_new ]
-| class_variable_identifier [ = class_new ]
+[ "=" dynamic_array_new ]
+| class_variable_identifier [ "=" class_new ]
 
 associative_dimension ::=
 	[ data_type ]
-| [ * ]
+| [ "*" ]
 
 packed_dimension ::=
 	[ constant_range ]
 | unsized_dimension
 
 queue_dimension ::=
-	[ $ [ ":" constant_expression ] ]
+	[ "$" [ ":" constant_expression ] ]
 
 unpacked_dimension ::=
 	[ constant_range ]
 | [ constant_expression ]
 
 unsized_dimension ::=
-	[ ]
+	"[" "]"
 
 variable_dimension ::=
 	unsized_dimension
@@ -869,10 +868,10 @@ dpi_function_proto ::=
 	function_prototype
 
 dpi_import_export ::=
-	import dpi_spec_string [ dpi_function_import_property ] [ c_identifier = ] dpi_function_proto ";"
-| import dpi_spec_string [ dpi_task_import_property ] [ c_identifier = ] dpi_task_proto ";"
-| export dpi_spec_string [ c_identifier = ] function function_identifier ";"
-| export dpi_spec_string [ c_identifier = ] task task_identifier ";"
+	import dpi_spec_string [ dpi_function_import_property ] [ c_identifier "=" ] dpi_function_proto ";"
+| import dpi_spec_string [ dpi_task_import_property ] [ c_identifier "=" ] dpi_task_proto ";"
+| export dpi_spec_string [ c_identifier "=" ] function function_identifier ";"
+| export dpi_spec_string [ c_identifier "=" ] task task_identifier ";"
 
 dpi_spec_string ::=
 	"DPI-C" | "DPI"
@@ -885,12 +884,12 @@ dpi_task_proto ::=
 
 function_body_declaration ::=
 	function_data_type_or_implicit
-[ interface_identifier . | class_scope ] function_identifier ";"
+[ interface_identifier "." | class_scope ] function_identifier ";"
 { tf_item_declaration }
 { function_statement_or_null }
 endfunction [ ":" function_identifier ]
 | function_data_type_or_implicit
-[ interface_identifier . | class_scope ] function_identifier "(" [ tf_port_list ] ")" ";"
+[ interface_identifier "." | class_scope ] function_identifier "(" [ tf_port_list ] ")" ";"
 { block_item_declaration }
 { function_statement_or_null }
 endfunction [ ":" function_identifier ]
@@ -917,11 +916,11 @@ initial_or_extends_specifier ::=
 | ":" extends
 
 task_body_declaration ::=
-	[ interface_identifier . | class_scope ] task_identifier ";"
+	[ interface_identifier "." | class_scope ] task_identifier ";"
 { tf_item_declaration }
 { statement_or_null }
 endtask [ ":" task_identifier ]
-| [ interface_identifier . | class_scope ] task_identifier "(" [ tf_port_list ] ")" ";"
+| [ interface_identifier "." | class_scope ] task_identifier "(" [ tf_port_list ] ")" ";"
 { block_item_declaration }
 { statement_or_null }
 endtask [ ":" task_identifier ]
@@ -945,7 +944,7 @@ tf_port_direction ::=
 
 tf_port_item ::=
 	{ attribute_instance } [ tf_port_direction ] [ var ] data_type_or_implicit
-[ port_identifier { variable_dimension } [ = expression ] ]
+[ port_identifier { variable_dimension } [ "=" expression ] ]
 
 tf_port_list ::=
 	tf_port_item { "," tf_port_item }
@@ -975,7 +974,7 @@ modport_ports_declaration ::=
 
 modport_simple_port ::=
 	port_identifier
-| . port_identifier "(" [ expression ] ")"
+| "." port_identifier "(" [ expression ] ")"
 
 modport_simple_ports_declaration ::=
 	port_direction modport_simple_port { "," modport_simple_port }
@@ -1018,9 +1017,9 @@ concurrent_assertion_statement ::=
 	| restrict_property_statement
 
 consecutive_repetition ::=
-	[* const_or_range_expression ]
-	| [*]
-	| [+]
+	["*" const_or_range_expression ]
+	| ["*"]
+	| ["+"]
 
 const_or_range_expression ::=
 	constant_expression
@@ -1034,22 +1033,22 @@ cover_sequence_statement ::=
 
 cycle_delay_const_range_expression ::=
 	constant_expression ":" constant_expression
-| constant_expression ":" $
+| constant_expression ":" "$"
 
 cycle_delay_range ::=
-	## constant_primary
-	| ## [ cycle_delay_const_range_expression ]
-	| ##[*]
-	| ##[+]
+	"##" constant_primary
+	| "##" "[" cycle_delay_const_range_expression "]"
+	| "##[*]"
+	| "##[+]"
 
 expect_property_statement ::=
 	expect "(" property_spec ")" action_block
 
 goto_repetition ::=
-	[-> const_or_range_expression ]
+	"[->" const_or_range_expression "]"
 
 nonconsecutive_repetition ::=
-	[= const_or_range_expression ]
+	"[=" const_or_range_expression "]"
 
 property_actual_arg ::=
 	property_expr
@@ -1073,12 +1072,12 @@ property_expr ::=
 	| not property_expr
 	| property_expr or property_expr
 	| property_expr and property_expr
-	| sequence_expr |-> property_expr
-	| sequence_expr |=> property_expr
+	| sequence_expr "|->" property_expr
+	| sequence_expr "|=>" property_expr
 	| if "(" expression_or_dist ")" property_expr [ else property_expr ]
 	| case "(" expression_or_dist ")" property_case_item { property_case_item } endcase
-	| sequence_expr #-# property_expr
-	| sequence_expr #=# property_expr
+	| sequence_expr "#-#" property_expr
+	| sequence_expr "#=#" property_expr
 	| nexttime property_expr
 	| nexttime [ constant_expression ] property_expr
 	| s_nexttime property_expr
@@ -1110,15 +1109,15 @@ property_instance ::=
 	 ps_or_hierarchical_property_identifier [ "(" [ property_list_of_arguments ] ")" ]
 
 property_list_of_arguments ::=
-	[ property_actual_arg ] { "," [ property_actual_arg ] } { "," . identifier "(" [ property_actual_arg ] ")" }
-| . identifier "(" [ property_actual_arg ] ")" { "," . identifier "(" [ property_actual_arg ] ")" }
+	[ property_actual_arg ] { "," [ property_actual_arg ] } { "," "." identifier "(" [ property_actual_arg ] ")" }
+| "." identifier "(" [ property_actual_arg ] ")" { "," "." identifier "(" [ property_actual_arg ] ")" }
 
 property_lvar_port_direction ::=
 	input
 
 property_port_item ::=
 	{ attribute_instance } [ local [ property_lvar_port_direction ] ] property_formal_type
-formal_port_identifier { variable_dimension } [ = property_actual_arg ]
+formal_port_identifier { variable_dimension } [ "=" property_actual_arg ]
 
 property_port_list ::=
 	property_port_item { "," property_port_item }
@@ -1135,7 +1134,7 @@ sequence_abbrev ::=
 sequence_actual_arg ::=
 	event_expression
 | sequence_expr
-| $
+| "$"
 
 sequence_declaration ::=
 	sequence sequence_identifier [ "(" [ sequence_port_list ] ")" ] ";"
@@ -1166,8 +1165,8 @@ sequence_instance ::=
 	ps_or_hierarchical_sequence_identifier [ "(" [ sequence_list_of_arguments ] ")" ]
 
 sequence_list_of_arguments ::=
-	[ sequence_actual_arg ] { "," [ sequence_actual_arg ] } { "," . identifier "(" [ sequence_actual_arg ] ")" }
-| . identifier "(" [ sequence_actual_arg ] ")" { "," . identifier "(" [ sequence_actual_arg ] ")" }
+	[ sequence_actual_arg ] { "," [ sequence_actual_arg ] } { "," "." identifier "(" [ sequence_actual_arg ] ")" }
+| "." identifier "(" [ sequence_actual_arg ] ")" { "," "." identifier "(" [ sequence_actual_arg ] ")" }
 
 sequence_lvar_port_direction ::=
 	input | inout | output
@@ -1178,18 +1177,18 @@ sequence_match_item ::=
 | subroutine_call
 
 sequence_method_call ::=
-	sequence_instance . method_identifier
+	sequence_instance "." method_identifier
 
 sequence_port_item ::=
 	{ attribute_instance } [ local [ sequence_lvar_port_direction ] ] sequence_formal_type
-formal_port_identifier { variable_dimension } [ = sequence_actual_arg ]
+formal_port_identifier { variable_dimension } [ "=" sequence_actual_arg ]
 
 sequence_port_list ::=
 	sequence_port_item { "," sequence_port_item }
 
 bins_expression ::=
 	variable_identifier
-| cover_point_identifier [ . bin_identifier ]
+| cover_point_identifier [ "." bin_identifier ]
 
 bins_keyword ::=
 	bins | illegal_bins | ignore_bins
@@ -1200,15 +1199,15 @@ bins_or_empty ::=
 
 bins_or_options ::=
 	coverage_option
-| [ wildcard ] bins_keyword bin_identifier [ [ [ covergroup_expression ] ] ] = { covergroup_range_list } [ with "(" with_covergroup_expression ")" ] [ iff "(" expression ")" ]
-| [ wildcard ] bins_keyword bin_identifier [ [ [ covergroup_expression ] ] ] = cover_point_identifier with "(" with_covergroup_expression ")" [ iff "(" expression ")" ]
-| [ wildcard ] bins_keyword bin_identifier [ [ [ covergroup_expression ] ] ] = set_covergroup_expression [ iff "(" expression ")" ]
-| [ wildcard ] bins_keyword bin_identifier [ [ ] ] = trans_list [ iff "(" expression ")" ]
-| bins_keyword bin_identifier [ [ [ covergroup_expression ] ] ] = default [ iff "(" expression ")" ]
-| bins_keyword bin_identifier = default sequence [ iff "(" expression ")" ]
+| [ wildcard ] bins_keyword bin_identifier [ [ [ covergroup_expression ] ] ] "=" { covergroup_range_list } [ with "(" with_covergroup_expression ")" ] [ iff "(" expression ")" ]
+| [ wildcard ] bins_keyword bin_identifier [ [ [ covergroup_expression ] ] ] "=" cover_point_identifier with "(" with_covergroup_expression ")" [ iff "(" expression ")" ]
+| [ wildcard ] bins_keyword bin_identifier [ [ [ covergroup_expression ] ] ] "=" set_covergroup_expression [ iff "(" expression ")" ]
+| [ wildcard ] bins_keyword bin_identifier [ "[" "]" ] "=" trans_list [ iff "(" expression ")" ]
+| bins_keyword bin_identifier [ [ [ covergroup_expression ] ] ] "=" default [ iff "(" expression ")" ]
+| bins_keyword bin_identifier "=" default sequence [ iff "(" expression ")" ]
 
 bins_selection ::=
-	bins_keyword bin_identifier = select_expression [ iff "(" expression ")" ]
+	bins_keyword bin_identifier "=" select_expression [ "iff" "(" expression ")" ]
 
 bins_selection_or_option ::=
 	{ attribute_instance } coverage_option
@@ -1228,11 +1227,11 @@ cover_point ::=
 coverage_event ::=
 	clocking_event
 | with function sample "(" [ tf_port_list ] ")"
-| @@ "(" block_event_expression ")"
+| "@@" "(" block_event_expression ")"
 
 coverage_option ::=
-	option . member_identifier = expression
-| type_option . member_identifier = constant_expression
+	option "." member_identifier "=" expression
+| type_option "." member_identifier "=" constant_expression
 
 coverage_spec ::=
 	cover_point
@@ -1258,11 +1257,11 @@ covergroup_range_list ::=
 
 covergroup_value_range ::=
 	covergroup_expression
-| [ covergroup_expression ":" covergroup_expression ]
-| [ $ ":" covergroup_expression ]
-| [ covergroup_expression ":" $ ]
-| [ covergroup_expression +/- covergroup_expression ]
-| [ covergroup_expression +%- covergroup_expression ]
+| "[" covergroup_expression ":" covergroup_expression "]"
+| "[" "$" ":" covergroup_expression "]"
+| "[" covergroup_expression ":" "$" "]"
+| "[" covergroup_expression "+/-" covergroup_expression "]"
+| "[" covergroup_expression "+%-" covergroup_expression "]"
 
 cross_body ::=
 	{ { cross_body_item ";" } }
@@ -1282,10 +1281,10 @@ cross_set_expression ::=
 hierarchical_btf_identifier ::=
 	hierarchical_tf_identifier
 | hierarchical_block_identifier
-| [ hierarchical_identifier . | class_scope ] method_identifier
+| [ hierarchical_identifier "." | class_scope ] method_identifier
 
 integer_covergroup_expression ::=
-	covergroup_expression | $
+	covergroup_expression | "$"
 
 list_of_cross_items ::=
 	cross_item "," cross_item { "," cross_item }
@@ -1299,13 +1298,13 @@ select_condition ::=
 
 select_expression ::=
 	select_condition
-| ! select_condition
-| select_expression && select_expression
-| select_expression || select_expression
+| "!" select_condition
+| select_expression "&&" select_expression
+| select_expression "||" select_expression
 | "(" select_expression ")"
-| select_expression with "(" with_covergroup_expression ")" [ matches integer_covergroup_expression ]
+| select_expression "with" "(" with_covergroup_expression ")" [ "matches" integer_covergroup_expression ]
 | cross_identifier
-| cross_set_expression [ matches integer_covergroup_expression ]
+| cross_set_expression [ "matches" integer_covergroup_expression ]
 
 set_covergroup_expression ::=
 	covergroup_expression
@@ -1318,12 +1317,12 @@ trans_list ::=
 
 trans_range_list ::=
 	trans_item
-| trans_item [* repeat_range ]
-| trans_item [–> repeat_range ]
-| trans_item [= repeat_range ]
+| trans_item "[*" repeat_range "]"
+| trans_item "[->" repeat_range "]"
+| trans_item "[=" repeat_range "]"
 
 trans_set ::=
-	trans_range_list { => trans_range_list }
+	trans_range_list { "=>" trans_range_list }
 
 with_covergroup_expression ::=
 	covergroup_expression
@@ -1332,7 +1331,7 @@ let_actual_arg ::=
 	expression
 
 let_declaration ::=
-	let let_identifier [ "(" [ let_port_list ] ")" ] = expression ";"
+	let let_identifier [ "(" [ let_port_list ] ")" ] "=" expression ";"
 
 let_expression ::=
 	[ package_scope ] let_identifier [ "(" [ let_list_of_arguments ] ")" ]
@@ -1345,11 +1344,11 @@ let_identifier ::=
 	identifier
 
 let_list_of_arguments ::=
-	[ let_actual_arg ] { "," [ let_actual_arg ] } { "," . identifier "(" [ let_actual_arg ] ")" }
-| . identifier "(" [ let_actual_arg ] ")" { "," . identifier "(" [ let_actual_arg ] ")" }
+	[ let_actual_arg ] { "," [ let_actual_arg ] } { "," "." identifier "(" [ let_actual_arg ] ")" }
+| "." identifier "(" [ let_actual_arg ] ")" { "," "." identifier "(" [ let_actual_arg ] ")" }
 
 let_port_item ::=
-	{ attribute_instance } let_formal_type formal_port_identifier { variable_dimension } [ = expression ]
+	{ attribute_instance } let_formal_type formal_port_identifier { variable_dimension } [ "=" expression ]
 
 let_port_list ::=
 	let_port_item { "," let_port_item }
@@ -1456,11 +1455,11 @@ name_of_instance ::=
 	instance_identifier { unpacked_dimension }
 
 named_parameter_assignment ::=
-	. parameter_identifier "(" [ param_expression ] ")"
+	"." parameter_identifier "(" [ param_expression ] ")"
 
 named_port_connection ::=
-	{ attribute_instance } . port_identifier [ "(" [ expression ] ")" ]
-| { attribute_instance } . *
+	{ attribute_instance } "." port_identifier [ "(" [ expression ] ")" ]
+| { attribute_instance } "." "*"
 
 ordered_parameter_assignment ::=
 	param_expression
@@ -1469,7 +1468,7 @@ ordered_port_connection ::=
 	{ attribute_instance } [ expression ]
 
 parameter_value_assignment ::=
-	# "(" [ list_of_parameter_value_assignments ] ")"
+	"#" "(" [ list_of_parameter_value_assignments ] ")"
 
 interface_instantiation ::=
 	interface_identifier [ parameter_value_assignment ] hierarchical_instance { "," hierarchical_instance } ";"
@@ -1485,8 +1484,8 @@ list_of_checker_port_connections ::=
 | named_checker_port_connection { "," named_checker_port_connection }
 
 named_checker_port_connection ::=
-	{ attribute_instance } . formal_port_identifier [ "(" [ property_actual_arg ] ")" ]
-| { attribute_instance } . *
+	{ attribute_instance } "." formal_port_identifier [ "(" [ property_actual_arg ] ")" ]
+| { attribute_instance } "." "*"
 
 ordered_checker_port_connection ::=
 	 { attribute_instance } [ property_actual_arg ]
@@ -1519,7 +1518,7 @@ generate_region ::=
 	generate { generate_item } endgenerate
 
 genvar_initialization ::=
-	[ genvar ] genvar_identifier = constant_expression
+	[ genvar ] genvar_identifier "=" constant_expression
 
 genvar_iteration ::=
 	genvar_identifier assignment_operator genvar_expression
@@ -1545,7 +1544,7 @@ udp_body
 endprimitive [ ":" udp_identifier ]
 | extern udp_nonansi_declaration
 | extern udp_ansi_declaration
-| { attribute_instance } primitive udp_identifier "(" . * ")" ";"
+| { attribute_instance } primitive udp_identifier "(" "." "*" ")" ";"
 { udp_port_declaration }
 udp_body
 endprimitive [ ":" udp_identifier ]
@@ -1561,7 +1560,7 @@ udp_input_declaration ::=
 
 udp_output_declaration ::=
 	{ attribute_instance } output port_identifier
-| { attribute_instance } output reg port_identifier [ = constant_expression ]
+| { attribute_instance } output reg port_identifier [ "=" constant_expression ]
 
 udp_port_declaration ::=
 	udp_output_declaration ";"
@@ -1590,7 +1589,7 @@ edge_input_list ::=
 	{ level_symbol } edge_indicator { level_symbol }
 
 edge_symbol ::=
-	r | R | f | F | p | P | n | N | *
+	r | R | f | F | p | P | n | N | "*"
 
 init_val ::=
 	1'b0 | 1'b1 | 1'bx | 1'bX | 1'B0 | 1'B1 | 1'Bx | 1'BX | 1 | 0
@@ -1599,11 +1598,11 @@ level_input_list ::=
 	level_symbol { level_symbol }
 
 level_symbol ::=
-	0 | 1 | x | X | ? | b | B
+	"0" | "1" | "x" | "X" | "?" | "b" | "B"
 
 next_state ::=
 	output_symbol
-| -
+| "-"
 
 output_symbol ::=
 	0 | 1 | x | X
@@ -1623,7 +1622,7 @@ udp_body ::=
 | sequential_body
 
 udp_initial_statement ::=
-	initial output_port_identifier = init_val ";"
+	initial output_port_identifier "=" init_val ";"
 
 udp_instance ::=
 	[ name_of_instance ] "(" output_terminal "," input_terminal { "," input_terminal } ")"
@@ -1642,10 +1641,10 @@ list_of_variable_assignments ::=
 	variable_assignment { "," variable_assignment }
 
 net_alias ::=
-	alias net_lvalue = net_lvalue { = net_lvalue } ";"
+	alias net_lvalue "=" net_lvalue { "=" net_lvalue } ";"
 
 net_assignment ::=
-	net_lvalue = expression
+	net_lvalue "=" expression
 
 always_construct ::=
 	always_keyword statement
@@ -1654,12 +1653,12 @@ always_keyword ::=
 	always | always_comb | always_latch | always_ff
 
 assignment_operator ::=
-	= | += | -= | *= | /= | %= | &= | |= | ^= | <<= | >>= | <<<= | >>>=
+	"=" | "+=" | "-=" | "*=" | "/=" | "%=" | "&=" | "|=" | "^=" | "<<=" | ">>=" | "<<<=" | ">>>="
 
 blocking_assignment ::=
-	variable_lvalue = delay_or_event_control expression
-| nonrange_variable_lvalue = dynamic_array_new
-| [ implicit_class_handle . | class_scope | package_scope ] hierarchical_variable_identifier select = class_new
+	variable_lvalue "=" delay_or_event_control expression
+| nonrange_variable_lvalue "=" dynamic_array_new
+| [ implicit_class_handle "." | class_scope | package_scope ] hierarchical_variable_identifier select "=" class_new
 | operator_assignment
 | inc_or_dec_expression
 
@@ -1670,7 +1669,7 @@ initial_construct ::=
 	initial statement_or_null
 
 nonblocking_assignment ::=
-	variable_lvalue <= [ delay_or_event_control ] expression
+	variable_lvalue "<=" [ delay_or_event_control ] expression
 
 operator_assignment ::=
 	variable_lvalue assignment_operator expression
@@ -1684,7 +1683,7 @@ procedural_continuous_assignment ::=
 | release net_lvalue
 
 variable_assignment ::=
-	variable_lvalue = expression
+	variable_lvalue "=" expression
 
 action_block ::=
 	statement_or_null
@@ -1737,13 +1736,13 @@ statement_or_null ::=
 | { attribute_instance } ";"
 
 clocking_event ::=
-	@ ps_identifier
-| @ hierarchical_identifier
-| @ "(" event_expression ")"
+	"@" ps_identifier
+| "@" hierarchical_identifier
+| "@" "(" event_expression ")"
 
 delay_control ::=
-	# delay_value
-| # "(" mintypmax_expression ")"
+	"#" delay_value
+| "#" "(" mintypmax_expression ")"
 
 delay_or_event_control ::=
 	delay_control
@@ -1757,8 +1756,8 @@ disable_statement ::=
 
 event_control ::=
 	clocking_event
-| @ *
-| @ "(" * ")"
+| "@" "*"
+| "@" "(" "*" ")"
 
 event_expression ::=
 	[ edge_identifier ] expression [ iff expression ]
@@ -1768,8 +1767,8 @@ event_expression ::=
 | "(" event_expression ")"
 
 event_trigger ::=
-	-> hierarchical_event_identifier nonrange_select ";"
-| ->> [ delay_or_event_control ] hierarchical_event_identifier nonrange_select ";"
+	"->" hierarchical_event_identifier nonrange_select ";"
+| "->>" [ delay_or_event_control ] hierarchical_event_identifier nonrange_select ";"
 
 jump_statement ::=
 	return [ expression ] ";"
@@ -1793,7 +1792,7 @@ cond_pattern ::=
 	expression matches pattern
 
 cond_predicate ::=
-	expression_or_cond_pattern { &&& expression_or_cond_pattern }
+	expression_or_cond_pattern { "&&&" expression_or_cond_pattern }
 
 conditional_statement ::=
 	[ unique_priority ] if "(" cond_predicate ")" statement_or_null
@@ -1825,7 +1824,7 @@ case_keyword ::=
 	case | casez | casex
 
 case_pattern_item ::=
-	pattern [ &&& expression ] ":" statement_or_null
+	pattern [ "&&&" expression ] ":" statement_or_null
 | default [ ":" ] statement_or_null
 
 case_statement ::=
@@ -1847,20 +1846,20 @@ range_list ::=
 
 value_range ::=
 	expression
-| [ expression ":" expression ]
-| [ $ ":" expression ]
-| [ expression ":" $ ]
-| [ expression +/- expression ]
-| [ expression +%- expression ]
+| "[" expression ":" expression "]"
+| "[" "$" ":" expression "]"
+| "[" expression ":" "$" "]"
+| "[" expression "+/-" expression "]"
+| "[" expression "+%-" expression "]"
 
 array_pattern_key ::=
 	constant_expression | assignment_pattern_key
 
 assignment_pattern ::=
-	' { expression { "," expression } }
-| ' { structure_pattern_key ":" expression { "," structure_pattern_key ":" expression } }
-| ' { array_pattern_key ":" expression { "," array_pattern_key ":" expression } }
-| ' { constant_expression { expression { "," expression } } }
+	"'" "{" expression { "," expression } "}"
+| "'" "{" structure_pattern_key ":" expression { "," structure_pattern_key ":" expression } "}"
+| "'" "{" array_pattern_key ":" expression { "," array_pattern_key ":" expression } "}"
+| "'" "{" constant_expression "{" expression { "," expression } "}" "}"
 
 assignment_pattern_expression ::=
 	[ assignment_pattern_expression_type ] assignment_pattern
@@ -1875,22 +1874,22 @@ assignment_pattern_key ::=
 	simple_type | default
 
 assignment_pattern_net_lvalue ::=
-	' { net_lvalue { "," net_lvalue } }
+	"'" "{" net_lvalue { "," net_lvalue } "}"
 
 assignment_pattern_variable_lvalue ::=
-	' { variable_lvalue { "," variable_lvalue } }
+	"'" "{" variable_lvalue { "," variable_lvalue } "}"
 
 constant_assignment_pattern_expression ::=
 	assignment_pattern_expression
 
 pattern ::=
 	"(" pattern ")"
-| . variable_identifier
-| .*
+| "." variable_identifier
+| "." "*"
 | constant_expression
-| tagged member_identifier [ pattern ]
-| ' { pattern { "," pattern } }
-| ' { member_identifier ":" pattern { "," member_identifier ":" pattern } }
+| "tagged" member_identifier [ pattern ]
+| "'" "{" pattern { "," pattern } "}"
+| "'" "{" member_identifier ":" pattern { "," member_identifier ":" pattern } "}"
 
 structure_pattern_key ::=
 	member_identifier | assignment_pattern_key
@@ -1908,7 +1907,7 @@ for_step_assignment ::=
 | function_subroutine_call
 
 for_variable_declaration ::=
-	[ var ] data_type variable_identifier = expression { "," variable_identifier = expression }
+	[ var ] data_type variable_identifier "=" expression { "," variable_identifier "=" expression }
 
 loop_statement ::=
 	forever statement_or_null
@@ -1923,15 +1922,15 @@ loop_variables ::=
 
 subroutine_call_statement ::=
 	subroutine_call ";"
-| void ' "(" function_subroutine_call ")" ";"
+| "void" "'" "(" function_subroutine_call ")" ";"
 
 assertion_item ::=
 	concurrent_assertion_item
 | deferred_immediate_assertion_item
 
 deferred_immediate_assert_statement ::=
-	assert #0 "(" expression ")" action_block
-| assert final "(" expression ")" action_block
+	"assert" "#0" "(" expression ")" action_block
+| "assert" "final" "(" expression ")" action_block
 
 deferred_immediate_assertion_item ::=
 	 [ block_identifier ":" ] deferred_immediate_assertion_statement
@@ -1942,12 +1941,12 @@ deferred_immediate_assertion_statement ::=
 | deferred_immediate_cover_statement
 
 deferred_immediate_assume_statement ::=
-	assume #0 "(" expression ")" action_block
-| assume final "(" expression ")" action_block
+	"assume" "#0" "(" expression ")" action_block
+| "assume" "final" "(" expression ")" action_block
 
 deferred_immediate_cover_statement ::=
-	cover #0 "(" expression ")" statement_or_null
-| cover final "(" expression ")" statement_or_null
+	"cover" "#0" "(" expression ")" statement_or_null
+| "cover" "final" "(" expression ")" statement_or_null
 
 immediate_assertion_statement ::=
 	simple_immediate_assertion_statement
@@ -1973,7 +1972,7 @@ simple_immediate_cover_statement ::=
 	cover "(" expression ")" statement_or_null
 
 clocking_decl_assign ::=
-	signal_identifier [ = expression ]
+	signal_identifier [ "=" expression ]
 
 clocking_declaration ::=
 	[ default ] clocking [ clocking_identifier ] clocking_event ";"
@@ -1989,7 +1988,7 @@ clocking_direction ::=
 | inout
 
 clocking_drive ::=
-	clockvar_expression <= [ cycle_delay ] expression
+	clockvar_expression "<=" [ cycle_delay ] expression
 
 clocking_item ::=
 	default default_skew ";"
@@ -2007,9 +2006,9 @@ clockvar_expression ::=
 	clockvar select
 
 cycle_delay ::=
-	## integral_number
-| ## identifier
-| ## "(" expression ")"
+	"##" integral_number
+| "##" identifier
+| "##" "(" expression ")"
 
 default_skew ::=
 	input clocking_skew
@@ -2058,7 +2057,7 @@ rs_repeat ::=
 	repeat "(" expression ")" rs_production_item
 
 rs_rule ::=
-	rs_production_list [ := rs_weight_specification [ rs_code_block ] ]
+	rs_production_list [ ":=" rs_weight_specification [ rs_code_block ] ]
 
 rs_weight_specification ::=
 	integral_number
@@ -2090,22 +2089,22 @@ edge_identifier ::=
 	posedge | negedge | edge
 
 edge_sensitive_path_declaration ::=
-	parallel_edge_sensitive_path_description = path_delay_value
-| full_edge_sensitive_path_description = path_delay_value
+	parallel_edge_sensitive_path_description "=" path_delay_value
+| full_edge_sensitive_path_description "=" path_delay_value
 
 full_edge_sensitive_path_description ::=
-	"(" [ edge_identifier ] list_of_path_inputs [ polarity_operator ] *> "(" list_of_path_outputs [ polarity_operator ] ":" data_source_expression ")" ")"
-| "(" [ edge_identifier ] list_of_path_inputs [ polarity_operator ] *> list_of_path_outputs ")"
+	"(" [ edge_identifier ] list_of_path_inputs [ polarity_operator ] "*>" "(" list_of_path_outputs [ polarity_operator ] ":" data_source_expression ")" ")"
+| "(" [ edge_identifier ] list_of_path_inputs [ polarity_operator ] "*>" list_of_path_outputs ")"
 
 full_path_description ::=
-	"(" list_of_path_inputs [ polarity_operator ] *> list_of_path_outputs ")"
+	"(" list_of_path_inputs [ polarity_operator ] "*>" list_of_path_outputs ")"
 
 parallel_edge_sensitive_path_description ::=
-	"(" [ edge_identifier ] specify_input_terminal_descriptor [ polarity_operator ] => "(" specify_output_terminal_descriptor [ polarity_operator ] ":" data_source_expression ")" ")"
-| "(" [ edge_identifier ] specify_input_terminal_descriptor [ polarity_operator ] => specify_output_terminal_descriptor ")"
+	"(" [ edge_identifier ] specify_input_terminal_descriptor [ polarity_operator ] "=>" "(" specify_output_terminal_descriptor [ polarity_operator ] ":" data_source_expression ")" ")"
+| "(" [ edge_identifier ] specify_input_terminal_descriptor [ polarity_operator ] "=>" specify_output_terminal_descriptor ")"
 
 parallel_path_description ::=
-	"(" specify_input_terminal_descriptor [ polarity_operator ] => specify_output_terminal_descriptor ")"
+	"(" specify_input_terminal_descriptor [ polarity_operator ] "=>" specify_output_terminal_descriptor ")"
 
 path_declaration ::=
 	simple_path_declaration ";"
@@ -2113,11 +2112,11 @@ path_declaration ::=
 | state_dependent_path_declaration ";"
 
 polarity_operator ::=
-	+ | -
+	"+" | "-"
 
 simple_path_declaration ::=
-	parallel_path_description = path_delay_value
-| full_path_description = path_delay_value
+	parallel_path_description "=" path_delay_value
+| full_path_description "=" path_delay_value
 
 state_dependent_path_declaration ::=
 	if "(" module_path_expression ")" simple_path_declaration
@@ -2127,7 +2126,7 @@ state_dependent_path_declaration ::=
 input_identifier ::=
 	input_port_identifier
 | inout_port_identifier
-| interface_identifier . port_identifier
+| interface_identifier "." port_identifier
 
 list_of_path_inputs ::=
 	specify_input_terminal_descriptor { "," specify_input_terminal_descriptor }
@@ -2138,7 +2137,7 @@ list_of_path_outputs ::=
 output_identifier ::=
 	output_port_identifier
 | inout_port_identifier
-| interface_identifier . port_identifier
+| interface_identifier "." port_identifier
 
 specify_input_terminal_descriptor ::=
 	input_identifier [ [ constant_range_expression ] ]
@@ -2303,7 +2302,7 @@ timing_check_limit ::=
 	expression
 
 controlled_timing_check_event ::=
-	timing_check_event_control specify_terminal_descriptor [ &&& timing_check_condition ]
+	timing_check_event_control specify_terminal_descriptor [ "&&&" timing_check_condition ]
 
 edge_control_specifier ::=
 	edge [ edge_descriptor { "," edge_descriptor } ]
@@ -2331,7 +2330,7 @@ timing_check_condition ::=
 | "(" scalar_timing_check_condition ")"
 
 timing_check_event ::=
-	[ timing_check_event_control ] specify_terminal_descriptor [ &&& timing_check_condition ]
+	[ timing_check_event_control ] specify_terminal_descriptor [ "&&&" timing_check_condition ]
 
 timing_check_event_control ::=
 	posedge
@@ -2408,11 +2407,11 @@ identifier_list ::=
 	identifier { "," identifier }
 
 list_of_arguments ::=
-	[ expression ] { "," [ expression ] } { "," . identifier "(" [ expression ] ")" }
-| . identifier "(" [ expression ] ")" { "," . identifier "(" [ expression ] ")" }
+	[ expression ] { "," [ expression ] } { "," "." identifier "(" [ expression ] ")" }
+| "." identifier "(" [ expression ] ")" { "," "." identifier "(" [ expression ] ")" }
 
 method_call ::=
-	method_call_root . method_call_body
+	method_call_root "." method_call_body
 
 method_call_body ::=
 	method_identifier { attribute_instance } [ "(" list_of_arguments ")" ]
@@ -2537,7 +2536,7 @@ cast ::=
 	casting_type ' "(" expression ")"
 
 class_qualifier ::=
-	[ local "::" ] [ implicit_class_handle . | class_scope ]
+	[ local "::" ] [ implicit_class_handle "." | class_scope ]
 
 constant_bit_select ::=
 	{ [ constant_expression ] }
@@ -2567,10 +2566,10 @@ constant_primary ::=
 | null
 
 constant_select ::=
-	[ { . member_identifier constant_bit_select } . member_identifier ] constant_bit_select [ [ constant_part_select_range ] ]
+	[ { "." member_identifier constant_bit_select } "." member_identifier ] constant_bit_select [ [ constant_part_select_range ] ]
 
 implicit_class_handle ::=
-	this | super | this . super
+	this | super | this "." super
 
 module_path_primary ::=
 	number
@@ -2581,7 +2580,7 @@ module_path_primary ::=
 | "(" module_path_mintypmax_expression ")"
 
 nonrange_select ::=
-	[ { . member_identifier bit_select } . member_identifier ] bit_select
+	[ { "." member_identifier bit_select } "." member_identifier ] bit_select
 
 primary ::=
 	primary_literal
@@ -2610,7 +2609,7 @@ range_expression ::=
 	expression | part_select_range
 
 select ::=
-	[ { . member_identifier bit_select } . member_identifier ] bit_select [ [ part_select_range ] ]
+	[ { "." member_identifier bit_select } "." member_identifier ] bit_select [ [ part_select_range ] ]
 
 time_literal ::=
 	unsigned_number time_unit
@@ -2625,10 +2624,10 @@ net_lvalue ::=
 | [ assignment_pattern_expression_type ] assignment_pattern_net_lvalue
 
 nonrange_variable_lvalue ::=
-	[ implicit_class_handle . | package_scope ] hierarchical_variable_identifier nonrange_select
+	[ implicit_class_handle "." | package_scope ] hierarchical_variable_identifier nonrange_select
 
 variable_lvalue ::=
-	[ implicit_class_handle . | package_scope ] hierarchical_variable_identifier select
+	[ implicit_class_handle "." | package_scope ] hierarchical_variable_identifier select
 | { variable_lvalue { "," variable_lvalue } }
 | [ assignment_pattern_expression_type ] assignment_pattern_variable_lvalue
 | streaming_concatenation
@@ -2637,7 +2636,7 @@ binary_module_path_operator ::=
 	== | != | && | || | & | | | ^ | ^~ | ~^
 
 binary_operator ::=
-	+ | - | * | / | % | == | != | === | !== | ==? | !=? | && | || | **
+	+ | - | "*" | / | % | == | != | === | !== | ==? | !=? | && | || | "*""*"
 | < | <= | > | >= | & | | | ^ | ^~ | ~^ | >> | << | >>> | <<< | -> | <->
 
 inc_or_dec_operator ::=
@@ -2677,7 +2676,7 @@ exp ::=
 	e | E
 
 fixed_point_number ::=
-	unsigned_number . unsigned_number
+	unsigned_number "." unsigned_number
 
 hex_base ::=
 	'[s|S]h|'[s|S]H
@@ -2715,7 +2714,7 @@ octal_value ::=
 
 real_number ::=
 	fixed_point_number
-| unsigned_number [ . unsigned_number ] exp [ sign ] unsigned_number
+| unsigned_number [ "." unsigned_number ] exp [ sign ] unsigned_number
 
 sign ::=
 	+ | -
@@ -2760,13 +2759,13 @@ attr_name ::=
 	identifier
 
 attr_spec ::=
-	attr_name [ = constant_expression ]
+	attr_name [ "=" constant_expression ]
 
 attribute_instance ::=
-	"("* attr_spec { "," attr_spec } *")"
+	"(""*" attr_spec { "," attr_spec } "*"")"
 
 block_comment ::=
-	/* comment_text */
+	/"*" comment_text "*"/
 
 comment ::=
 	one_line_comment
@@ -2860,7 +2859,7 @@ hierarchical_event_identifier ::=
 	hierarchical_identifier
 
 hierarchical_identifier ::=
-	[ $root . ] { identifier constant_bit_select . } identifier
+	[ $root "." ] { identifier constant_bit_select "." } identifier
 
 hierarchical_net_identifier ::=
 	hierarchical_identifier
@@ -2960,7 +2959,7 @@ ps_identifier ::=
 	[ package_scope ] identifier
 
 ps_or_hierarchical_array_identifier ::=
-	[ implicit_class_handle . | class_scope | package_scope ] hierarchical_array_identifier
+	[ implicit_class_handle "." | class_scope | package_scope ] hierarchical_array_identifier
 
 ps_or_hierarchical_net_identifier ::=
 	[ package_scope ] net_identifier
@@ -2980,7 +2979,7 @@ ps_or_hierarchical_tf_identifier ::=
 
 ps_parameter_identifier ::=
 	[ package_scope | class_scope ] parameter_identifier
-| { generate_block_identifier [ [ constant_expression ] ] . } parameter_identifier
+| { generate_block_identifier [ [ constant_expression ] ] "." } parameter_identifier
 
 ps_type_identifier ::=
 	[ local "::" | package_scope | class_scope ] type_identifier
