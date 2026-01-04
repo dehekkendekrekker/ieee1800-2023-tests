@@ -2315,11 +2315,11 @@ scalar_constant ::=
 
 scalar_timing_check_condition ::=
 	expression
-| ~ expression
-| expression == scalar_constant
-| expression === scalar_constant
-| expression != scalar_constant
-| expression !== scalar_constant
+| "~" expression
+| expression "==" scalar_constant
+| expression "===" scalar_constant
+| expression "!=" scalar_constant
+| expression "!==" scalar_constant
 
 specify_terminal_descriptor ::=
 	specify_input_terminal_descriptor
@@ -2330,7 +2330,7 @@ timing_check_condition ::=
 | "(" scalar_timing_check_condition ")"
 
 timing_check_event ::=
-	[ timing_check_event_control ] specify_terminal_descriptor [ "&&&" timing_check_condition ]
+	[ timing_check_event_control ] specify_terminal_descriptor [ "&&&"i timing_check_condition ]
 
 timing_check_event_control ::=
 	posedge
@@ -2347,8 +2347,8 @@ zero_or_one ::=
 array_range_expression ::=
 	expression
 | expression ":" expression
-| expression +: expression
-| expression -: expression
+| expression "+:" expression
+| expression "-:" expression
 
 concatenation ::=
 	{ expression { "," expression } }
@@ -2360,7 +2360,7 @@ constant_multiple_concatenation ::=
 	{ constant_expression constant_concatenation }
 
 empty_unpacked_array_concatenation ::=
-	{ }
+	"{" "}"
 
 module_path_concatenation ::=
 	{ module_path_expression { "," module_path_expression } }
@@ -2381,7 +2381,7 @@ stream_expression ::=
 	expression [ with [ array_range_expression ] ]
 
 stream_operator ::=
-	>> | <<
+	">>" | "<<"
 
 streaming_concatenation ::=
 	{ stream_operator [ slice_size ] stream_concatenation }
@@ -2443,17 +2443,17 @@ variable_identifier_list ::=
 	variable_identifier { "," variable_identifier }
 
 conditional_expression ::=
-	cond_predicate ? { attribute_instance } expression ":" expression
+	cond_predicate "?" { attribute_instance } expression ":" expression
 
 constant_expression ::=
 	constant_primary
 | unary_operator { attribute_instance } constant_primary
 | constant_expression binary_operator { attribute_instance } constant_expression
-| constant_expression ? { attribute_instance } constant_expression ":" constant_expression
+| constant_expression "?" { attribute_instance } constant_expression ":" constant_expression
 
 constant_indexed_range ::=
-	constant_expression +: constant_expression
-| constant_expression -: constant_expression
+	constant_expression "+:" constant_expression
+| constant_expression "-:" constant_expression
 
 constant_mintypmax_expression ::=
 	constant_expression
@@ -2462,7 +2462,7 @@ constant_mintypmax_expression ::=
 constant_param_expression ::=
 	constant_mintypmax_expression
 | data_type
-| $
+| "$"
 
 constant_part_select_range ::=
 	constant_range
@@ -2493,8 +2493,8 @@ inc_or_dec_expression ::=
 | variable_lvalue { attribute_instance } inc_or_dec_operator
 
 indexed_range ::=
-	expression +: constant_expression
-| expression -: constant_expression
+	expression "+:" constant_expression
+| expression "-:" constant_expression
 
 inside_expression ::=
 	expression inside { range_list }
@@ -2504,7 +2504,7 @@ mintypmax_expression ::=
 | expression ":" expression ":" expression
 
 module_path_conditional_expression ::=
-	module_path_expression ? { attribute_instance }
+	module_path_expression "?" { attribute_instance }
 module_path_expression ":" module_path_expression
 
 module_path_expression ::=
@@ -2520,7 +2520,7 @@ module_path_mintypmax_expression ::=
 param_expression ::=
 	mintypmax_expression
 | data_type
-| $
+| "$"
 
 part_select_range ::=
 	constant_range
@@ -2533,7 +2533,7 @@ bit_select ::=
 	{ [ expression ] }
 
 cast ::=
-	casting_type ' "(" expression ")"
+	casting_type "'" "(" expression ")"
 
 class_qualifier ::=
 	[ local "::" ] [ implicit_class_handle "." | class_scope ]
@@ -2542,7 +2542,7 @@ constant_bit_select ::=
 	{ [ constant_expression ] }
 
 constant_cast ::=
-	casting_type ' "(" constant_expression ")"
+	casting_type "'" "(" constant_expression ")"
 
 constant_let_expression ::=
 	let_expression
@@ -2633,20 +2633,20 @@ variable_lvalue ::=
 | streaming_concatenation
 
 binary_module_path_operator ::=
-	== | != | && | || | & | | | ^ | ^~ | ~^
+	"==" | "!=" | "&&" | "||" | "&" | "|" | "^" | "^~" | "~^"
 
 binary_operator ::=
-	+ | - | "*" | / | % | == | != | === | !== | ==? | !=? | && | || | "*""*"
-| < | <= | > | >= | & | | | ^ | ^~ | ~^ | >> | << | >>> | <<< | -> | <->
+	"+" | "-" | "*" | "/" | "%" | "==" | "!=" | "===" | "!==" | "==?" | "!=?" | "&&" | "||" | "**"
+| "<" | "<=" | ">" | ">=" | "&" | "|" | "^" | "^~" | "~^" | ">>" | "<<" | ">>>" | "<<<" | "->" | "<->"
 
 inc_or_dec_operator ::=
-	++ | --
+	"++" | "--"
 
 unary_module_path_operator ::=
-	! | ~ | & | ~& | | | ~| | ^ | ~^ | ^~
+	"!" | "~" | "&" | "~&" | "|" | "~|" | "^" | "~^" | "^~"
 
 unary_operator ::=
-	+ | - | ! | ~ | & | ~& | | | ~| | ^ | ~^ | ^~
+	"+" | "-" | "!" | "~" | "&" | "~&" | "|" | "~|" | "^" | "~^" | "^~"
 
 binary_base ::=
 	' [s|S]b|'[s|S]B
@@ -2717,13 +2717,13 @@ real_number ::=
 | unsigned_number [ "." unsigned_number ] exp [ sign ] unsigned_number
 
 sign ::=
-	+ | -
+	"+" | "-"
 
 size ::=
 	unsigned_number
 
 unbased_unsized_literal ::=
-	'0 | '1 | 'z_or_x
+	"'0" | "'1" | "'"z_or_x
 
 unsigned_number ::=
 	decimal_digit { _|decimal_digit }
@@ -2732,18 +2732,18 @@ x_digit ::=
 	x | X
 
 z_digit ::=
-	z | Z | ?
+	"z" | "Z" | "?"
 
 quoted_string ::=
-	" { quoted_string_item | string_escape_seq } "
+	'"' { quoted_string_item | string_escape_seq } '"'
 
 quoted_string_item ::=
-	any_ASCII_character except \ or newline or "
+	ASCII_FOR_QSI
 
 string_escape_seq ::=
-	\any_ASCII_character
-| \one_to_three_digit_octal_number
-| \x one_to_two_digit_hex_number
+	"\"ASCII
+| "\"one_to_three_digit_octal_number
+| "\x" one_to_two_digit_hex_number
 
 string_literal ::=
 	quoted_string
@@ -2753,7 +2753,7 @@ triple_quoted_string ::=
 	""" { triple_quoted_string_item | string_escape_seq } """
 
 triple_quoted_string_item ::=
-	any_ASCII_character except \
+	ASCII_FOR_TQSI
 
 attr_name ::=
 	identifier
@@ -2762,10 +2762,10 @@ attr_spec ::=
 	attr_name [ "=" constant_expression ]
 
 attribute_instance ::=
-	"(""*" attr_spec { "," attr_spec } "*"")"
+	"(*" attr_spec { "," attr_spec } "*)"
 
 block_comment ::=
-	/"*" comment_text "*"/
+	"/*" comment_text "*/"
 
 comment ::=
 	one_line_comment
@@ -2775,7 +2775,7 @@ comment_text ::=
 	{ Any_ASCII_character }
 
 one_line_comment ::=
-	// comment_text \n
+	"//" comment_text "\n"
 
 array_identifier ::=
 	identifier
@@ -2787,7 +2787,7 @@ block_identifier ::=
 	identifier
 
 c_identifier ::=
-	[ a-zA-Z_ ] { [ a-zA-Z0-9_ ] }
+	[ "a-zA-Z_" ] { [ "a-zA-Z0-9_" ] }
 
 cell_identifier ::=
 	identifier
@@ -2832,7 +2832,7 @@ enum_identifier ::=
 	identifier
 
 escaped_identifier ::=
-	\ { any_printable_ASCII_character_except_white_space } white_space
+	"\" { "[!-~]+" } white_space
 
 formal_identifier ::=
 	identifier
@@ -2931,8 +2931,8 @@ package_identifier ::=
 	identifier
 
 package_scope ::=
-	package_identifier ::
-| $unit ::
+	package_identifier "::"
+| "$unit" "::"
 
 parameter_identifier ::=
 	identifier
@@ -2994,13 +2994,13 @@ signal_identifier ::=
 	identifier
 
 simple_identifier ::=
-	[ a-zA-Z_ ] { [ a-zA-Z0-9_$ ] }
+	[ "a-zA-Z_" ] { [ "a-zA-Z0-9_$" ] }
 
 specparam_identifier ::=
 	identifier
 
 system_tf_identifier ::=
-	$ [ a-zA-Z0-9_$ ] { [ a-zA-Z0-9_$ ] }
+	"$" [ "a-zA-Z0-9_$" ] { [ "a-zA-Z0-9_$" ] }
 
 task_identifier ::=
 	identifier
@@ -3025,4 +3025,6 @@ variable_identifier ::=
 
 white_space ::=
 	space | tab | newline | formfeed | eof
+
+
 

@@ -1,0 +1,85 @@
+syntax = { rule+ }
+
+rule = { 
+	opt_whitespace 
+	~ rule_name 
+	~ opt_whitespace 
+	~ "::=" 
+	~ opt_new_line
+	~ opt_whitespace 
+	~ expression 
+	~ line_end
+}
+
+opt_new_line = {
+	NEWLINE? ~ opt_whitespace
+}
+
+expression = {
+	list 
+	~ opt_whitespace 
+	~ opt_new_line
+	~ "|" 
+	~ opt_whitespace 
+	~ expression 
+	| list
+}
+
+
+repetition = {
+	"{" ~ opt_whitespace ~ list ~ opt_whitespace ~ "}"
+}
+
+optional = {
+	"[" ~ opt_whitespace ~ list ~ opt_whitespace ~ "]"
+}
+
+
+list = { term ~ opt_whitespace ~ list 
+		| opt_whitespace ~ "|" ~ opt_whitespace ~ list
+		| term 
+} 
+
+term = { opt_new_line ~ (literal | rule_name | repetition | optional)} 
+
+
+
+literal = {
+	"\"" ~ text1 ~ "\"" | 
+	"'" ~ text2 ~ "'"
+}
+
+text1 = { (character1 ~ text1)* }
+text2 = { (character2 ~ text2)*}
+
+
+letter = { ASCII_ALPHA }
+digit = { ASCII_DIGIT }
+symbol = {
+    "|" | " "  | "!" | "#" | "$" | "%" | "&" | "(" | ")" | "*" | "+" | "," |
+	"-" | "."  | "/" | ":" | ";" | ">" | "=" | "<" | "?" | "@" | "[" | "\\" |
+	"]" | "^" | "_" | "`" | "{" | "}" | "~" 
+}
+character = { letter | digit | symbol }
+
+character1 = { character | "'" }
+character2 = { character | "\"" }
+
+
+eol = { NEWLINE }
+
+
+line_end = { opt_whitespace ~ eol ~ line_end | opt_whitespace ~ eol }
+
+
+whitespace = { " " | "\t"  }
+
+opt_whitespace = { whitespace ~ opt_whitespace | "" }
+
+
+// Deal with $. Can only be the first char
+rule_char = { ASCII_ALPHA | ASCII_DIGIT | "_" | "$"}
+
+rule_name = { rule_char ~ rule_name | rule_char }
+
+
