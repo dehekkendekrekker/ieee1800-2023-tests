@@ -1,4 +1,6 @@
-use crate::ast::{Definition, Production, Syntax};
+use std::collections::HashMap;
+
+use crate::ast::{Definition, AST};
 use anyhow::Result;
 
 
@@ -17,29 +19,31 @@ pub struct BNFParser;
 
 
 
-pub fn parse_bnf(input: String) -> Result<Syntax> {
-    let mut pairs = BNFParser::parse(Rule::syntax, input.as_str())?;
-    let syntax_pair = pairs.next().unwrap();
-
-
-    let rule_pairs = syntax_pair.into_inner();
-    println!("Rules: {}", rule_pairs.len());
+pub fn parse_bnf(input: String) -> Result<AST> {
+    let mut parsed_bnf = BNFParser::parse(Rule::syntax, input.as_str())?;
     
-    let mut productions = Vec::new();
-    for rule_pair in rule_pairs{
-        if rule_pair.as_rule() == Rule::rule {
-            productions.push(parse_rule(rule_pair)?);
-        }
+    let syntax = parsed_bnf.next().unwrap();
+    let rules = syntax.into_inner();
+
+    let mut ast = AST::new();
+    
+    for rule in rules {
+        let (name, definition) = parse_rule(rule)?;
+
+        ast.add_rule(name, definition);
+
     }
 
-    Ok(Syntax { rules: productions })
+    Ok(ast)
+
 }
 
 
-pub fn parse_rule(pair: Pair<Rule>) -> Result<Production> {
+pub fn parse_rule(pair: Pair<Rule>) -> Result<(String, Definition)> {
     let mut name = String::new();
 
     for inner in pair.into_inner() {
+//        println!("inner: {:#?}", inner);
         match inner.as_rule() {
             Rule::rule_name => {
                 name = inner.as_str().to_string();
@@ -53,6 +57,5 @@ pub fn parse_rule(pair: Pair<Rule>) -> Result<Production> {
         expression: format!("LALA")
     };
 
-    Ok(Production { name: name , 
-        definition: def })
+    Ok((name, def))
 }

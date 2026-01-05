@@ -26,12 +26,12 @@ fn main() -> Result<(), anyhow::Error>{
         .map_err(|e| anyhow!("Failed to read bnf file '{:#?}: {}", path, e))
         .unwrap();
 
-    let syntax = parse_bnf(input)
+    let ast = parse_bnf(input)
         .map_err(|e| anyhow!("Failed to parse BNF: {}", e))?;
 
 
-    for production in syntax.rules {
-        println!("{} : {:#?}", production.name, production.definition);
+    for (name, definition) in ast.rules {
+        println!("{} : {:#?}", name, definition);
     }
 
 
