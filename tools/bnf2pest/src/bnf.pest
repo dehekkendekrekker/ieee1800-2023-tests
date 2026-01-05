@@ -1,4 +1,4 @@
-syntax = { rule+ ~ EOI }
+syntax = { rule+ | EOI }
 
 rule = { 
 	opt_whitespace 

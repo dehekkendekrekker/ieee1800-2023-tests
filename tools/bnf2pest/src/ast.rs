@@ -18,7 +18,15 @@ impl Expression {
         self.sequences.push(sequence);
     }
 
-    
+    pub fn find_rule_names(&self) -> Vec<&String> {
+        let mut names = Vec::new();
+        for seq in &self.sequences {
+            for item in &seq.items {
+                item.collect_rule_names(&mut names);
+            }
+        }
+        names
+    }
 }
 
 #[derive(Debug)]
@@ -48,6 +56,17 @@ pub enum Item {
 }
 
 
+impl Item {
+    fn collect_rule_names<'a>(&'a self, names: &mut Vec<&'a String>) {
+        match self {
+            Item::RuleName(name) => names.push(name),
+            Item::Optional(expr) | Item::Repetition(expr) => {
+                names.extend(expr.find_rule_names());
+            }
+            Item::Literal(_) => {}
+        }
+    }
+}
 
 
 #[derive(Debug)]
@@ -62,6 +81,19 @@ impl AST {
 
     pub fn add_rule(&mut self, name : String, expression : Expression) {
         self.rules.insert(name, expression);
+    }
+
+
+    pub fn get_referenced_rule_names(&self) -> Vec<String> {
+        let mut names : Vec<String> = Vec::new();
+        self.rules.values().for_each(
+            |e|  e.find_rule_names().iter().for_each(|f| names.push(f.to_string()))
+        );
+
+        names.sort();
+        names.dedup();
+        names
+
     }
     
 }

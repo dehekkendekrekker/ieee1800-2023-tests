@@ -1,4 +1,4 @@
-use std::{fs, path::PathBuf};
+use std::{collections::HashSet, fs, path::PathBuf};
 use anyhow::anyhow;
 
 use clap::Parser;
@@ -30,7 +30,33 @@ fn main() -> Result<(), anyhow::Error>{
         .map_err(|e| anyhow!("Failed to parse BNF: {}", e))?;
 
 
-    println!("{:#?}", ast);
+    let mut correct_rule_names : Vec<String> = ast.rules.keys().cloned().collect();
+    correct_rule_names.sort();
+    let mut referenced_rules_names = ast.get_referenced_rule_names();
+    referenced_rules_names.sort();
+
+
+    let set_a: HashSet<_> = correct_rule_names.iter().collect();
+    let set_b: HashSet<_> = referenced_rules_names.iter().collect();
+    let mut diff: Vec<_> = set_a.symmetric_difference(&set_b).collect();
+
+    diff.sort();
+
+    println!("Correct: ({}), {:#?}", correct_rule_names.len(), correct_rule_names);
+    println!("Referenced: ({}) {:#?}", referenced_rules_names.len(), referenced_rules_names);
+    println!("Diff: ({}) {:#?}", diff.len(), diff);
+
+
+    for name in diff {
+        println!("{}", name);
+    }
+
+
+//    println!("AST: {:#?}", ast);
+
+
+
+    
 
 
 

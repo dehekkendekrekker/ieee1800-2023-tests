@@ -1,3 +1,5 @@
+use std::process::exit;
+
 use crate::ast::{AST, Expression, Item, Sequence};
 use anyhow::{Result, anyhow};
 
@@ -26,8 +28,8 @@ pub fn parse_bnf(input: String) -> Result<AST> {
     let mut ast = AST::new();
     
     for rule in rules {
-        let (name, definition) = parse_rule(rule)?;
 
+        let (name, definition) = parse_rule(rule)?;
         ast.add_rule(name, definition);
 
     }
@@ -94,6 +96,7 @@ pub fn parse_item(rule_pair: Pair<Rule>) -> Result<Item> {
     for inner in rule_pair.into_inner() {
         match inner.as_rule() {
             Rule::literal => {
+
 
                 let literal = parse_literal(inner)?;
 
