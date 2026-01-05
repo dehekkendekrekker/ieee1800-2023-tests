@@ -1,46 +1,47 @@
-syntax = { rule+ }
+syntax = { rule+ ~ EOI }
 
 rule = { 
 	opt_whitespace 
-	~ rule_name 
-	~ opt_whitespace 
-	~ "::=" 
-	~ opt_new_line
-	~ opt_whitespace 
+	~ rule_name
+	~ opt_whitespace
+	~ "::="
+	~ opt_whitespace
 	~ expression 
 	~ line_end
 }
 
-opt_new_line = {
-	NEWLINE? ~ opt_whitespace
+expression = {
+	sequence ~ (
+		or
+		~ sequence
+	)* 
+
 }
 
-expression = {
-	list 
-	~ opt_whitespace 
-	~ opt_new_line
-	~ "|" 
-	~ opt_whitespace 
-	~ expression 
-	| list
+or = { "|" } 
+
+sequence = { item+ }
+item = { 
+	opt_whitespace ~ (optional | repetition | literal | rule_name) ~ opt_whitespace
+
 }
 
 
 repetition = {
-	"{" ~ opt_whitespace ~ list ~ opt_whitespace ~ "}"
+	"{" ~ opt_whitespace ~ expression ~ opt_whitespace ~ "}"
 }
 
 optional = {
-	"[" ~ opt_whitespace ~ list ~ opt_whitespace ~ "]"
+	"[" ~ opt_whitespace ~ expression ~ opt_whitespace ~ "]"
 }
 
 
-list = { term ~ opt_whitespace ~ list 
-		| opt_whitespace ~ "|" ~ opt_whitespace ~ list
-		| term 
+list = { 
+	term ~ opt_whitespace ~ list | 
+	term 
 } 
 
-term = { opt_new_line ~ (literal | rule_name | repetition | optional)} 
+term = { (literal | rule_name )} 
 
 
 
@@ -72,9 +73,9 @@ eol = { NEWLINE }
 line_end = { opt_whitespace ~ eol ~ line_end | opt_whitespace ~ eol }
 
 
-whitespace = { " " | "\t"  }
+whitespace = { " " }
+opt_whitespace = { whitespace*}
 
-opt_whitespace = { whitespace ~ opt_whitespace | "" }
 
 
 // Deal with $. Can only be the first char

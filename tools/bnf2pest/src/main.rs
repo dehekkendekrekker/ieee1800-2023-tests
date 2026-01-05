@@ -30,9 +30,9 @@ fn main() -> Result<(), anyhow::Error>{
         .map_err(|e| anyhow!("Failed to parse BNF: {}", e))?;
 
 
-    for (name, definition) in ast.rules {
-        println!("{} : {:#?}", name, definition);
-    }
+    println!("{:#?}", ast);
+
+
 
 
     Ok(())

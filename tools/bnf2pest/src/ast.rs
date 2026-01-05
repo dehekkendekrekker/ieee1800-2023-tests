@@ -1,14 +1,58 @@
 use std::collections::HashMap;
 
-#[derive(Debug,Clone)]
-pub struct Definition {
-    pub expression : String
+
+
+#[derive(Debug)]
+pub struct Expression {
+    pub sequences: Vec<Sequence>,
+}
+
+impl Expression {
+    pub fn new() -> Self {
+        Expression{
+            sequences : Vec::new()
+        }
+    }
+
+    pub fn add_sequence(&mut self, sequence : Sequence) {
+        self.sequences.push(sequence);
+    }
+
+    
+}
+
+#[derive(Debug)]
+pub struct Sequence {
+    pub items: Vec<Item>
+}
+
+impl Sequence {
+    pub fn new() -> Self {
+        Sequence { items: Vec::new() }
+    }
+
+    pub fn add_item(&mut self, item : Item) {
+        self.items.push(item);
+    }
 }
 
 
-#[derive(Debug, Clone)]
+
+
+#[derive(Debug)]
+pub enum Item {
+    Literal(String),
+    RuleName(String),
+    Optional(Box<Expression>),
+    Repetition(Box<Expression>)
+}
+
+
+
+
+#[derive(Debug)]
 pub struct AST {
-    pub rules : HashMap<String, Definition>
+    pub rules : HashMap<String, Expression>
 }
 
 impl AST {
@@ -16,8 +60,8 @@ impl AST {
         AST { rules: HashMap::new() }
     }
 
-    pub fn add_rule(&mut self, name : String, definition : Definition) {
-        self.rules.insert(name, definition);
+    pub fn add_rule(&mut self, name : String, expression : Expression) {
+        self.rules.insert(name, expression);
     }
     
 }
