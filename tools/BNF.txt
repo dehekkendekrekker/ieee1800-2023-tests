@@ -1341,7 +1341,7 @@ bin_identifier ::= identifier
 
 block_identifier ::= identifier
 
-c_identifier ::= [ "/a-zA-Z_/" ] { [ "/a-zA-Z0-9_/" ] }
+c_identifier ::= [ '/a-zA-Z_/' ] { [ '/a-zA-Z0-9_/' ] }
 
 cell_identifier ::= identifier
 

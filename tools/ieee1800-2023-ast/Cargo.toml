@@ -1,7 +1,11 @@
 [package]
-name = "bnf2pest"
+name = "ieee1800-2023-ast"
 version = "0.1.0"
 edition = "2024"
+
+[[bin]]
+name = "bnf2ast2json"
+path = "./src/bin/bnf2ast2json.rs"
 
 [dependencies]
 anyhow = "1.0.100"

@@ -22,7 +22,7 @@ or = { "|" }
 
 sequence = { item+ }
 item = { 
-	opt_whitespace ~ (optional | repetition | regex | literal | rule_name) ~ opt_whitespace
+	opt_whitespace ~ (optional | repetition | literal | rule_name) ~ opt_whitespace
 
 }
 
@@ -34,12 +34,6 @@ repetition = {
 optional = {
 	"[" ~ opt_whitespace ~ expression ~ opt_whitespace ~ "]"
 }
-
-regex = {
-	"\"/" ~ character ~ "/\"" |
-	"'/" ~ character ~ "'/"
-}
-
 
 literal = {
 	"\"" ~ text1 ~ "\"" | 

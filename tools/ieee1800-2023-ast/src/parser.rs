@@ -96,11 +96,7 @@ pub fn parse_item(rule_pair: Pair<Rule>) -> Result<Item> {
     for inner in rule_pair.into_inner() {
         match inner.as_rule() {
             Rule::literal => {
-
-
                 let literal = parse_literal(inner)?;
-
-
                 return Ok(Item::Literal(literal));
             },
 

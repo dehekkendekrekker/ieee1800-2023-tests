@@ -2,8 +2,9 @@ use std::{collections::HashSet, fs, path::PathBuf};
 use anyhow::anyhow;
 
 use clap::Parser;
+use ieee1800_2023_ast::parser::parse_bnf;
 
-use bnf2pest::parser::parse_bnf;
+
 
 #[derive(Parser, Debug)]
 #[command(author = "Daniel Attevelt")]
@@ -45,11 +46,6 @@ fn main() -> Result<(), anyhow::Error>{
     println!("Correct: ({}), {:#?}", correct_rule_names.len(), correct_rule_names);
     println!("Referenced: ({}) {:#?}", referenced_rules_names.len(), referenced_rules_names);
     println!("Diff: ({}) {:#?}", diff.len(), diff);
-
-
-    for name in diff {
-        println!("{}", name);
-    }
 
 
     println!("AST: {:#?}", ast);

@@ -63,7 +63,7 @@ impl Item {
             Item::Optional(expr) | Item::Repetition(expr) => {
                 names.extend(expr.find_rule_names());
             }
-            Item::Literal(_) => {}
+            _ => {}
         }
     }
 }
