@@ -52,7 +52,7 @@ fn main() -> Result<(), anyhow::Error>{
     }
 
 
-//    println!("AST: {:#?}", ast);
+    println!("AST: {:#?}", ast);
 
 
 
