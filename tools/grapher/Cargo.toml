@@ -9,4 +9,7 @@ iso_14977 = "0.1.0"
 nom = "8.0.0"
 petgraph = "0.8"
 quick-xml = "0.38.4"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.148"
 thiserror = "2.0.17"
+ieee1800-2023-ast = { path = "../ieee1800-2023-ast"}

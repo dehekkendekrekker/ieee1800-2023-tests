@@ -1,8 +1,9 @@
 use std::collections::HashMap;
+use serde::{Serialize, Deserialize};
 
 
 
-#[derive(Debug)]
+#[derive(Debug,Serialize, Deserialize)]
 pub struct Expression {
     pub sequences: Vec<Sequence>,
 }
@@ -29,7 +30,7 @@ impl Expression {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug,Serialize, Deserialize)]
 pub struct Sequence {
     pub items: Vec<Item>
 }
@@ -47,8 +48,9 @@ impl Sequence {
 
 
 
-#[derive(Debug)]
+#[derive(Debug,Serialize, Deserialize)]
 pub enum Item {
+    RegEx(String),
     Literal(String),
     RuleName(String),
     Optional(Box<Expression>),
@@ -69,7 +71,7 @@ impl Item {
 }
 
 
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct AST {
     pub rules : HashMap<String, Expression>
 }
@@ -81,6 +83,10 @@ impl AST {
 
     pub fn add_rule(&mut self, name : String, expression : Expression) {
         self.rules.insert(name, expression);
+    }
+
+    pub fn get_rule(&self, name : &String) -> Option<&Expression> {
+        self.rules.get(name)
     }
 
 

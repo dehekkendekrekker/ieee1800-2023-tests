@@ -1,34 +1,45 @@
 use std::{fs, path::PathBuf, process};
 
+use grapher::{grapher::Grapher, graphml::to_graphml};
+use ieee1800_2023_ast::ast::AST;
 use petgraph::graph::DiGraph;
 use clap::Parser;
 
-
-mod graphml;
-mod parser;
 
 #[derive(Parser, Debug)]
 #[command(author = "DHK")]
 #[command(name = "grapher")]
 #[command(version = "1.0")]
-#[command(about = "Converts IEEE1800-2023 BNF to GraphML")]
+#[command(about = "Converts IEEE1800-2023 AST to GraphML")]
 #[command(author, long_about = None)]
 struct Cli {
-    #[arg(long, value_name = "FILE")]
+    #[arg(long, value_name = "FILE_NAME")]
     input: PathBuf,
+
+    #[arg(long, value_name = "RULE_NAME")]
+    entry: String,
 }
 
 fn main() {
     let cli = Cli::parse();
 
-    let text = match fs::read_to_string(&cli.input) {
-        Ok(t) => t,
-        Err(e) => {
-            eprintln!("Error reading file '{}': {}", cli.input.display(), e);
-            process::exit(1);
-        }
-    };
 
+    let mut ast : AST = serde_json::from_reader(
+        fs::File::open(cli.input).expect("Error opening input file")
+    ).expect("Error deserialzing json");
+
+
+    let grapher = Grapher::new(ast);
+
+    let graph = grapher.create_graph(cli.entry);
+
+
+
+
+
+
+    
+/*
 
     let mut graph = DiGraph::<&str, i32>::new();
 
@@ -40,6 +51,6 @@ fn main() {
     // Add edges (node indices, edge weight)
     graph.add_edge(a, b, 10);
     graph.add_edge(b, c, 10);
-
-    println!("{}", graphml::to_graphml(&graph));
+*/
+    println!("{}", to_graphml(&graph));
 }

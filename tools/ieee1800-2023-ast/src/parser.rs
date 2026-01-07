@@ -97,7 +97,11 @@ pub fn parse_item(rule_pair: Pair<Rule>) -> Result<Item> {
         match inner.as_rule() {
             Rule::literal => {
                 let literal = parse_literal(inner)?;
-                return Ok(Item::Literal(literal));
+                if literal.starts_with("/") && literal.ends_with("/") {
+                    return  Ok(Item::RegEx(literal));
+                } else {
+                    return Ok(Item::Literal(literal));
+                }
             },
 
             Rule::rule_name => {

@@ -30,7 +30,7 @@ fn main() -> Result<(), anyhow::Error>{
     let ast = parse_bnf(input)
         .map_err(|e| anyhow!("Failed to parse BNF: {}", e))?;
 
-
+/*
     let mut correct_rule_names : Vec<String> = ast.rules.keys().cloned().collect();
     correct_rule_names.sort();
     let mut referenced_rules_names = ast.get_referenced_rule_names();
@@ -49,7 +49,9 @@ fn main() -> Result<(), anyhow::Error>{
 
 
     println!("AST: {:#?}", ast);
-
+*/
+    let json = serde_json::to_string(&ast).unwrap();
+    println!("{}", json);
 
 
     
