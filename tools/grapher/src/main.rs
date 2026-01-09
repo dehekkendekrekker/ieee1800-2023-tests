@@ -1,8 +1,7 @@
-use std::{fs, path::PathBuf, process};
+use std::{fs, path::PathBuf};
 
 use grapher::{grapher::Grapher, graphml::to_graphml};
 use ieee1800_2023_ast::ast::AST;
-use petgraph::graph::DiGraph;
 use clap::Parser;
 
 
@@ -24,7 +23,7 @@ fn main() {
     let cli = Cli::parse();
 
 
-    let mut ast : AST = serde_json::from_reader(
+    let ast : AST = serde_json::from_reader(
         fs::File::open(cli.input).expect("Error opening input file")
     ).expect("Error deserialzing json");
 
