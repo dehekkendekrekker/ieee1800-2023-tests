@@ -1341,7 +1341,7 @@ bin_identifier ::= identifier
 
 block_identifier ::= identifier
 
-c_identifier ::= [ '/a-zA-Z_/' ] { [ '/a-zA-Z0-9_/' ] }
+c_identifier ::= "/[a-zA-Z_][a-zA-Z0-9_]+/"
 
 cell_identifier ::= identifier
 
@@ -1371,7 +1371,7 @@ dynamic_array_variable_identifier ::= variable_identifier
 
 enum_identifier ::= identifier
 
-escaped_identifier ::= "\" { "[!-~]+" } white_space
+escaped_identifier ::= "/\\[!-~]+[ \t\n\f]/"
 
 formal_identifier ::= identifier
 
@@ -1475,11 +1475,11 @@ sequence_identifier ::= identifier
 
 signal_identifier ::= identifier
 
-simple_identifier ::= [ "a-zA-Z_" ] { [ "a-zA-Z0-9_$" ] }
+simple_identifier ::= "/[a-zA-Z_]/[a-zA-Z0-9_$]+/"
 
 specparam_identifier ::= identifier
 
-system_tf_identifier ::= "$" [ "a-zA-Z0-9_$" ] { [ "a-zA-Z0-9_$" ] }
+system_tf_identifier ::= "/\$[a-zA-Z0-9_$]+/"
 
 task_identifier ::= identifier
 
@@ -1495,4 +1495,4 @@ udp_identifier ::= identifier
 
 variable_identifier ::= identifier
 
-white_space ::= "space" | "tab" | "newline" | "formfeed" | "eof"
+white_space ::= "/[ \t\n\f]/"
