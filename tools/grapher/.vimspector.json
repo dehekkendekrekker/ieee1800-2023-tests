@@ -1,0 +1,47 @@
+{
+  "configurations": {
+    "launch-gdb": {
+      "adapter": "vscode-cpptools",
+      "configuration": {
+        "request": "launch",
+        "program": "${workspaceRoot}/target/debug/grapher",
+        "args": ["--input", "/tmp/ast.json", "--entry", "hierarchical_identifier"],
+        "stopAtEntry": true,
+        "cwd": "${workspaceRoot}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "setupCommands": [
+          {
+            "description": "Force hex output",
+            "text": "set output-radix 16",
+            "ignoreFailures": true
+          }
+        ]
+      }
+    },
+    "remote-bbb-debug": {
+      "adapter": "vscode-cpptools",
+      "configuration": {
+        "request": "launch",
+        "program": "${workspaceRoot}/bin/bbb/kkcc",
+        "miDebuggerServerAddress": "192.168.7.2:1234",
+        "miDebuggerPath": "arm-unknown-linux-gnueabihf-gdb",
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}",
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Force hex output",
+            "text": "set output-radix 16",
+            "ignoreFailures": true
+          }
+        ]
+      }
+    }
+  }
+}
+
+
