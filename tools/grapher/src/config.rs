@@ -5,7 +5,8 @@ use anyhow::Result;
 
 #[derive(Debug, Deserialize)]
 pub struct Config {
-    entry_point: String,
+    /// The name of the rule from which the graph is built.
+    pub entry_point: String,
 }
 
 

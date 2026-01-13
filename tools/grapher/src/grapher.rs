@@ -28,13 +28,14 @@ impl Grapher {
     }
 
 
-    pub fn create_graph(&self, rule_name : String) -> Graph<String, u32> {
+    pub fn create_graph(&self) -> Graph<String, u32> {
+        let entry_point = self.config_.entry_point.clone();
         let mut graph = DiGraph::<String, u32>::new();
 
         let node = graph.add_node("START".to_string());
 
-        self.recursion_checker_.borrow_mut().check(rule_name.clone());
-        self.add_rule_name_nodes(&mut graph, vec![node], rule_name);
+        self.recursion_checker_.borrow_mut().check(entry_point.clone());
+        self.add_rule_name_nodes(&mut graph, vec![node], entry_point);
         println!("Done creating graph");
 
         graph

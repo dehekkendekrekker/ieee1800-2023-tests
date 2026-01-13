@@ -1,5 +1,5 @@
-use std::{fs, path::PathBuf};
-use anyhow::Result
+use std::{fs, path::PathBuf, process::exit};
+use anyhow::Result;
 
 use grapher::{config::Config, grapher::Grapher, graphml::to_graphml};
 use ieee1800_2023_ast::ast::AST;
@@ -29,46 +29,22 @@ fn main() -> Result<()> {
     let cli = Cli::parse();
 
 
-    // Derive configuration from config file
-    let config = Config::load(cli.config)?;
-
-
     // Load ast
     let ast : AST = serde_json::from_reader(
         fs::File::open(cli.ast).expect("Error opening input file")
     ).expect("Error deserialzing json");
 
+    // Derive configuration from config file
+    let config = Config::load(cli.config)?;
 
     // Instantiate grapher
-    let grapher = Grapher::new(ast);
+    let grapher = Grapher::new(ast, config);
 
-//    let graph = grapher.create_graph(cli.entry);
-
-
-//    graph.node_count();
-//
-//
+    let graph = grapher.create_graph();
 
 
+    println!("Node count: {}", graph.node_count());
 
-
-
-
-    
-/*
-
-    let mut graph = DiGraph::<&str, i32>::new();
-
-    // Add nodes
-    let a = graph.add_node("A");
-    let b = graph.add_node("B");
-    let c = graph.add_node("C");
-
-    // Add edges (node indices, edge weight)
-    graph.add_edge(a, b, 10);
-    graph.add_edge(b, c, 10);
-*/
-//    println!("{}", to_graphml(&graph));
 
     fs::write(cli.output, to_graphml(&graph))?;
 
