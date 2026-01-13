@@ -1,6 +1,5 @@
-use std::{collections::HashMap, process::exit};
+use std::{collections::HashMap};
 
-use ieee1800_2023_ast::ast::Expression;
 use petgraph::graph::NodeIndex;
 
 pub struct Checker {

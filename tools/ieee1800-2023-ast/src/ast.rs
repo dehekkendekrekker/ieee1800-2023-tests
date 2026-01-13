@@ -3,7 +3,7 @@ use serde::{Serialize, Deserialize};
 
 
 
-#[derive(Debug,Serialize, Deserialize)]
+#[derive(Debug,Serialize, Deserialize, Clone)]
 pub struct Expression {
     pub sequences: Vec<Sequence>,
 }
@@ -30,7 +30,7 @@ impl Expression {
     }
 }
 
-#[derive(Debug,Serialize, Deserialize)]
+#[derive(Debug,Serialize, Deserialize, Clone)]
 pub struct Sequence {
     pub items: Vec<Item>
 }
@@ -48,7 +48,7 @@ impl Sequence {
 
 
 
-#[derive(Debug,Serialize, Deserialize)]
+#[derive(Debug,Serialize, Deserialize, Clone)]
 pub enum Item {
     RegEx(String),
     Literal(String),
@@ -85,10 +85,9 @@ impl AST {
         self.rules.insert(name, expression);
     }
 
-    pub fn get_rule(&self, name : &String) -> Option<&Expression> {
-        self.rules.get(name)
+    pub fn get_rule(&self, name : &String) -> Option<Expression> {
+        self.rules.get(name).cloned()
     }
-
 
     pub fn get_referenced_rule_names(&self) -> Vec<String> {
         let mut names : Vec<String> = Vec::new();

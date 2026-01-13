@@ -1,4 +1,4 @@
-use std::{fs, path::PathBuf, process::exit};
+use std::{fs, path::PathBuf};
 use anyhow::Result;
 
 use grapher::{config::Config, grapher::Grapher, graphml::to_graphml};
@@ -40,12 +40,14 @@ fn main() -> Result<()> {
     // Instantiate grapher
     let grapher = Grapher::new(ast, config);
 
+    // Create graph
     let graph = grapher.create_graph();
 
 
     println!("Node count: {}", graph.node_count());
 
 
+    // Write graph to FS
     fs::write(cli.output, to_graphml(&graph))?;
 
     Ok(())

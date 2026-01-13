@@ -7,6 +7,8 @@ use anyhow::Result;
 pub struct Config {
     /// The name of the rule from which the graph is built.
     pub entry_point: String,
+
+    pub ignore_rules: Vec<String>
 }
 
 
