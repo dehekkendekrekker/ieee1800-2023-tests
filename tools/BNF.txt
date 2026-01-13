@@ -2,7 +2,7 @@ file_path_spec ::= '/^/?(\.\.\.|\.\.|\.|[\w\-?*.]+)(/(\.\.\.|\.\.|\.|[\w\-?*.]+)
 
 include_statement ::= "include" file_path_spec ";"
 
-library_declaration ::= "library" library_identifier "file_path_spec" { "," "file_path_spec" } [ "-incdir" "file_path_spec" { "," "file_path_spec" } ] ";"
+library_declaration ::= "library" library_identifier file_path_spec { "," file_path_spec } [ "-incdir" file_path_spec { "," file_path_spec } ] ";"
 
 library_description ::= library_declaration|include_statement|config_declaration|";"
 library_text ::= { library_description }
