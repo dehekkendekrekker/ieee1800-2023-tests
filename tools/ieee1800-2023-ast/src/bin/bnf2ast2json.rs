@@ -1,4 +1,4 @@
-use std::{collections::HashSet, fs, path::PathBuf};
+use std::{fs, path::PathBuf};
 use anyhow::anyhow;
 
 use clap::Parser;
