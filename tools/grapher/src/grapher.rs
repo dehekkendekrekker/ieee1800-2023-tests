@@ -1,18 +1,29 @@
+use std::{cell::RefCell, collections::HashMap};
+
 use ieee1800_2023_ast::ast::{AST, Expression, Item, Sequence};
 use petgraph::{Graph, graph::{DiGraph, NodeIndex}};
+
+use crate::{config::Config, recursion::Checker};
+
+
+
 
 
 
 
 pub struct Grapher {
-    ast_ : AST
+    ast_ : AST,
+    config_ : Config,
+    recursion_checker_ : RefCell<Checker>,
 }
 
 
 impl Grapher {
-    pub fn new(ast : AST) -> Self {
+    pub fn new(ast : AST, config : Config) -> Self {
         Grapher {  
-            ast_ : ast
+            ast_ : ast,
+            config_ : config,
+            recursion_checker_ : Checker::new().into(),
         }
     }
 
@@ -20,23 +31,42 @@ impl Grapher {
     pub fn create_graph(&self, rule_name : String) -> Graph<String, u32> {
         let mut graph = DiGraph::<String, u32>::new();
 
-
         let node = graph.add_node("START".to_string());
 
-
+        self.recursion_checker_.borrow_mut().check(rule_name.clone());
         self.add_rule_name_nodes(&mut graph, vec![node], rule_name);
+        println!("Done creating graph");
 
         graph
     }
 
     pub fn add_rule_name_nodes(&self, graph : &mut Graph<String, u32>, parent_nodes : Vec<NodeIndex>,   rule_name : String) -> Vec<NodeIndex> {
+        if let Some(node) = self.recursion_checker_.borrow_mut().check(rule_name.clone()) {
+            for parent_node in &parent_nodes {
+                graph.add_edge(*parent_node, node, 5);
+                return vec![];
+            }
+        }
+        
+
         let node = graph.add_node(rule_name.clone());
+        self.recursion_checker_.borrow_mut().add_expression_node(rule_name.clone(), node.clone());
+
         for parent_node in parent_nodes {
             graph.add_edge(parent_node, node, 5);
         }
 
         let expression = self.ast_.get_rule(&rule_name).expect("Rule not found");
-        self.add_expression_nodes(graph, vec![node], expression)
+        let nodes = self.add_expression_nodes(graph, vec![node], expression);
+
+
+        self.recursion_checker_.borrow_mut().pop();
+
+//        println!("-- DONE WITH RULE --");
+
+        nodes
+        
+
     }
 
     pub fn add_expression_nodes(&self, graph : &mut Graph<String,u32>, parent_nodes : Vec<NodeIndex>, expression :&Expression) -> Vec<NodeIndex> {
@@ -67,11 +97,13 @@ impl Grapher {
             Item::Optional(expression) => {
                  self.add_optional_node(graph, expression, parent_nodes)
             },
-            Item::Repetition(_) => {
-                vec![self.add_node(graph, "REPETITION".to_string(), parent_nodes)]
+            Item::Repetition(expression) => {
+                vec![self.add_node(graph, format!("REPETITION"), parent_nodes)]
+                // self.add_repetition_node(graph, expression, parent_nodes)
             }
             Item::RuleName(rule_name) => {
-                self.add_rule_name_nodes(graph, parent_nodes, rule_name.clone())
+                let nodes = self.add_rule_name_nodes(graph, parent_nodes, rule_name.clone());
+                nodes
             },
         }
     }
@@ -92,7 +124,10 @@ impl Grapher {
         nodes
     }
 
-    pub fn add_repetition_node(){
+    pub fn add_repetition_node(&self, graph : &mut Graph<String, u32>, expression : &Expression, parent_nodes : Vec<NodeIndex>) -> Vec<NodeIndex> {
+        let mut nodes = self.add_expression_nodes(graph, parent_nodes.clone(), expression);
+        nodes.extend(parent_nodes);
+        nodes
     }
 
 }

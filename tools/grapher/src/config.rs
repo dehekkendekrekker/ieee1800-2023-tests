@@ -1,0 +1,21 @@
+use std::{fs, path::PathBuf};
+
+use serde::Deserialize;
+use anyhow::Result;
+
+#[derive(Debug, Deserialize)]
+pub struct Config {
+    entry_point: String,
+}
+
+
+
+impl Config {
+    pub fn load(path : PathBuf) -> Result<Config> {
+        let contents = fs::read_to_string(path)?;
+        let config: Config = serde_yaml::from_str(&contents)?;
+        Ok(config)
+    }
+}
+
+

@@ -1,6 +1,7 @@
 use std::{fs, path::PathBuf};
+use anyhow::Result
 
-use grapher::{grapher::Grapher, graphml::to_graphml};
+use grapher::{config::Config, grapher::Grapher, graphml::to_graphml};
 use ieee1800_2023_ast::ast::AST;
 use clap::Parser;
 
@@ -13,24 +14,40 @@ use clap::Parser;
 #[command(author, long_about = None)]
 struct Cli {
     #[arg(long, value_name = "FILE_NAME")]
-    input: PathBuf,
+    ast: PathBuf,
 
-    #[arg(long, value_name = "RULE_NAME")]
-    entry: String,
+    #[arg(long, value_name = "FILE_NAME")]
+    config : PathBuf,
+
+    #[arg(long, value_name = "FILE_NAME")]
+    output: PathBuf,
 }
 
-fn main() {
+fn main() -> Result<()> {
+
+    // Load command line arguments
     let cli = Cli::parse();
 
 
+    // Derive configuration from config file
+    let config = Config::load(cli.config)?;
+
+
+    // Load ast
     let ast : AST = serde_json::from_reader(
-        fs::File::open(cli.input).expect("Error opening input file")
+        fs::File::open(cli.ast).expect("Error opening input file")
     ).expect("Error deserialzing json");
 
 
+    // Instantiate grapher
     let grapher = Grapher::new(ast);
 
-    let graph = grapher.create_graph(cli.entry);
+//    let graph = grapher.create_graph(cli.entry);
+
+
+//    graph.node_count();
+//
+//
 
 
 
@@ -51,5 +68,10 @@ fn main() {
     graph.add_edge(a, b, 10);
     graph.add_edge(b, c, 10);
 */
-    println!("{}", to_graphml(&graph));
+//    println!("{}", to_graphml(&graph));
+
+    fs::write(cli.output, to_graphml(&graph))?;
+
+    Ok(())
+
 }

@@ -1,15 +1,8 @@
-use std::process::exit;
-
 use crate::ast::{AST, Expression, Item, Sequence};
 use anyhow::{Result, anyhow};
 
 
 use pest::{Parser, iterators::Pair};
-//use pest::iterators::{Pair, Pairs};
-//use pest::pratt_parser::{Assoc, Op, PrattParser};
-//use anyhow::{Result, anyhow};
-//use crate::ast::*;
-
 #[derive(pest_derive::Parser)]
 #[grammar = "bnf.pest"]
 pub struct BNFParser;
@@ -28,14 +21,10 @@ pub fn parse_bnf(input: String) -> Result<AST> {
     let mut ast = AST::new();
     
     for rule in rules {
-
         let (name, definition) = parse_rule(rule)?;
         ast.add_rule(name, definition);
-
     }
-
     Ok(ast)
-
 }
 
 
