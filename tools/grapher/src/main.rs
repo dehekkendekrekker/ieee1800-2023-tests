@@ -1,7 +1,7 @@
 use std::{fs, path::PathBuf};
 use anyhow::Result;
 
-use grapher::{config::Config, grapher::Grapher, graphml::to_graphml, paths::PathFinder};
+use grapher::{config::Config, grapher::Grapher, graphml::to_graphml, paths::{PathFinder, PathGenerator}};
 use ieee1800_2023_ast::ast::AST;
 use clap::Parser;
 
@@ -39,7 +39,16 @@ fn main() -> Result<()> {
 
     let path_finder = PathFinder::new(ast, config);
     
-    path_finder.start();
+    let pathmap = path_finder.build_pathmap();
+
+//    let path_generator = PathGenerator::from(pathmap);
+//    let paths = path_generator.generate_all(10, 4);
+
+//    println!("Paths: {:#?}", paths);
+
+ //   let grapher = Grapher::from(pathmap);
+
+//    let graph = grapher.create_graph();
 
 
     /*
@@ -51,11 +60,11 @@ fn main() -> Result<()> {
 
 
     println!("Node count: {}", graph.node_count());
-
+*/
 
     // Write graph to FS
-    fs::write(cli.output, to_graphml(&graph))?;
-*/
+//    fs::write(cli.output, to_graphml(&graph))?;
+
     Ok(())
 
 }
