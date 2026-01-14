@@ -1,5 +1,5 @@
-entry_point: library_declaration
+entry_point: sequence_expr
 
 
 ignore_rules:
-  - sequence_expr
+#  - sequence_expr

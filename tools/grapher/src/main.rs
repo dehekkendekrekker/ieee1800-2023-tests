@@ -1,7 +1,7 @@
 use std::{fs, path::PathBuf};
 use anyhow::Result;
 
-use grapher::{config::Config, grapher::Grapher, graphml::to_graphml};
+use grapher::{config::Config, grapher::Grapher, graphml::to_graphml, paths::PathFinder};
 use ieee1800_2023_ast::ast::AST;
 use clap::Parser;
 
@@ -37,6 +37,12 @@ fn main() -> Result<()> {
     // Derive configuration from config file
     let config = Config::load(cli.config)?;
 
+    let path_finder = PathFinder::new(ast, config);
+    
+    path_finder.start();
+
+
+    /*
     // Instantiate grapher
     let grapher = Grapher::new(ast, config);
 
@@ -49,7 +55,7 @@ fn main() -> Result<()> {
 
     // Write graph to FS
     fs::write(cli.output, to_graphml(&graph))?;
-
+*/
     Ok(())
 
 }

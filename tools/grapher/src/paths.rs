@@ -1,91 +1,151 @@
-use petgraph::graph::NodeIndex;
-use typed_arena::Arena;
+use std::{collections::HashMap, os::unix::process::parent_id, usize};
+
+use clap::builder::Str;
+use ieee1800_2023_ast::ast::{AST, Expression, Item, Sequence};
+
+use crate::config::Config;
+
+use slab::Slab;
 
 #[derive(Debug)]
-pub struct Node {
-    pub value: Option<NodeIndex>,
-    children: Vec<usize>
+pub enum Node {
+    Literal(String),
+    RegEx(String),
+    Rule(String),
+    OrOpen,
+    OrClose,
+    OptOpen,
+    OptClose,
+    RepOpen,
+    RepClose,
+
 }
 
-impl Node {
+
+#[derive(Debug)]
+pub struct PathMap {
+    reg_ : HashMap<String, Vec<Node>>,
+    entry_point_ : String,
+}
+
+impl PathMap {
     pub fn new() -> Self {
-        Node { value: None, children: Vec::new() }
-    }
-
-    pub fn add_child(mut self, idx : usize) -> Self {
-        self.children.push(idx);
-        self
-    }
-}
-
-impl From<NodeIndex> for Node {
-    fn from(value: NodeIndex) -> Self {
-        Node { value: Some(value), children: Vec::new() }
-    }
-}
-
-pub struct NodeArena {
-    arena: Arena<Node>,
-    nodes: Vec<*const Node>  // track pointers for indexing
-}
-
-impl NodeArena {
-    pub fn new() -> Self {
-        NodeArena { 
-            arena: Arena::new(),
-            nodes: Vec::new()
-        }
-    }
-    
-    pub fn add(&mut self, node: Node) -> usize {
-        let idx = self.nodes.len();
-        let ptr = self.arena.alloc(node) as *const Node;
-        self.nodes.push(ptr);
-        idx
-    }
-    
-    pub fn get(&self, idx: usize) -> Option<&Node> {
-        self.nodes.get(idx).map(|&ptr| unsafe { &*ptr })
-    }
-
-    pub fn dfs(&self, start_idx: usize, f: &mut impl FnMut(&Node)) {
-        if let Some(node) = self.get(start_idx) {
-            f(node);
-            if node.children.len() == 0 {
-                println!("");
-            }
-            for &child_idx in &node.children {
-                self.dfs(child_idx, f);
-            }
+        PathMap {
+            reg_ : HashMap::new(),
+            entry_point_: String::new(),
         }
     }
 
-    pub fn leaf_paths(&self, start_idx: usize) -> Vec<Vec<NodeIndex>> {
-        let mut paths = Vec::new();
-        let mut current = Vec::new();
-        self.leaf_helper(start_idx, &mut current, &mut paths);
-        paths
+    pub fn add_rule(&mut self, name : String, chain : Vec<Node>) {
+        self.reg_.insert(name, chain);
     }
-    
-    fn leaf_helper(&self, idx: usize, current: &mut Vec<NodeIndex>, paths: &mut Vec<Vec<NodeIndex>>) {
-        if let Some(node) = self.get(idx) {
-            if let Some(value) = node.value {
-                current.push(value);
-            }
-            
-            if node.children.is_empty() {
-                paths.push(current.clone());
-            } else {
-                for &child_idx in &node.children {
-                    self.leaf_helper(child_idx, current, paths);
-                }
-            }
-            
-            if node.value.is_some() {
-                current.pop();
-            }
+
+    pub fn has_rule(&self, k : String) -> bool {
+        self.reg_.contains_key(&k)
+    }
+}
+
+
+
+pub struct PathFinder {
+    ast_ : AST,
+    config_ : Config,
+    rr_ : PathMap,
+}
+
+impl PathFinder {
+    pub fn new(ast : AST, config : Config) -> Self {
+        PathFinder { 
+            ast_: ast,
+            config_ : config,
+            rr_ : PathMap::new(),
         }
     }
 
+    pub fn start(mut self) {
+        let entry_point = self.config_.entry_point.clone();
+
+        self.rr_.entry_point_ = entry_point.clone();
+        self.add_rule_name_nodes(Vec::new(), entry_point);
+
+
+        println!("NodeMap: {:#?}", self.rr_);
+
+        
+    }
+
+    fn add_rule_name_nodes(&mut self, mut chain : Vec<Node>, rule_name : String) -> Vec<Node> {
+        chain.push(Node::Rule(rule_name.clone()));
+
+        if !self.rr_.has_rule(rule_name.clone()) {
+            // Insert empty vec to prevent recursion
+            self.rr_.add_rule(rule_name.clone(), Vec::new());
+            let expression = self.ast_.get_rule(&rule_name).expect("Rule not found");
+            let subchain = self.add_expression_nodes(Vec::new(), expression);
+
+            self.rr_.add_rule(rule_name, subchain);
+        }
+        
+
+        chain
+    }
+
+
+    pub fn add_expression_nodes(&mut self, mut chain : Vec<Node>, expression : Expression) -> Vec<Node> {
+        for sequence in &expression.sequences {
+            chain.push(Node::OrOpen);
+            chain = self.add_sequence_nodes(chain, sequence);
+            chain.push(Node::OrClose);
+        }
+
+        chain
+    }
+
+    fn add_sequence_nodes(&mut self, mut chain: Vec<Node>, sequence : &Sequence) -> Vec<Node> {
+        for item in &sequence.items {
+            chain = self.add_item_node(chain, item.clone());
+        }
+
+        chain
+    }
+
+    fn add_item_node(&mut self, mut chain : Vec<Node>, item : Item) -> Vec<Node> {
+        match item {
+            Item::Literal(literal) => {
+                chain.push(Node::Literal(format!("L({})", literal)));
+                chain
+            }
+            Item::RegEx(regex) => {
+                chain.push(Node::RegEx(format!("RE({})", regex)));
+                chain
+            },
+
+            Item::Optional(expression) => {
+                chain.push(Node::OptOpen);
+                chain = self.add_expression_nodes(chain, *expression);
+                chain.push(Node::OptClose);
+                chain
+            },
+            Item::Repetition(expression) => {
+                chain.push(Node::RepOpen);
+                chain = self.add_expression_nodes(chain, *expression);
+                chain.push(Node::RepClose);
+                chain
+            }
+            Item::RuleName(rule_name) => {
+                chain = self.add_rule_name_nodes(chain, rule_name.clone());
+                chain
+            },
+        }
+    }
     
 }
+
+
+
+
+
+
+
+    
+    
