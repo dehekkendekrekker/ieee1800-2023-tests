@@ -10,7 +10,7 @@ pub enum Node {
     Literal(String),
     RegEx(String),
     Rule(String),           // Just a reference
-    Or(Vec<Vec<Node>>),     // Each inner Vec is an alternative
+    Alternative(Vec<Vec<Node>>),     // Each inner Vec is an alternative
     Optional(Box<Node>),    // 0 or 1 times
     Repetition(Box<Node>),  // 0..n times
 }
@@ -102,7 +102,7 @@ impl PathFinder  {
             nodes.push(self.add_sequence_nodes(sequence));
         }
 
-        Node::Or(nodes)
+        Node::Alternative(nodes)
     }
 
     fn add_sequence_nodes(&mut self, sequence : &Sequence) -> Vec<Node> {
@@ -178,7 +178,7 @@ impl PathGenerator {
                 self.expand_node(&rule_node, depth + 1, max_depth, max_reps)
             }
             
-            Node::Or(alternatives) => {
+            Node::Alternative(alternatives) => {
                 let mut all_paths = Vec::new();
                 
                 for sequence in alternatives {
