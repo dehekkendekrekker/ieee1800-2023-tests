@@ -93,7 +93,6 @@ impl Grapher {
 
         println!("rnm: {:#?}", map);
 
-        self.update_graph(&map);
 
         let entry_point = self.pathmap_.get_entry_point();
 
@@ -111,46 +110,10 @@ impl Grapher {
     }
 
 
-    fn update_graph(&mut self, map : &RuleNodeMap) {
-        for (rule_name, nodes) in self.pathmap_.get_rules() {
-//            self.parse_path_nodes(map, rule_name, nodes);
-
-        }
 
 
-
-    }
-
-
-    fn parse_path_nodes(&mut self, map : &RuleNodeMap, name : String, nodes : Vec<Node>) {
-        let (start_node, end_node) = map.get(name);
-
-        let mut parent_node = start_node;
-
-        let mut start_junctions : VecDeque<NodeIndex> = VecDeque::new();
-        let mut end_junctions : VecDeque<NodeIndex> = VecDeque::new();
-
-
-        for node in nodes {
-            match node {
-                Node::Literal(label) => {
-                    let node = self.graph_.add_node(label);
-                    self.graph_.add_edge(parent_node, node, 5);
-                    parent_node = node;
-
-                },
-                _ => {}
-            
-            }
-        }
-
-
-        self.graph_.add_edge(parent_node, end_node, 5);
-
-    }
-
-    
 }
+   
 
 
 impl From<PathMap> for Grapher {
