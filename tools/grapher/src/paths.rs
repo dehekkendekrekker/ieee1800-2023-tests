@@ -1,0 +1,91 @@
+use petgraph::graph::NodeIndex;
+use typed_arena::Arena;
+
+#[derive(Debug)]
+pub struct Node {
+    pub value: Option<NodeIndex>,
+    children: Vec<usize>
+}
+
+impl Node {
+    pub fn new() -> Self {
+        Node { value: None, children: Vec::new() }
+    }
+
+    pub fn add_child(mut self, idx : usize) -> Self {
+        self.children.push(idx);
+        self
+    }
+}
+
+impl From<NodeIndex> for Node {
+    fn from(value: NodeIndex) -> Self {
+        Node { value: Some(value), children: Vec::new() }
+    }
+}
+
+pub struct NodeArena {
+    arena: Arena<Node>,
+    nodes: Vec<*const Node>  // track pointers for indexing
+}
+
+impl NodeArena {
+    pub fn new() -> Self {
+        NodeArena { 
+            arena: Arena::new(),
+            nodes: Vec::new()
+        }
+    }
+    
+    pub fn add(&mut self, node: Node) -> usize {
+        let idx = self.nodes.len();
+        let ptr = self.arena.alloc(node) as *const Node;
+        self.nodes.push(ptr);
+        idx
+    }
+    
+    pub fn get(&self, idx: usize) -> Option<&Node> {
+        self.nodes.get(idx).map(|&ptr| unsafe { &*ptr })
+    }
+
+    pub fn dfs(&self, start_idx: usize, f: &mut impl FnMut(&Node)) {
+        if let Some(node) = self.get(start_idx) {
+            f(node);
+            if node.children.len() == 0 {
+                println!("");
+            }
+            for &child_idx in &node.children {
+                self.dfs(child_idx, f);
+            }
+        }
+    }
+
+    pub fn leaf_paths(&self, start_idx: usize) -> Vec<Vec<NodeIndex>> {
+        let mut paths = Vec::new();
+        let mut current = Vec::new();
+        self.leaf_helper(start_idx, &mut current, &mut paths);
+        paths
+    }
+    
+    fn leaf_helper(&self, idx: usize, current: &mut Vec<NodeIndex>, paths: &mut Vec<Vec<NodeIndex>>) {
+        if let Some(node) = self.get(idx) {
+            if let Some(value) = node.value {
+                current.push(value);
+            }
+            
+            if node.children.is_empty() {
+                paths.push(current.clone());
+            } else {
+                for &child_idx in &node.children {
+                    self.leaf_helper(child_idx, current, paths);
+                }
+            }
+            
+            if node.value.is_some() {
+                current.pop();
+            }
+        }
+    }
+
+    
+}

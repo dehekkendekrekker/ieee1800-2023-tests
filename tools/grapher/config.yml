@@ -1,4 +1,5 @@
-entry_point: name_of_instance
+entry_point: identifier
 
 
 ignore_rules:
+  - sequence_expr
