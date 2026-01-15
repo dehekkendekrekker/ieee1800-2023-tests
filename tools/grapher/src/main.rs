@@ -1,7 +1,7 @@
 use std::{fs, path::PathBuf};
 use anyhow::Result;
 
-use grapher::{config::Config, paths::{PathFinder}};
+use grapher::{config::Config, paths::{PathFinder, PathGenerator}};
 use ieee1800_2023_ast::ast::AST;
 use clap::Parser;
 
@@ -39,10 +39,13 @@ fn main() -> Result<()> {
 
     let path_finder = PathFinder::new(ast, config);
     
-    let _pathmap = path_finder.build_pathmap();
+    let pathmap = path_finder.build_pathmap();
 
-//    let path_generator = PathGenerator::from(pathmap);
-//    let paths = path_generator.generate_all(10, 4);
+    let path_generator = PathGenerator::from(pathmap);
+    let paths = path_generator.generate_all(10, 4);
+
+    println!("Pathcount: {}", paths.len());
+    
 
 //    println!("Paths: {:#?}", paths);
 

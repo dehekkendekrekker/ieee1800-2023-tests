@@ -59,7 +59,7 @@ impl PathMap {
 pub struct PathFinder {
     ast_ : AST,
     config_ : Config,
-    rr_ : PathMap,
+    map_ : PathMap,
 }
 
 impl PathFinder  {
@@ -67,31 +67,35 @@ impl PathFinder  {
         PathFinder {
             ast_: ast,
             config_ : config,
-            rr_ : PathMap::new(),
+            map_ : PathMap::new(),
         }
     }
 
     pub fn build_pathmap(mut self) -> PathMap{
         let entry_point = self.config_.entry_point.clone();
 
-        self.rr_.entry_point_ = entry_point.clone();
+        self.map_.entry_point_ = entry_point.clone();
         self.add_rule_name_nodes(&entry_point);
 
 
-        println!("PATHMAP: {:#?}", self.rr_);
+        println!("PATHMAP: {:#?}", self.map_);
 
-        self.rr_
+        self.map_
     }
 
     fn add_rule_name_nodes(&mut self, rule_name : &String)  {
-        if self.rr_.has_rule(rule_name) {
+        if self.map_.has_rule(rule_name) {
             return;
         }
 
 
+    
+        self.map_.add_rule(rule_name, Node::Literal("Placeholder".to_string()));
+
+
         let expression = self.ast_.get_rule(&rule_name).expect("Rule not found");
         let or_node = self.add_expression_nodes(&Box::new(expression));
-        self.rr_.add_rule(rule_name, or_node);
+        self.map_.add_rule(rule_name, or_node);
 
     }
 
