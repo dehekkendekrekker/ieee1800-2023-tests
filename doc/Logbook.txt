@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2026-01-15T19:25:07-05:00
+
+====== Logbook ======
+Created Thursday 15 January 2026
+
+
+===== 14-1-2026 =====
+* Implemented functionality that takes an AST and transforms it into a datastructure that can be more easily handled.
+* This datastructure is a Pathmap and is basically a Hashmap mapping rule names to their definition.
+* This Pathmap describes all possible paths that can be taken from the entry point to the end of each path
+* Implemented routine that takes this pathmap and enumerates each  individual path through the map.
+* These path form the basis for code generation.
+
+Caveat: In this process, the path space explodes and it is not sure if it is finite. It is safer to assume it is not and build controls to manage
+this space.
+
+It is through placing constraints on the pathmap that this is best done. Exactly how this is done should be scrutinized
+
+==== Todo ====
+* Study the best approach to place configurable constraints on the Pathmap
+* Find a better way to visualize each path
+
+===== 15-1-2026 =====
+Implemented parsing of `Pathmap` to a railroad diagram.
+This presents a better overview of how a path flows than a DAG.
+Currently, there is no rule expansion taking place, but this feature will be implemented soon
+
+==== Todo ====
+* Implement rule expansion
+* Review this zim doc and tidy up

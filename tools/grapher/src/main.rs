@@ -1,7 +1,8 @@
 use std::{fs, path::PathBuf};
 use anyhow::Result;
+use railroad::*;
 
-use grapher::{config::Config, paths::{PathFinder, PathGenerator}};
+use grapher::{config::Config, grapher::RailRoadConverter, paths::{PathFinder, PathGenerator}};
 use ieee1800_2023_ast::ast::AST;
 use clap::Parser;
 
@@ -41,32 +42,24 @@ fn main() -> Result<()> {
     
     let pathmap = path_finder.build_pathmap();
 
-    let path_generator = PathGenerator::from(pathmap);
-    let paths = path_generator.generate_all(10, 4);
+//    let path_generator = PathGenerator::from(pathmap);
+//    let paths = path_generator.generate_all(10, 4);
 
-    println!("Pathcount: {}", paths.len());
+
+    let converter = RailRoadConverter::from(pathmap); 
+
+    let dsl = converter.dsl();
+
+
+    println!("DSL: {}", dsl);
+
+    let diagram = railroad_dsl::compile(&dsl, &railroad::Stylesheet::Dark.stylesheet())?;
+
+
+
+
     
-
-//    println!("Paths: {:#?}", paths);
-
- //   let grapher = Grapher::from(pathmap);
-
-//    let graph = grapher.create_graph();
-
-
-    /*
-    // Instantiate grapher
-    let grapher = Grapher::new(ast, config);
-
-    // Create graph
-    let graph = grapher.create_graph();
-
-
-    println!("Node count: {}", graph.node_count());
-*/
-
-    // Write graph to FS
-//    fs::write(cli.output, to_graphml(&graph))?;
+    fs::write(cli.output, diagram.diagram.to_string())?;
 
     Ok(())
 

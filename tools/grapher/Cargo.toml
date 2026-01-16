@@ -16,3 +16,5 @@ ieee1800-2023-ast = { path = "../ieee1800-2023-ast"}
 serde_yaml = "0.9.34"
 anyhow = "1.0.100"
 slab = "0.4.11"
+railroad = "0.3.3"
+railroad_dsl = "0.2.2"

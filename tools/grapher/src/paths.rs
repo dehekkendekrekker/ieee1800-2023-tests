@@ -10,7 +10,8 @@ pub enum Node {
     Literal(String),
     RegEx(String),
     Rule(String),           // Just a reference
-    Alternative(Vec<Vec<Node>>),     // Each inner Vec is an alternative
+    Sequence(Vec<Node>),
+    Alternative(Box<Vec<Node>>),     // Each inner Vec is an alternative
     Optional(Box<Node>),    // 0 or 1 times
     Repetition(Box<Node>),  // 0..n times
 }
@@ -106,26 +107,26 @@ impl PathFinder  {
             nodes.push(self.add_sequence_nodes(sequence));
         }
 
-        Node::Alternative(nodes)
+        Node::Alternative(Box::new(nodes))
     }
 
-    fn add_sequence_nodes(&mut self, sequence : &Sequence) -> Vec<Node> {
+    fn add_sequence_nodes(&mut self, sequence : &Sequence) -> Node {
         let mut item_vecs = Vec::new();
 
         for item in &sequence.items {
             item_vecs.push(self.add_item_node(item));
         }
 
-        item_vecs
+        Node::Sequence(item_vecs)
     }
 
     fn add_item_node(&mut self, item : &Item) -> Node {
         match item {
             Item::Literal(literal) => {
-                Node::Literal(format!("L({})", literal))
+                Node::Literal(format!("{}", literal))
             }
             Item::RegEx(regex) => {
-                Node::RegEx(format!("RE({})", regex))
+                Node::RegEx(format!("{}", regex))
             },
 
             Item::Optional(expression) => {
@@ -185,7 +186,7 @@ impl PathGenerator {
             Node::Alternative(alternatives) => {
                 let mut all_paths = Vec::new();
                 
-                for sequence in alternatives {
+                for sequence in alternatives.iter() {
                     let paths = self.expand_sequence(sequence, depth, max_depth, max_reps);
                     all_paths.extend(paths);
                 }
@@ -209,34 +210,55 @@ impl PathGenerator {
             Node::Repetition(inner) => {
                 let inner_paths = self.expand_node(inner, depth, max_depth, max_reps);
                 let mut all_paths = Vec::new();
-                
+
                 // 0 repetitions
                 all_paths.push(vec![]);
-                
+
                 // 1 to max_reps repetitions
                 for rep_count in 1..=max_reps {
                     let repeated = self.repeat_n_times(&inner_paths, rep_count);
                     all_paths.extend(repeated);
                 }
-                
+
                 all_paths
+            }
+
+            Node::Sequence(nodes) => {
+                if nodes.is_empty() {
+                    return vec![vec![]];
+                }
+
+                let mut current_paths = self.expand_node(&nodes[0], depth, max_depth, max_reps);
+
+                for node in &nodes[1..] {
+                    let next_parts = self.expand_node(node, depth, max_depth, max_reps);
+                    current_paths = self.combine_all(&current_paths, &next_parts);
+                }
+
+                current_paths
             }
         }
     }
     
-    fn expand_sequence(&self, nodes: &[Node], depth: usize, max_depth: usize, max_reps: usize) -> Vec<Vec<Node>> {
-        if nodes.is_empty() {
-            return vec![vec![]];
+    fn expand_sequence(&self, node: &Node, depth: usize, max_depth: usize, max_reps: usize) -> Vec<Vec<Node>> {
+        match node {
+            Node::Sequence(nodes) => {
+                if nodes.is_empty() {
+                    return vec![vec![]];
+                }
+
+                let mut current_paths = self.expand_node(&nodes[0], depth, max_depth, max_reps);
+
+                for node in &nodes[1..] {
+                    let next_parts = self.expand_node(node, depth, max_depth, max_reps);
+                    current_paths = self.combine_all(&current_paths, &next_parts);
+                }
+
+                current_paths
+            }
+            // If it's not a Sequence, treat it as a single-element sequence
+            _ => self.expand_node(node, depth, max_depth, max_reps)
         }
-        
-        let mut current_paths = self.expand_node(&nodes[0], depth, max_depth, max_reps);
-        
-        for node in &nodes[1..] {
-            let next_parts = self.expand_node(node, depth, max_depth, max_reps);
-            current_paths = self.combine_all(&current_paths, &next_parts);
-        }
-        
-        current_paths
     }
     
     fn combine_all(&self, first: &[Vec<Node>], second: &[Vec<Node>]) -> Vec<Vec<Node>> {

@@ -1,123 +1,83 @@
-use std::collections::HashMap;
-
-use petgraph::{Graph, graph::{DiGraph, NodeIndex}};
-
 use crate::paths::PathMap;
+use crate::paths::Node;
 
 
-
-#[derive(Debug)]
-pub struct RuleNodeMap {
-    map_ : HashMap<String, (NodeIndex, NodeIndex)>,
+pub struct RailRoadConverter {
+    map_ : PathMap
 }
 
-impl RuleNodeMap  {
-    pub fn get(&self, k : String) -> (NodeIndex, NodeIndex) {
-        self.map_.get(&k).unwrap().clone()
-    }
-    
-}
 
-struct RuleNodeMapBuilder {
-    pathmap_ : Option<PathMap>,
-    graph_ : Option<Graph<String, u32>>
-}
+impl RailRoadConverter {
+    pub fn dsl(&self) -> String {
+        let mut output = String::new();
+        for (name, declaration) in self.map_.get_rules() {
 
-impl RuleNodeMapBuilder {
-    pub fn new() -> Self {
-        RuleNodeMapBuilder { pathmap_: None, graph_: None }
-    }
-
-    pub fn pathmap(mut self, pathmap : PathMap) -> Self {
-        self.pathmap_ = Some(pathmap);
-        self
-    }
-
-    pub fn graph(mut self, graph: Graph<String, u32>) -> Self {
-         self.graph_ = Some(graph);
-         self
-    }
-
-    pub fn build(mut self) -> (Graph<String, u32>, RuleNodeMap)  {
-
-        let mut graph = self.graph_.take().expect("graph not set");
-        let pathmap = self.pathmap_.take().expect("pathmap not set");
-
-
-        let mut map = HashMap::new();
-
-        for rule_name in pathmap.get_rule_names() {
-            let start_node = graph.add_node(format!("{}[", rule_name));
-            let end_node = graph.add_node(format!("]{}", rule_name));
-
-            map.insert(rule_name, (start_node, end_node));
+            output = format!("{}[`{}` [{}]]\n", output, name, self.parse_node(&declaration));
         }
 
-
-        let rnmp = RuleNodeMap {
-            map_ : map
-        };
-
-
-        (graph, rnmp)
-
-
-
-
+        output
     }
-    
-}
+
+    pub fn parse_node(&self, node : &Node) -> String {
+
+        match node {
+            Node::Rule(label) => {
+                format!("'{}'", label)
+            },
+            Node::Literal(label) => {
+                format!("\"{}\"", label)
+            },
+
+            Node::RegEx(label) => {
+                format!("'RE'")
+            },
+            Node::Alternative(node) => {
+                let mut retval = format!("<");
+                let mut contents = Vec::new();
+                for sequence in node.iter() {
+                    contents.push(self.parse_node(&sequence));
+                }
+
+                let substr = contents.join(", ");
+                retval = format!("{}{}", retval, substr);
+
+                format!("{}>", retval)
+            },
+
+            Node::Sequence(nodes) => {
+                let mut retval = format!("[");
+                let mut contents = Vec::new();
+                for node in nodes.iter() {
+                    contents.push(self.parse_node(&node));
+                }
+
+                let substr = contents.join(" ");
+                retval = format!("{}{}", retval, substr);
+
+                format!("{}]", retval)
+            }
 
 
+            Node::Optional(node) => {
+                format!("[{}]?", self.parse_node(node))
+            }
 
-
-
-
-
-pub struct Grapher {
-    graph_ : Graph<String, u32>,
-    pathmap_ : PathMap,
-}
-
-
-impl Grapher {
-    pub fn create_graph(mut self) -> Graph<String,u32> {
-        let (graph, map) = RuleNodeMapBuilder::new()
-            .graph(self.graph_)
-            .pathmap(self.pathmap_.clone())
-            .build();
-
-
-        self.graph_ = graph;
-
-        println!("rnm: {:#?}", map);
-
-
-        let entry_point = self.pathmap_.get_entry_point();
-
-
-        let start_node = self.graph_.add_node("START".to_string());
-        let next_node = map.get(entry_point).0;
-        self.graph_.add_edge(start_node, next_node, 5);
-
-
-
-
-
-        self.graph_
-
+            Node::Repetition(node) => {
+                format!("*[{}]", self.parse_node(node))
+            }
+        }
     }
 
 
-
-
 }
-   
 
-
-impl From<PathMap> for Grapher {
+impl From<PathMap> for RailRoadConverter {
     fn from(value: PathMap) -> Self {
-        Grapher { graph_: DiGraph::<String, u32>::new(), pathmap_: value }
+        RailRoadConverter { map_: value }
     }
 }
+
+
+
+
 
