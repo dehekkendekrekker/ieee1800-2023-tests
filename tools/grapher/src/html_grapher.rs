@@ -623,13 +623,10 @@ document.getElementById('search').addEventListener('input', function(e) {
     });
 });
 
-// Click on nonterminal to navigate to that rule
-document.body.addEventListener('click', function(e) {
+// Right-click on nonterminal to navigate to that rule (without expanding)
+document.body.addEventListener('contextmenu', function(e) {
     const nonterminal = e.target.closest('.nonterminal');
     if (!nonterminal) return;
-
-    // If it's already handling expansion, let that take precedence
-    if (nonterminal.classList.contains('expanded')) return;
 
     const ruleName = nonterminal.dataset.rule;
     if (!ruleName) return;
@@ -638,7 +635,6 @@ document.body.addEventListener('click', function(e) {
     const section = document.getElementById('rule-' + ruleName);
     if (section) {
         e.preventDefault();
-        e.stopPropagation();
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, '', '#rule-' + ruleName);
     }
