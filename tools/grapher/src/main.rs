@@ -1,8 +1,7 @@
 use std::{fs, path::PathBuf};
 use anyhow::Result;
-use railroad::*;
 
-use grapher::{config::Config, grapher::RailRoadConverter, paths::{PathFinder, PathGenerator}};
+use grapher::{config::Config, grapher::RailRoadConverter, paths::PathFinder};
 use ieee1800_2023_ast::ast::AST;
 use clap::Parser;
 
@@ -22,6 +21,10 @@ struct Cli {
 
     #[arg(long, value_name = "FILE_NAME")]
     output: PathBuf,
+
+    /// Depth to expand rules inline (0 = no expansion, rules shown as terminals)
+    #[arg(long, default_value_t = 0)]
+    expand_depth: usize,
 }
 
 fn main() -> Result<()> {
@@ -46,7 +49,7 @@ fn main() -> Result<()> {
 //    let paths = path_generator.generate_all(10, 4);
 
 
-    let converter = RailRoadConverter::from(pathmap); 
+    let converter = RailRoadConverter::new(pathmap, cli.expand_depth);
 
     let dsl = converter.dsl();
 

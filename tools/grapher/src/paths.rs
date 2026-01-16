@@ -46,6 +46,10 @@ impl PathMap {
         self.reg_.get(&k).unwrap().clone()
     }
 
+    pub fn get_rule_opt(&self, k: &String) -> Option<Node> {
+        self.reg_.get(k).cloned()
+    }
+
     pub fn get_rules(&self) -> HashMap<String, Node> {
         self.reg_.clone()
     }
