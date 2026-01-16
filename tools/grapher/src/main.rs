@@ -25,10 +25,6 @@ struct Cli {
     /// Depth to expand rules inline (0 = no expansion, rules shown as terminals)
     #[arg(long, default_value_t = 0)]
     expand_depth: usize,
-
-    /// Generate HTML with all rules (only for HTML output)
-    #[arg(long, default_value_t = false)]
-    all_rules: bool,
 }
 
 fn main() -> Result<()> {
@@ -44,9 +40,10 @@ fn main() -> Result<()> {
 
     // Derive configuration from config file
     let config = Config::load(cli.config)?;
+    let has_entry_point = config.entry_point.is_some();
 
     let path_finder = PathFinder::new(ast, config);
-    
+
     let pathmap = path_finder.build_pathmap();
 
 //    let path_generator = PathGenerator::from(pathmap);
@@ -62,10 +59,10 @@ fn main() -> Result<()> {
         "html" | "htm" => {
             // Generate interactive HTML
             let generator = HtmlRailroadGenerator::new(pathmap);
-            if cli.all_rules {
-                generator.generate_html_all_rules()
-            } else {
+            if has_entry_point {
                 generator.generate_html()
+            } else {
+                generator.generate_html_all_rules()
             }
         }
         _ => {
