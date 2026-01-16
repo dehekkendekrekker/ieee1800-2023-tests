@@ -1,6 +1,6 @@
 use crate::paths::PathMap;
 use crate::paths::Node as PathNode;
-use railroad::{self, Node as RailroadNode, Diagram, Sequence, Choice, Terminal, NonTerminal, Empty, Stylesheet};
+use railroad::{self, Node as RailroadNode, Diagram, Sequence, Choice, Terminal, NonTerminal, Empty, Stylesheet, Comment};
 
 
 pub struct RailRoadConverter {
@@ -25,6 +25,7 @@ impl RailRoadConverter {
         let content = self.convert_node(&root_node, 0);
 
         let mut seq: Sequence<Box<dyn RailroadNode>> = Sequence::default();
+        seq.push(Box::new(Comment::new(entry_point)));
         seq.push(Box::new(railroad::Start));
         seq.push(content);
         seq.push(Box::new(railroad::End));
