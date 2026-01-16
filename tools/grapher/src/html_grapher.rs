@@ -108,6 +108,24 @@ const RULES = {rules_json};
 </head>
 <body>
     <div class="sidebar">
+        <details class="legend" open>
+            <summary>Legend &amp; Controls</summary>
+            <div class="legend-content">
+                <div class="legend-section">
+                    <h4>Mouse Controls</h4>
+                    <div class="legend-item"><strong>Left-click</strong> non-terminal: Expand inline</div>
+                    <div class="legend-item"><strong>Right-click</strong> non-terminal: Jump to definition</div>
+                </div>
+                <div class="legend-section">
+                    <h4>Symbols</h4>
+                    <div class="legend-item"><span class="terminal">terminal</span> Literal text</div>
+                    <div class="legend-item"><span class="nonterminal" style="cursor:default">rule</span> Rule reference</div>
+                    <div class="legend-item"><span class="legend-optional">opt</span> Optional (0 or 1)</div>
+                    <div class="legend-item"><span class="legend-repetition">rep</span> Repetition (0+)</div>
+                    <div class="legend-item"><span class="legend-choice">A | B</span> Choice</div>
+                </div>
+            </div>
+        </details>
         <h2>Rules ({rule_count})</h2>
         <input type="text" id="search" placeholder="Search rules..." />
         <ul id="toc">
@@ -569,6 +587,101 @@ body {
 
 .sidebar li.hidden {
     display: none;
+}
+
+.legend {
+    margin-bottom: 20px;
+    border: 1px solid hsl(200, 10%, 30%);
+    border-radius: 6px;
+    background: hsl(230, 12%, 14%);
+}
+
+.legend summary {
+    padding: 10px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    color: hsl(200, 60%, 70%);
+    user-select: none;
+}
+
+.legend summary:hover {
+    background: hsl(230, 15%, 18%);
+}
+
+.legend-content {
+    padding: 12px;
+    border-top: 1px solid hsl(200, 10%, 25%);
+}
+
+.legend-section {
+    margin-bottom: 12px;
+}
+
+.legend-section:last-child {
+    margin-bottom: 0;
+}
+
+.legend-section h4 {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    color: hsl(200, 40%, 60%);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.legend-item {
+    font-size: 12px;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-item .terminal,
+.legend-item .nonterminal {
+    font-size: 11px;
+    padding: 2px 8px;
+    margin: 0;
+}
+
+.legend-optional {
+    display: inline-block;
+    padding: 2px 6px;
+    border: 2px dashed hsl(200, 10%, 40%);
+    border-radius: 6px;
+    font-size: 11px;
+    font-family: monospace;
+    background: hsl(230, 10%, 15%);
+}
+
+.legend-repetition {
+    display: inline-block;
+    padding: 2px 6px;
+    border: 2px solid hsl(120, 30%, 40%);
+    border-radius: 6px;
+    font-size: 11px;
+    font-family: monospace;
+    background: hsl(230, 10%, 15%);
+    position: relative;
+}
+
+.legend-repetition::after {
+    content: '*';
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    color: hsl(120, 50%, 60%);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.legend-choice {
+    display: inline-block;
+    padding: 2px 6px;
+    border-left: 2px solid hsl(200, 10%, 40%);
+    border-right: 2px solid hsl(200, 10%, 40%);
+    font-size: 11px;
+    font-family: monospace;
 }
 
 .main-content {
