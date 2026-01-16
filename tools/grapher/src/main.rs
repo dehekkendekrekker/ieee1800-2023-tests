@@ -2,7 +2,7 @@ use std::{fs, path::PathBuf};
 use anyhow::Result;
 use clap::Parser;
 
-use grapher::{config::Config, grapher::RailRoadConverter, paths::PathFinder};
+use grapher::{config::Config, grapher::RailRoadConverter, html_grapher::HtmlRailroadGenerator, paths::PathFinder};
 use ieee1800_2023_ast::ast::AST;
 
 
@@ -49,11 +49,26 @@ fn main() -> Result<()> {
 //    let paths = path_generator.generate_all(10, 4);
 
 
-    let converter = RailRoadConverter::new(pathmap, cli.expand_depth);
+    // Determine output format from file extension
+    let extension = cli.output.extension()
+        .and_then(|e| e.to_str())
+        .unwrap_or("svg");
 
-    let diagram = converter.generate_diagram();
+    let output_content = match extension {
+        "html" | "htm" => {
+            // Generate interactive HTML
+            let generator = HtmlRailroadGenerator::new(pathmap);
+            generator.generate_html()
+        }
+        _ => {
+            // Default to SVG
+            let converter = RailRoadConverter::new(pathmap, cli.expand_depth);
+            let diagram = converter.generate_diagram();
+            diagram.to_string()
+        }
+    };
 
-    fs::write(cli.output, diagram.to_string())?;
+    fs::write(cli.output, output_content)?;
 
     Ok(())
 
