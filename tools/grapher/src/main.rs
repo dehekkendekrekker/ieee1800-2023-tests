@@ -25,6 +25,10 @@ struct Cli {
     /// Depth to expand rules inline (0 = no expansion, rules shown as terminals)
     #[arg(long, default_value_t = 0)]
     expand_depth: usize,
+
+    /// Generate HTML with all rules (only for HTML output)
+    #[arg(long, default_value_t = false)]
+    all_rules: bool,
 }
 
 fn main() -> Result<()> {
@@ -58,7 +62,11 @@ fn main() -> Result<()> {
         "html" | "htm" => {
             // Generate interactive HTML
             let generator = HtmlRailroadGenerator::new(pathmap);
-            generator.generate_html()
+            if cli.all_rules {
+                generator.generate_html_all_rules()
+            } else {
+                generator.generate_html()
+            }
         }
         _ => {
             // Default to SVG

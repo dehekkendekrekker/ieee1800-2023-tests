@@ -53,6 +53,92 @@ const RULES = {rules_json};
         )
     }
 
+    /// Generate a complete HTML page with ALL rules as railroad diagrams
+    pub fn generate_html_all_rules(&self) -> String {
+        let entry_point = self.map_.get_entry_point();
+        let rules = self.map_.get_rules();
+
+        // Sort rule names alphabetically
+        let mut rule_names: Vec<&String> = rules.keys().collect();
+        rule_names.sort();
+
+        // Generate table of contents and diagrams
+        let mut toc_html = String::new();
+        let mut diagrams_html = String::new();
+
+        for name in &rule_names {
+            // Table of contents entry
+            toc_html.push_str(&format!(
+                "<li><a href=\"#rule-{}\">{}</a></li>",
+                html_escape(name),
+                html_escape(name)
+            ));
+
+            // Diagram
+            let node = rules.get(*name).unwrap();
+            let diagram = self.render_node(node);
+            diagrams_html.push_str(&format!(
+                "<div class=\"rule-section\" id=\"rule-{}\">\n\
+                    <h2>{}</h2>\n\
+                    <div class=\"railroad\">\n\
+                        <div class=\"start\"></div>\n\
+                        {}\n\
+                        <div class=\"end\"></div>\n\
+                    </div>\n\
+                </div>\n",
+                html_escape(name),
+                html_escape(name),
+                diagram
+            ));
+        }
+
+        let rules_json = self.generate_rules_json();
+
+        format!(
+            r#"<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{entry_point} - Grammar Railroad Diagrams</title>
+    <style>
+{CSS}
+{ALL_RULES_CSS}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Rules ({rule_count})</h2>
+        <input type="text" id="search" placeholder="Search rules..." />
+        <ul id="toc">
+            {toc_html}
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Grammar: {entry_point}</h1>
+        {diagrams_html}
+    </div>
+
+    <script>
+const RULES = {rules_json};
+
+{JAVASCRIPT}
+{ALL_RULES_JAVASCRIPT}
+    </script>
+</body>
+</html>"#,
+            entry_point = entry_point,
+            rule_count = rule_names.len(),
+            toc_html = toc_html,
+            diagrams_html = diagrams_html,
+            rules_json = rules_json,
+            CSS = CSS,
+            ALL_RULES_CSS = ALL_RULES_CSS,
+            JAVASCRIPT = JAVASCRIPT,
+            ALL_RULES_JAVASCRIPT = ALL_RULES_JAVASCRIPT
+        )
+    }
+
     /// Render a node to HTML
     fn render_node(&self, node: &PathNode) -> String {
         match node {
@@ -412,5 +498,149 @@ document.addEventListener('DOMContentLoaded', function() {
         // Insert after the nonterminal
         nonterminal.insertAdjacentElement('afterend', expandedDiv);
     });
+});
+"#;
+
+const ALL_RULES_CSS: &str = r#"
+body {
+    display: flex;
+    padding: 0;
+}
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: hsl(230, 15%, 12%);
+    border-right: 1px solid hsl(200, 10%, 30%);
+    padding: 20px;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    color: hsl(200, 60%, 70%);
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid hsl(200, 10%, 30%);
+    border-radius: 4px;
+    background: hsl(230, 10%, 18%);
+    color: hsl(230, 30%, 80%);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.sidebar input:focus {
+    outline: none;
+    border-color: hsl(200, 60%, 50%);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 2px 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 4px 8px;
+    color: hsl(230, 30%, 70%);
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.sidebar a:hover {
+    background: hsl(230, 20%, 25%);
+    color: hsl(200, 60%, 70%);
+}
+
+.sidebar li.hidden {
+    display: none;
+}
+
+.main-content {
+    margin-left: 300px;
+    padding: 20px;
+    flex: 1;
+}
+
+.main-content h1 {
+    margin-top: 0;
+}
+
+.rule-section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(200, 10%, 25%);
+}
+
+.rule-section h2 {
+    font-family: monospace;
+    color: hsl(200, 60%, 70%);
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.rule-section:target {
+    background: hsl(200, 20%, 18%);
+    margin: -10px;
+    padding: 10px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+
+.rule-section:target h2 {
+    color: hsl(200, 70%, 75%);
+}
+"#;
+
+const ALL_RULES_JAVASCRIPT: &str = r#"
+// Search functionality
+document.getElementById('search').addEventListener('input', function(e) {
+    const query = e.target.value.toLowerCase();
+    const items = document.querySelectorAll('#toc li');
+
+    items.forEach(function(item) {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(query)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+});
+
+// Click on nonterminal to navigate to that rule
+document.body.addEventListener('click', function(e) {
+    const nonterminal = e.target.closest('.nonterminal');
+    if (!nonterminal) return;
+
+    // If it's already handling expansion, let that take precedence
+    if (nonterminal.classList.contains('expanded')) return;
+
+    const ruleName = nonterminal.dataset.rule;
+    if (!ruleName) return;
+
+    // Check if this rule exists as a section
+    const section = document.getElementById('rule-' + ruleName);
+    if (section) {
+        e.preventDefault();
+        e.stopPropagation();
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', '#rule-' + ruleName);
+    }
 });
 "#;
