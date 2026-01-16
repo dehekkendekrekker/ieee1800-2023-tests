@@ -6,8 +6,10 @@ use anyhow::Result;
 #[derive(Debug, Deserialize)]
 pub struct Config {
     /// The name of the rule from which the graph is built.
-    pub entry_point: String,
+    /// If not specified, all rules will be included.
+    pub entry_point: Option<String>,
 
+    #[serde(default)]
     pub ignore_rules: Vec<String>
 }
 

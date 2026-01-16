@@ -77,11 +77,22 @@ impl PathFinder  {
     }
 
     pub fn build_pathmap(mut self) -> PathMap{
-        let entry_point = self.config_.entry_point.clone();
+        let entry_point_opt = self.config_.entry_point.clone();
 
-        self.map_.entry_point_ = entry_point.clone();
-        self.add_rule_name_nodes(&entry_point);
-
+        if let Some(entry_point) = entry_point_opt {
+            // Build from specific entry point (only reachable rules)
+            self.map_.entry_point_ = entry_point.clone();
+            self.add_rule_name_nodes(&entry_point);
+        } else {
+            // Build all rules from AST
+            let rule_names: Vec<String> = self.ast_.rules.keys().cloned().collect();
+            if let Some(first) = rule_names.first() {
+                self.map_.entry_point_ = first.clone();
+            }
+            for rule_name in rule_names {
+                self.add_rule_name_nodes(&rule_name);
+            }
+        }
 
         println!("PATHMAP: {:#?}", self.map_);
 

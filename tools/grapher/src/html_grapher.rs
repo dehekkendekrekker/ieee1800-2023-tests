@@ -118,7 +118,8 @@ const RULES = {rules_json};
                 </div>
                 <div class="legend-section">
                     <h4>Symbols</h4>
-                    <div class="legend-item"><span class="terminal">terminal</span> Literal text</div>
+                    <div class="legend-item"><span class="terminal">literal</span> Literal text</div>
+                    <div class="legend-item"><span class="terminal regex">/regex/</span> Regular expression</div>
                     <div class="legend-item"><span class="nonterminal" style="cursor:default">rule</span> Rule reference</div>
                     <div class="legend-item"><span class="legend-optional">opt</span> Optional (0 or 1)</div>
                     <div class="legend-item"><span class="legend-repetition">rep</span> Repetition (0+)</div>
