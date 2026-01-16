@@ -737,35 +737,35 @@ document.getElementById('search').addEventListener('input', function(e) {
     });
 });
 
-// Sidebar link clicks - use hash navigation for back button support
+// Navigate to a rule section
+function navigateTo(targetId, addToHistory) {
+    const section = document.getElementById(targetId);
+    if (!section) return;
+
+    if (addToHistory) {
+        history.pushState({ targetId: targetId }, '', '');
+    }
+
+    const y = section.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ left: 0, top: y, behavior: 'smooth' });
+}
+
+// Sidebar link clicks
 document.querySelectorAll('.sidebar a[data-target]').forEach(function(link) {
     link.addEventListener('click', function(e) {
-        const targetId = this.dataset.target;
-        location.hash = targetId;
+        e.preventDefault();
+        navigateTo(this.dataset.target, true);
     });
 });
 
-// Handle hash navigation (for back button support)
-function scrollToHash(hash) {
-    if (!hash) return;
-    const section = document.getElementById(hash.substring(1));
-    if (section) {
-        const y = section.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({ left: 0, top: y, behavior: 'smooth' });
+// Back/forward button support
+window.addEventListener('popstate', function(e) {
+    if (e.state && e.state.targetId) {
+        navigateTo(e.state.targetId, false);
     }
-}
-
-// Listen for back/forward navigation
-window.addEventListener('hashchange', function() {
-    scrollToHash(location.hash);
 });
 
-// Handle initial hash on page load
-if (location.hash) {
-    scrollToHash(location.hash);
-}
-
-// Right-click on nonterminal to navigate to that rule (without expanding)
+// Right-click on nonterminal to navigate to that rule
 document.body.addEventListener('contextmenu', function(e) {
     const nonterminal = e.target.closest('.nonterminal');
     if (!nonterminal) return;
@@ -773,11 +773,11 @@ document.body.addEventListener('contextmenu', function(e) {
     const ruleName = nonterminal.dataset.rule;
     if (!ruleName) return;
 
-    // Check if this rule exists as a section
-    const section = document.getElementById('rule-' + ruleName);
+    const targetId = 'rule-' + ruleName;
+    const section = document.getElementById(targetId);
     if (section) {
         e.preventDefault();
-        location.hash = 'rule-' + ruleName;
+        navigateTo(targetId, true);
     }
 });
 "#;
