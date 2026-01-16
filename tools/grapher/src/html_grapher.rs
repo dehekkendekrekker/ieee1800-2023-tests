@@ -537,6 +537,7 @@ body {
     padding: 20px;
     overflow-y: auto;
     flex-shrink: 0;
+    z-index: 1000;
 }
 
 .sidebar h2 {
