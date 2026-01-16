@@ -13,7 +13,7 @@ impl HtmlRailroadGenerator {
 
     /// Generate a complete HTML page with interactive railroad diagram
     pub fn generate_html(&self) -> String {
-        let entry_point = self.map_.get_entry_point();
+        let entry_point = self.map_.get_entry_point().expect("entry_point required");
         let root_node = self.map_.get_rule(entry_point.clone());
 
         let diagram_html = self.render_node(&root_node);
@@ -55,7 +55,6 @@ const RULES = {rules_json};
 
     /// Generate a complete HTML page with ALL rules as railroad diagrams
     pub fn generate_html_all_rules(&self) -> String {
-        let entry_point = self.map_.get_entry_point();
         let rules = self.map_.get_rules();
 
         // Sort rule names alphabetically
@@ -100,7 +99,7 @@ const RULES = {rules_json};
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{entry_point} - Grammar Railroad Diagrams</title>
+    <title>Grammar Railroad Diagrams</title>
     <style>
 {CSS}
 {ALL_RULES_CSS}
@@ -134,7 +133,7 @@ const RULES = {rules_json};
         </ul>
     </div>
     <div class="main-content">
-        <h1>Grammar: {entry_point}</h1>
+        <h1>Grammar</h1>
         {diagrams_html}
     </div>
 
@@ -146,7 +145,6 @@ const RULES = {rules_json};
     </script>
 </body>
 </html>"#,
-            entry_point = entry_point,
             rule_count = rule_names.len(),
             toc_html = toc_html,
             diagrams_html = diagrams_html,

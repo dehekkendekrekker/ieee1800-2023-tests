@@ -19,7 +19,7 @@ impl RailRoadConverter {
 
     /// Generate a diagram for the entry point rule
     pub fn generate_diagram(&self) -> Diagram<Sequence<Box<dyn RailroadNode>>> {
-        let entry_point = self.map_.get_entry_point();
+        let entry_point = self.map_.get_entry_point().expect("entry_point required");
         let root_node = self.map_.get_rule(entry_point.clone());
 
         let content = self.convert_node(&root_node, 0);

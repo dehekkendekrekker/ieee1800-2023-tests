@@ -19,14 +19,14 @@ pub enum Node {
 #[derive(Debug, Clone)]
 pub struct PathMap {
     reg_ : HashMap<String, Node>,
-    entry_point_ : String,
+    entry_point_ : Option<String>,
 }
 
 impl PathMap {
     pub fn new() -> Self {
         PathMap {
             reg_ : HashMap::new(),
-            entry_point_: String::new(),
+            entry_point_: None,
         }
     }
 
@@ -54,7 +54,7 @@ impl PathMap {
         self.reg_.clone()
     }
 
-    pub fn get_entry_point(&self) -> String {
+    pub fn get_entry_point(&self) -> Option<String> {
         self.entry_point_.clone()
     }
 }
@@ -81,14 +81,11 @@ impl PathFinder  {
 
         if let Some(entry_point) = entry_point_opt {
             // Build from specific entry point (only reachable rules)
-            self.map_.entry_point_ = entry_point.clone();
+            self.map_.entry_point_ = Some(entry_point.clone());
             self.add_rule_name_nodes(&entry_point);
         } else {
             // Build all rules from AST
             let rule_names: Vec<String> = self.ast_.rules.keys().cloned().collect();
-            if let Some(first) = rule_names.first() {
-                self.map_.entry_point_ = first.clone();
-            }
             for rule_name in rule_names {
                 self.add_rule_name_nodes(&rule_name);
             }
@@ -174,7 +171,7 @@ impl From<PathMap> for PathGenerator {
 
 impl PathGenerator {
     pub fn generate_all(&self, max_depth: usize, max_reps: usize) -> Vec<Vec<Node>> {
-        let entry = self.pathmap_.get_entry_point();
+        let entry = self.pathmap_.get_entry_point().expect("entry_point required");
         let root = self.pathmap_.get_rule(entry);
         self.expand_node(&root, 0, max_depth, max_reps)
     }
