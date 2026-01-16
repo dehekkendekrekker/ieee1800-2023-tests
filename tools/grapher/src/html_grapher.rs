@@ -122,7 +122,7 @@ const RULES = {rules_json};
                     <div class="legend-item"><span class="nonterminal" style="cursor:default">rule</span> Rule reference</div>
                     <div class="legend-item"><span class="legend-optional">opt</span> Optional (0 or 1)</div>
                     <div class="legend-item"><span class="legend-repetition">rep</span> Repetition (0+)</div>
-                    <div class="legend-item"><span class="legend-choice">A | B</span> Choice</div>
+                    <div class="legend-item"><span class="legend-choice"><span>A</span><span>B</span></span> Choice</div>
                 </div>
             </div>
         </details>
@@ -677,12 +677,14 @@ body {
 }
 
 .legend-choice {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
     padding: 2px 6px;
     border-left: 2px solid hsl(200, 10%, 40%);
     border-right: 2px solid hsl(200, 10%, 40%);
     font-size: 11px;
     font-family: monospace;
+    line-height: 1.4;
 }
 
 .main-content {
