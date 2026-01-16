@@ -1,5 +1,6 @@
 use crate::paths::PathMap;
-use crate::paths::Node;
+use crate::paths::Node as PathNode;
+use railroad::{self, Node as RailroadNode, Diagram, Sequence, Choice, Terminal, NonTerminal, Empty, Stylesheet};
 
 
 pub struct RailRoadConverter {
@@ -16,73 +17,84 @@ impl RailRoadConverter {
         }
     }
 
-    pub fn dsl(&self) -> String {
-        let mut output = String::new();
-        for (name, declaration) in self.map_.get_rules() {
-            output = format!("{}[`{}` [{}]]\n", output, name, self.parse_node(&declaration, 0));
-        }
+    /// Generate a diagram for the entry point rule
+    pub fn generate_diagram(&self) -> Diagram<Sequence<Box<dyn RailroadNode>>> {
+        let entry_point = self.map_.get_entry_point();
+        let root_node = self.map_.get_rule(entry_point.clone());
 
-        output
+        let content = self.convert_node(&root_node, 0);
+
+        let mut seq: Sequence<Box<dyn RailroadNode>> = Sequence::default();
+        seq.push(Box::new(railroad::Start));
+        seq.push(content);
+        seq.push(Box::new(railroad::End));
+
+        Diagram::new_with_stylesheet(seq, &Stylesheet::Dark)
     }
 
-    fn parse_node(&self, node: &Node, current_depth: usize) -> String {
+    /// Convert our PathNode to a railroad Node
+    fn convert_node(&self, node: &PathNode, current_depth: usize) -> Box<dyn RailroadNode> {
         match node {
-            Node::Rule(label) => {
+            PathNode::Rule(label) => {
                 if current_depth < self.expand_depth_ {
                     if let Some(rule_node) = self.map_.get_rule_opt(label) {
-                        self.parse_node(&rule_node, current_depth + 1)
+                        self.convert_node(&rule_node, current_depth + 1)
                     } else {
-                        format!("'{}'", label)
+                        Box::new(NonTerminal::new(label.clone()))
                     }
                 } else {
-                    format!("'{}'", label)
+                    Box::new(NonTerminal::new(label.clone()))
                 }
             }
-            Node::Literal(label) => {
-                format!("\"{}\"", label)
+
+            PathNode::Literal(label) => {
+                Box::new(Terminal::new(label.clone()))
             }
 
-            Node::RegEx(_) => {
-                format!("'RE'")
+            PathNode::RegEx(pattern) => {
+                // Display regex patterns as terminals with a distinct format
+                Box::new(Terminal::new(format!("/{}/", pattern)))
             }
-            Node::Alternative(node) => {
-                let mut retval = format!("<");
-                let mut contents = Vec::new();
-                for sequence in node.iter() {
-                    contents.push(self.parse_node(&sequence, current_depth));
+
+            PathNode::Alternative(alternatives) => {
+                if alternatives.len() == 1 {
+                    // Single alternative - no need for Choice
+                    self.convert_node(&alternatives[0], current_depth)
+                } else {
+                    let mut choice: Choice<Box<dyn RailroadNode>> = Choice::new(vec![]);
+                    for alt in alternatives.iter() {
+                        choice.push(self.convert_node(alt, current_depth));
+                    }
+                    Box::new(choice)
                 }
-
-                let substr = contents.join(", ");
-                retval = format!("{}{}", retval, substr);
-
-                format!("{}>", retval)
             }
 
-            Node::Sequence(nodes) => {
-                let mut retval = format!("[");
-                let mut contents = Vec::new();
-                for node in nodes.iter() {
-                    contents.push(self.parse_node(&node, current_depth));
+            PathNode::Sequence(nodes) => {
+                if nodes.is_empty() {
+                    Box::new(Empty)
+                } else if nodes.len() == 1 {
+                    // Single element - no need for Sequence wrapper
+                    self.convert_node(&nodes[0], current_depth)
+                } else {
+                    let mut seq: Sequence<Box<dyn RailroadNode>> = Sequence::new(vec![]);
+                    for n in nodes.iter() {
+                        seq.push(self.convert_node(n, current_depth));
+                    }
+                    Box::new(seq)
                 }
-
-                let substr = contents.join(" ");
-                retval = format!("{}{}", retval, substr);
-
-                format!("{}]", retval)
             }
 
-            Node::Optional(node) => {
-                format!("[{}]?", self.parse_node(node, current_depth))
+            PathNode::Optional(inner) => {
+                let inner_node = self.convert_node(inner, current_depth);
+                Box::new(railroad::Optional::new(inner_node))
             }
 
-            Node::Repetition(node) => {
-                format!("*[{}]", self.parse_node(node, current_depth))
+            PathNode::Repetition(inner) => {
+                let inner_node = self.convert_node(inner, current_depth);
+                // Repeat takes (forward_element, backward_element)
+                // For zero-or-more, we use Empty as the backward path
+                Box::new(railroad::Repeat::new(inner_node, Box::new(Empty) as Box<dyn RailroadNode>))
             }
         }
     }
 }
-
-
-
-
-

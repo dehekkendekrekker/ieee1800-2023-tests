@@ -1,4 +1,4 @@
-entry_point: library_declaration
+entry_point: sequence_expr
 
 
 ignore_rules:

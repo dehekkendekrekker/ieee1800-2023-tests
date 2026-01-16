@@ -1,9 +1,9 @@
 use std::{fs, path::PathBuf};
 use anyhow::Result;
+use clap::Parser;
 
 use grapher::{config::Config, grapher::RailRoadConverter, paths::PathFinder};
 use ieee1800_2023_ast::ast::AST;
-use clap::Parser;
 
 
 #[derive(Parser, Debug)]
@@ -51,18 +51,9 @@ fn main() -> Result<()> {
 
     let converter = RailRoadConverter::new(pathmap, cli.expand_depth);
 
-    let dsl = converter.dsl();
+    let diagram = converter.generate_diagram();
 
-
-    println!("DSL: {}", dsl);
-
-    let diagram = railroad_dsl::compile(&dsl, &railroad::Stylesheet::Dark.stylesheet())?;
-
-
-
-
-    
-    fs::write(cli.output, diagram.diagram.to_string())?;
+    fs::write(cli.output, diagram.to_string())?;
 
     Ok(())
 
