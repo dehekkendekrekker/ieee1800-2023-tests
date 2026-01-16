@@ -737,17 +737,33 @@ document.getElementById('search').addEventListener('input', function(e) {
     });
 });
 
-// Sidebar link clicks - scroll vertically only
+// Sidebar link clicks - use hash navigation for back button support
 document.querySelectorAll('.sidebar a[data-target]').forEach(function(link) {
     link.addEventListener('click', function(e) {
         const targetId = this.dataset.target;
-        const section = document.getElementById(targetId);
-        if (section) {
-            const y = section.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({ left: 0, top: y, behavior: 'smooth' });
-        }
+        location.hash = targetId;
     });
 });
+
+// Handle hash navigation (for back button support)
+function scrollToHash(hash) {
+    if (!hash) return;
+    const section = document.getElementById(hash.substring(1));
+    if (section) {
+        const y = section.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ left: 0, top: y, behavior: 'smooth' });
+    }
+}
+
+// Listen for back/forward navigation
+window.addEventListener('hashchange', function() {
+    scrollToHash(location.hash);
+});
+
+// Handle initial hash on page load
+if (location.hash) {
+    scrollToHash(location.hash);
+}
 
 // Right-click on nonterminal to navigate to that rule (without expanding)
 document.body.addEventListener('contextmenu', function(e) {
@@ -761,8 +777,7 @@ document.body.addEventListener('contextmenu', function(e) {
     const section = document.getElementById('rule-' + ruleName);
     if (section) {
         e.preventDefault();
-        const y = section.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({ left: 0, top: y, behavior: 'smooth' });
+        location.hash = 'rule-' + ruleName;
     }
 });
 "#;
