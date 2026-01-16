@@ -69,7 +69,7 @@ const RULES = {rules_json};
         for name in &rule_names {
             // Table of contents entry
             toc_html.push_str(&format!(
-                "<li><a href=\"#rule-{}\">{}</a></li>",
+                "<li><a data-target=\"rule-{}\">{}</a></li>",
                 html_escape(name),
                 html_escape(name)
             ));
@@ -580,6 +580,7 @@ body {
     font-family: monospace;
     font-size: 13px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .sidebar a:hover {
@@ -738,6 +739,18 @@ document.getElementById('search').addEventListener('input', function(e) {
     });
 });
 
+// Sidebar link clicks - scroll vertically only
+document.querySelectorAll('.sidebar a[data-target]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        const targetId = this.dataset.target;
+        const section = document.getElementById(targetId);
+        if (section) {
+            const y = section.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ left: 0, top: y, behavior: 'smooth' });
+        }
+    });
+});
+
 // Right-click on nonterminal to navigate to that rule (without expanding)
 document.body.addEventListener('contextmenu', function(e) {
     const nonterminal = e.target.closest('.nonterminal');
@@ -750,8 +763,8 @@ document.body.addEventListener('contextmenu', function(e) {
     const section = document.getElementById('rule-' + ruleName);
     if (section) {
         e.preventDefault();
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.pushState(null, '', '#rule-' + ruleName);
+        const y = section.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ left: 0, top: y, behavior: 'smooth' });
     }
 });
 "#;
