@@ -112,7 +112,7 @@ const RULES = {rules_json};
             <div class="legend-content">
                 <div class="legend-section">
                     <h4>Mouse Controls</h4>
-                    <div class="legend-item"><strong>Left-click</strong> non-terminal: Expand inline</div>
+                    <div class="legend-item"><strong>Left-click</strong> non-terminal: Toggle expand/collapse</div>
                     <div class="legend-item"><strong>Right-click</strong> non-terminal: Jump to definition</div>
                 </div>
                 <div class="legend-section">
@@ -461,22 +461,6 @@ h1 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.collapse-btn {
-    background: hsl(0, 40%, 40%);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    margin-left: 8px;
-    font-size: 12px;
-    line-height: 1;
-}
-
-.collapse-btn:hover {
-    background: hsl(0, 50%, 50%);
-}
 "#;
 
 const JAVASCRIPT: &str = r#"
@@ -485,35 +469,25 @@ document.addEventListener('DOMContentLoaded', function() {
         const nonterminal = e.target.closest('.nonterminal');
         if (!nonterminal) return;
 
-        // Check if already expanded
-        if (nonterminal.classList.contains('expanded')) {
-            return; // Let collapse button handle it
-        }
-
         const ruleName = nonterminal.dataset.rule;
         if (!ruleName || !RULES[ruleName]) return;
 
-        // Mark as expanded
-        nonterminal.classList.add('expanded');
-
-        // Create expanded content
-        const expandedDiv = document.createElement('div');
-        expandedDiv.className = 'expanded-content';
-        expandedDiv.innerHTML = RULES[ruleName];
-
-        // Add collapse button
-        const collapseBtn = document.createElement('button');
-        collapseBtn.className = 'collapse-btn';
-        collapseBtn.textContent = '×';
-        collapseBtn.onclick = function(evt) {
-            evt.stopPropagation();
+        // Toggle expand/collapse
+        if (nonterminal.classList.contains('expanded')) {
+            // Collapse
             nonterminal.classList.remove('expanded');
-            expandedDiv.remove();
-        };
-        expandedDiv.appendChild(collapseBtn);
-
-        // Insert after the nonterminal
-        nonterminal.insertAdjacentElement('afterend', expandedDiv);
+            const expandedDiv = nonterminal.nextElementSibling;
+            if (expandedDiv && expandedDiv.classList.contains('expanded-content')) {
+                expandedDiv.remove();
+            }
+        } else {
+            // Expand
+            nonterminal.classList.add('expanded');
+            const expandedDiv = document.createElement('div');
+            expandedDiv.className = 'expanded-content';
+            expandedDiv.innerHTML = RULES[ruleName];
+            nonterminal.insertAdjacentElement('afterend', expandedDiv);
+        }
     });
 });
 "#;
